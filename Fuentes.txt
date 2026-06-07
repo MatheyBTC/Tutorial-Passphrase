@@ -1,0 +1,142 @@
+# FUENTES — Tutorial Passphrase Bitcoin
+# Recopiladas por agentes de investigación — 2026-06-06
+
+## HARDWARE WALLETS
+
+### Jade / Jade Plus (Blockstream)
+- Docs oficiales passphrase: https://help.blockstream.com/hc/en-us/articles/20138948637337-Add-a-BIP39-passphrase-for-Jade
+- Cómo funciona la passphrase en Jade: https://help.blockstream.com/hc/en-us/articles/5131416184601-How-does-a-Passphrase-work-on-Jade
+- Quickstart Desktop: https://help.blockstream.com/hc/en-us/articles/900002174303
+- Quickstart Android: https://help.blockstream.com/hc/en-us/articles/900002177663
+- Métodos de entrada: Manual (char-by-char) y WordList (BIP39 words con autocompletado)
+
+### Coldcard Q / Mk4 / Mk5 (Coinkite)
+- Docs passphrase: https://coldcard.com/docs/passphrase/
+- Menú tree: https://coldcard.com/docs/menu-tree/
+- Blog oficial: https://blog.coinkite.com/everything-you-need-to-know-about-passphrases/
+- Video tutorial: https://www.youtube.com/watch?v=akwxazuIguk (Q y Mk4)
+- Video Econoalchemist: https://m.youtube.com/watch?v=Q2F1JkxyH4k
+- Econoalchemist Paranoid Guide (passphrase section): https://coldcard3.econoalchemist.com/06%20Passphrase.html
+- MicroSD encrypted storage: AES-256, requiere verificar fingerprint
+
+### BitBox02 / BitBox02 Nova (Shift Crypto)
+- Docs setup passphrase: https://support.bitbox.swiss/en_US/optional-passphrase/set-up-bitbox02-optional-passphrase
+- Understanding passphrase: https://support.bitbox.swiss/en_US/optional-passphrase/understanding-bitbox02-optional-passphrase
+- Blog benefits/risks: https://blog.bitbox.swiss/en/optional-passphrases-benefits-and-risks/
+- IMPORTANTE: La passphrase se ingresa SOLO en el dispositivo, nunca en la app
+- Guide Arman the Parman: https://armantheparman.com/bitbox02/
+
+### Ledger (Nano X / Nano S Plus / Flex / Stax)
+- Setup passphrase: https://support.ledger.com/article/115005214529-zd
+- Recuperar cuentas passphrase: https://support.ledger.com/article/4983095135261-zd
+- Ledger Academy: https://www.ledger.com/academy/passphrase-an-advanced-security-feature
+- Bitcoin Magazine guide: https://bitcoinmagazine.com/guides/how-to-use-bitcoin-ledger-nano-s
+- Coinguides: https://coinguides.org/ledger-passphrase-setup/
+
+### Trezor (T / Safe 3 / Safe 5 / Safe 7) (SatoshiLabs)
+- Qué es passphrase: https://trezor.io/guides/backups-recovery/advanced-wallets/what-is-a-passphrase
+- Cómo usar passphrase wallet: https://trezor.io/guides/trezor-suite/using-a-passphrase-wallet-in-trezor-suite
+- Troubleshooting: https://trezor.io/support/troubleshooting/trezor-suite-issues/passphrase-hidden-wallets-issues
+- Coinguides step-by-step: https://coinguides.org/trezor-passphrase-setup/
+- Tristan Borges Substack: https://tristanborgess.substack.com/p/how-to-use-a-passphrase-with-trezor
+- Safe 7: pantalla 2.5" 520x380px | Safe 5: 1.54" 240x240px | Model T: touch | Safe 3: botones
+
+### SeedSigner (DIY / Open Source)
+- Sitio oficial: https://seedsigner.com/
+- Guía independiente: https://seedsigner.com/seedsigner-independent-custody-guide/
+- GitHub: https://github.com/SeedSigner/seedsigner
+- Plan B Academy: https://planb.academy/tutorials/wallet/backup/passphrase-a26a0220-806c-44b4-af14-bafdeb1adce7
+- Bitcoin Magazine: https://bitcoinmagazine.com/guides/how-to-use-seedsigner-for-secure-bitcoin
+- Nota: Bug visual conocido — display wrapping al mostrar passphrase en pantalla
+
+### Foundation Passport (Gen2 / 02 / Prime) (Foundation)
+- Docs oficiales: https://docs.foundation.xyz/passport/passport-menu/more/
+- Blog passphrase: https://foundation.xyz/2021/10/passphrases-what-why-how/
+- Econoalchemist (MEJOR guía visual): https://econoalchemist.github.io/Foundation-Passport/06%20Creating%20a%20Passphrase.html
+- Econoalchemist GitHub: https://github.com/econoalchemist/
+- Bitcoin Magazine: https://bitcoinmagazine.com/technical/how-to-use-passport-hardware-bitcoin-wallet
+- Ruta de menú: MORE (↑) → Settings → Advanced → Passphrase → Set Passphrase
+- Gen2: teclado alfanumérico | Prime: teclado táctil | Indicador visual: 'P' en escudo
+
+### Keystone 3 / Keystone 3 Pro (Keystone)
+- Guía passphrase: https://guide.keyst.one/docs/passphrase-wallet
+- Soporte: https://support.keyst.one/advanced-features/passphrase
+- Blog in-depth: https://blog.keyst.one/in-depth-passphrase-guide-unlocking-your-hidden-vault
+- Máximo 128 caracteres | no se almacena en el dispositivo
+- Ruta: Menú (…) → Device Settings → Wallet Settings → Passphrase
+
+### Specter Shield / Specter DIY (Specter Solutions)
+- Docs seguridad DIY: https://github.com/cryptoadvance/specter-diy/blob/master/docs/security.md
+- Specter Desktop FAQ: https://docs.specter.solutions/desktop/faq/
+- Teclado estilo iPhone | máximo intentos PIN: 10 (luego reset)
+- Specter Shield: slot smartcard con seed cifrada en tarjeta reemplazable
+
+## DESKTOP WALLETS
+
+### Sparrow Wallet
+- FAQ oficial: https://sparrowwallet.com/docs/faq.html
+- Sigue BIP39 estricto: no almacena passphrase en archivo wallet
+- Master Fingerprint visible al importar seed + passphrase
+
+### Electrum
+- Docs seed: https://electrum.readthedocs.io/en/latest/seedphrase.html
+- Importar Ledger/Trezor: https://coinguides.org/import-ledger-trezor-seed-electrum/
+- Llama a la passphrase "extension word" o "custom words" (no BIP39 nativo)
+- Para usar BIP39: Options → BIP39 seed → "Extend with custom words"
+
+### Specter Desktop
+- Docs: https://docs.specter.solutions/desktop/faq/
+- GitHub: https://github.com/cryptoadvance/specter-desktop
+- Campo "BIP39 passphrase (optional)" en diálogo de setup de dispositivo
+
+### Blockstream Green (Desktop + Mobile)
+- Setup passphrase: https://help.blockstream.com/hc/en-us/articles/8721715194649-Set-up-a-BIP39-passphrase
+- Añadido en v2.0.4 (2024)
+- Acceso: ⋯ (tres puntos) → "Login with BIP39 Passphrase"
+
+## HOT WALLETS MOBILE
+
+### BlueWallet
+- Import wallet docs: https://bluewallet.io/docs/import-wallet/
+- GitHub wallets soportados: https://github.com/BlueWallet/BlueWallet/wiki/Supported-wallet-types
+- Requiere: Advanced Mode activado para ver campo passphrase
+
+### Bull Bitcoin Wallet
+- GitHub: https://github.com/SatoshiPortal/bullbitcoin-mobile
+- Bitcoin + Lightning only | passphrase almacenada en secure storage del dispositivo
+
+### Phoenix Wallet
+- Sitio: https://phoenix.acinq.co/
+- GitHub: https://github.com/ACINQ/phoenix
+- Lightning-only — NO soporta BIP39 passphrase standard
+- Usa sistema propio de seed para canales Lightning
+
+### Blockstream Green Mobile
+- Misma UX que desktop (v2.0.4+)
+- Login BIP39 Passphrase desde ⋯ en pantalla principal
+
+### Nunchuk
+- Sitio: https://nunchuk.io/
+- Recursos: https://resources.nunchuk.io/wallet-recovery/personal-wallet/
+- Botón "[Set passphrase]" al añadir software key
+- Bitcoin-only, multisig-focused
+- Fingerprint actualiza al añadir passphrase (verificación visual)
+
+## FUENTES EDUCATIVAS GENERALES
+
+### Más completas (con fotos)
+- Econoalchemist: https://econoalchemist.github.io/ (COLDCARD + Passport)
+- Arman the Parman: https://armantheparman.com/passphrase/ (multi-dispositivo)
+- Plan B Academy: https://planb.academy/tutorials/wallet/backup/passphrase-a26a0220-806c-44b4-af14-bafdeb1adce7
+
+### Referencia técnica
+- CoinKite Blog: https://blog.coinkite.com/everything-you-need-to-know-about-passphrases/
+- Ministry of Nodes: https://www.ministryofnodes.com.au/bitcoin-seeds-passphrase-and-pin-what's-the-difference
+- Bitcoiner.guide Coldcard: https://bitcoiner.guide/coldcard/
+- Bitcoiner.guide Passport: https://bitcoiner.guide/passport/
+- Coinguides: https://coinguides.org/recovery-seed-passphrase-pin-explained/
+
+### En Español
+- Estudio Bitcoin: https://estudiobitcoin.com/guia-para-crear-un-passphrase/
+- Bitcoin Argentina: https://bitcoinargentina.org/tutoriales/passphrase/
+- Hablemos de Bitcoin: https://hablemosdebitcoin.xyz/que-son-las-passphrases-en-bitcoin-y-como-utilizarlas/
