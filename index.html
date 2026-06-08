@@ -1262,33 +1262,171 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR MODEL T — pasos en el dispositivo
+  // TREZOR SUITE — PC (aplica a todos los modelos Trezor)
   {
-    id: 'hw-trezor-t', ready: true, group: 'hw',
+    id: 'hw-trezor-suite-pc', ready: true, group: 'hw',
     brand: 'Trezor',
-    es: 'Trezor Model T', en: 'Trezor Model T',
+    es: 'Trezor Suite (PC)', en: 'Trezor Suite (PC)',
     steps: [
       {
-        f: 'hw-trezor-t-01.png', imgW: 280,
-        es: 'Dispositivo - Confirmar Activación',
-        en: 'Device - Confirm Activation',
-        des: `El <strong>Trezor Model T</strong> tiene pantalla táctil a color. Desde <strong>Trezor Suite</strong> activar la passphrase; el Model T pide confirmación en su pantalla.<br><br>
-        Tocar <strong>Confirmar</strong> en el dispositivo.<br><br>
-        <div class="info">El Model T fue el primer Trezor con pantalla táctil. Usa Trezor Suite igual que los modelos Safe.</div>`,
-        den: `<strong>Trezor Model T</strong> has a color touchscreen. From <strong>Trezor Suite</strong> enable passphrase; Model T asks for confirmation on its screen.<br><br>
-        Tap <strong>Confirm</strong> on the device.<br><br>
-        <div class="info">Model T was the first Trezor with a touchscreen. Uses Trezor Suite the same as Safe models.</div>`
+        f: 'hw-suite-pc-01.png',
+        es: 'Settings → Dispositivo → Activar Passphrase',
+        en: 'Settings → Device → Enable Passphrase',
+        des: `Abrí <strong>Trezor Suite</strong> (desktop) con el Trezor conectado. En la barra lateral hacer clic en <strong>Configuración → pestaña Dispositivo</strong>.<br><br>
+        En la sección <strong>Passphrase</strong>, activar el toggle <strong>"Usar billeteras con passphrase"</strong>. Suite pedirá confirmación en el dispositivo físico.<br><br>
+        <div class="info">Este proceso es igual para todos los modelos Trezor: Model T, Safe 3, Safe 5, Safe 7.</div>`,
+        den: `Open <strong>Trezor Suite</strong> (desktop) with the Trezor connected. In the sidebar click <strong>Settings → Device tab</strong>.<br><br>
+        In the <strong>Passphrase</strong> section, toggle <strong>"Use passphrase wallets"</strong>. Suite will ask for confirmation on the physical device.<br><br>
+        <div class="info">This process is the same for all Trezor models: Model T, Safe 3, Safe 5, Safe 7.</div>`
       },
       {
-        f: 'hw-trezor-t-02.png', imgW: 280,
-        es: 'Dispositivo - Teclado Táctil del Model T',
-        en: 'Device - Model T Touch Keyboard',
-        des: `Al abrir una billetera con passphrase, el Model T muestra el teclado táctil para ingresar la frase directamente en el dispositivo.<br><br>
-        Ingresar la passphrase y confirmar con ✓. Suite abre la billetera derivada.<br><br>
-        <div class="warn">⚠️ Trezor no muestra fingerprint. Guardá la primera dirección de recepción para verificar en sesiones futuras.</div>`,
-        den: `When opening a passphrase wallet, Model T shows the touch keyboard to enter the phrase directly on the device.<br><br>
-        Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
-        <div class="warn">⚠️ Trezor doesn't show a fingerprint. Save the first receiving address to verify in future sessions.</div>`
+        f: 'hw-suite-pc-02.png', imgW: 220,
+        es: 'Dispositivo - Confirmar Activación',
+        en: 'Device - Confirm Activation',
+        des: `El dispositivo Trezor muestra la pregunta <strong>"¿Activar la protección por passphrase?"</strong>.<br><br>
+        Confirmar en el dispositivo (botón o pantalla táctil según el modelo).<br><br>
+        <div class="warn">⚠️ Una vez activado, cada sesión pedirá ingresar la passphrase en el dispositivo físico.</div>`,
+        den: `The Trezor device shows <strong>"Activate passphrase protection?"</strong>.<br><br>
+        Confirm on the device (button or touchscreen depending on model).<br><br>
+        <div class="warn">⚠️ Once activated, each session will ask for the passphrase on the physical device.</div>`
+      },
+      {
+        f: 'hw-suite-pc-03.png', imgW: 220,
+        es: 'Dispositivo - Tipear la Passphrase',
+        en: 'Device - Type the Passphrase',
+        des: `Al abrir una billetera con passphrase, el dispositivo muestra el teclado para ingresar la frase. Ingresar carácter a carácter -la passphrase nunca viaja a la computadora.<br><br>
+        Confirmar con ✓. Suite abre la billetera derivada.<br><br>
+        <div class="tip">Primera vez: anotá la primera dirección de recepción para verificar en sesiones futuras.</div>`,
+        den: `When opening a passphrase wallet, the device shows a keyboard to enter the phrase. Enter character by character -the passphrase never travels to the computer.<br><br>
+        Confirm with ✓. Suite opens the derived wallet.<br><br>
+        <div class="tip">First time: write down the first receiving address to verify in future sessions.</div>`
+      },
+    ]
+  },
+
+  // TREZOR SUITE — MOBILE (aplica a todos los modelos Trezor)
+  {
+    id: 'hw-trezor-suite-mob', ready: true, group: 'hw',
+    brand: 'Trezor',
+    es: 'Trezor Suite (Mobile)', en: 'Trezor Suite (Mobile)',
+    steps: [
+      {
+        f: 'hw-suite-mob-01.png',
+        es: 'Pantalla de Inicio - Ícono del Dispositivo',
+        en: 'Home Screen - Device Icon',
+        des: `Abrí la app <strong>Trezor Suite</strong> en el móvil con el Trezor conectado. En la pantalla de inicio, tocar el <strong>ícono del dispositivo</strong> (esquina superior derecha).<br><br>
+        <div class="info">Aplica a todos los modelos Trezor: Model T, Safe 3, Safe 5, Safe 7.</div>`,
+        den: `Open the <strong>Trezor Suite</strong> app on mobile with the Trezor connected. On the home screen, tap the <strong>device icon</strong> (top right corner).<br><br>
+        <div class="info">Applies to all Trezor models: Model T, Safe 3, Safe 5, Safe 7.</div>`
+      },
+      {
+        f: 'hw-suite-mob-02.png',
+        es: 'Menú del Dispositivo - Ajustes del Dispositivo',
+        en: 'Device Menu - Device Settings',
+        des: `El menú del dispositivo muestra la billetera estándar conectada y dos opciones: <strong>Ajustes del dispositivo</strong> y <strong>Conecta el Trezor</strong>.<br><br>
+        Tocar <strong>"Ajustes del dispositivo"</strong> para acceder a la configuración de passphrase.`,
+        den: `The device menu shows the connected standard wallet and two options: <strong>Device settings</strong> and <strong>Connect Trezor</strong>.<br><br>
+        Tap <strong>"Device settings"</strong> to access the passphrase configuration.`
+      },
+      {
+        f: 'hw-suite-mob-03.png',
+        es: 'Ajustes → Seguridad → Copia de Seguridad y Passphrase',
+        en: 'Settings → Security → Backup and Passphrase',
+        des: `En Ajustes del dispositivo, ir a la sección <strong>Seguridad</strong> y tocar <strong>"Copia de seguridad de la billetera y passphrase"</strong>.<br><br>
+        Esta sección también muestra opciones de PIN y autenticidad del dispositivo.`,
+        den: `In Device settings, go to the <strong>Security</strong> section and tap <strong>"Wallet backup and passphrase"</strong>.<br><br>
+        This section also shows PIN options and device authenticity.`
+      },
+      {
+        f: 'hw-suite-mob-04.png',
+        es: 'Activar Toggle "Billeteras con Passphrase"',
+        en: 'Enable "Passphrase Wallets" Toggle',
+        des: `La pantalla muestra dos opciones:<br>
+        • <strong>Verificar la copia de seguridad de la billetera</strong><br>
+        • <strong>Billeteras con passphrase</strong> — toggle desactivado<br><br>
+        Tocar el toggle de <strong>"Billeteras con passphrase"</strong> para activar la función. La app pedirá confirmar la acción en el dispositivo físico.`,
+        den: `The screen shows two options:<br>
+        • <strong>Verify wallet backup</strong><br>
+        • <strong>Passphrase wallets</strong> — toggle disabled<br><br>
+        Tap the <strong>"Passphrase wallets"</strong> toggle to enable the feature. The app will ask to confirm the action on the physical device.`
+      },
+      {
+        f: 'hw-suite-mob-05.png',
+        es: 'Continúa en tu Trezor para Confirmar',
+        en: 'Continue on your Trezor to Confirm',
+        des: `La app muestra la pantalla <strong>"Continúa en tu Trezor"</strong> — el dispositivo físico debe confirmar la activación.<br><br>
+        Mirá la pantalla del Safe 7 para el siguiente paso.`,
+        den: `The app shows the <strong>"Continue on your Trezor"</strong> screen — the physical device must confirm the activation.<br><br>
+        Look at the Safe 7 screen for the next step.`
+      },
+      {
+        f: 'hw-suite-mob-06.png', imgW: 220,
+        es: 'Dispositivo - Confirmar Activación',
+        en: 'Device - Confirm Activation',
+        des: `El Safe 7 muestra la pregunta <strong>"¿Activar la protección por passphrase?"</strong>.<br><br>
+        Tocar <strong>Confirmar</strong> en la pantalla táctil del dispositivo. La passphrase queda habilitada para todas las sesiones futuras.`,
+        den: `Safe 7 shows the question <strong>"Activate passphrase protection?"</strong>.<br><br>
+        Tap <strong>Confirm</strong> on the device's touch screen. Passphrase is now enabled for all future sessions.`
+      },
+      {
+        f: 'hw-suite-mob-07.png',
+        es: 'Pantalla de Inicio - Botón "Abrir Passphrase"',
+        en: 'Home Screen - "Open Passphrase" Button',
+        des: `Con passphrase habilitada, la pantalla de inicio de la app ahora muestra el botón <strong>"Abrir passphrase"</strong> junto a "Ajustes del dispositivo".<br><br>
+        Tocar <strong>"Abrir passphrase"</strong> cada vez que quieras acceder a tu billetera protegida.`,
+        den: `With passphrase enabled, the app home screen now shows the <strong>"Open passphrase"</strong> button alongside "Device settings".<br><br>
+        Tap <strong>"Open passphrase"</strong> each time you want to access your protected wallet.`
+      },
+      {
+        f: 'hw-suite-mob-08.png',
+        es: 'Elegir Cómo Ingresar la Passphrase',
+        en: 'Choose How to Enter the Passphrase',
+        des: `La pantalla <strong>"Passphrase"</strong> ofrece dos opciones para ingresar:<br><br>
+        • <strong>"Ingresa tu passphrase"</strong> — tipear directamente en el campo del móvil<br>
+        • <strong>"Introduce la passphrase en tu Trezor"</strong> — tipear en el dispositivo físico<br><br>
+        <div class="tip">Ingresar en el dispositivo físico es más seguro — la passphrase nunca pasa por el móvil ni ningún software.</div>`,
+        den: `The <strong>"Passphrase"</strong> screen offers two options to enter:<br><br>
+        • <strong>"Enter your passphrase"</strong> — type directly in the mobile field<br>
+        • <strong>"Enter passphrase on your Trezor"</strong> — type on the physical device<br><br>
+        <div class="tip">Entering on the physical device is more secure — the passphrase never passes through the mobile or any software.</div>`
+      },
+      {
+        f: 'hw-suite-mob-09.png',
+        es: 'Opción Dispositivo - Continuar en Trezor',
+        en: 'Device Option - Continue on Trezor',
+        des: `Si elegiste ingresar en el dispositivo, la app muestra <strong>"Continuar en Trezor - Ingresa tu passphrase en tu Trezor"</strong>.<br><br>
+        El Safe 7 mostrará su teclado táctil para ingresar la passphrase directamente en el hardware.`,
+        den: `If you chose to enter on the device, the app shows <strong>"Continue on Trezor - Enter your passphrase on your Trezor"</strong>.<br><br>
+        Safe 7 will show its touch keyboard to enter the passphrase directly on the hardware.`
+      },
+      {
+        f: 'hw-suite-mob-10.png', imgW: 220,
+        es: 'Dispositivo - Teclado "Ingresa Passphrase"',
+        en: 'Device - "Enter Passphrase" Keyboard',
+        des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> con grupos de letras: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        Tocar cada grupo para seleccionar el carácter, navegar entre letras del grupo, y confirmar con <strong>✓</strong> al terminar.<br><br>
+        <div class="warn">⚠️ La passphrase es case-sensitive. Un carácter incorrecto abre una billetera diferente sin aviso.</div>`,
+        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard with letter groups: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        Tap each group to select the character, navigate between letters in the group, and confirm with <strong>✓</strong> when done.<br><br>
+        <div class="warn">⚠️ The passphrase is case-sensitive. One wrong character opens a different wallet without warning.</div>`
+      },
+      {
+        f: 'hw-suite-mob-11.png',
+        es: 'Opción Dispositivo - Continuar en Trezor',
+        en: 'Device Option - Continue on Trezor',
+        des: `Si elegiste ingresar en el dispositivo, la app muestra <strong>"Continuar en Trezor"</strong>. El dispositivo mostrará su teclado para ingresar la passphrase directamente en el hardware.`,
+        den: `If you chose to enter on the device, the app shows <strong>"Continue on Trezor"</strong>. The device will show its keyboard to enter the passphrase directly on hardware.`
+      },
+      {
+        f: 'hw-suite-mob-12.png',
+        es: 'Opción Alternativa - Tipear desde el Móvil',
+        en: 'Alternative Option - Type from Mobile',
+        des: `Opción alternativa: tipear la passphrase directamente en el campo del móvil.<br><br>
+        La app la enviará al dispositivo para derivar la billetera.<br><br>
+        <div class="info">Ingresar en el dispositivo físico siempre es más seguro que hacerlo desde el móvil.</div>`,
+        den: `Alternative option: type the passphrase directly in the mobile field.<br><br>
+        The app will send it to the device to derive the wallet.<br><br>
+        <div class="info">Entering on the physical device is always more secure than from mobile.</div>`
       },
     ]
   },
@@ -1357,57 +1495,6 @@ const SECTIONS = [
         Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
         <div class="warn">⚠️ No fingerprint. Save the first receiving address to verify in future sessions.</div>`
       },
-      {
-        f: 'hw-trezor-safe5-03.png',
-        es: 'Verificar con Dirección Conocida',
-        en: 'Verify with Known Address',
-        des: `Suite carga la billetera con passphrase activa. Verificar la primera dirección con tu registro previo.<br><br>
-        <div class="info">Safe 5 tiene chip EAL6+ + pantalla táctil + feedback háptico. Es la opción balanceada de la línea Safe para uso con passphrase frecuente.</div>`,
-        den: `Suite loads the active passphrase wallet. Verify the first address with your previous record.<br><br>
-        <div class="info">Safe 5 has EAL6+ chip + touchscreen + haptic feedback. It's the balanced Safe lineup option for frequent passphrase use.</div>`
-      },
-    ]
-  },
-
-  // TREZOR SUITE — PC (aplica a todos los modelos Trezor)
-  {
-    id: 'hw-trezor-suite-pc', ready: true, group: 'hw',
-    brand: 'Trezor',
-    es: 'Trezor Suite (PC)', en: 'Trezor Suite (PC)',
-    steps: [
-      {
-        f: 'hw-suite-pc-01.png',
-        es: 'Settings → Dispositivo → Activar Passphrase',
-        en: 'Settings → Device → Enable Passphrase',
-        des: `Abrí <strong>Trezor Suite</strong> (desktop) con el Trezor conectado. En la barra lateral hacer clic en <strong>Configuración → pestaña Dispositivo</strong>.<br><br>
-        En la sección <strong>Passphrase</strong>, activar el toggle <strong>"Usar billeteras con passphrase"</strong>. Suite pedirá confirmación en el dispositivo físico.<br><br>
-        <div class="info">Este proceso es igual para todos los modelos Trezor: Model T, Safe 3, Safe 5, Safe 7.</div>`,
-        den: `Open <strong>Trezor Suite</strong> (desktop) with the Trezor connected. In the sidebar click <strong>Settings → Device tab</strong>.<br><br>
-        In the <strong>Passphrase</strong> section, toggle <strong>"Use passphrase wallets"</strong>. Suite will ask for confirmation on the physical device.<br><br>
-        <div class="info">This process is the same for all Trezor models: Model T, Safe 3, Safe 5, Safe 7.</div>`
-      },
-      {
-        f: 'hw-suite-pc-02.png', imgW: 220,
-        es: 'Dispositivo - Confirmar Activación',
-        en: 'Device - Confirm Activation',
-        des: `El dispositivo Trezor muestra la pregunta <strong>"¿Activar la protección por passphrase?"</strong>.<br><br>
-        Confirmar en el dispositivo (botón o pantalla táctil según el modelo).<br><br>
-        <div class="warn">⚠️ Una vez activado, cada sesión pedirá ingresar la passphrase en el dispositivo físico.</div>`,
-        den: `The Trezor device shows <strong>"Activate passphrase protection?"</strong>.<br><br>
-        Confirm on the device (button or touchscreen depending on model).<br><br>
-        <div class="warn">⚠️ Once activated, each session will ask for the passphrase on the physical device.</div>`
-      },
-      {
-        f: 'hw-suite-pc-03.png', imgW: 220,
-        es: 'Dispositivo - Tipear la Passphrase',
-        en: 'Device - Type the Passphrase',
-        des: `Al abrir una billetera con passphrase, el dispositivo muestra el teclado para ingresar la frase. Ingresar carácter a carácter -la passphrase nunca viaja a la computadora.<br><br>
-        Confirmar con ✓. Suite abre la billetera derivada.<br><br>
-        <div class="tip">Primera vez: anotá la primera dirección de recepción para verificar en sesiones futuras.</div>`,
-        den: `When opening a passphrase wallet, the device shows a keyboard to enter the phrase. Enter character by character -the passphrase never travels to the computer.<br><br>
-        Confirm with ✓. Suite opens the derived wallet.<br><br>
-        <div class="tip">First time: write down the first receiving address to verify in future sessions.</div>`
-      },
     ]
   },
 
@@ -1436,6 +1523,37 @@ const SECTIONS = [
         den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard on its touchscreen. Letter groups: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
         Tap each group to select the character, confirm with ✓. Passphrase is entered entirely on hardware.<br><br>
         <div class="tip">Verify the first receiving address with your previous record.</div>`
+      },
+    ]
+  },
+
+  // TREZOR MODEL T — pasos en el dispositivo
+  {
+    id: 'hw-trezor-t', ready: true, group: 'hw',
+    brand: 'Trezor',
+    es: 'Trezor Model T', en: 'Trezor Model T',
+    steps: [
+      {
+        f: 'hw-trezor-t-01.png', imgW: 280,
+        es: 'Dispositivo - Confirmar Activación',
+        en: 'Device - Confirm Activation',
+        des: `El <strong>Trezor Model T</strong> tiene pantalla táctil a color. Desde <strong>Trezor Suite</strong> activar la passphrase; el Model T pide confirmación en su pantalla.<br><br>
+        Tocar <strong>Confirmar</strong> en el dispositivo.<br><br>
+        <div class="info">El Model T fue el primer Trezor con pantalla táctil. Usa Trezor Suite igual que los modelos Safe.</div>`,
+        den: `<strong>Trezor Model T</strong> has a color touchscreen. From <strong>Trezor Suite</strong> enable passphrase; Model T asks for confirmation on its screen.<br><br>
+        Tap <strong>Confirm</strong> on the device.<br><br>
+        <div class="info">Model T was the first Trezor with a touchscreen. Uses Trezor Suite the same as Safe models.</div>`
+      },
+      {
+        f: 'hw-trezor-t-02.png', imgW: 280,
+        es: 'Dispositivo - Teclado Táctil del Model T',
+        en: 'Device - Model T Touch Keyboard',
+        des: `Al abrir una billetera con passphrase, el Model T muestra el teclado táctil para ingresar la frase directamente en el dispositivo.<br><br>
+        Ingresar la passphrase y confirmar con ✓. Suite abre la billetera derivada.<br><br>
+        <div class="warn">⚠️ Trezor no muestra fingerprint. Guardá la primera dirección de recepción para verificar en sesiones futuras.</div>`,
+        den: `When opening a passphrase wallet, Model T shows the touch keyboard to enter the phrase directly on the device.<br><br>
+        Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
+        <div class="warn">⚠️ Trezor doesn't show a fingerprint. Save the first receiving address to verify in future sessions.</div>`
       },
     ]
   },
@@ -1872,133 +1990,6 @@ const SECTIONS = [
   // ─────────────────────────────────────────────────────────────
   // BLOQUE 3 -HOT WALLETS MOBILE
   // ─────────────────────────────────────────────────────────────
-
-  // TREZOR SUITE — MOBILE (aplica a todos los modelos Trezor)
-  {
-    id: 'hw-trezor-suite-mob', ready: true, group: 'hw',
-    brand: 'Trezor',
-    es: 'Trezor Suite (Mobile)', en: 'Trezor Suite (Mobile)',
-    steps: [
-      {
-        f: 'hw-suite-mob-01.png',
-        es: 'Pantalla de Inicio - Ícono del Dispositivo',
-        en: 'Home Screen - Device Icon',
-        des: `Abrí la app <strong>Trezor Suite</strong> en el móvil con el Trezor conectado. En la pantalla de inicio, tocar el <strong>ícono del dispositivo</strong> (esquina superior derecha).<br><br>
-        <div class="info">Aplica a todos los modelos Trezor: Model T, Safe 3, Safe 5, Safe 7.</div>`,
-        den: `Open the <strong>Trezor Suite</strong> app on mobile with the Trezor connected. On the home screen, tap the <strong>device icon</strong> (top right corner).<br><br>
-        <div class="info">Applies to all Trezor models: Model T, Safe 3, Safe 5, Safe 7.</div>`
-      },
-      {
-        f: 'hw-suite-mob-02.png',
-        es: 'Menú del Dispositivo - Ajustes del Dispositivo',
-        en: 'Device Menu - Device Settings',
-        des: `El menú del dispositivo muestra la billetera estándar conectada y dos opciones: <strong>Ajustes del dispositivo</strong> y <strong>Conecta el Trezor</strong>.<br><br>
-        Tocar <strong>"Ajustes del dispositivo"</strong> para acceder a la configuración de passphrase.`,
-        den: `The device menu shows the connected standard wallet and two options: <strong>Device settings</strong> and <strong>Connect Trezor</strong>.<br><br>
-        Tap <strong>"Device settings"</strong> to access the passphrase configuration.`
-      },
-      {
-        f: 'hw-suite-mob-03.png',
-        es: 'Ajustes → Seguridad → Copia de Seguridad y Passphrase',
-        en: 'Settings → Security → Backup and Passphrase',
-        des: `En Ajustes del dispositivo, ir a la sección <strong>Seguridad</strong> y tocar <strong>"Copia de seguridad de la billetera y passphrase"</strong>.<br><br>
-        Esta sección también muestra opciones de PIN y autenticidad del dispositivo.`,
-        den: `In Device settings, go to the <strong>Security</strong> section and tap <strong>"Wallet backup and passphrase"</strong>.<br><br>
-        This section also shows PIN options and device authenticity.`
-      },
-      {
-        f: 'hw-suite-mob-04.png',
-        es: 'Activar Toggle "Billeteras con Passphrase"',
-        en: 'Enable "Passphrase Wallets" Toggle',
-        des: `La pantalla muestra dos opciones:<br>
-        • <strong>Verificar la copia de seguridad de la billetera</strong><br>
-        • <strong>Billeteras con passphrase</strong> — toggle desactivado<br><br>
-        Tocar el toggle de <strong>"Billeteras con passphrase"</strong> para activar la función. La app pedirá confirmar la acción en el dispositivo físico.`,
-        den: `The screen shows two options:<br>
-        • <strong>Verify wallet backup</strong><br>
-        • <strong>Passphrase wallets</strong> — toggle disabled<br><br>
-        Tap the <strong>"Passphrase wallets"</strong> toggle to enable the feature. The app will ask to confirm the action on the physical device.`
-      },
-      {
-        f: 'hw-suite-mob-05.png',
-        es: 'Continúa en tu Trezor para Confirmar',
-        en: 'Continue on your Trezor to Confirm',
-        des: `La app muestra la pantalla <strong>"Continúa en tu Trezor"</strong> — el dispositivo físico debe confirmar la activación.<br><br>
-        Mirá la pantalla del Safe 7 para el siguiente paso.`,
-        den: `The app shows the <strong>"Continue on your Trezor"</strong> screen — the physical device must confirm the activation.<br><br>
-        Look at the Safe 7 screen for the next step.`
-      },
-      {
-        f: 'hw-suite-mob-06.png', imgW: 220,
-        es: 'Dispositivo - Confirmar Activación',
-        en: 'Device - Confirm Activation',
-        des: `El Safe 7 muestra la pregunta <strong>"¿Activar la protección por passphrase?"</strong>.<br><br>
-        Tocar <strong>Confirmar</strong> en la pantalla táctil del dispositivo. La passphrase queda habilitada para todas las sesiones futuras.`,
-        den: `Safe 7 shows the question <strong>"Activate passphrase protection?"</strong>.<br><br>
-        Tap <strong>Confirm</strong> on the device's touch screen. Passphrase is now enabled for all future sessions.`
-      },
-      {
-        f: 'hw-suite-mob-07.png',
-        es: 'Pantalla de Inicio - Botón "Abrir Passphrase"',
-        en: 'Home Screen - "Open Passphrase" Button',
-        des: `Con passphrase habilitada, la pantalla de inicio de la app ahora muestra el botón <strong>"Abrir passphrase"</strong> junto a "Ajustes del dispositivo".<br><br>
-        Tocar <strong>"Abrir passphrase"</strong> cada vez que quieras acceder a tu billetera protegida.`,
-        den: `With passphrase enabled, the app home screen now shows the <strong>"Open passphrase"</strong> button alongside "Device settings".<br><br>
-        Tap <strong>"Open passphrase"</strong> each time you want to access your protected wallet.`
-      },
-      {
-        f: 'hw-suite-mob-08.png',
-        es: 'Elegir Cómo Ingresar la Passphrase',
-        en: 'Choose How to Enter the Passphrase',
-        des: `La pantalla <strong>"Passphrase"</strong> ofrece dos opciones para ingresar:<br><br>
-        • <strong>"Ingresa tu passphrase"</strong> — tipear directamente en el campo del móvil<br>
-        • <strong>"Introduce la passphrase en tu Trezor"</strong> — tipear en el dispositivo físico<br><br>
-        <div class="tip">Ingresar en el dispositivo físico es más seguro — la passphrase nunca pasa por el móvil ni ningún software.</div>`,
-        den: `The <strong>"Passphrase"</strong> screen offers two options to enter:<br><br>
-        • <strong>"Enter your passphrase"</strong> — type directly in the mobile field<br>
-        • <strong>"Enter passphrase on your Trezor"</strong> — type on the physical device<br><br>
-        <div class="tip">Entering on the physical device is more secure — the passphrase never passes through the mobile or any software.</div>`
-      },
-      {
-        f: 'hw-suite-mob-09.png',
-        es: 'Opción Dispositivo - Continuar en Trezor',
-        en: 'Device Option - Continue on Trezor',
-        des: `Si elegiste ingresar en el dispositivo, la app muestra <strong>"Continuar en Trezor - Ingresa tu passphrase en tu Trezor"</strong>.<br><br>
-        El Safe 7 mostrará su teclado táctil para ingresar la passphrase directamente en el hardware.`,
-        den: `If you chose to enter on the device, the app shows <strong>"Continue on Trezor - Enter your passphrase on your Trezor"</strong>.<br><br>
-        Safe 7 will show its touch keyboard to enter the passphrase directly on the hardware.`
-      },
-      {
-        f: 'hw-suite-mob-10.png', imgW: 220,
-        es: 'Dispositivo - Teclado "Ingresa Passphrase"',
-        en: 'Device - "Enter Passphrase" Keyboard',
-        des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> con grupos de letras: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
-        Tocar cada grupo para seleccionar el carácter, navegar entre letras del grupo, y confirmar con <strong>✓</strong> al terminar.<br><br>
-        <div class="warn">⚠️ La passphrase es case-sensitive. Un carácter incorrecto abre una billetera diferente sin aviso.</div>`,
-        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard with letter groups: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
-        Tap each group to select the character, navigate between letters in the group, and confirm with <strong>✓</strong> when done.<br><br>
-        <div class="warn">⚠️ The passphrase is case-sensitive. One wrong character opens a different wallet without warning.</div>`
-      },
-      {
-        f: 'hw-suite-mob-11.png',
-        es: 'Opción Dispositivo - Continuar en Trezor',
-        en: 'Device Option - Continue on Trezor',
-        des: `Si elegiste ingresar en el dispositivo, la app muestra <strong>"Continuar en Trezor"</strong>. El dispositivo mostrará su teclado para ingresar la passphrase directamente en el hardware.`,
-        den: `If you chose to enter on the device, the app shows <strong>"Continue on Trezor"</strong>. The device will show its keyboard to enter the passphrase directly on hardware.`
-      },
-      {
-        f: 'hw-suite-mob-12.png',
-        es: 'Opción Alternativa - Tipear desde el Móvil',
-        en: 'Alternative Option - Type from Mobile',
-        des: `Opción alternativa: tipear la passphrase directamente en el campo del móvil.<br><br>
-        La app la enviará al dispositivo para derivar la billetera.<br><br>
-        <div class="info">Ingresar en el dispositivo físico siempre es más seguro que hacerlo desde el móvil.</div>`,
-        den: `Alternative option: type the passphrase directly in the mobile field.<br><br>
-        The app will send it to the device to derive the wallet.<br><br>
-        <div class="info">Entering on the physical device is always more secure than from mobile.</div>`
-      },
-    ]
-  },
 
   // BLUEWALLET
   {
