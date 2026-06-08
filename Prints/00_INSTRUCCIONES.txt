@@ -1,0 +1,178 @@
+# INSTRUCCIONES — Carpeta Prints
+# Tutorial-Passphrase — Screenshots por modelo (uno por uno)
+# Convención: {bloque}-{modelo}-{nn}.png
+
+## ══════════════════════════════════════
+## HARDWARE WALLETS
+## ══════════════════════════════════════
+
+### Jade (botones físicos) — Blockstream
+hw-jade-01.png           → Pantalla de inicio — seleccionar Options
+hw-jade-02.png           → Options → BIP39 Passphrase
+hw-jade-03.png           → Seleccionar Frequency (Never / Next Login Only / Always Ask)
+hw-jade-04.png           → Seleccionar Method (Manual / WordList)
+hw-jade-05.png           → Enter Passphrase — teclado en pantalla QWERTY
+hw-jade-06.png           → Pantalla de inicio con fingerprint activo (ej. 808B18) ✅ MAPEADO
+
+### Jade Plus (pantalla táctil) — Blockstream
+hw-jade-plus-01.png      → Options → BIP39 Passphrase (pantalla táctil)
+hw-jade-plus-02.png      → Teclado QWERTY táctil + WordList
+hw-jade-plus-03.png      → Dirección de verificación
+
+### Coldcard Mk4 — Coinkite
+hw-coldcard-mk4-01.png   → PIN → menú principal → Passphrase
+hw-coldcard-mk4-02.png   → Edit Phrase: teclado en pantalla con pad numérico
+hw-coldcard-mk4-03.png   → Wallet Fingerprint (8 chars hex)
+hw-coldcard-mk4-04.png   → Apply + opción MicroSD cifrado
+
+### Coldcard Mk5 — Coinkite
+hw-coldcard-mk5-01.png   → PIN → menú principal → Passphrase
+hw-coldcard-mk5-02.png   → Edit Phrase: teclado idéntico a Mk4
+hw-coldcard-mk5-03.png   → Wallet Fingerprint + Apply
+
+### Coldcard Q — Coinkite
+hw-coldcard-q-01.png     → PIN → menú principal (teclado QWERTY físico visible)
+hw-coldcard-q-02.png     → Edit Phrase: escritura directa en teclado QWERTY
+hw-coldcard-q-03.png     → Wallet Fingerprint + Apply + MicroSD
+
+### BitBox02 — Shift Crypto
+hw-bitbox-01.png         → BitBoxApp → clic en Configuración (sidebar) ✅ MAPEADO
+hw-bitbox-02.png         → Pestaña "Administrar dispositivo" ✅ MAPEADO
+hw-bitbox-03.png         → Configuración avanzada → Passphrase (Desactivado) ✅ MAPEADO
+hw-bitbox-04.png         → Wizard "Configurar passphrase" → Aprende como funciona ✅ MAPEADO
+hw-bitbox-05.png         → Resumen → tildar checkbox → Activar passphrase ✅ MAPEADO
+hw-bitbox-06.png         → Dispositivo físico: teclado "Optional passphrase" en OLED ✅ MAPEADO
+hw-bitbox-07.png         → Root fingerprint verificado / Passphrase = Activado ✅ MAPEADO
+
+### BitBox02 Nova — Shift Crypto
+hw-bitbox-nova-01.png    → BitBoxApp + Settings → Expert Settings
+hw-bitbox-nova-02.png    → Entrada en dispositivo Nova
+hw-bitbox-nova-03.png    → Wallet estándar vs wallet con passphrase
+
+### Ledger Nano X — Ledger
+hw-ledger-nanox-01.png   → Settings → Security → Passphrase (dos botones)
+hw-ledger-nanox-02.png   → Teclado en pantalla navegado con dos botones
+hw-ledger-nanox-03.png   → Confirmación + app Bitcoin abierta
+
+### Ledger Nano S Plus — Ledger
+hw-ledger-splus-01.png   → Settings → Security → Passphrase
+hw-ledger-splus-02.png   → Misma UX de dos botones que Nano X
+hw-ledger-splus-03.png   → App Bitcoin con passphrase activa
+
+### Ledger Flex — Ledger
+hw-ledger-flex-01.png    → Settings → Security → Passphrase (pantalla E Ink táctil)
+hw-ledger-flex-02.png    → Teclado táctil QWERTY
+hw-ledger-flex-03.png    → App Bitcoin activa
+
+### Ledger Stax — Ledger
+hw-ledger-stax-01.png    → Settings → Security → Passphrase (pantalla curva 3.7")
+hw-ledger-stax-02.png    → Teclado táctil grande
+hw-ledger-stax-03.png    → App Bitcoin activa
+
+### Trezor Model T — Trezor
+hw-trezor-t-01.png       → Trezor Suite: Settings → Device → Passphrase
+hw-trezor-t-02.png       → Wallet menu → + Passphrase wallet
+hw-trezor-t-03.png       → Teclado táctil en Model T
+
+### Trezor Safe 3 — Trezor
+hw-trezor-safe3-01.png   → Suite: Settings → Device → Passphrase
+hw-trezor-safe3-02.png   → Wallet menu → + Passphrase wallet (dos botones)
+hw-trezor-safe3-03.png   → Dirección de verificación
+
+### Trezor Safe 5 — Trezor
+hw-trezor-safe5-01.png   → Suite: Settings → Device → Passphrase
+hw-trezor-safe5-02.png   → Teclado táctil 1.54" con feedback háptico
+hw-trezor-safe5-03.png   → Dirección de verificación
+
+### Trezor Safe 7 — Trezor
+hw-trezor-safe7-01.png   → Suite: Settings → Device → Passphrase
+hw-trezor-safe7-02.png   → Teclado táctil 2.47" (más grande de la línea)
+hw-trezor-safe7-03.png   → Dirección de verificación
+
+### SeedSigner — DIY Open Source
+hw-seedsigner-01.png     → Cargar seed → pantalla "Add Passphrase?"
+hw-seedsigner-02.png     → Teclado de entrada + fingerprint nuevo
+
+### Passport Gen2 — Foundation
+hw-passport-gen2-01.png  → MORE(↑) → Settings → Advanced → Passphrase
+hw-passport-gen2-02.png  → Teclado físico alfanumérico + fingerprint + "P en escudo"
+
+### Passport 02 — Foundation
+hw-passport-02-01.png    → MORE(↑) → Settings → Advanced → Passphrase
+hw-passport-02-02.png    → Teclado físico + fingerprint + Apply
+
+### Passport Prime — Foundation
+hw-passport-prime-01.png → MORE(↑) → Settings → Advanced → Passphrase (táctil)
+hw-passport-prime-02.png → Teclado QWERTY táctil + fingerprint + "P en escudo"
+
+### Keystone 3 — Keystone
+hw-keystone3-01.png      → Menú (…) → Device Settings → Wallet Settings → Passphrase
+hw-keystone3-02.png      → Teclado táctil 4" + entrada (máx 128 chars)
+hw-keystone3-03.png      → Wallet estándar vs wallet con passphrase
+
+### Keystone 3 Pro — Keystone
+hw-keystone3-pro-01.png  → Mismo menú que Keystone 3 (con cámara QR visible)
+hw-keystone3-pro-02.png  → Teclado táctil + confirmación
+
+### Specter DIY — Specter Solutions
+hw-specter-diy-01.png    → PIN → anti-phishing words → opción passphrase
+hw-specter-diy-02.png    → Teclado estilo iPhone
+hw-specter-diy-03.png    → QR export de xpub a Specter Desktop
+
+### Specter Shield — Specter Solutions
+hw-specter-shield-01.png → PIN + anti-phishing → passphrase (slot smartcard visible)
+hw-specter-shield-02.png → Teclado iPhone + QR export
+
+## ══════════════════════════════════════
+## DESKTOP WALLETS
+## ══════════════════════════════════════
+
+### Blockstream Green Desktop
+sw-green-01.png          → Wallet → (⋯) → Login with BIP39 Passphrase
+sw-green-02.png          → Campo de passphrase + Submit
+sw-green-03.png          → Billetera cargada, dirección verificación
+
+### Specter Desktop
+sw-specter-01.png        → Add Device → campo BIP39 passphrase (optional)
+sw-specter-02.png        → Importar key con passphrase
+
+### Sparrow Wallet
+sw-sparrow-01.png        → File → New Wallet → Mnemonic Words (BIP39)
+sw-sparrow-02.png        → Campo BIP39 Passphrase en import
+sw-sparrow-03.png        → Master Fingerprint visible
+
+### Electrum
+sw-electrum-01.png       → I already have a seed
+sw-electrum-02.png       → Options → BIP39 + "Extend with custom words"
+sw-electrum-03.png       → Campo "Custom words" (= passphrase)
+
+## ══════════════════════════════════════
+## HOT WALLETS MOBILE
+## ══════════════════════════════════════
+
+### BlueWallet
+mob-blue-01.png          → Add wallet → Import (con Advanced Mode activo)
+mob-blue-02.png          → Campo BIP39 Passphrase en import
+
+### Blockstream Green Mobile
+mob-green-01.png         → Restore wallet con seed
+mob-green-02.png         → (⋯) → Login with BIP39 Passphrase → campo
+
+### Bull Bitcoin Wallet
+mob-bull-01.png          → Import seed + campo passphrase
+
+### Nunchuk
+mob-nunchuk-01.png       → Add software key → botón [Set passphrase]
+mob-nunchuk-02.png       → Fingerprint actualizado tras añadir passphrase
+
+### Phoenix Wallet
+(Sin screenshots — Phoenix es Lightning-only, no soporta BIP39 passphrase estándar)
+
+## ══════════════════════════════════════
+## FUENTES PARA SCREENSHOTS
+## ══════════════════════════════════════
+- Econoalchemist (Passport + Coldcard): https://econoalchemist.github.io/
+- Arman the Parman (multi-dispositivo): https://armantheparman.com/passphrase/
+- Plan B Academy: https://planb.academy/tutorials/wallet/backup/
+- Docs oficiales de cada fabricante (ver Fuentes.txt en raíz)
+- Capturas propias del dispositivo/app

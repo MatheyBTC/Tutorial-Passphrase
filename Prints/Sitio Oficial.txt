@@ -1,0 +1,4 @@
+Jade + Jade Plus
+https://help.blockstream.com/blockstream-jade/add-more-security-functionality/add-a-bip39-passphrase-for-jade
+BitBox02 + Bitbox02 Nova
+https://support.bitbox.swiss/optional-passphrase/use-manage-bitbox02-optional-passphrase?from_search=230635202&swifty_search_highlight=passphrase

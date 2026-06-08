@@ -305,26 +305,26 @@
 
 <!-- LIGHTBOX -->
 <div id="lightbox">
-  <span id="lightbox-close">âœ•</span>
+  <span id="lightbox-close">✕</span>
   <img id="lightbox-img" src="" alt="">
   <div id="lightbox-caption"></div>
 </div>
 
 <script>
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // LANG
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 let LANG = 'es';
 const t = (es, en) => LANG === 'es' ? es : en;
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // DATA -Secciones y pasos
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 const SECTIONS = [
 
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
   // 00 -INTRODUCCI“N
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
   {
     id: 'intro-01', group: 'intro',
     es: '01 - ¿Qué es la Passphrase?', en: '01 - What is a Passphrase?',
@@ -423,16 +423,16 @@ const SECTIONS = [
         en: 'Allowed Characters in a Passphrase',
         des: `La passphrase acepta <strong>caracteres ASCII estándar</strong>. Podés usar cualquier combinación de:<br><br>
         <strong>Letras</strong><br>
-        âžœ Minúsculas: <code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code><br>
-        âžœ Mayúsculas: <code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code><br><br>
+        ➜ Minúsculas: <code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code><br>
+        ➜ Mayúsculas: <code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code><br><br>
         <strong>Números</strong><br>
-        âžœ <code>0 1 2 3 4 5 6 7 8 9</code><br><br>
+        ➜ <code>0 1 2 3 4 5 6 7 8 9</code><br><br>
         <strong>Símbolos y caracteres especiales</strong><br>
-        âžœ <code>! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ \` { | } ~ §</code><br><br>
+        ➜ <code>! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ \` { | } ~ §</code><br><br>
         <strong>Espacio</strong><br>
-        âžœ Un carácter de espacio en blanco (Ë½) es válido y forma parte de la passphrase<br><br>
+        ➜ Un carácter de espacio en blanco (␣) es válido y forma parte de la passphrase<br><br>
         <strong>Longitud máxima</strong><br>
-        âžœ El estándar BIP39 permite hasta <strong>127 caracteres</strong>. Algunos dispositivos aplican sus propios límites:<br>
+        ➜ El estándar BIP39 permite hasta <strong>127 caracteres</strong>. Algunos dispositivos aplican sus propios límites:<br>
         &nbsp;&nbsp;&nbsp;• Trezor: hasta 50 caracteres<br>
         &nbsp;&nbsp;&nbsp;• Ledger: hasta 100 caracteres<br>
         &nbsp;&nbsp;&nbsp;• Jade / BitBox02: hasta 127 caracteres<br><br>
@@ -441,16 +441,16 @@ const SECTIONS = [
         </div>`,
         den: `The passphrase accepts <strong>standard ASCII characters</strong>. You can use any combination of:<br><br>
         <strong>Letters</strong><br>
-        âžœ Lowercase: <code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code><br>
-        âžœ Uppercase: <code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code><br><br>
+        ➜ Lowercase: <code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code><br>
+        ➜ Uppercase: <code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code><br><br>
         <strong>Numbers</strong><br>
-        âžœ <code>0 1 2 3 4 5 6 7 8 9</code><br><br>
+        ➜ <code>0 1 2 3 4 5 6 7 8 9</code><br><br>
         <strong>Symbols and special characters</strong><br>
-        âžœ <code>! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ \` { | } ~ §</code><br><br>
+        ➜ <code>! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ \` { | } ~ §</code><br><br>
         <strong>Space</strong><br>
-        âžœ A whitespace character (Ë½) is valid and is part of the passphrase<br><br>
+        ➜ A whitespace character (␣) is valid and is part of the passphrase<br><br>
         <strong>Maximum length</strong><br>
-        âžœ The BIP39 standard allows up to <strong>127 characters</strong>. Some devices apply their own limits:<br>
+        ➜ The BIP39 standard allows up to <strong>127 characters</strong>. Some devices apply their own limits:<br>
         &nbsp;&nbsp;&nbsp;• Trezor: up to 50 characters<br>
         &nbsp;&nbsp;&nbsp;• Ledger: up to 100 characters<br>
         &nbsp;&nbsp;&nbsp;• Jade / BitBox02: up to 127 characters<br><br>
@@ -469,45 +469,45 @@ const SECTIONS = [
         noImg: true,
         es: 'Qué Considerar Antes de Usar una Passphrase',
         en: 'What to Consider Before Using a Passphrase',
-        des: `âžœ <strong>Cada passphrase deriva una billetera completamente diferente.</strong><br>
+        des: `➜ <strong>Cada passphrase deriva una billetera completamente diferente.</strong><br>
         No hay billetera "incorrecta" —cualquier passphrase abre una billetera válida.<br><br>
-        âžœ <strong>Perder la passphrase equivale a perder el acceso a esa billetera.</strong><br>
+        ➜ <strong>Perder la passphrase equivale a perder el acceso a esa billetera.</strong><br>
         Sin recuperación posible. Sin excepción.<br><br>
-        âžœ <strong>Mayúsculas y minúsculas importan.</strong><br>
-        <code>Bitcoin</code> â‰  <code>bitcoin</code> — son billeteras distintas.<br><br>
-        âžœ <strong>Los espacios también importan.</strong><br>
-        <code>"bitcoin"</code> â‰  <code>" bitcoin"</code> â‰  <code>"bitcoin "</code><br><br>
-        âžœ <strong>Un error de tipeo crea otra billetera.</strong><br>
+        ➜ <strong>Mayúsculas y minúsculas importan.</strong><br>
+        <code>Bitcoin</code> ≠ <code>bitcoin</code> — son billeteras distintas.<br><br>
+        ➜ <strong>Los espacios también importan.</strong><br>
+        <code>"bitcoin"</code> ≠ <code>" bitcoin"</code> ≠ <code>"bitcoin "</code><br><br>
+        ➜ <strong>Un error de tipeo crea otra billetera.</strong><br>
         Tu dispositivo no te avisa. Abrirá una billetera diferente sin dar ningún mensaje de error.<br><br>
-        âžœ <strong>La passphrase no tiene mecanismo de recuperación.</strong><br>
+        ➜ <strong>La passphrase no tiene mecanismo de recuperación.</strong><br>
         Ni el fabricante del dispositivo, ni nadie más puede recuperarla por vos.<br><br>
-        âžœ <strong>Tu passphrase no es parte de tu seed (12/24 palabras).</strong><br>
+        ➜ <strong>Tu passphrase no es parte de tu seed (12/24 palabras).</strong><br>
         Ambas son secretos independientes. Perder cualquiera de los dos significa perder acceso.<br><br>
-        âžœ <strong>Verificá recuperación y acceso antes de hacer cualquier transacción.</strong><br>
+        ➜ <strong>Verificá recuperación y acceso antes de hacer cualquier transacción.</strong><br>
         Enviá una cantidad pequeña, desconectá el dispositivo, volvé a conectar e ingresá la passphrase —verificá que los fondos aparecen.<br><br>
-        âžœ <strong>No uses una passphrase demasiado compleja sin un plan de respaldo claro.</strong><br>
+        ➜ <strong>No uses una passphrase demasiado compleja sin un plan de respaldo claro.</strong><br>
         La complejidad es buena, pero solo si podés reproducirla exactamente cuando la necesites.<br><br>
-        âžœ <strong>Tus herederos necesitan conocer el procedimiento completo.</strong><br>
+        ➜ <strong>Tus herederos necesitan conocer el procedimiento completo.</strong><br>
         Si fallecés sin dejar instrucciones, nadie podrá acceder a esos fondos.`,
-        den: `âžœ <strong>Each passphrase derives a completely different wallet.</strong><br>
+        den: `➜ <strong>Each passphrase derives a completely different wallet.</strong><br>
         There is no "wrong" wallet —any passphrase opens a valid wallet.<br><br>
-        âžœ <strong>Losing the passphrase means losing access to that wallet.</strong><br>
+        ➜ <strong>Losing the passphrase means losing access to that wallet.</strong><br>
         No recovery possible. No exceptions.<br><br>
-        âžœ <strong>Uppercase and lowercase matter.</strong><br>
-        <code>Bitcoin</code> â‰  <code>bitcoin</code> — these are different wallets.<br><br>
-        âžœ <strong>Spaces also matter.</strong><br>
-        <code>"bitcoin"</code> â‰  <code>" bitcoin"</code> â‰  <code>"bitcoin "</code><br><br>
-        âžœ <strong>A typo creates another wallet.</strong><br>
+        ➜ <strong>Uppercase and lowercase matter.</strong><br>
+        <code>Bitcoin</code> ≠ <code>bitcoin</code> — these are different wallets.<br><br>
+        ➜ <strong>Spaces also matter.</strong><br>
+        <code>"bitcoin"</code> ≠ <code>" bitcoin"</code> ≠ <code>"bitcoin "</code><br><br>
+        ➜ <strong>A typo creates another wallet.</strong><br>
         Your device won't warn you. It will open a different wallet without any error message.<br><br>
-        âžœ <strong>The passphrase has no recovery mechanism.</strong><br>
+        ➜ <strong>The passphrase has no recovery mechanism.</strong><br>
         Not the device manufacturer, not anyone else can recover it for you.<br><br>
-        âžœ <strong>Your passphrase is not part of your seed (12/24 words).</strong><br>
+        ➜ <strong>Your passphrase is not part of your seed (12/24 words).</strong><br>
         Both are independent secrets. Losing either one means losing access.<br><br>
-        âžœ <strong>Verify recovery and access before making any transaction.</strong><br>
+        ➜ <strong>Verify recovery and access before making any transaction.</strong><br>
         Send a small amount, disconnect the device, reconnect and enter the passphrase —verify that the funds appear.<br><br>
-        âžœ <strong>Don't use an overly complex passphrase without a clear backup plan.</strong><br>
+        ➜ <strong>Don't use an overly complex passphrase without a clear backup plan.</strong><br>
         Complexity is good, but only if you can reproduce it exactly when needed.<br><br>
-        âžœ <strong>Your heirs need to know the complete procedure.</strong><br>
+        ➜ <strong>Your heirs need to know the complete procedure.</strong><br>
         If you pass away without leaving instructions, no one will be able to access those funds.`
       },
     ]
@@ -525,18 +525,18 @@ const SECTIONS = [
         <strong>Regla fundamental: guardá la passphrase SEPARADA de tu seed</strong><br>
         Si alguien encuentra la seed, que no encuentre también la passphrase en el mismo lugar. Guardadas juntas, la passphrase no agrega ninguna protección.<br><br>
         <strong>Opciones de respaldo físico</strong><br>
-        âžœ <strong>Papel:</strong> escríbila con bolígrafo en papel resistente. Guardalo en un lugar seguro, seco y protegido del fuego.<br>
-        âžœ <strong>Metal:</strong> grábar o estampar en acero inoxidable o titanio —resistente al fuego, agua y corrosión. Opción más durable.<br>
-        âžœ <strong>Múltiples copias:</strong> considerá tener al menos dos copias físicas en ubicaciones distintas.<br><br>
+        ➜ <strong>Papel:</strong> escríbila con bolígrafo en papel resistente. Guardalo en un lugar seguro, seco y protegido del fuego.<br>
+        ➜ <strong>Metal:</strong> grábar o estampar en acero inoxidable o titanio —resistente al fuego, agua y corrosión. Opción más durable.<br>
+        ➜ <strong>Múltiples copias:</strong> considerá tener al menos dos copias físicas en ubicaciones distintas.<br><br>
         <strong>Qué NO hacer</strong><br>
-        âžœ No la guardes en formato digital: ni en email, ni en notas del teléfono, ni en la nube, ni en fotos.<br>
-        âžœ No la guardes junto a tu seed o en el mismo lugar físico.<br>
-        âžœ No la compartas con nadie que no deba tener acceso a tus fondos.<br><br>
+        ➜ No la guardes en formato digital: ni en email, ni en notas del teléfono, ni en la nube, ni en fotos.<br>
+        ➜ No la guardes junto a tu seed o en el mismo lugar físico.<br>
+        ➜ No la compartas con nadie que no deba tener acceso a tus fondos.<br><br>
         <strong>Verificación del fingerprint</strong><br>
         Algunos dispositivos (Jade, BitBox02, Coldcard) muestran un <strong>fingerprint o huella raíz</strong> al cargar la wallet con passphrase. Este código corto es único para cada combinación semilla + passphrase. Anotalo junto a la passphrase —te sirve para confirmar en sesiones futuras que ingresaste la passphrase correctamente.<br><br>
         <strong>Plan de herencia</strong><br>
-        âžœ Dejá instrucciones escritas y seguras para tus herederos.<br>
-        âžœ Explicá que existe una passphrase, dónde está guardada y cómo usarla para acceder a los fondos.<br><br>
+        ➜ Dejá instrucciones escritas y seguras para tus herederos.<br>
+        ➜ Explicá que existe una passphrase, dónde está guardada y cómo usarla para acceder a los fondos.<br><br>
         <div class="warn">
         Sin passphrase + sin seed = sin acceso. Tratá ambos secretos con el mismo nivel de cuidado y seriedad.
         </div>`,
@@ -544,18 +544,18 @@ const SECTIONS = [
         <strong>Fundamental rule: store the passphrase SEPARATELY from your seed</strong><br>
         If someone finds the seed, they should not also find the passphrase in the same place. Stored together, the passphrase adds no protection.<br><br>
         <strong>Physical backup options</strong><br>
-        âžœ <strong>Paper:</strong> write it with a pen on sturdy paper. Store in a safe, dry, fire-protected place.<br>
-        âžœ <strong>Metal:</strong> engrave or stamp on stainless steel or titanium —resistant to fire, water and corrosion. Most durable option.<br>
-        âžœ <strong>Multiple copies:</strong> consider having at least two physical copies in different locations.<br><br>
+        ➜ <strong>Paper:</strong> write it with a pen on sturdy paper. Store in a safe, dry, fire-protected place.<br>
+        ➜ <strong>Metal:</strong> engrave or stamp on stainless steel or titanium —resistant to fire, water and corrosion. Most durable option.<br>
+        ➜ <strong>Multiple copies:</strong> consider having at least two physical copies in different locations.<br><br>
         <strong>What NOT to do</strong><br>
-        âžœ Don't store it digitally: not in email, phone notes, the cloud, or photos.<br>
-        âžœ Don't store it with your seed or in the same physical location.<br>
-        âžœ Don't share it with anyone who should not have access to your funds.<br><br>
+        ➜ Don't store it digitally: not in email, phone notes, the cloud, or photos.<br>
+        ➜ Don't store it with your seed or in the same physical location.<br>
+        ➜ Don't share it with anyone who should not have access to your funds.<br><br>
         <strong>Fingerprint verification</strong><br>
         Some devices (Jade, BitBox02, Coldcard) show a <strong>fingerprint or root fingerprint</strong> when loading the wallet with passphrase. This short code is unique to each seed + passphrase combination. Write it down alongside the passphrase —it helps you confirm in future sessions that you entered the passphrase correctly.<br><br>
         <strong>Inheritance plan</strong><br>
-        âžœ Leave written and secure instructions for your heirs.<br>
-        âžœ Explain that a passphrase exists, where it is stored and how to use it to access the funds.<br><br>
+        ➜ Leave written and secure instructions for your heirs.<br>
+        ➜ Explain that a passphrase exists, where it is stored and how to use it to access the funds.<br><br>
         <div class="warn">
         No passphrase + no seed = no access. Treat both secrets with the same level of care and seriousness.
         </div>`
@@ -563,9 +563,9 @@ const SECTIONS = [
     ]
   },
 
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
   // BLOQUE 1 -HARDWARE WALLETS
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
 
   // JADE (original -botones físicos)
   {
@@ -584,8 +584,8 @@ const SECTIONS = [
       },
       {
         f: 'hw-jade-02.png',
-        es: 'Options â†’ BIP39 Passphrase',
-        en: 'Options â†’ BIP39 Passphrase',
+        es: 'Options → BIP39 Passphrase',
+        en: 'Options → BIP39 Passphrase',
         des: `Dentro del menú Options, navegar hasta <strong>"BIP39 Passphrase"</strong> y confirmar con el botón central.<br><br>
         El menú también muestra <strong>Device</strong> y <strong>Temporary Signer</strong>.`,
         den: `Inside the Options menu, navigate to <strong>"BIP39 Passphrase"</strong> and confirm with the center button.<br><br>
@@ -615,11 +615,11 @@ const SECTIONS = [
         des: `Navegar a <strong>Method</strong> y confirmar para cambiar el método de entrada:<br><br>
         • <code>Manual</code> -ingresás la passphrase carácter por carácter con el teclado en pantalla<br>
         • <code>WordList</code> -ingresás palabras BIP39 con autocompletado (más fácil de tipear en el dispositivo)<br><br>
-        <div class="warn">âš ï¸ Sea cual sea el método, la passphrase es <strong>case-sensitive</strong>. Anotá exactamente cómo la ingresás.</div>`,
+        <div class="warn">⚠️ Sea cual sea el método, la passphrase es <strong>case-sensitive</strong>. Anotá exactamente cómo la ingresás.</div>`,
         den: `Navigate to <strong>Method</strong> and confirm to change the entry method:<br><br>
         • <code>Manual</code> -enter the passphrase character by character with the on-screen keyboard<br>
         • <code>WordList</code> -enter BIP39 words with autocomplete (easier to type on the device)<br><br>
-        <div class="warn">âš ï¸ Regardless of method, the passphrase is <strong>case-sensitive</strong>. Note exactly how you enter it.</div>`
+        <div class="warn">⚠️ Regardless of method, the passphrase is <strong>case-sensitive</strong>. Note exactly how you enter it.</div>`
       },
       {
         f: 'hw-jade-05.png',
@@ -627,13 +627,13 @@ const SECTIONS = [
         en: 'Enter Passphrase -On-Screen Keyboard',
         des: `Jade muestra la pantalla <strong>"Enter Passphrase"</strong> con el teclado QWERTY en azul.<br><br>
         Navegar con los botones laterales hasta cada letra, confirmar con el botón central. Al terminar:<br>
-        • <strong>â†’</strong> para avanzar al siguiente conjunto de caracteres<br>
-        • <strong>âœ“</strong> para confirmar la passphrase completa<br><br>
+        • <strong>→</strong> para avanzar al siguiente conjunto de caracteres<br>
+        • <strong>✓</strong> para confirmar la passphrase completa<br><br>
         <div class="tip">La primera vez que usás la passphrase: anotá una dirección de recepción en papel para verificar en sesiones futuras -Jade no guarda fingerprint como Coldcard.</div>`,
         den: `Jade shows the <strong>"Enter Passphrase"</strong> screen with the blue QWERTY keyboard.<br><br>
         Navigate with side buttons to each letter, confirm with center button. When done:<br>
-        • <strong>â†’</strong> to advance to the next character set<br>
-        • <strong>âœ“</strong> to confirm the complete passphrase<br><br>
+        • <strong>→</strong> to advance to the next character set<br>
+        • <strong>✓</strong> to confirm the complete passphrase<br><br>
         <div class="tip">First time using your passphrase: write down a receiving address on paper to verify in future sessions -Jade doesn't store a fingerprint like Coldcard.</div>`
       },
       {
@@ -667,8 +667,8 @@ const SECTIONS = [
       },
       {
         f: 'hw-jade-plus-02.png',
-        es: 'Options â†’ BIP39 Passphrase',
-        en: 'Options â†’ BIP39 Passphrase',
+        es: 'Options → BIP39 Passphrase',
+        en: 'Options → BIP39 Passphrase',
         des: `En el menú Options, tocar <strong>"BIP39 Passphrase"</strong>.<br><br>
         El menú también muestra <strong>Device</strong> y <strong>Temporary Signer</strong>. La navegación táctil es precisa y rápida -sin necesidad de botones físicos.`,
         den: `In the Options menu, tap <strong>"BIP39 Passphrase"</strong>.<br><br>
@@ -694,21 +694,21 @@ const SECTIONS = [
         des: `Tocar <strong>Method</strong> para cambiar el método de entrada:<br><br>
         • <code>Manual</code> -teclado QWERTY táctil carácter por carácter<br>
         • <code>WordList</code> -palabras BIP39 con autocompletado<br><br>
-        <div class="warn">âš ï¸ Passphrase es <strong>case-sensitive</strong>. Anotá exactamente el método y los caracteres usados.</div>`,
+        <div class="warn">⚠️ Passphrase es <strong>case-sensitive</strong>. Anotá exactamente el método y los caracteres usados.</div>`,
         den: `Tap <strong>Method</strong> to change the entry method:<br><br>
         • <code>Manual</code> -QWERTY touch keyboard character by character<br>
         • <code>WordList</code> -BIP39 words with autocomplete<br><br>
-        <div class="warn">âš ï¸ Passphrase is <strong>case-sensitive</strong>. Note exactly the method and characters used.</div>`
+        <div class="warn">⚠️ Passphrase is <strong>case-sensitive</strong>. Note exactly the method and characters used.</div>`
       },
       {
         f: 'hw-jade-plus-05.png',
         es: 'Enter Passphrase -Teclado Táctil',
         en: 'Enter Passphrase -Touch Keyboard',
         des: `Jade Plus muestra la pantalla <strong>"Enter Passphrase"</strong> con el teclado QWERTY táctil (letras azules). El campo de texto muestra los caracteres ingresados en tiempo real.<br><br>
-        Tocar cada letra para ingresarla. Al terminar, tocar <strong>âœ“</strong> para confirmar la passphrase.<br><br>
+        Tocar cada letra para ingresarla. Al terminar, tocar <strong>✓</strong> para confirmar la passphrase.<br><br>
         <div class="tip">La pantalla táctil hace la entrada mucho más rápida que el Jade original con botones físicos -especialmente para passphrases largas.</div>`,
         den: `Jade Plus shows the <strong>"Enter Passphrase"</strong> screen with the QWERTY touch keyboard (blue letters). The text field shows entered characters in real time.<br><br>
-        Tap each letter to enter it. When done, tap <strong>âœ“</strong> to confirm the passphrase.<br><br>
+        Tap each letter to enter it. When done, tap <strong>✓</strong> to confirm the passphrase.<br><br>
         <div class="tip">The touchscreen makes entry much faster than the original Jade with physical buttons -especially for long passphrases.</div>`
       },
       {
@@ -717,12 +717,12 @@ const SECTIONS = [
         en: 'Fingerprint -Verify the Active Wallet',
         des: `Al aplicar la passphrase, Jade Plus regresa a la pantalla de inicio. El <strong>fingerprint en la esquina inferior derecha cambia</strong> -ese nuevo código identifica únicamente la combinación seed + passphrase.<br><br>
         <strong>Primera vez:</strong> anotá este fingerprint (<code>8D688EA0</code> en el ejemplo) en papel y guardalo separado de tu seed y passphrase.<br><br>
-        <strong>Sesiones siguientes:</strong> si el fingerprint coincide con tu registro â†’ passphrase ingresada correctamente.<br><br>
-        <div class="warn">âš ï¸ Fingerprint diferente al esperado = typo en la passphrase. No operés hasta verificar.</div>`,
+        <strong>Sesiones siguientes:</strong> si el fingerprint coincide con tu registro → passphrase ingresada correctamente.<br><br>
+        <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase. No operés hasta verificar.</div>`,
         den: `When the passphrase is applied, Jade Plus returns to the home screen. The <strong>fingerprint in the lower right corner changes</strong> -that new code uniquely identifies the seed + passphrase combination.<br><br>
         <strong>First time:</strong> write down this fingerprint (<code>8D688EA0</code> in the example) on paper and store it separate from your seed and passphrase.<br><br>
-        <strong>Subsequent sessions:</strong> if the fingerprint matches your record â†’ passphrase entered correctly.<br><br>
-        <div class="warn">âš ï¸ Different fingerprint than expected = typo in passphrase. Don't operate until verified.</div>`
+        <strong>Subsequent sessions:</strong> if the fingerprint matches your record → passphrase entered correctly.<br><br>
+        <div class="warn">⚠️ Different fingerprint than expected = typo in passphrase. Don't operate until verified.</div>`
       },
     ]
   },
@@ -735,8 +735,8 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-coldcard-mk4-01.png',
-        es: 'PIN â†’ Menú Principal â†’ Passphrase',
-        en: 'PIN â†’ Main Menu â†’ Passphrase',
+        es: 'PIN → Menú Principal → Passphrase',
+        en: 'PIN → Main Menu → Passphrase',
         des: `Encender la Coldcard Mk4 e ingresar el PIN. Una vez en el menú principal, navegar con el <strong>pad numérico</strong> hasta la opción <strong>"Passphrase"</strong>.<br><br>
         La Mk4 tiene pad numérico (5×5) y pantalla OLED monocromática. Usás los números para navegar el menú y confirmar selecciones.<br><br>
         <div class="info">La opción "Passphrase" aparece solo si la wallet fue creada con semilla BIP39 (12/24 palabras).</div>`,
@@ -751,11 +751,11 @@ const SECTIONS = [
         des: `Seleccionar <strong>"Edit Phrase"</strong>. La Mk4 muestra un teclado en pantalla navegable con el pad numérico.<br><br>
         Cambiar entre conjuntos de caracteres (letras / números / símbolos) con las teclas de función. Ingresar la passphrase carácter por carácter.<br><br>
         También podés ingresar <strong>palabras BIP39</strong> desde el WordList para una passphrase más fácil de tipear.<br><br>
-        <div class="warn">âš ï¸ Ingresar passphrases largas en Mk4 es lento por el teclado en pantalla. Considerá passphrases cortas o usar el WordList.</div>`,
+        <div class="warn">⚠️ Ingresar passphrases largas en Mk4 es lento por el teclado en pantalla. Considerá passphrases cortas o usar el WordList.</div>`,
         den: `Select <strong>"Edit Phrase"</strong>. Mk4 shows a navigable on-screen keyboard using the numeric pad.<br><br>
         Switch between character sets (letters / numbers / symbols) with function keys. Enter the passphrase character by character.<br><br>
         You can also enter <strong>BIP39 words</strong> from the WordList for an easier-to-type passphrase.<br><br>
-        <div class="warn">âš ï¸ Entering long passphrases on Mk4 is slow due to the on-screen keyboard. Consider short passphrases or using the WordList.</div>`
+        <div class="warn">⚠️ Entering long passphrases on Mk4 is slow due to the on-screen keyboard. Consider short passphrases or using the WordList.</div>`
       },
       {
         f: 'hw-coldcard-mk4-03.png',
@@ -763,22 +763,22 @@ const SECTIONS = [
         en: 'Wallet Fingerprint -Save on Paper',
         des: `Coldcard muestra el <strong>wallet fingerprint</strong>: código de 8 caracteres hex único para esa combinación seed + passphrase.<br><br>
         <strong>Primera vez:</strong> anotalo en papel y guardalo separado de la seed y la passphrase.<br>
-        <strong>Sesiones siguientes:</strong> si el fingerprint coincide â†’ passphrase ingresada correctamente.<br><br>
-        <div class="warn">âš ï¸ Fingerprint diferente al esperado = typo en la passphrase. <strong>Cancelá antes de cualquier transacción.</strong></div>`,
+        <strong>Sesiones siguientes:</strong> si el fingerprint coincide → passphrase ingresada correctamente.<br><br>
+        <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase. <strong>Cancelá antes de cualquier transacción.</strong></div>`,
         den: `Coldcard shows the <strong>wallet fingerprint</strong>: 8-character hex code unique to that seed + passphrase combination.<br><br>
         <strong>First time:</strong> write it on paper and store it separate from seed and passphrase.<br>
-        <strong>Subsequent sessions:</strong> if fingerprint matches â†’ passphrase entered correctly.<br><br>
-        <div class="warn">âš ï¸ Different fingerprint than expected = typo in passphrase. <strong>Cancel before any transaction.</strong></div>`
+        <strong>Subsequent sessions:</strong> if fingerprint matches → passphrase entered correctly.<br><br>
+        <div class="warn">⚠️ Different fingerprint than expected = typo in passphrase. <strong>Cancel before any transaction.</strong></div>`
       },
       {
         f: 'hw-coldcard-mk4-04.png',
         es: 'Apply + Opción MicroSD Cifrado',
         en: 'Apply + Encrypted MicroSD Option',
         des: `Seleccionar <strong>"Apply"</strong> para activar la billetera con passphrase en la sesión actual.<br><br>
-        <strong>Opción MicroSD (avanzado):</strong> podés guardar la passphrase cifrada en MicroSD (AES-256). En sesiones futuras: insertar SD â†’ <strong>Passphrase â†’ Restore Saved</strong> â†’ verificar primera letra + longitud â†’ confirmar fingerprint.<br><br>
+        <strong>Opción MicroSD (avanzado):</strong> podés guardar la passphrase cifrada en MicroSD (AES-256). En sesiones futuras: insertar SD → <strong>Passphrase → Restore Saved</strong> → verificar primera letra + longitud → confirmar fingerprint.<br><br>
         <div class="info">La passphrase <strong>no persiste</strong> entre reinicios. Cada sesión debés ingresarla nuevamente (o restaurarla desde la SD).</div>`,
         den: `Select <strong>"Apply"</strong> to activate the passphrase wallet in the current session.<br><br>
-        <strong>MicroSD option (advanced):</strong> you can save the passphrase encrypted on MicroSD (AES-256). In future sessions: insert SD â†’ <strong>Passphrase â†’ Restore Saved</strong> â†’ verify first letter + length â†’ confirm fingerprint.<br><br>
+        <strong>MicroSD option (advanced):</strong> you can save the passphrase encrypted on MicroSD (AES-256). In future sessions: insert SD → <strong>Passphrase → Restore Saved</strong> → verify first letter + length → confirm fingerprint.<br><br>
         <div class="info">The passphrase <strong>does not persist</strong> between reboots. Each session you must enter it again (or restore from SD).</div>`
       },
     ]
@@ -792,13 +792,13 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-coldcard-mk5-01.png',
-        es: 'PIN â†’ Menú Principal â†’ Passphrase',
-        en: 'PIN â†’ Main Menu â†’ Passphrase',
+        es: 'PIN → Menú Principal → Passphrase',
+        en: 'PIN → Main Menu → Passphrase',
         des: `La Coldcard Mk5 tiene el mismo proceso que la Mk4 -pad numérico y pantalla OLED. La diferencia principal es hardware interno (seguridad mejorada, chip SE2 dual).<br><br>
-        Ingresar el PIN â†’ navegar con el pad numérico â†’ seleccionar <strong>"Passphrase"</strong> en el menú principal.<br><br>
+        Ingresar el PIN → navegar con el pad numérico → seleccionar <strong>"Passphrase"</strong> en el menú principal.<br><br>
         <div class="info">Mk5 corre el mismo firmware que Mk4. Los pasos del menú son idénticos.</div>`,
         den: `Coldcard Mk5 has the same process as Mk4 -numeric pad and OLED screen. The main difference is internal hardware (improved security, dual SE2 chip).<br><br>
-        Enter PIN â†’ navigate with numeric pad â†’ select <strong>"Passphrase"</strong> in the main menu.<br><br>
+        Enter PIN → navigate with numeric pad → select <strong>"Passphrase"</strong> in the main menu.<br><br>
         <div class="info">Mk5 runs the same firmware as Mk4. The menu steps are identical.</div>`
       },
       {
@@ -806,10 +806,10 @@ const SECTIONS = [
         es: 'Edit Phrase -Mismo Teclado que Mk4',
         en: 'Edit Phrase -Same Keyboard as Mk4',
         des: `Seleccionar <strong>"Edit Phrase"</strong>. El teclado en pantalla y la navegación son idénticos a la Mk4.<br><br>
-        Ingresar la passphrase carácter por carácter o via WordList BIP39. Confirmar con <strong>OK / âœ“</strong>.<br><br>
+        Ingresar la passphrase carácter por carácter o via WordList BIP39. Confirmar con <strong>OK / ✓</strong>.<br><br>
         <div class="tip">Al igual que en Mk4, passphrases largas son lentas de ingresar. La Coldcard Q resuelve esto con teclado QWERTY físico.</div>`,
         den: `Select <strong>"Edit Phrase"</strong>. The on-screen keyboard and navigation are identical to Mk4.<br><br>
-        Enter the passphrase character by character or via BIP39 WordList. Confirm with <strong>OK / âœ“</strong>.<br><br>
+        Enter the passphrase character by character or via BIP39 WordList. Confirm with <strong>OK / ✓</strong>.<br><br>
         <div class="tip">As with Mk4, long passphrases are slow to enter. The Coldcard Q solves this with a physical QWERTY keyboard.</div>`
       },
       {
@@ -817,12 +817,12 @@ const SECTIONS = [
         es: 'Wallet Fingerprint + Apply',
         en: 'Wallet Fingerprint + Apply',
         des: `Coldcard Mk5 muestra el mismo <strong>wallet fingerprint</strong> de 8 caracteres hex que la Mk4.<br><br>
-        Verificar que coincide con el fingerprint guardado â†’ seleccionar <strong>"Apply"</strong>.<br><br>
-        Opción MicroSD cifrada disponible igual que en Mk4: <strong>Passphrase â†’ Restore Saved</strong>.<br><br>
+        Verificar que coincide con el fingerprint guardado → seleccionar <strong>"Apply"</strong>.<br><br>
+        Opción MicroSD cifrada disponible igual que en Mk4: <strong>Passphrase → Restore Saved</strong>.<br><br>
         <div class="info">La diferencia Mk4 vs Mk5 es de seguridad interna (chip SE2 adicional), no de funcionalidad de passphrase -el proceso es exactamente el mismo.</div>`,
         den: `Coldcard Mk5 shows the same 8-character hex <strong>wallet fingerprint</strong> as Mk4.<br><br>
-        Verify it matches your saved fingerprint â†’ select <strong>"Apply"</strong>.<br><br>
-        Encrypted MicroSD option available same as Mk4: <strong>Passphrase â†’ Restore Saved</strong>.<br><br>
+        Verify it matches your saved fingerprint → select <strong>"Apply"</strong>.<br><br>
+        Encrypted MicroSD option available same as Mk4: <strong>Passphrase → Restore Saved</strong>.<br><br>
         <div class="info">The Mk4 vs Mk5 difference is internal security (additional SE2 chip), not passphrase functionality -the process is exactly the same.</div>`
       },
     ]
@@ -836,13 +836,13 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-coldcard-q-01.png',
-        es: 'PIN â†’ Menú Principal â†’ Passphrase',
-        en: 'PIN â†’ Main Menu â†’ Passphrase',
+        es: 'PIN → Menú Principal → Passphrase',
+        en: 'PIN → Main Menu → Passphrase',
         des: `La Coldcard Q tiene <strong>teclado QWERTY físico completo</strong> -la mayor diferencia respecto a Mk4/Mk5. La navegación del menú se hace con las teclas de dirección del teclado.<br><br>
-        Ingresar el PIN con el teclado numérico integrado â†’ navegar al menú principal â†’ seleccionar <strong>"Passphrase"</strong>.<br><br>
+        Ingresar el PIN con el teclado numérico integrado → navegar al menú principal → seleccionar <strong>"Passphrase"</strong>.<br><br>
         <div class="tip">La Q tiene también pantalla a color más grande. La experiencia general es mucho más cómoda que los modelos Mk.</div>`,
         den: `Coldcard Q has a <strong>full physical QWERTY keyboard</strong> -the biggest difference from Mk4/Mk5. Menu navigation is done with the keyboard's direction keys.<br><br>
-        Enter PIN with the integrated numeric keypad â†’ navigate to main menu â†’ select <strong>"Passphrase"</strong>.<br><br>
+        Enter PIN with the integrated numeric keypad → navigate to main menu → select <strong>"Passphrase"</strong>.<br><br>
         <div class="tip">The Q also has a larger color screen. The overall experience is much more comfortable than Mk models.</div>`
       },
       {
@@ -863,12 +863,12 @@ const SECTIONS = [
         es: 'Wallet Fingerprint (8 chars hex) + Apply',
         en: 'Wallet Fingerprint (8 hex chars) + Apply',
         des: `La Q muestra el mismo <strong>wallet fingerprint</strong> de 8 caracteres hex que Mk4/Mk5.<br><br>
-        Verificar â†’ <strong>"Apply"</strong>. La wallet con passphrase queda activa para la sesión.<br><br>
-        <strong>MicroSD cifrado:</strong> también disponible en Q -<strong>Passphrase â†’ Restore Saved</strong>. El teclado QWERTY facilita también ingresar el PIN de la SD si es alfanumérico.<br><br>
+        Verificar → <strong>"Apply"</strong>. La wallet con passphrase queda activa para la sesión.<br><br>
+        <strong>MicroSD cifrado:</strong> también disponible en Q -<strong>Passphrase → Restore Saved</strong>. El teclado QWERTY facilita también ingresar el PIN de la SD si es alfanumérico.<br><br>
         <div class="info">La Q es el modelo más reciente y completo de Coinkite. Incluye cámara QR para operaciones air-gapped.</div>`,
         den: `The Q shows the same 8-character hex <strong>wallet fingerprint</strong> as Mk4/Mk5.<br><br>
-        Verify â†’ <strong>"Apply"</strong>. The passphrase wallet is active for the session.<br><br>
-        <strong>Encrypted MicroSD:</strong> also available on Q -<strong>Passphrase â†’ Restore Saved</strong>. The QWERTY keyboard also makes it easier to enter an alphanumeric SD PIN.<br><br>
+        Verify → <strong>"Apply"</strong>. The passphrase wallet is active for the session.<br><br>
+        <strong>Encrypted MicroSD:</strong> also available on Q -<strong>Passphrase → Restore Saved</strong>. The QWERTY keyboard also makes it easier to enter an alphanumeric SD PIN.<br><br>
         <div class="info">The Q is Coinkite's newest and most complete model. Includes QR camera for air-gapped operations.</div>`
       },
     ]
@@ -882,8 +882,8 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-bitbox-01.png',
-        es: 'Abrir BitBoxApp â†’ Configuración',
-        en: 'Open BitBoxApp â†’ Settings',
+        es: 'Abrir BitBoxApp → Configuración',
+        en: 'Open BitBoxApp → Settings',
         des: `Conectá el BitBox02 al computador e iniciá la <strong>BitBoxApp</strong>. En la barra lateral izquierda, hacé clic en <strong>"Configuración"</strong> (ícono de engranaje en la parte inferior).<br><br>
         La passphrase en BitBox02 se habilita desde la app de escritorio -la app guiará paso a paso con información sobre cómo funciona antes de activarla.`,
         den: `Connect the BitBox02 to your computer and launch <strong>BitBoxApp</strong>. In the left sidebar, click <strong>"Settings"</strong> (gear icon at the bottom).<br><br>
@@ -900,8 +900,8 @@ const SECTIONS = [
       },
       {
         f: 'hw-bitbox-03.png',
-        es: 'Configuración Avanzada â†’ Passphrase (Desactivado)',
-        en: 'Advanced Settings â†’ Passphrase (Disabled)',
+        es: 'Configuración Avanzada → Passphrase (Desactivado)',
+        en: 'Advanced Settings → Passphrase (Disabled)',
         des: `En la sección <strong>Configuración avanzada</strong>, localizar la opción <strong>"Passphrase"</strong> -aparece con estado <strong>"Desactivado"</strong>.<br><br>
         Encima se ve el <strong>Root fingerprint</strong> actual (ej. <code>630e4904</code>): es el identificador único de tu billetera sin passphrase. Guardalo antes de continuar.<br><br>
         Hacer clic en "Passphrase" para iniciar el wizard de activación.`,
@@ -951,11 +951,11 @@ const SECTIONS = [
         es: 'Consideraciones de la Copia de Seguridad',
         en: 'Backup Considerations',
         des: `Pantalla crítica: para restaurar una billetera con passphrase necesitás <strong>tanto la copia de seguridad COMO la passphrase</strong>.<br><br>
-        <div class="warn">âš ï¸ Si olvidás o perdés tu passphrase, perderás el acceso a todos los fondos de esa billetera -sin excepción.</div><br>
+        <div class="warn">⚠️ Si olvidás o perdés tu passphrase, perderás el acceso a todos los fondos de esa billetera -sin excepción.</div><br>
         Recomendación: guardá la passphrase en un lugar <strong>distinto</strong> al de tu copia de seguridad. Si alguien encuentra la semilla, no encontrará también la passphrase.<br><br>
         Hacer clic en <strong>"Cómo se ve"</strong> para continuar.`,
         den: `Critical screen: to restore a passphrase wallet you need <strong>both the backup AND the passphrase</strong>.<br><br>
-        <div class="warn">âš ï¸ If you forget or lose your passphrase, you will lose access to all funds in that wallet -no exceptions.</div><br>
+        <div class="warn">⚠️ If you forget or lose your passphrase, you will lose access to all funds in that wallet -no exceptions.</div><br>
         Recommendation: store the passphrase in a <strong>different</strong> location from your backup. If someone finds the seed, they won't also find the passphrase.<br><br>
         Click <strong>"How it looks"</strong> to continue.`
       },
@@ -1009,11 +1009,11 @@ const SECTIONS = [
         es: 'Ingresar Passphrase -Solo en el Dispositivo Físico',
         en: 'Enter Passphrase -Only on the Physical Device',
         des: `Al reconectar, el <strong>dispositivo físico</strong> muestra el teclado <strong>"Optional passphrase"</strong> en su pantalla OLED.<br><br>
-        Navegá por los grupos de letras (abcd / efgh / ijklm / nopq / rstuv / wxyz / ABC â–¼) con los controles táctiles del dispositivo y escribí tu passphrase carácter por carácter.<br><br>
-        <div class="warn">âš ï¸ La passphrase se ingresa <strong>ÚNICAMENTE en el dispositivo físico</strong> -nunca en la computadora ni en la BitBoxApp. Esto protege contra keyloggers y malware.</div>`,
+        Navegá por los grupos de letras (abcd / efgh / ijklm / nopq / rstuv / wxyz / ABC ▼) con los controles táctiles del dispositivo y escribí tu passphrase carácter por carácter.<br><br>
+        <div class="warn">⚠️ La passphrase se ingresa <strong>ÚNICAMENTE en el dispositivo físico</strong> -nunca en la computadora ni en la BitBoxApp. Esto protege contra keyloggers y malware.</div>`,
         den: `When reconnecting, the <strong>physical device</strong> shows the <strong>"Optional passphrase"</strong> keyboard on its OLED screen.<br><br>
-        Navigate through letter groups (abcd / efgh / ijklm / nopq / rstuv / wxyz / ABC â–¼) with the device's touch controls and type your passphrase character by character.<br><br>
-        <div class="warn">âš ï¸ The passphrase is entered <strong>ONLY on the physical device</strong> -never on the computer or in BitBoxApp. This protects against keyloggers and malware.</div>`
+        Navigate through letter groups (abcd / efgh / ijklm / nopq / rstuv / wxyz / ABC ▼) with the device's touch controls and type your passphrase character by character.<br><br>
+        <div class="warn">⚠️ The passphrase is entered <strong>ONLY on the physical device</strong> -never on the computer or in BitBoxApp. This protects against keyloggers and malware.</div>`
       },
       {
         f: 'hw-bitbox-12.png',
@@ -1030,10 +1030,10 @@ const SECTIONS = [
         f: 'hw-bitbox-13.png',
         es: 'Desactivar la Passphrase (Opcional)',
         en: 'Disable the Passphrase (Optional)',
-        des: `Si querés desactivar la passphrase, ir a <strong>Configuración â†’ Administrar dispositivo â†’ Passphrase</strong> y seleccionar <strong>"Desactivar"</strong>.<br><br>
+        des: `Si querés desactivar la passphrase, ir a <strong>Configuración → Administrar dispositivo → Passphrase</strong> y seleccionar <strong>"Desactivar"</strong>.<br><br>
         Al desactivar, el BitBox dejará de pedir passphrase y abrirá directamente la billetera estándar (sin passphrase).<br><br>
         <div class="info">Tus fondos en la billetera con passphrase <strong>no se pierden</strong> -siguen en la blockchain. Para acceder a ellos, simplemente volvé a activar la passphrase e ingresá la misma que usabas.</div>`,
-        den: `To disable the passphrase, go to <strong>Settings â†’ Manage device â†’ Passphrase</strong> and select <strong>"Disable"</strong>.<br><br>
+        den: `To disable the passphrase, go to <strong>Settings → Manage device → Passphrase</strong> and select <strong>"Disable"</strong>.<br><br>
         After disabling, BitBox will stop asking for a passphrase and will directly open the standard wallet (without passphrase).<br><br>
         <div class="info">Your funds in the passphrase wallet are <strong>not lost</strong> -they remain on the blockchain. To access them, simply re-enable the passphrase and enter the same one you used.</div>`
       },
@@ -1048,13 +1048,13 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-bitbox-nova-01.png',
-        es: 'BitBoxApp â†’ Settings â†’ Expert Settings â†’ Passphrase',
-        en: 'BitBoxApp â†’ Settings â†’ Expert Settings â†’ Passphrase',
+        es: 'BitBoxApp → Settings → Expert Settings → Passphrase',
+        en: 'BitBoxApp → Settings → Expert Settings → Passphrase',
         des: `BitBox02 Nova tiene el mismo proceso que el BitBox02 estándar -la passphrase se habilita desde la <strong>BitBoxApp</strong> y se ingresa <strong>únicamente en el dispositivo físico</strong>.<br><br>
-        Conectar la Nova â†’ <strong>Settings â†’ Manage device â†’ Expert settings â†’ Passphrase</strong>. Confirmar activación tocando ambos lados del dispositivo simultáneamente.<br><br>
+        Conectar la Nova → <strong>Settings → Manage device → Expert settings → Passphrase</strong>. Confirmar activación tocando ambos lados del dispositivo simultáneamente.<br><br>
         <div class="info">BitBox02 Nova es la versión 2024+ con mejoras de hardware. La funcionalidad de passphrase es idéntica al modelo original.</div>`,
         den: `BitBox02 Nova has the same process as the standard BitBox02 -passphrase is enabled from <strong>BitBoxApp</strong> and entered <strong>only on the physical device</strong>.<br><br>
-        Connect the Nova â†’ <strong>Settings â†’ Manage device â†’ Expert settings â†’ Passphrase</strong>. Confirm activation by touching both sides of the device simultaneously.<br><br>
+        Connect the Nova → <strong>Settings → Manage device → Expert settings → Passphrase</strong>. Confirm activation by touching both sides of the device simultaneously.<br><br>
         <div class="info">BitBox02 Nova is the 2024+ version with hardware improvements. Passphrase functionality is identical to the original model.</div>`
       },
       {
@@ -1063,10 +1063,10 @@ const SECTIONS = [
         en: 'Enter Passphrase Only on Device',
         des: `Al conectar la Nova con passphrase habilitada, la app pedirá la passphrase. La Nova muestra un teclado en su pantalla -ingresá la passphrase <strong>directamente en el dispositivo</strong>.<br><br>
         Confirmá tocando ambos lados. La passphrase nunca viaja a la computadora.<br><br>
-        <div class="tip">âœ… Ventaja de seguridad: la passphrase se ingresa en el hardware seguro, aislada del software y la computadora host.</div>`,
+        <div class="tip">✅ Ventaja de seguridad: la passphrase se ingresa en el hardware seguro, aislada del software y la computadora host.</div>`,
         den: `When connecting the Nova with passphrase enabled, the app will request the passphrase. Nova shows a keyboard on its screen -enter the passphrase <strong>directly on the device</strong>.<br><br>
         Confirm by touching both sides. The passphrase never travels to the computer.<br><br>
-        <div class="tip">âœ… Security advantage: the passphrase is entered in secure hardware, isolated from the software and host computer.</div>`
+        <div class="tip">✅ Security advantage: the passphrase is entered in secure hardware, isolated from the software and host computer.</div>`
       },
       {
         f: 'hw-bitbox-nova-03.png',
@@ -1076,12 +1076,12 @@ const SECTIONS = [
         <strong>Wallet estándar:</strong> dejar vacío el campo passphrase y confirmar en el dispositivo.<br>
         <strong>Wallet con passphrase:</strong> ingresar la passphrase correcta en el dispositivo y confirmar.<br><br>
         La BitBoxApp mostrará la billetera correspondiente a la elección.<br><br>
-        <div class="warn">âš ï¸ Un carácter incorrecto abre una billetera diferente (vacía). No hay mensaje de error -cualquier passphrase es "válida".</div>`,
+        <div class="warn">⚠️ Un carácter incorrecto abre una billetera diferente (vacía). No hay mensaje de error -cualquier passphrase es "válida".</div>`,
         den: `With passphrase enabled, each session you choose:<br><br>
         <strong>Standard wallet:</strong> leave the passphrase field empty and confirm on the device.<br>
         <strong>Passphrase wallet:</strong> enter the correct passphrase on the device and confirm.<br><br>
         BitBoxApp will show the wallet corresponding to the choice.<br><br>
-        <div class="warn">âš ï¸ One wrong character opens a different (empty) wallet. There's no error message -any passphrase is "valid".</div>`
+        <div class="warn">⚠️ One wrong character opens a different (empty) wallet. There's no error message -any passphrase is "valid".</div>`
       },
     ]
   },
@@ -1094,16 +1094,16 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-ledger-nanox-01.png',
-        es: 'Settings â†’ Security â†’ Passphrase',
-        en: 'Settings â†’ Security â†’ Passphrase',
+        es: 'Settings → Security → Passphrase',
+        en: 'Settings → Security → Passphrase',
         des: `En la Nano X, navegar con los <strong>dos botones físicos</strong> (izquierdo/derecho) y confirmar presionando ambos a la vez.<br><br>
-        Ruta: <strong>Settings â†’ Security â†’ Passphrase</strong>.<br><br>
+        Ruta: <strong>Settings → Security → Passphrase</strong>.<br><br>
         Ledger ofrece dos modos:<br>
         • <strong>Set temporary:</strong> ingresás la passphrase manualmente cada sesión<br>
         • <strong>Attach to PIN:</strong> asocia la passphrase a un segundo PIN de 8 dígitos<br><br>
         <div class="info">La Nano X tiene Bluetooth -asegurate de estar en un lugar privado al ingresar la passphrase.</div>`,
         den: `On the Nano X, navigate with the <strong>two physical buttons</strong> (left/right) and confirm by pressing both simultaneously.<br><br>
-        Path: <strong>Settings â†’ Security â†’ Passphrase</strong>.<br><br>
+        Path: <strong>Settings → Security → Passphrase</strong>.<br><br>
         Ledger offers two modes:<br>
         • <strong>Set temporary:</strong> enter the passphrase manually each session<br>
         • <strong>Attach to PIN:</strong> associates the passphrase with a second 8-digit PIN<br><br>
@@ -1115,10 +1115,10 @@ const SECTIONS = [
         en: 'Enter Passphrase with Two Buttons',
         des: `La Nano X usa el teclado en pantalla navegado con los dos botones físicos. <strong>Botón izquierdo</strong>: retroceder / <strong>Botón derecho</strong>: avanzar / <strong>Ambos</strong>: confirmar.<br><br>
         Para ingresar cada carácter: navegar hasta la letra/número deseado y presionar ambos botones para seleccionar.<br><br>
-        <div class="warn">âš ï¸ Ingresar passphrases largas con solo dos botones es <strong>muy lento</strong>. Recomendado: passphrases de 8-12 caracteres máximo para uso diario con Nano X.</div>`,
+        <div class="warn">⚠️ Ingresar passphrases largas con solo dos botones es <strong>muy lento</strong>. Recomendado: passphrases de 8-12 caracteres máximo para uso diario con Nano X.</div>`,
         den: `Nano X uses an on-screen keyboard navigated with two physical buttons. <strong>Left button</strong>: back / <strong>Right button</strong>: forward / <strong>Both</strong>: confirm.<br><br>
         To enter each character: navigate to the desired letter/number and press both buttons to select.<br><br>
-        <div class="warn">âš ï¸ Entering long passphrases with only two buttons is <strong>very slow</strong>. Recommended: passphrases of 8-12 characters max for daily Nano X use.</div>`
+        <div class="warn">⚠️ Entering long passphrases with only two buttons is <strong>very slow</strong>. Recommended: passphrases of 8-12 characters max for daily Nano X use.</div>`
       },
       {
         f: 'hw-ledger-nanox-03.png',
@@ -1142,14 +1142,14 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-ledger-splus-01.png',
-        es: 'Settings â†’ Security â†’ Passphrase',
-        en: 'Settings â†’ Security â†’ Passphrase',
+        es: 'Settings → Security → Passphrase',
+        en: 'Settings → Security → Passphrase',
         des: `La Nano S Plus usa los mismos <strong>dos botones físicos</strong> que la Nano X. La diferencia principal: no tiene Bluetooth y tiene más memoria para apps.<br><br>
-        Ruta: <strong>Settings â†’ Security â†’ Passphrase</strong>. Los dos modos disponibles son idénticos a Nano X:<br>
+        Ruta: <strong>Settings → Security → Passphrase</strong>. Los dos modos disponibles son idénticos a Nano X:<br>
         • <strong>Set temporary</strong><br>
         • <strong>Attach to PIN</strong>`,
         den: `Nano S Plus uses the same <strong>two physical buttons</strong> as Nano X. Main difference: no Bluetooth and more app memory.<br><br>
-        Path: <strong>Settings â†’ Security â†’ Passphrase</strong>. The two available modes are identical to Nano X:<br>
+        Path: <strong>Settings → Security → Passphrase</strong>. The two available modes are identical to Nano X:<br>
         • <strong>Set temporary</strong><br>
         • <strong>Attach to PIN</strong>`
       },
@@ -1158,9 +1158,9 @@ const SECTIONS = [
         es: 'Ingresar Passphrase -Misma UX que Nano X',
         en: 'Enter Passphrase -Same UX as Nano X',
         des: `El proceso de entrada con los dos botones físicos es idéntico a la Nano X: navegar el teclado en pantalla con botón izquierdo/derecho, confirmar carácter con ambos.<br><br>
-        <div class="warn">âš ï¸ Mismo problema que Nano X: passphrases largas son lentas de ingresar. La Nano S Plus es económica pero el input de passphrase es incómodo para frases largas.</div>`,
+        <div class="warn">⚠️ Mismo problema que Nano X: passphrases largas son lentas de ingresar. La Nano S Plus es económica pero el input de passphrase es incómodo para frases largas.</div>`,
         den: `The two-button input process is identical to Nano X: navigate the on-screen keyboard with left/right button, confirm character with both.<br><br>
-        <div class="warn">âš ï¸ Same issue as Nano X: long passphrases are slow to enter. Nano S Plus is affordable but passphrase input is uncomfortable for long phrases.</div>`
+        <div class="warn">⚠️ Same issue as Nano X: long passphrases are slow to enter. Nano S Plus is affordable but passphrase input is uncomfortable for long phrases.</div>`
       },
       {
         f: 'hw-ledger-splus-03.png',
@@ -1182,14 +1182,14 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-ledger-flex-01.png',
-        es: 'Settings â†’ Security â†’ Passphrase (Táctil)',
-        en: 'Settings â†’ Security â†’ Passphrase (Touchscreen)',
+        es: 'Settings → Security → Passphrase (Táctil)',
+        en: 'Settings → Security → Passphrase (Touchscreen)',
         des: `El Ledger Flex tiene <strong>pantalla táctil E Ink a color</strong> (2.84"). La navegación es por toques, mucho más cómoda que los botones físicos de Nano X/S Plus.<br><br>
-        Tocar <strong>Settings â†’ Security â†’ Passphrase</strong> y elegir modo:<br>
+        Tocar <strong>Settings → Security → Passphrase</strong> y elegir modo:<br>
         • <strong>Set temporary</strong><br>
         • <strong>Attach to PIN</strong>`,
         den: `Ledger Flex has a <strong>color E Ink touchscreen</strong> (2.84"). Navigation is by taps, much more comfortable than Nano X/S Plus physical buttons.<br><br>
-        Tap <strong>Settings â†’ Security â†’ Passphrase</strong> and choose mode:<br>
+        Tap <strong>Settings → Security → Passphrase</strong> and choose mode:<br>
         • <strong>Set temporary</strong><br>
         • <strong>Attach to PIN</strong>`
       },
@@ -1210,9 +1210,9 @@ const SECTIONS = [
         f: 'hw-ledger-flex-03.png',
         es: 'Abrir App Bitcoin con Passphrase Activa',
         en: 'Open Bitcoin App with Active Passphrase',
-        des: `Passphrase confirmada â†’ abrir <strong>app Bitcoin</strong> en el Flex. Conectar a Ledger Live, Sparrow o Electrum.<br><br>
+        des: `Passphrase confirmada → abrir <strong>app Bitcoin</strong> en el Flex. Conectar a Ledger Live, Sparrow o Electrum.<br><br>
         La billetera mostrará las direcciones derivadas de seed + passphrase activa.`,
-        den: `Passphrase confirmed â†’ open <strong>Bitcoin app</strong> on the Flex. Connect to Ledger Live, Sparrow or Electrum.<br><br>
+        den: `Passphrase confirmed → open <strong>Bitcoin app</strong> on the Flex. Connect to Ledger Live, Sparrow or Electrum.<br><br>
         The wallet will show addresses derived from seed + active passphrase.`
       },
     ]
@@ -1226,15 +1226,15 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-ledger-stax-01.png',
-        es: 'Settings â†’ Security â†’ Passphrase (Pantalla Curva)',
-        en: 'Settings â†’ Security â†’ Passphrase (Curved Screen)',
+        es: 'Settings → Security → Passphrase (Pantalla Curva)',
+        en: 'Settings → Security → Passphrase (Curved Screen)',
         des: `El Ledger Stax tiene la <strong>pantalla E Ink más grande</strong> de todos los Ledger (3.7", curvada en los bordes). Navegación completamente táctil.<br><br>
-        Tocar <strong>Settings â†’ Security â†’ Passphrase</strong>. Elegir entre:<br>
+        Tocar <strong>Settings → Security → Passphrase</strong>. Elegir entre:<br>
         • <strong>Set temporary</strong> -manual cada sesión<br>
         • <strong>Attach to PIN</strong> -PIN secundario de 8 dígitos<br><br>
         <div class="info">El Stax es el modelo premium de Ledger. La pantalla grande facilita ver y verificar la passphrase antes de confirmar.</div>`,
         den: `Ledger Stax has the <strong>largest E Ink screen</strong> of all Ledgers (3.7", curved at edges). Fully touchscreen navigation.<br><br>
-        Tap <strong>Settings â†’ Security â†’ Passphrase</strong>. Choose between:<br>
+        Tap <strong>Settings → Security → Passphrase</strong>. Choose between:<br>
         • <strong>Set temporary</strong> -manual each session<br>
         • <strong>Attach to PIN</strong> -secondary 8-digit PIN<br><br>
         <div class="info">Stax is Ledger's premium model. The large screen makes it easier to see and verify the passphrase before confirming.</div>`
@@ -1254,127 +1254,108 @@ const SECTIONS = [
         f: 'hw-ledger-stax-03.png',
         es: 'Abrir App Bitcoin con Passphrase Activa',
         en: 'Open Bitcoin App with Active Passphrase',
-        des: `Passphrase confirmada â†’ abrir <strong>app Bitcoin</strong> en el Stax â†’ conectar a Ledger Live, Sparrow o Electrum.<br><br>
+        des: `Passphrase confirmada → abrir <strong>app Bitcoin</strong> en el Stax → conectar a Ledger Live, Sparrow o Electrum.<br><br>
         La billetera mostrará las direcciones de la wallet derivada con passphrase activa.`,
-        den: `Passphrase confirmed â†’ open <strong>Bitcoin app</strong> on the Stax â†’ connect to Ledger Live, Sparrow or Electrum.<br><br>
+        den: `Passphrase confirmed → open <strong>Bitcoin app</strong> on the Stax → connect to Ledger Live, Sparrow or Electrum.<br><br>
         The wallet will show the addresses of the wallet derived with active passphrase.`
       },
     ]
   },
 
-  // TREZOR MODEL T
+  // TREZOR MODEL T — pasos en el dispositivo
   {
-    id: 'hw-trezor-t', group: 'hw',
+    id: 'hw-trezor-t', ready: true, group: 'hw',
     brand: 'Trezor',
     es: 'Trezor Model T', en: 'Trezor Model T',
     steps: [
       {
-        f: 'hw-trezor-t-01.png',
-        es: 'Trezor Suite â†’ Settings â†’ Device â†’ Passphrase',
-        en: 'Trezor Suite â†’ Settings â†’ Device â†’ Passphrase',
-        des: `El Trezor Model T tiene <strong>pantalla táctil a color</strong>. La passphrase se habilita desde <strong>Trezor Suite</strong> (escritorio o web).<br><br>
-        Ir a <strong>Settings â†’ Device â†’ Passphrase</strong> y activar la opción. El Model T pedirá confirmación en su pantalla táctil.<br><br>
-        <div class="info">El Model T es el modelo anterior a la línea Safe. Fue el primer Trezor con pantalla táctil.</div>`,
-        den: `Trezor Model T has a <strong>color touchscreen</strong>. Passphrase is enabled from <strong>Trezor Suite</strong> (desktop or web).<br><br>
-        Go to <strong>Settings â†’ Device â†’ Passphrase</strong> and enable the option. Model T will ask for confirmation on its touchscreen.<br><br>
-        <div class="info">Model T is the predecessor to the Safe lineup. It was the first Trezor with a touchscreen.</div>`
+        f: 'hw-trezor-t-01.png', imgW: 280,
+        es: 'Dispositivo - Confirmar Activación',
+        en: 'Device - Confirm Activation',
+        des: `El <strong>Trezor Model T</strong> tiene pantalla táctil a color. Desde <strong>Trezor Suite</strong> activar la passphrase; el Model T pide confirmación en su pantalla.<br><br>
+        Tocar <strong>Confirmar</strong> en el dispositivo.<br><br>
+        <div class="info">El Model T fue el primer Trezor con pantalla táctil. Usa Trezor Suite igual que los modelos Safe.</div>`,
+        den: `<strong>Trezor Model T</strong> has a color touchscreen. From <strong>Trezor Suite</strong> enable passphrase; Model T asks for confirmation on its screen.<br><br>
+        Tap <strong>Confirm</strong> on the device.<br><br>
+        <div class="info">Model T was the first Trezor with a touchscreen. Uses Trezor Suite the same as Safe models.</div>`
       },
       {
-        f: 'hw-trezor-t-02.png',
-        es: 'Wallet Menu â†’ + Passphrase Wallet',
-        en: 'Wallet Menu â†’ + Passphrase Wallet',
-        des: `Con la passphrase habilitada, en Trezor Suite hacer clic en el <strong>menú de wallets</strong> (esquina superior izquierda) y seleccionar <strong>"+ Passphrase wallet"</strong>.<br><br>
-        Suite preguntará dónde ingresar la passphrase:<br>
-        <strong>Enter on Trezor:</strong> se ingresa en la pantalla táctil del dispositivo (recomendado)<br>
-        <strong>Enter on host:</strong> se escribe en la computadora<br><br>
-        <div class="tip">Siempre usar <strong>Enter on Trezor</strong> -la passphrase queda aislada en el hardware seguro.</div>`,
-        den: `With passphrase enabled, in Trezor Suite click the <strong>wallet menu</strong> (top left corner) and select <strong>"+ Passphrase wallet"</strong>.<br><br>
-        Suite will ask where to enter the passphrase:<br>
-        <strong>Enter on Trezor:</strong> entered on the device's touchscreen (recommended)<br>
-        <strong>Enter on host:</strong> typed on the computer<br><br>
-        <div class="tip">Always use <strong>Enter on Trezor</strong> -the passphrase stays isolated in secure hardware.</div>`
-      },
-      {
-        f: 'hw-trezor-t-03.png',
-        es: 'Teclado Táctil en el Model T',
-        en: 'Touch Keyboard on Model T',
-        des: `Al elegir "Enter on Trezor", el Model T muestra un <strong>teclado QWERTY táctil</strong> en su pantalla. Ingresar la passphrase (hasta 50 caracteres).<br><br>
-        Trezor Suite mostrará la billetera derivada. Verificar con una dirección conocida -Trezor no muestra fingerprint.<br><br>
-        <div class="warn">âš ï¸ Sin fingerprint de verificación. Anotá una dirección de recepción la primera vez para verificar en sesiones futuras.</div>`,
-        den: `When choosing "Enter on Trezor", Model T shows a <strong>QWERTY touch keyboard</strong> on its screen. Enter the passphrase (up to 50 characters).<br><br>
-        Trezor Suite will show the derived wallet. Verify with a known address -Trezor doesn't show a fingerprint.<br><br>
-        <div class="warn">âš ï¸ No verification fingerprint. Write down a receiving address the first time to verify in future sessions.</div>`
+        f: 'hw-trezor-t-02.png', imgW: 280,
+        es: 'Dispositivo - Teclado Táctil del Model T',
+        en: 'Device - Model T Touch Keyboard',
+        des: `Al abrir una billetera con passphrase, el Model T muestra el teclado táctil para ingresar la frase directamente en el dispositivo.<br><br>
+        Ingresar la passphrase y confirmar con ✓. Suite abre la billetera derivada.<br><br>
+        <div class="warn">⚠️ Trezor no muestra fingerprint. Guardá la primera dirección de recepción para verificar en sesiones futuras.</div>`,
+        den: `When opening a passphrase wallet, Model T shows the touch keyboard to enter the phrase directly on the device.<br><br>
+        Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
+        <div class="warn">⚠️ Trezor doesn't show a fingerprint. Save the first receiving address to verify in future sessions.</div>`
       },
     ]
   },
 
-  // TREZOR SAFE 3
+  // TREZOR SAFE 3 — pasos en el dispositivo
   {
-    id: 'hw-trezor-safe3', group: 'hw',
+    id: 'hw-trezor-safe3', ready: true, group: 'hw',
     brand: 'Trezor',
     es: 'Trezor Safe 3', en: 'Trezor Safe 3',
     steps: [
       {
-        f: 'hw-trezor-safe3-01.png',
-        es: 'Trezor Suite â†’ Settings â†’ Device â†’ Passphrase',
-        en: 'Trezor Suite â†’ Settings â†’ Device â†’ Passphrase',
-        des: `El Trezor Safe 3 usa <strong>dos botones físicos</strong> (sin pantalla táctil). Es el modelo más económico de la línea Safe con chip de seguridad certificado (EAL6+).<br><br>
-        Habilitar passphrase desde Trezor Suite: <strong>Settings â†’ Device â†’ Passphrase â†’ Enable</strong>. Confirmar en el dispositivo con los botones físicos.`,
-        den: `Trezor Safe 3 uses <strong>two physical buttons</strong> (no touchscreen). It's the most affordable Safe lineup model with certified security chip (EAL6+).<br><br>
-        Enable passphrase from Trezor Suite: <strong>Settings â†’ Device â†’ Passphrase â†’ Enable</strong>. Confirm on the device with physical buttons.`
+        f: 'hw-trezor-safe3-01.png', imgW: 280,
+        es: 'Dispositivo - Confirmar Activación (Botón Derecho)',
+        en: 'Device - Confirm Activation (Right Button)',
+        des: `El <strong>Safe 3</strong> usa <strong>dos botones físicos</strong> (sin pantalla táctil). Desde Trezor Suite activar la passphrase; el dispositivo pide confirmación.<br><br>
+        Presionar el <strong>botón derecho</strong> para confirmar.`,
+        den: `<strong>Safe 3</strong> uses <strong>two physical buttons</strong> (no touchscreen). From Trezor Suite enable passphrase; the device asks for confirmation.<br><br>
+        Press the <strong>right button</strong> to confirm.`
       },
       {
-        f: 'hw-trezor-safe3-02.png',
-        es: 'Wallet Menu â†’ + Passphrase Wallet',
-        en: 'Wallet Menu â†’ + Passphrase Wallet',
-        des: `En Suite, ir al <strong>menú de wallets â†’ "+ Passphrase wallet"</strong>.<br><br>
-        Para el Safe 3, elegir entre:<br>
-        <strong>Enter on Trezor:</strong> el dispositivo mostrará un teclado en pantalla navegado con los dos botones -proceso lento<br>
-        <strong>Enter on host:</strong> escribir en la computadora (menos seguro)<br><br>
-        <div class="warn">âš ï¸ Ingresar passphrase en Safe 3 con botones físicos es tedioso para frases largas. Considerá passphrases cortas (6-10 chars) para uso diario.</div>`,
-        den: `In Suite, go to <strong>wallet menu â†’ "+ Passphrase wallet"</strong>.<br><br>
-        For Safe 3, choose between:<br>
-        <strong>Enter on Trezor:</strong> the device shows an on-screen keyboard navigated with two buttons -slow process<br>
-        <strong>Enter on host:</strong> type on the computer (less secure)<br><br>
-        <div class="warn">âš ï¸ Entering passphrase on Safe 3 with physical buttons is tedious for long phrases. Consider short passphrases (6-10 chars) for daily use.</div>`
+        f: 'hw-trezor-safe3-02.png', imgW: 280,
+        es: 'Dispositivo - Ingresar Passphrase con Botones',
+        en: 'Device - Enter Passphrase with Buttons',
+        des: `El Safe 3 muestra el teclado en pantalla OLED navegado con los dos botones físicos.<br><br>
+        Navegar hasta cada carácter y confirmar con ambos botones. La passphrase se ingresa completamente en el dispositivo.<br><br>
+        <div class="tip">Safe 3 tiene chip EAL6+. Para entrada más cómoda, considerá passphrases cortas (6-10 chars).</div>`,
+        den: `Safe 3 shows the on-screen keyboard on its OLED display navigated with the two physical buttons.<br><br>
+        Navigate to each character and confirm with both buttons. The passphrase is entered entirely on the device.<br><br>
+        <div class="tip">Safe 3 has EAL6+ chip. For more comfortable entry, consider short passphrases (6-10 chars).</div>`
       },
       {
-        f: 'hw-trezor-safe3-03.png',
-        es: 'Verificar con Dirección Conocida',
-        en: 'Verify with Known Address',
-        des: `Suite carga la billetera con passphrase. Verificar con la primera dirección de recepción guardada previamente.<br><br>
-        <div class="info">Safe 3 tiene chip de seguridad certificado EAL6+ -el mismo nivel que los mejores hardware wallets del mercado. La limitación de passphrase es solo la UX de entrada por botones.</div>`,
-        den: `Suite loads the passphrase wallet. Verify with the first receiving address saved previously.<br><br>
-        <div class="info">Safe 3 has EAL6+ certified security chip -the same level as the best hardware wallets on the market. The passphrase limitation is only the button-based entry UX.</div>`
+        f: 'hw-trezor-safe3-03.png', imgW: 280,
+        es: 'Dispositivo - Wallet Cargada',
+        en: 'Device - Wallet Loaded',
+        des: `Tras confirmar la passphrase, Suite carga la billetera derivada. Verificar con la primera dirección de recepción guardada previamente.<br><br>
+        <div class="warn">⚠️ Sin fingerprint. Guardá la primera dirección la primera vez para verificar en sesiones futuras.</div>`,
+        den: `After confirming the passphrase, Suite loads the derived wallet. Verify with the first receiving address saved previously.<br><br>
+        <div class="warn">⚠️ No fingerprint. Save the first address the first time to verify in future sessions.</div>`
       },
     ]
   },
 
-  // TREZOR SAFE 5
+  // TREZOR SAFE 5 — pasos en el dispositivo
   {
-    id: 'hw-trezor-safe5', group: 'hw',
+    id: 'hw-trezor-safe5', ready: true, group: 'hw',
     brand: 'Trezor',
     es: 'Trezor Safe 5', en: 'Trezor Safe 5',
     steps: [
       {
-        f: 'hw-trezor-safe5-01.png',
-        es: 'Trezor Suite â†’ Settings â†’ Device â†’ Passphrase',
-        en: 'Trezor Suite â†’ Settings â†’ Device â†’ Passphrase',
-        des: `El Trezor Safe 5 tiene <strong>pantalla táctil a color 1.54"</strong> (240×240px) con <strong>feedback háptico</strong> -notificación táctil al confirmar acciones.<br><br>
-        Habilitar passphrase desde Trezor Suite: <strong>Settings â†’ Device â†’ Passphrase â†’ Enable</strong>. La pantalla táctil del Safe 5 hace la confirmación mucho más cómoda que el Safe 3.`,
-        den: `Trezor Safe 5 has a <strong>1.54" color touchscreen</strong> (240×240px) with <strong>haptic feedback</strong> -tactile notification when confirming actions.<br><br>
-        Enable passphrase from Trezor Suite: <strong>Settings â†’ Device â†’ Passphrase â†’ Enable</strong>. Safe 5's touchscreen makes confirmation much more comfortable than Safe 3.`
+        f: 'hw-trezor-safe5-01.png', imgW: 280,
+        es: 'Dispositivo - Confirmar Activación',
+        en: 'Device - Confirm Activation',
+        des: `El <strong>Safe 5</strong> tiene pantalla táctil a color (240×240px) con feedback háptico. Desde Trezor Suite activar la passphrase; el dispositivo pide confirmación.<br><br>
+        Tocar <strong>Confirmar</strong> en la pantalla táctil del Safe 5.`,
+        den: `<strong>Safe 5</strong> has a color touchscreen (240×240px) with haptic feedback. From Trezor Suite enable passphrase; the device asks for confirmation.<br><br>
+        Tap <strong>Confirm</strong> on Safe 5's touchscreen.`
       },
       {
-        f: 'hw-trezor-safe5-02.png',
-        es: 'Wallet Menu â†’ + Passphrase Wallet',
-        en: 'Wallet Menu â†’ + Passphrase Wallet',
-        des: `En Suite, ir al <strong>menú de wallets â†’ "+ Passphrase wallet"</strong>.<br><br>
-        Elegir <strong>"Enter on Trezor"</strong> para ingresar en la pantalla táctil del Safe 5. El teclado táctil con feedback háptico hace la entrada cómoda y precisa.<br><br>
-        <div class="tip">El feedback háptico del Safe 5 ayuda a evitar errores de escritura -sentís un pulso al confirmar cada carácter.</div>`,
-        den: `In Suite, go to <strong>wallet menu â†’ "+ Passphrase wallet"</strong>.<br><br>
-        Choose <strong>"Enter on Trezor"</strong> to enter on Safe 5's touchscreen. The touch keyboard with haptic feedback makes entry comfortable and precise.<br><br>
-        <div class="tip">Safe 5's haptic feedback helps avoid typos -you feel a pulse when confirming each character.</div>`
+        f: 'hw-trezor-safe5-02.png', imgW: 280,
+        es: 'Dispositivo - Teclado Táctil con Feedback Háptico',
+        en: 'Device - Touch Keyboard with Haptic Feedback',
+        des: `El Safe 5 muestra el teclado táctil para ingresar la passphrase. El <strong>feedback háptico</strong> (vibración) confirma cada carácter tocado, ayudando a evitar errores.<br><br>
+        Ingresar la passphrase y confirmar con ✓. Suite abre la billetera derivada.<br><br>
+        <div class="warn">⚠️ Sin fingerprint. Guardá la primera dirección de recepción para verificar en sesiones futuras.</div>`,
+        den: `Safe 5 shows the touch keyboard to enter the passphrase. <strong>Haptic feedback</strong> (vibration) confirms each tapped character, helping avoid mistakes.<br><br>
+        Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
+        <div class="warn">⚠️ No fingerprint. Save the first receiving address to verify in future sessions.</div>`
       },
       {
         f: 'hw-trezor-safe5-03.png',
@@ -1388,44 +1369,73 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR SAFE 7 — Desktop (Trezor Suite PC)
+  // TREZOR SUITE — PC (aplica a todos los modelos Trezor)
+  {
+    id: 'hw-trezor-suite-pc', ready: true, group: 'hw',
+    brand: 'Trezor',
+    es: 'Trezor Suite (PC)', en: 'Trezor Suite (PC)',
+    steps: [
+      {
+        f: 'hw-suite-pc-01.png',
+        es: 'Settings → Dispositivo → Activar Passphrase',
+        en: 'Settings → Device → Enable Passphrase',
+        des: `Abrí <strong>Trezor Suite</strong> (desktop) con el Trezor conectado. En la barra lateral hacer clic en <strong>Configuración → pestaña Dispositivo</strong>.<br><br>
+        En la sección <strong>Passphrase</strong>, activar el toggle <strong>"Usar billeteras con passphrase"</strong>. Suite pedirá confirmación en el dispositivo físico.<br><br>
+        <div class="info">Este proceso es igual para todos los modelos Trezor: Model T, Safe 3, Safe 5, Safe 7.</div>`,
+        den: `Open <strong>Trezor Suite</strong> (desktop) with the Trezor connected. In the sidebar click <strong>Settings → Device tab</strong>.<br><br>
+        In the <strong>Passphrase</strong> section, toggle <strong>"Use passphrase wallets"</strong>. Suite will ask for confirmation on the physical device.<br><br>
+        <div class="info">This process is the same for all Trezor models: Model T, Safe 3, Safe 5, Safe 7.</div>`
+      },
+      {
+        f: 'hw-suite-pc-02.png', imgW: 220,
+        es: 'Dispositivo - Confirmar Activación',
+        en: 'Device - Confirm Activation',
+        des: `El dispositivo Trezor muestra la pregunta <strong>"¿Activar la protección por passphrase?"</strong>.<br><br>
+        Confirmar en el dispositivo (botón o pantalla táctil según el modelo).<br><br>
+        <div class="warn">⚠️ Una vez activado, cada sesión pedirá ingresar la passphrase en el dispositivo físico.</div>`,
+        den: `The Trezor device shows <strong>"Activate passphrase protection?"</strong>.<br><br>
+        Confirm on the device (button or touchscreen depending on model).<br><br>
+        <div class="warn">⚠️ Once activated, each session will ask for the passphrase on the physical device.</div>`
+      },
+      {
+        f: 'hw-suite-pc-03.png', imgW: 220,
+        es: 'Dispositivo - Tipear la Passphrase',
+        en: 'Device - Type the Passphrase',
+        des: `Al abrir una billetera con passphrase, el dispositivo muestra el teclado para ingresar la frase. Ingresar carácter a carácter -la passphrase nunca viaja a la computadora.<br><br>
+        Confirmar con ✓. Suite abre la billetera derivada.<br><br>
+        <div class="tip">Primera vez: anotá la primera dirección de recepción para verificar en sesiones futuras.</div>`,
+        den: `When opening a passphrase wallet, the device shows a keyboard to enter the phrase. Enter character by character -the passphrase never travels to the computer.<br><br>
+        Confirm with ✓. Suite opens the derived wallet.<br><br>
+        <div class="tip">First time: write down the first receiving address to verify in future sessions.</div>`
+      },
+    ]
+  },
+
+  // TREZOR SAFE 7 — pasos en el dispositivo
   {
     id: 'hw-trezor-safe7', ready: true, group: 'hw',
     brand: 'Trezor',
     es: 'Trezor Safe 7', en: 'Trezor Safe 7',
     steps: [
       {
-        f: 'hw-trezor-safe7-01.png',
-        es: 'Trezor Suite - Configuración â†’ Dispositivo â†’ Passphrase',
-        en: 'Trezor Suite - Settings â†’ Device â†’ Passphrase',
-        des: `Abrí <strong>Trezor Suite</strong> (desktop) con el Safe 7 conectado. En la barra lateral izquierda hacer clic en <strong>Configuración</strong>, luego ir a la pestaña <strong>Dispositivo</strong>.<br><br>
-        En la sección <strong>Passphrase</strong> encontrarás la opción <strong>"Usar billeteras con passphrase"</strong>. Activar el toggle para habilitar la función.<br><br>
-        <div class="info">La pantalla composite muestra el flujo completo: Configuración (1) â†’ pestaña Dispositivo (2) â†’ sección Passphrase (3) â†’ toggle activar (4) â†’ confirmar en dispositivo (5) â†’ tipear en dispositivo (6).</div>`,
-        den: `Open <strong>Trezor Suite</strong> (desktop) with Safe 7 connected. In the left sidebar click <strong>Settings</strong>, then go to the <strong>Device</strong> tab.<br><br>
-        In the <strong>Passphrase</strong> section you'll find the option <strong>"Use passphrase wallets"</strong>. Toggle it to enable the feature.<br><br>
-        <div class="info">The composite screen shows the full flow: Settings (1) â†’ Device tab (2) â†’ Passphrase section (3) â†’ enable toggle (4) â†’ confirm on device (5) â†’ type on device (6).</div>`
+        f: 'hw-trezor-safe7-new-01.png', imgW: 280,
+        es: 'Dispositivo - Confirmar Activación',
+        en: 'Device - Confirm Activation',
+        des: `Desde <strong>Trezor Suite</strong>, activar la passphrase. El <strong>Safe 7</strong> muestra la pantalla de confirmación en su pantalla táctil a color.<br><br>
+        Tocar <strong>Confirmar</strong> en el dispositivo para activar la protección por passphrase.`,
+        den: `From <strong>Trezor Suite</strong>, enable passphrase. The <strong>Safe 7</strong> shows the confirmation screen on its color touchscreen.<br><br>
+        Tap <strong>Confirm</strong> on the device to activate passphrase protection.`
       },
       {
-        f: 'hw-trezor-safe7-02.png', imgW: 220,
-        es: 'Dispositivo - ¿Activar la Protección por Passphrase?',
-        en: 'Device - Activate Passphrase Protection?',
-        des: `Trezor Suite solicita confirmación en el <strong>dispositivo físico</strong>. El Safe 7 muestra la pregunta <strong>"¿Activar la protección por passphrase?"</strong>.<br><br>
-        Tocar <strong>Confirmar</strong> en la pantalla del dispositivo para activar la función.<br><br>
-        <div class="warn">âš ï¸ Una vez confirmado, cada sesión pedirá ingresar la passphrase directamente en el dispositivo.</div>`,
-        den: `Trezor Suite requests confirmation on the <strong>physical device</strong>. Safe 7 shows the question <strong>"Activate passphrase protection?"</strong>.<br><br>
-        Tap <strong>Confirm</strong> on the device screen to activate the feature.<br><br>
-        <div class="warn">âš ï¸ Once confirmed, each session will ask you to enter the passphrase directly on the device.</div>`
-      },
-      {
-        f: 'hw-trezor-safe7-03.png', imgW: 220,
-        es: 'Dispositivo - Tipear la Passphrase en el Safe 7',
-        en: 'Device - Type the Passphrase on Safe 7',
-        des: `Al abrir una billetera con passphrase, el Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> en su pantalla táctil. Los grupos de letras son: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / Ë½*#.<br><br>
-        Tocar cada grupo para seleccionar el carácter deseado, luego confirmar con el <strong>âœ“</strong>. La passphrase se ingresa completamente en el hardware — nunca en la computadora.<br><br>
-        <div class="tip">Al terminar, Suite abre la billetera correspondiente a la passphrase ingresada. Verificá la primera dirección de recepción con tu registro previo.</div>`,
-        den: `When opening a passphrase wallet, Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard on its touch screen. Letter groups are: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / Ë½*#.<br><br>
-        Tap each group to select the desired character, then confirm with <strong>âœ“</strong>. The passphrase is entered entirely on the hardware — never on the computer.<br><br>
-        <div class="tip">When done, Suite opens the wallet corresponding to the entered passphrase. Verify the first receiving address with your previous record.</div>`
+        f: 'hw-trezor-safe7-new-02.png', imgW: 280,
+        es: 'Dispositivo - Teclado Táctil del Safe 7',
+        en: 'Device - Safe 7 Touch Keyboard',
+        des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> en su pantalla táctil. Grupos de letras: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        Tocar cada grupo para seleccionar el carácter, confirmar con ✓. La passphrase se ingresa completamente en el hardware.<br><br>
+        <div class="tip">Verificá la primera dirección de recepción con tu registro previo.</div>`,
+        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard on its touchscreen. Letter groups: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        Tap each group to select the character, confirm with ✓. Passphrase is entered entirely on hardware.<br><br>
+        <div class="tip">Verify the first receiving address with your previous record.</div>`
       },
     ]
   },
@@ -1467,27 +1477,27 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-passport-gen2-01.png',
-        es: 'MORE (â†‘) â†’ Settings â†’ Advanced â†’ Passphrase',
-        en: 'MORE (â†‘) â†’ Settings â†’ Advanced â†’ Passphrase',
+        es: 'MORE (↑) → Settings → Advanced → Passphrase',
+        en: 'MORE (↑) → Settings → Advanced → Passphrase',
         des: `El Passport Gen2 usa <strong>teclado alfanumérico físico</strong> (estilo BlackBerry) con rueda de navegación lateral.<br><br>
-        Presionar el pad direccional hacia la derecha para llegar al menú <strong>MORE</strong>. Navegar: <strong>MORE â†’ Settings â†’ Advanced â†’ Passphrase â†’ Set Passphrase</strong>.<br><br>
+        Presionar el pad direccional hacia la derecha para llegar al menú <strong>MORE</strong>. Navegar: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
         <div class="info">El Gen2 es el modelo original con teclado físico completo -cómodo para ingresar passphrases directamente en el dispositivo.</div>`,
         den: `Passport Gen2 uses a <strong>physical alphanumeric keyboard</strong> (BlackBerry style) with side navigation wheel.<br><br>
-        Press the directional pad right to reach the <strong>MORE</strong> menu. Navigate: <strong>MORE â†’ Settings â†’ Advanced â†’ Passphrase â†’ Set Passphrase</strong>.<br><br>
+        Press the directional pad right to reach the <strong>MORE</strong> menu. Navigate: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
         <div class="info">Gen2 is the original model with full physical keyboard -comfortable for entering passphrases directly on the device.</div>`
       },
       {
         f: 'hw-passport-gen2-02.png',
-        es: 'Teclado Físico â†’ Fingerprint â†’ Apply',
-        en: 'Physical Keyboard â†’ Fingerprint â†’ Apply',
+        es: 'Teclado Físico → Fingerprint → Apply',
+        en: 'Physical Keyboard → Fingerprint → Apply',
         des: `Escribir la passphrase con el teclado físico alfanumérico del Gen2. El teclado completo hace que la entrada sea más cómoda que en dispositivos con solo botones.<br><br>
-        Confirmar â†’ Passport mostrará el <strong>wallet fingerprint</strong>. Anotarlo en papel.<br><br>
+        Confirmar → Passport mostrará el <strong>wallet fingerprint</strong>. Anotarlo en papel.<br><br>
         Seleccionar <strong>Apply</strong>. Cuando la passphrase está activa, aparece una <strong>"P" en el escudo</strong> de la tarjeta de cuenta.<br><br>
-        <div class="warn">âš ï¸ La passphrase no persiste. Cada sesión: PIN + passphrase.</div>`,
+        <div class="warn">⚠️ La passphrase no persiste. Cada sesión: PIN + passphrase.</div>`,
         den: `Type the passphrase with Gen2's physical alphanumeric keyboard. The full keyboard makes entry more comfortable than button-only devices.<br><br>
-        Confirm â†’ Passport shows the <strong>wallet fingerprint</strong>. Write it on paper.<br><br>
+        Confirm → Passport shows the <strong>wallet fingerprint</strong>. Write it on paper.<br><br>
         Select <strong>Apply</strong>. When passphrase is active, a <strong>"P" in the shield</strong> appears on the account card.<br><br>
-        <div class="warn">âš ï¸ Passphrase doesn't persist. Each session: PIN + passphrase.</div>`
+        <div class="warn">⚠️ Passphrase doesn't persist. Each session: PIN + passphrase.</div>`
       },
     ]
   },
@@ -1500,25 +1510,25 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-passport-02-01.png',
-        es: 'MORE (â†‘) â†’ Settings â†’ Advanced â†’ Passphrase',
-        en: 'MORE (â†‘) â†’ Settings â†’ Advanced â†’ Passphrase',
-        des: `El Passport 02 mantiene la misma ruta de menú que el Gen2: <strong>MORE â†’ Settings â†’ Advanced â†’ Passphrase â†’ Set Passphrase</strong>.<br><br>
+        es: 'MORE (↑) → Settings → Advanced → Passphrase',
+        en: 'MORE (↑) → Settings → Advanced → Passphrase',
+        des: `El Passport 02 mantiene la misma ruta de menú que el Gen2: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
         El 02 tiene mejoras de hardware sobre el Gen2 pero conserva el mismo diseño físico con teclado alfanumérico.<br><br>
         <div class="info">Passport 02 es la actualización del Gen2 -mismo form factor, hardware interno mejorado (nuevo chip de seguridad).</div>`,
-        den: `Passport 02 maintains the same menu path as Gen2: <strong>MORE â†’ Settings â†’ Advanced â†’ Passphrase â†’ Set Passphrase</strong>.<br><br>
+        den: `Passport 02 maintains the same menu path as Gen2: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
         The 02 has hardware improvements over Gen2 but retains the same physical design with alphanumeric keyboard.<br><br>
         <div class="info">Passport 02 is the Gen2 update -same form factor, improved internal hardware (new security chip).</div>`
       },
       {
         f: 'hw-passport-02-02.png',
-        es: 'Teclado Físico â†’ Fingerprint â†’ Apply',
-        en: 'Physical Keyboard â†’ Fingerprint â†’ Apply',
+        es: 'Teclado Físico → Fingerprint → Apply',
+        en: 'Physical Keyboard → Fingerprint → Apply',
         des: `Ingresar la passphrase con el teclado físico. El proceso es idéntico al Gen2.<br><br>
-        Confirmar â†’ ver el <strong>wallet fingerprint</strong> â†’ anotarlo â†’ <strong>Apply</strong>.<br><br>
+        Confirmar → ver el <strong>wallet fingerprint</strong> → anotarlo → <strong>Apply</strong>.<br><br>
         Indicador visual activo: <strong>"P" en el escudo</strong> en la tarjeta de cuenta.<br><br>
         <div class="tip">Si venís del Gen2, el proceso en el 02 es exactamente el mismo -no hay curva de aprendizaje.</div>`,
         den: `Enter the passphrase with the physical keyboard. The process is identical to Gen2.<br><br>
-        Confirm â†’ see the <strong>wallet fingerprint</strong> â†’ write it down â†’ <strong>Apply</strong>.<br><br>
+        Confirm → see the <strong>wallet fingerprint</strong> → write it down → <strong>Apply</strong>.<br><br>
         Active visual indicator: <strong>"P" in the shield</strong> on the account card.<br><br>
         <div class="tip">If you're coming from Gen2, the process on the 02 is exactly the same -no learning curve.</div>`
       },
@@ -1533,25 +1543,25 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-passport-prime-01.png',
-        es: 'MORE (â†‘) â†’ Settings â†’ Advanced â†’ Passphrase',
-        en: 'MORE (â†‘) â†’ Settings â†’ Advanced â†’ Passphrase',
+        es: 'MORE (↑) → Settings → Advanced → Passphrase',
+        en: 'MORE (↑) → Settings → Advanced → Passphrase',
         des: `El Passport Prime es el modelo más nuevo y premium de Foundation. Tiene <strong>pantalla táctil a color</strong> y corre <strong>KeyOS</strong> (microkernel en Rust con apps sandboxeadas).<br><br>
-        Ruta idéntica a Gen2/02: <strong>MORE â†’ Settings â†’ Advanced â†’ Passphrase â†’ Set Passphrase</strong>, pero la navegación es táctil -mucho más fluida.<br><br>
+        Ruta idéntica a Gen2/02: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>, pero la navegación es táctil -mucho más fluida.<br><br>
         <div class="info">Prime incluye apps adicionales: 2FA, Security Keys, almacenamiento cifrado de archivos, Seed Vault.</div>`,
         den: `Passport Prime is Foundation's newest and most premium model. Has a <strong>color touchscreen</strong> and runs <strong>KeyOS</strong> (Rust microkernel with sandboxed apps).<br><br>
-        Same path as Gen2/02: <strong>MORE â†’ Settings â†’ Advanced â†’ Passphrase â†’ Set Passphrase</strong>, but navigation is touchscreen -much smoother.<br><br>
+        Same path as Gen2/02: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>, but navigation is touchscreen -much smoother.<br><br>
         <div class="info">Prime includes additional apps: 2FA, Security Keys, encrypted file storage, Seed Vault.</div>`
       },
       {
         f: 'hw-passport-prime-02.png',
-        es: 'Teclado Táctil â†’ Fingerprint â†’ Apply',
-        en: 'Touch Keyboard â†’ Fingerprint â†’ Apply',
+        es: 'Teclado Táctil → Fingerprint → Apply',
+        en: 'Touch Keyboard → Fingerprint → Apply',
         des: `La pantalla táctil del Prime muestra un <strong>teclado QWERTY completo</strong>. Ingresar la passphrase es rápido y cómodo, incluso para frases largas con símbolos.<br><br>
-        Confirmar â†’ <strong>wallet fingerprint</strong> â†’ anotarlo â†’ <strong>Apply</strong>.<br><br>
+        Confirmar → <strong>wallet fingerprint</strong> → anotarlo → <strong>Apply</strong>.<br><br>
         Indicador <strong>"P" en el escudo</strong> visible en la cuenta activa.<br><br>
         <div class="tip">El Prime es la mejor opción Foundation para usuarios que quieren la experiencia más fluida con passphrase.</div>`,
         den: `Prime's touchscreen shows a <strong>full QWERTY keyboard</strong>. Entering the passphrase is fast and comfortable, even for long phrases with symbols.<br><br>
-        Confirm â†’ <strong>wallet fingerprint</strong> â†’ write it down â†’ <strong>Apply</strong>.<br><br>
+        Confirm → <strong>wallet fingerprint</strong> → write it down → <strong>Apply</strong>.<br><br>
         <strong>"P" in shield</strong> indicator visible on the active account.<br><br>
         <div class="tip">Prime is the best Foundation option for users who want the smoothest passphrase experience.</div>`
       },
@@ -1566,13 +1576,13 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-keystone3-01.png',
-        es: 'Menú (…) â†’ Device Settings â†’ Wallet Settings â†’ Passphrase',
-        en: 'Menu (…) â†’ Device Settings â†’ Wallet Settings â†’ Passphrase',
+        es: 'Menú (…) → Device Settings → Wallet Settings → Passphrase',
+        en: 'Menu (…) → Device Settings → Wallet Settings → Passphrase',
         des: `El Keystone 3 tiene pantalla táctil de <strong>4 pulgadas</strong>. Tocar el ícono de menú <strong>(…)</strong> en la esquina superior derecha.<br><br>
-        Navegar: <strong>Device Settings â†’ Wallet Settings â†’ Passphrase</strong>. Ingresar contraseña o huella digital para desbloquear la opción.<br><br>
+        Navegar: <strong>Device Settings → Wallet Settings → Passphrase</strong>. Ingresar contraseña o huella digital para desbloquear la opción.<br><br>
         <div class="info">Keystone 3 funciona como firmador air-gapped vía QR con Sparrow, BlueWallet y otras wallets. No tiene cámara integrada para escanear -usa la pantalla para mostrar QR.</div>`,
         den: `Keystone 3 has a <strong>4-inch</strong> touchscreen. Tap the menu icon <strong>(…)</strong> in the top right corner.<br><br>
-        Navigate: <strong>Device Settings â†’ Wallet Settings â†’ Passphrase</strong>. Enter password or fingerprint to unlock the option.<br><br>
+        Navigate: <strong>Device Settings → Wallet Settings → Passphrase</strong>. Enter password or fingerprint to unlock the option.<br><br>
         <div class="info">Keystone 3 works as an air-gapped signer via QR with Sparrow, BlueWallet and other wallets. It doesn't have an integrated camera -uses the screen to display QR.</div>`
       },
       {
@@ -1581,10 +1591,10 @@ const SECTIONS = [
         en: 'Touch Keyboard -Up to 128 Characters',
         des: `Keystone 3 muestra un teclado táctil en pantalla. Ingresar la passphrase (máximo <strong>128 caracteres</strong>).<br><br>
         Tocar <strong>"Confirm"</strong>. El dispositivo deriva la billetera hidden y la muestra como cuenta separada.<br><br>
-        <div class="warn">âš ï¸ Keystone <strong>no almacena la passphrase</strong> en el dispositivo. Cada sesión debés ingresarla. Si la olvidás, los fondos son irrecuperables.</div>`,
+        <div class="warn">⚠️ Keystone <strong>no almacena la passphrase</strong> en el dispositivo. Cada sesión debés ingresarla. Si la olvidás, los fondos son irrecuperables.</div>`,
         den: `Keystone 3 shows a touchscreen keyboard. Enter the passphrase (maximum <strong>128 characters</strong>).<br><br>
         Tap <strong>"Confirm"</strong>. The device derives the hidden wallet and shows it as a separate account.<br><br>
-        <div class="warn">âš ï¸ Keystone <strong>does not store the passphrase</strong> on the device. Each session you must enter it. If you forget it, funds are unrecoverable.</div>`
+        <div class="warn">⚠️ Keystone <strong>does not store the passphrase</strong> on the device. Each session you must enter it. If you forget it, funds are unrecoverable.</div>`
       },
       {
         f: 'hw-keystone3-03.png',
@@ -1610,25 +1620,25 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-keystone3-pro-01.png',
-        es: 'Menú (…) â†’ Device Settings â†’ Wallet Settings â†’ Passphrase',
-        en: 'Menu (…) â†’ Device Settings â†’ Wallet Settings â†’ Passphrase',
+        es: 'Menú (…) → Device Settings → Wallet Settings → Passphrase',
+        en: 'Menu (…) → Device Settings → Wallet Settings → Passphrase',
         des: `El Keystone 3 Pro tiene la misma pantalla táctil de 4" que el Keystone 3 pero añade <strong>cámara integrada para escanear QR</strong> -clave para el flujo air-gapped con wallets como Sparrow o BlueWallet.<br><br>
-        Misma ruta de passphrase: <strong>(…) â†’ Device Settings â†’ Wallet Settings â†’ Passphrase</strong>.<br><br>
+        Misma ruta de passphrase: <strong>(…) → Device Settings → Wallet Settings → Passphrase</strong>.<br><br>
         <div class="info">El Pro es el modelo recomendado para usar como firmador air-gapped: escaneás el QR de Sparrow/BlueWallet con la cámara integrada y firmás sin cables.</div>`,
         den: `Keystone 3 Pro has the same 4" touchscreen as Keystone 3 but adds an <strong>integrated camera for QR scanning</strong> -key for the air-gapped flow with wallets like Sparrow or BlueWallet.<br><br>
-        Same passphrase path: <strong>(…) â†’ Device Settings â†’ Wallet Settings â†’ Passphrase</strong>.<br><br>
+        Same passphrase path: <strong>(…) → Device Settings → Wallet Settings → Passphrase</strong>.<br><br>
         <div class="info">The Pro is the recommended model for use as an air-gapped signer: you scan the QR from Sparrow/BlueWallet with the integrated camera and sign without cables.</div>`
       },
       {
         f: 'hw-keystone3-pro-02.png',
         es: 'Teclado Táctil -Hasta 128 Caracteres',
         en: 'Touch Keyboard -Up to 128 Characters',
-        des: `Proceso idéntico al Keystone 3: teclado táctil â†’ ingresar passphrase (máx 128 chars) â†’ <strong>Confirm</strong>.<br><br>
+        des: `Proceso idéntico al Keystone 3: teclado táctil → ingresar passphrase (máx 128 chars) → <strong>Confirm</strong>.<br><br>
         La billetera derivada aparece como cuenta separada. La cámara del Pro no afecta el proceso de passphrase -solo mejora el flujo de firma air-gapped.<br><br>
-        <div class="warn">âš ï¸ La passphrase no se almacena. Cada sesión se ingresa manualmente.</div>`,
-        den: `Identical process to Keystone 3: touch keyboard â†’ enter passphrase (max 128 chars) â†’ <strong>Confirm</strong>.<br><br>
+        <div class="warn">⚠️ La passphrase no se almacena. Cada sesión se ingresa manualmente.</div>`,
+        den: `Identical process to Keystone 3: touch keyboard → enter passphrase (max 128 chars) → <strong>Confirm</strong>.<br><br>
         The derived wallet appears as a separate account. The Pro's camera doesn't affect the passphrase process -it only improves the air-gapped signing flow.<br><br>
-        <div class="warn">âš ï¸ Passphrase is not stored. Each session it must be entered manually.</div>`
+        <div class="warn">⚠️ Passphrase is not stored. Each session it must be entered manually.</div>`
       },
     ]
   },
@@ -1641,16 +1651,16 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-specter-diy-01.png',
-        es: 'PIN â†’ Anti-Phishing Words â†’ Passphrase',
-        en: 'PIN â†’ Anti-Phishing Words â†’ Passphrase',
+        es: 'PIN → Anti-Phishing Words → Passphrase',
+        en: 'PIN → Anti-Phishing Words → Passphrase',
         des: `Specter DIY es un dispositivo air-gapped <strong>open source y armable por el usuario</strong> (Raspberry Pi Zero + pantalla + batería).<br><br>
-        Al encender y conectar: ingresar la primera parte del PIN â†’ el dispositivo muestra <strong>dos palabras anti-phishing únicas</strong> para verificar que el hardware no fue comprometido â†’ ingresar el resto del PIN.<br><br>
+        Al encender y conectar: ingresar la primera parte del PIN → el dispositivo muestra <strong>dos palabras anti-phishing únicas</strong> para verificar que el hardware no fue comprometido → ingresar el resto del PIN.<br><br>
         Después del PIN, el dispositivo ofrece la opción de <strong>ingresar passphrase</strong> antes de derivar la billetera.<br><br>
-        <div class="warn">âš ï¸ Si las palabras anti-phishing no coinciden con las tuyas, <strong>abortá inmediatamente</strong> -el dispositivo puede estar comprometido.</div>`,
+        <div class="warn">⚠️ Si las palabras anti-phishing no coinciden con las tuyas, <strong>abortá inmediatamente</strong> -el dispositivo puede estar comprometido.</div>`,
         den: `Specter DIY is an <strong>open source, user-buildable</strong> air-gapped device (Raspberry Pi Zero + screen + battery).<br><br>
-        On power and connect: enter the first part of the PIN â†’ device shows <strong>two unique anti-phishing words</strong> to verify hardware wasn't compromised â†’ enter the rest of PIN.<br><br>
+        On power and connect: enter the first part of the PIN → device shows <strong>two unique anti-phishing words</strong> to verify hardware wasn't compromised → enter the rest of PIN.<br><br>
         After PIN, the device offers the option to <strong>enter passphrase</strong> before deriving the wallet.<br><br>
-        <div class="warn">âš ï¸ If the anti-phishing words don't match yours, <strong>abort immediately</strong> -the device may be compromised.</div>`
+        <div class="warn">⚠️ If the anti-phishing words don't match yours, <strong>abort immediately</strong> -the device may be compromised.</div>`
       },
       {
         f: 'hw-specter-diy-02.png',
@@ -1669,10 +1679,10 @@ const SECTIONS = [
         en: 'Export Account via QR to Specter Desktop',
         des: `Con la billetera con passphrase activa, el dispositivo muestra un <strong>QR de la clave pública extendida (xpub)</strong>.<br><br>
         Escanear ese QR con Specter Desktop para importar la cuenta como watch-only. Desde Specter Desktop podés ver saldos, generar direcciones y crear PSBTs (transacciones sin firmar).<br><br>
-        <div class="tip">El flujo completo air-gapped: Specter Desktop crea la transacción â†’ exporta QR â†’ Specter DIY firma â†’ devuelve QR firmado â†’ Desktop transmite.</div>`,
+        <div class="tip">El flujo completo air-gapped: Specter Desktop crea la transacción → exporta QR → Specter DIY firma → devuelve QR firmado → Desktop transmite.</div>`,
         den: `With the passphrase wallet active, the device shows a <strong>QR of the extended public key (xpub)</strong>.<br><br>
         Scan that QR with Specter Desktop to import the account as watch-only. From Specter Desktop you can view balances, generate addresses and create PSBTs (unsigned transactions).<br><br>
-        <div class="tip">Complete air-gapped flow: Specter Desktop creates transaction â†’ exports QR â†’ Specter DIY signs â†’ returns signed QR â†’ Desktop broadcasts.</div>`
+        <div class="tip">Complete air-gapped flow: Specter Desktop creates transaction → exports QR → Specter DIY signs → returns signed QR → Desktop broadcasts.</div>`
       },
     ]
   },
@@ -1685,30 +1695,30 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-specter-shield-01.png',
-        es: 'PIN + Anti-Phishing â†’ Passphrase',
-        en: 'PIN + Anti-Phishing â†’ Passphrase',
+        es: 'PIN + Anti-Phishing → Passphrase',
+        en: 'PIN + Anti-Phishing → Passphrase',
         des: `Specter Shield es la versión <strong>comercial y terminada</strong> del Specter DIY -mismo concepto air-gapped open source pero en un hardware robusto listo para usar.<br><br>
-        El proceso es idéntico al DIY: PIN en dos partes con verificación de palabras anti-phishing â†’ opción de passphrase antes de derivar la billetera.<br><br>
+        El proceso es idéntico al DIY: PIN en dos partes con verificación de palabras anti-phishing → opción de passphrase antes de derivar la billetera.<br><br>
         <div class="info">La diferencia clave del Shield vs DIY: el Shield incluye un <strong>slot para smartcard</strong>. La semilla puede almacenarse cifrada en una smartcard reemplazable -si perdés el dispositivo, tu smartcard es tu backup.</div>`,
         den: `Specter Shield is the <strong>commercial, finished version</strong> of Specter DIY -same air-gapped open source concept but in robust ready-to-use hardware.<br><br>
-        Process is identical to DIY: two-part PIN with anti-phishing word verification â†’ passphrase option before deriving wallet.<br><br>
+        Process is identical to DIY: two-part PIN with anti-phishing word verification → passphrase option before deriving wallet.<br><br>
         <div class="info">Key Shield vs DIY difference: Shield includes a <strong>smartcard slot</strong>. The seed can be stored encrypted on a replaceable smartcard -if you lose the device, your smartcard is your backup.</div>`
       },
       {
         f: 'hw-specter-shield-02.png',
-        es: 'Teclado iPhone â†’ Passphrase â†’ QR Export',
-        en: 'iPhone Keyboard â†’ Passphrase â†’ QR Export',
-        des: `Mismo teclado estilo iPhone que el DIY. Ingresar la passphrase â†’ confirmar â†’ el Shield deriva la billetera y muestra el QR de la xpub para exportar a Specter Desktop.<br><br>
+        es: 'Teclado iPhone → Passphrase → QR Export',
+        en: 'iPhone Keyboard → Passphrase → QR Export',
+        des: `Mismo teclado estilo iPhone que el DIY. Ingresar la passphrase → confirmar → el Shield deriva la billetera y muestra el QR de la xpub para exportar a Specter Desktop.<br><br>
         <div class="tip">Con el Shield podés tener la smartcard con la semilla y una passphrase separada -dos factores completamente independientes para acceder a tu billetera real.</div>`,
-        den: `Same iPhone-style keyboard as DIY. Enter passphrase â†’ confirm â†’ Shield derives the wallet and shows the xpub QR to export to Specter Desktop.<br><br>
+        den: `Same iPhone-style keyboard as DIY. Enter passphrase → confirm → Shield derives the wallet and shows the xpub QR to export to Specter Desktop.<br><br>
         <div class="tip">With Shield you can have the smartcard with the seed and a separate passphrase -two completely independent factors to access your real wallet.</div>`
       },
     ]
   },
 
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
   // BLOQUE 2 -DESKTOP WALLETS
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
 
   // SPARROW
   {
@@ -1718,12 +1728,12 @@ const SECTIONS = [
     steps: [
       {
         f: 'sw-sparrow-01.png',
-        es: 'Nueva Wallet â†’ Software Wallet â†’ Mnemonic Words',
-        en: 'New Wallet â†’ Software Wallet â†’ Mnemonic Words',
-        des: `En Sparrow, ir a <strong>File â†’ New Wallet</strong>. En el tipo de keystore seleccionar <strong>New or Imported Software Wallet</strong>.<br><br>
+        es: 'Nueva Wallet → Software Wallet → Mnemonic Words',
+        en: 'New Wallet → Software Wallet → Mnemonic Words',
+        des: `En Sparrow, ir a <strong>File → New Wallet</strong>. En el tipo de keystore seleccionar <strong>New or Imported Software Wallet</strong>.<br><br>
         Elegir <strong>Mnemonic Words (BIP39)</strong> e ingresar tus 12/24 palabras.<br><br>
         <div class="tip">Si conectás un hardware wallet a Sparrow, la passphrase se ingresa en el dispositivo (ver las secciones HW correspondientes). Esta sección cubre Sparrow como hot wallet de software.</div>`,
-        den: `In Sparrow, go to <strong>File â†’ New Wallet</strong>. For keystore type select <strong>New or Imported Software Wallet</strong>.<br><br>
+        den: `In Sparrow, go to <strong>File → New Wallet</strong>. For keystore type select <strong>New or Imported Software Wallet</strong>.<br><br>
         Choose <strong>Mnemonic Words (BIP39)</strong> and enter your 12/24 words.<br><br>
         <div class="tip">If you connect a hardware wallet to Sparrow, the passphrase is entered on the device (see the corresponding HW sections). This section covers Sparrow as a software hot wallet.</div>`
       },
@@ -1732,9 +1742,9 @@ const SECTIONS = [
         es: 'Ingresar la Passphrase en el Campo BIP39',
         en: 'Enter Passphrase in BIP39 Field',
         des: `Después de ingresar las palabras, Sparrow muestra un campo <strong>"BIP39 Passphrase"</strong> (opcional). Ingresar la passphrase en ese campo.<br><br>
-        <div class="warn">âš ï¸ En Sparrow (software wallet), la passphrase se escribe en la computadora. Asegurate de estar en un ambiente seguro sin malware o keyloggers.</div>`,
+        <div class="warn">⚠️ En Sparrow (software wallet), la passphrase se escribe en la computadora. Asegurate de estar en un ambiente seguro sin malware o keyloggers.</div>`,
         den: `After entering the words, Sparrow shows an optional <strong>"BIP39 Passphrase"</strong> field. Enter the passphrase in that field.<br><br>
-        <div class="warn">âš ï¸ In Sparrow (software wallet), the passphrase is typed on the computer. Make sure you're in a safe environment without malware or keyloggers.</div>`
+        <div class="warn">⚠️ In Sparrow (software wallet), the passphrase is typed on the computer. Make sure you're in a safe environment without malware or keyloggers.</div>`
       },
       {
         f: 'sw-sparrow-03.png',
@@ -1758,13 +1768,13 @@ const SECTIONS = [
     steps: [
       {
         f: 'sw-green-01.png',
-        es: 'Seleccionar Wallet â†’ Menú (â‹¯) â†’ Login with BIP39 Passphrase',
-        en: 'Select Wallet â†’ Menu (â‹¯) â†’ Login with BIP39 Passphrase',
+        es: 'Seleccionar Wallet → Menú (⋯) → Login with BIP39 Passphrase',
+        en: 'Select Wallet → Menu (⋯) → Login with BIP39 Passphrase',
         des: `Blockstream Green Desktop añadió soporte de passphrase en la <strong>versión 2.0.4 (2024)</strong>.<br><br>
-        Abrir la app â†’ seleccionar la wallet existente â†’ en lugar de ingresar el PIN, tocar los <strong>tres puntos (â‹¯)</strong> en la esquina superior derecha â†’ seleccionar <strong>"Login with BIP39 Passphrase"</strong>.<br><br>
+        Abrir la app → seleccionar la wallet existente → en lugar de ingresar el PIN, tocar los <strong>tres puntos (⋯)</strong> en la esquina superior derecha → seleccionar <strong>"Login with BIP39 Passphrase"</strong>.<br><br>
         <div class="info">Esta opción crea una billetera <strong>completamente separada</strong> a partir de la misma seed. Podés tener múltiples billeteras ocultas con diferentes passphrases.</div>`,
         den: `Blockstream Green Desktop added passphrase support in <strong>version 2.0.4 (2024)</strong>.<br><br>
-        Open the app â†’ select existing wallet â†’ instead of entering the PIN, tap the <strong>three dots (â‹¯)</strong> in the top right corner â†’ select <strong>"Login with BIP39 Passphrase"</strong>.<br><br>
+        Open the app → select existing wallet → instead of entering the PIN, tap the <strong>three dots (⋯)</strong> in the top right corner → select <strong>"Login with BIP39 Passphrase"</strong>.<br><br>
         <div class="info">This option creates a <strong>completely separate wallet</strong> from the same seed. You can have multiple hidden wallets with different passphrases.</div>`
       },
       {
@@ -1773,10 +1783,10 @@ const SECTIONS = [
         en: 'Enter the Passphrase and Submit',
         des: `Green muestra un campo de texto para ingresar la passphrase. Escribirla y tocar <strong>"Submit"</strong>.<br><br>
         La app cargará la billetera derivada de seed + passphrase. Las direcciones y el saldo serán los correspondientes a esa passphrase específica.<br><br>
-        <div class="warn">âš ï¸ La passphrase se ingresa en la computadora (app desktop). Asegurate de estar en un ambiente seguro. Para mayor seguridad, usá un hardware wallet con Green en lugar de la seed directamente en software.</div>`,
+        <div class="warn">⚠️ La passphrase se ingresa en la computadora (app desktop). Asegurate de estar en un ambiente seguro. Para mayor seguridad, usá un hardware wallet con Green en lugar de la seed directamente en software.</div>`,
         den: `Green shows a text field to enter the passphrase. Type it and tap <strong>"Submit"</strong>.<br><br>
         The app will load the wallet derived from seed + passphrase. The addresses and balance will be those corresponding to that specific passphrase.<br><br>
-        <div class="warn">âš ï¸ The passphrase is entered on the computer (desktop app). Make sure you're in a safe environment. For better security, use a hardware wallet with Green instead of the seed directly in software.</div>`
+        <div class="warn">⚠️ The passphrase is entered on the computer (desktop app). Make sure you're in a safe environment. For better security, use a hardware wallet with Green instead of the seed directly in software.</div>`
       },
       {
         f: 'sw-green-03.png',
@@ -1800,13 +1810,13 @@ const SECTIONS = [
     steps: [
       {
         f: 'sw-specter-01.png',
-        es: 'Add Device â†’ Campo BIP39 Passphrase',
-        en: 'Add Device â†’ BIP39 Passphrase Field',
+        es: 'Add Device → Campo BIP39 Passphrase',
+        en: 'Add Device → BIP39 Passphrase Field',
         des: `Specter Desktop está diseñado principalmente para conectar hardware wallets (Trezor, Ledger, Coldcard, etc.) y crear multisig.<br><br>
-        Al añadir un dispositivo manualmente (<strong>Add Device â†’ Manual</strong>), en el diálogo de setup aparece el campo <strong>"BIP39 passphrase (optional)"</strong>.<br><br>
+        Al añadir un dispositivo manualmente (<strong>Add Device → Manual</strong>), en el diálogo de setup aparece el campo <strong>"BIP39 passphrase (optional)"</strong>.<br><br>
         <div class="tip">Si conectás un hardware wallet, la passphrase se ingresa en el dispositivo. El campo de Specter Desktop es para cuando importás claves manualmente sin el dispositivo físico presente.</div>`,
         den: `Specter Desktop is designed primarily to connect hardware wallets (Trezor, Ledger, Coldcard, etc.) and create multisig.<br><br>
-        When adding a device manually (<strong>Add Device â†’ Manual</strong>), the setup dialog shows the <strong>"BIP39 passphrase (optional)"</strong> field.<br><br>
+        When adding a device manually (<strong>Add Device → Manual</strong>), the setup dialog shows the <strong>"BIP39 passphrase (optional)"</strong> field.<br><br>
         <div class="tip">If you connect a hardware wallet, the passphrase is entered on the device. Specter Desktop's field is for when you import keys manually without the physical device present.</div>`
       },
       {
@@ -1833,15 +1843,15 @@ const SECTIONS = [
         f: 'sw-electrum-01.png',
         es: 'Crear Nueva Wallet con Semilla Existente',
         en: 'Create New Wallet with Existing Seed',
-        des: `En Electrum, ir a <strong>File â†’ New/Restore â†’ Standard wallet â†’ I already have a seed</strong>.<br><br>
+        des: `En Electrum, ir a <strong>File → New/Restore → Standard wallet → I already have a seed</strong>.<br><br>
         Ingresar las 12/24 palabras de la semilla.`,
-        den: `In Electrum, go to <strong>File â†’ New/Restore â†’ Standard wallet â†’ I already have a seed</strong>.<br><br>
+        den: `In Electrum, go to <strong>File → New/Restore → Standard wallet → I already have a seed</strong>.<br><br>
         Enter your 12/24 seed words.`
       },
       {
         f: 'sw-electrum-02.png',
-        es: 'Opciones de la Semilla â†’ Extend with Custom Words',
-        en: 'Seed Options â†’ Extend with Custom Words',
+        es: 'Opciones de la Semilla → Extend with Custom Words',
+        en: 'Seed Options → Extend with Custom Words',
         des: `En la pantalla de ingreso de semilla, hacer clic en <strong>Options</strong> (esquina inferior derecha o botón visible). Marcar <strong>"Extend this seed with custom words"</strong>.<br><br>
         El campo de passphrase aparecerá en la siguiente pantalla.`,
         den: `On the seed entry screen, click <strong>Options</strong> (lower right corner or visible button). Check <strong>"Extend this seed with custom words"</strong>.<br><br>
@@ -1859,25 +1869,27 @@ const SECTIONS = [
     ]
   },
 
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
   // BLOQUE 3 -HOT WALLETS MOBILE
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
 
-  // TREZOR SAFE 7 — Mobile (Trezor Suite Mobile)
+  // TREZOR SUITE — MOBILE (aplica a todos los modelos Trezor)
   {
-    id: 'hw-trezor-safe7-mob', ready: true, group: 'hw',
+    id: 'hw-trezor-suite-mob', ready: true, group: 'hw',
     brand: 'Trezor',
-    es: 'Trezor Safe 7 (Mobile)', en: 'Trezor Safe 7 (Mobile)',
+    es: 'Trezor Suite (Mobile)', en: 'Trezor Suite (Mobile)',
     steps: [
       {
-        f: 'hw-trezor-safe7-mob-01.png',
-        es: 'Pantalla de Inicio - Tocar Ícono del Dispositivo',
-        en: 'Home Screen - Tap Device Icon',
-        des: `Abrí la app <strong>Trezor Suite</strong> en el móvil con el Safe 7 conectado. En la pantalla de inicio, tocar el <strong>ícono del dispositivo</strong> (esquina superior derecha) para acceder a las opciones del Trezor conectado.`,
-        den: `Open the <strong>Trezor Suite</strong> app on mobile with Safe 7 connected. On the home screen, tap the <strong>device icon</strong> (top right corner) to access the options of the connected Trezor.`
+        f: 'hw-suite-mob-01.png',
+        es: 'Pantalla de Inicio - Ícono del Dispositivo',
+        en: 'Home Screen - Device Icon',
+        des: `Abrí la app <strong>Trezor Suite</strong> en el móvil con el Trezor conectado. En la pantalla de inicio, tocar el <strong>ícono del dispositivo</strong> (esquina superior derecha).<br><br>
+        <div class="info">Aplica a todos los modelos Trezor: Model T, Safe 3, Safe 5, Safe 7.</div>`,
+        den: `Open the <strong>Trezor Suite</strong> app on mobile with the Trezor connected. On the home screen, tap the <strong>device icon</strong> (top right corner).<br><br>
+        <div class="info">Applies to all Trezor models: Model T, Safe 3, Safe 5, Safe 7.</div>`
       },
       {
-        f: 'hw-trezor-safe7-mob-02.png',
+        f: 'hw-suite-mob-02.png',
         es: 'Menú del Dispositivo - Ajustes del Dispositivo',
         en: 'Device Menu - Device Settings',
         des: `El menú del dispositivo muestra la billetera estándar conectada y dos opciones: <strong>Ajustes del dispositivo</strong> y <strong>Conecta el Trezor</strong>.<br><br>
@@ -1886,16 +1898,16 @@ const SECTIONS = [
         Tap <strong>"Device settings"</strong> to access the passphrase configuration.`
       },
       {
-        f: 'hw-trezor-safe7-mob-03.png',
-        es: 'Ajustes â†’ Seguridad â†’ Copia de Seguridad y Passphrase',
-        en: 'Settings â†’ Security â†’ Backup and Passphrase',
+        f: 'hw-suite-mob-03.png',
+        es: 'Ajustes → Seguridad → Copia de Seguridad y Passphrase',
+        en: 'Settings → Security → Backup and Passphrase',
         des: `En Ajustes del dispositivo, ir a la sección <strong>Seguridad</strong> y tocar <strong>"Copia de seguridad de la billetera y passphrase"</strong>.<br><br>
         Esta sección también muestra opciones de PIN y autenticidad del dispositivo.`,
         den: `In Device settings, go to the <strong>Security</strong> section and tap <strong>"Wallet backup and passphrase"</strong>.<br><br>
         This section also shows PIN options and device authenticity.`
       },
       {
-        f: 'hw-trezor-safe7-mob-04.png',
+        f: 'hw-suite-mob-04.png',
         es: 'Activar Toggle "Billeteras con Passphrase"',
         en: 'Enable "Passphrase Wallets" Toggle',
         des: `La pantalla muestra dos opciones:<br>
@@ -1908,7 +1920,7 @@ const SECTIONS = [
         Tap the <strong>"Passphrase wallets"</strong> toggle to enable the feature. The app will ask to confirm the action on the physical device.`
       },
       {
-        f: 'hw-trezor-safe7-mob-05.png',
+        f: 'hw-suite-mob-05.png',
         es: 'Continúa en tu Trezor para Confirmar',
         en: 'Continue on your Trezor to Confirm',
         des: `La app muestra la pantalla <strong>"Continúa en tu Trezor"</strong> — el dispositivo físico debe confirmar la activación.<br><br>
@@ -1917,7 +1929,7 @@ const SECTIONS = [
         Look at the Safe 7 screen for the next step.`
       },
       {
-        f: 'hw-trezor-safe7-mob-06.png', imgW: 220,
+        f: 'hw-suite-mob-06.png', imgW: 220,
         es: 'Dispositivo - Confirmar Activación',
         en: 'Device - Confirm Activation',
         des: `El Safe 7 muestra la pregunta <strong>"¿Activar la protección por passphrase?"</strong>.<br><br>
@@ -1926,7 +1938,7 @@ const SECTIONS = [
         Tap <strong>Confirm</strong> on the device's touch screen. Passphrase is now enabled for all future sessions.`
       },
       {
-        f: 'hw-trezor-safe7-mob-07.png',
+        f: 'hw-suite-mob-07.png',
         es: 'Pantalla de Inicio - Botón "Abrir Passphrase"',
         en: 'Home Screen - "Open Passphrase" Button',
         des: `Con passphrase habilitada, la pantalla de inicio de la app ahora muestra el botón <strong>"Abrir passphrase"</strong> junto a "Ajustes del dispositivo".<br><br>
@@ -1935,7 +1947,7 @@ const SECTIONS = [
         Tap <strong>"Open passphrase"</strong> each time you want to access your protected wallet.`
       },
       {
-        f: 'hw-trezor-safe7-mob-08.png',
+        f: 'hw-suite-mob-08.png',
         es: 'Elegir Cómo Ingresar la Passphrase',
         en: 'Choose How to Enter the Passphrase',
         des: `La pantalla <strong>"Passphrase"</strong> ofrece dos opciones para ingresar:<br><br>
@@ -1948,7 +1960,7 @@ const SECTIONS = [
         <div class="tip">Entering on the physical device is more secure — the passphrase never passes through the mobile or any software.</div>`
       },
       {
-        f: 'hw-trezor-safe7-mob-09.png',
+        f: 'hw-suite-mob-09.png',
         es: 'Opción Dispositivo - Continuar en Trezor',
         en: 'Device Option - Continue on Trezor',
         des: `Si elegiste ingresar en el dispositivo, la app muestra <strong>"Continuar en Trezor - Ingresa tu passphrase en tu Trezor"</strong>.<br><br>
@@ -1957,26 +1969,33 @@ const SECTIONS = [
         Safe 7 will show its touch keyboard to enter the passphrase directly on the hardware.`
       },
       {
-        f: 'hw-trezor-safe7-mob-10.png', imgW: 220,
+        f: 'hw-suite-mob-10.png', imgW: 220,
         es: 'Dispositivo - Teclado "Ingresa Passphrase"',
         en: 'Device - "Enter Passphrase" Keyboard',
-        des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> con grupos de letras: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / Ë½*#.<br><br>
-        Tocar cada grupo para seleccionar el carácter, navegar entre letras del grupo, y confirmar con <strong>âœ“</strong> al terminar.<br><br>
-        <div class="warn">âš ï¸ La passphrase es case-sensitive. Un carácter incorrecto abre una billetera diferente sin aviso.</div>`,
-        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard with letter groups: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / Ë½*#.<br><br>
-        Tap each group to select the character, navigate between letters in the group, and confirm with <strong>âœ“</strong> when done.<br><br>
-        <div class="warn">âš ï¸ The passphrase is case-sensitive. One wrong character opens a different wallet without warning.</div>`
+        des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> con grupos de letras: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        Tocar cada grupo para seleccionar el carácter, navegar entre letras del grupo, y confirmar con <strong>✓</strong> al terminar.<br><br>
+        <div class="warn">⚠️ La passphrase es case-sensitive. Un carácter incorrecto abre una billetera diferente sin aviso.</div>`,
+        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard with letter groups: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        Tap each group to select the character, navigate between letters in the group, and confirm with <strong>✓</strong> when done.<br><br>
+        <div class="warn">⚠️ The passphrase is case-sensitive. One wrong character opens a different wallet without warning.</div>`
       },
       {
-        f: 'hw-trezor-safe7-mob-11.png',
+        f: 'hw-suite-mob-11.png',
+        es: 'Opción Dispositivo - Continuar en Trezor',
+        en: 'Device Option - Continue on Trezor',
+        des: `Si elegiste ingresar en el dispositivo, la app muestra <strong>"Continuar en Trezor"</strong>. El dispositivo mostrará su teclado para ingresar la passphrase directamente en el hardware.`,
+        den: `If you chose to enter on the device, the app shows <strong>"Continue on Trezor"</strong>. The device will show its keyboard to enter the passphrase directly on hardware.`
+      },
+      {
+        f: 'hw-suite-mob-12.png',
         es: 'Opción Alternativa - Tipear desde el Móvil',
         en: 'Alternative Option - Type from Mobile',
-        des: `Si elegiste ingresar la passphrase desde el móvil, la app muestra el campo <strong>"Ingresa tu passphrase"</strong>.<br><br>
-        Escribí la passphrase directamente en el teclado del móvil. La app la enviará al dispositivo para derivar la billetera correspondiente.<br><br>
-        <div class="info">Esta opción es más cómoda pero menos segura que ingresarla directamente en el dispositivo físico.</div>`,
-        den: `If you chose to enter the passphrase from mobile, the app shows the <strong>"Enter your passphrase"</strong> field.<br><br>
-        Type the passphrase directly on the mobile keyboard. The app will send it to the device to derive the corresponding wallet.<br><br>
-        <div class="info">This option is more convenient but less secure than entering it directly on the physical device.</div>`
+        des: `Opción alternativa: tipear la passphrase directamente en el campo del móvil.<br><br>
+        La app la enviará al dispositivo para derivar la billetera.<br><br>
+        <div class="info">Ingresar en el dispositivo físico siempre es más seguro que hacerlo desde el móvil.</div>`,
+        den: `Alternative option: type the passphrase directly in the mobile field.<br><br>
+        The app will send it to the device to derive the wallet.<br><br>
+        <div class="info">Entering on the physical device is always more secure than from mobile.</div>`
       },
     ]
   },
@@ -1991,9 +2010,9 @@ const SECTIONS = [
         f: 'mob-blue-01.png',
         es: 'Importar Wallet con Seed Existente',
         en: 'Import Wallet with Existing Seed',
-        des: `En BlueWallet, tocar <strong>"+ Agregar billetera"</strong> â†’ <strong>Importar billetera</strong>. Ingresar las 12/24 palabras de la semilla.<br><br>
+        des: `En BlueWallet, tocar <strong>"+ Agregar billetera"</strong> → <strong>Importar billetera</strong>. Ingresar las 12/24 palabras de la semilla.<br><br>
         <div class="info">BlueWallet soporta passphrase BIP39 para wallets de tipo HD (Hierarchical Deterministic). Las wallets Lightning no soportan passphrase.</div>`,
-        den: `In BlueWallet, tap <strong>"+ Add wallet"</strong> â†’ <strong>Import wallet</strong>. Enter the 12/24 seed words.<br><br>
+        den: `In BlueWallet, tap <strong>"+ Add wallet"</strong> → <strong>Import wallet</strong>. Enter the 12/24 seed words.<br><br>
         <div class="info">BlueWallet supports BIP39 passphrase for HD (Hierarchical Deterministic) wallet types. Lightning wallets do not support passphrase.</div>`
       },
       {
@@ -2001,9 +2020,9 @@ const SECTIONS = [
         es: 'Ingresar la Passphrase en el Campo BIP39',
         en: 'Enter Passphrase in BIP39 Field',
         des: `Al importar con seed, BlueWallet muestra un campo opcional <strong>"BIP39 Passphrase"</strong>. Ingresá tu passphrase ahí.<br><br>
-        <div class="warn">âš ï¸ La passphrase se ingresa en el teléfono. Asegurate de que el dispositivo esté libre de malware y no tengas capturas de pantalla automáticas activadas.</div>`,
+        <div class="warn">⚠️ La passphrase se ingresa en el teléfono. Asegurate de que el dispositivo esté libre de malware y no tengas capturas de pantalla automáticas activadas.</div>`,
         den: `When importing with seed, BlueWallet shows an optional <strong>"BIP39 Passphrase"</strong> field. Enter your passphrase there.<br><br>
-        <div class="warn">âš ï¸ The passphrase is entered on the phone. Make sure the device is malware-free and you don't have automatic screenshots enabled.</div>`
+        <div class="warn">⚠️ The passphrase is entered on the phone. Make sure the device is malware-free and you don't have automatic screenshots enabled.</div>`
       },
     ]
   },
@@ -2046,10 +2065,10 @@ const SECTIONS = [
         es: 'Bull Bitcoin -Soporte de Passphrase',
         en: 'Bull Bitcoin -Passphrase Support',
         des: `Bull Bitcoin Wallet es una wallet Bitcoin-only desarrollada por el equipo de Bull Bitcoin (exchange canadiense). Soporta passphrase BIP39 al importar o restaurar una wallet con semilla.<br><br>
-        El proceso es similar al de otras wallets móviles: importar semilla â†’ campo opcional de passphrase â†’ confirmar.<br><br>
+        El proceso es similar al de otras wallets móviles: importar semilla → campo opcional de passphrase → confirmar.<br><br>
         <div class="info">Pendiente: capturas de pantalla del proceso actualizado. Ver documentación oficial en bullbitcoin.com/wallet.</div>`,
         den: `Bull Bitcoin Wallet is a Bitcoin-only wallet developed by the Bull Bitcoin team (Canadian exchange). It supports BIP39 passphrase when importing or restoring a wallet with seed.<br><br>
-        The process is similar to other mobile wallets: import seed â†’ optional passphrase field â†’ confirm.<br><br>
+        The process is similar to other mobile wallets: import seed → optional passphrase field → confirm.<br><br>
         <div class="info">Pending: screenshots of the updated process. See official documentation at bullbitcoin.com/wallet.</div>`
       },
     ]
@@ -2063,8 +2082,8 @@ const SECTIONS = [
     steps: [
       {
         f: 'mob-nunchuk-01.png',
-        es: 'Añadir Software Key â†’ Set Passphrase',
-        en: 'Add Software Key â†’ Set Passphrase',
+        es: 'Añadir Software Key → Set Passphrase',
+        en: 'Add Software Key → Set Passphrase',
         des: `En Nunchuk, al añadir una <strong>software key</strong> (clave de software), aparece el botón <strong>"[Set passphrase]"</strong>.<br><br>
         Tocarlo e ingresar tu passphrase. Si no necesitás passphrase, seleccionar <strong>"[I don't need a passphrase]"</strong> para omitirla.<br><br>
         <div class="info">Nunchuk es una wallet Bitcoin-only enfocada en multisig. Es popular entre usuarios avanzados que quieren multisig en mobile con hardware wallets conectados via NFC o QR.</div>`,
@@ -2078,10 +2097,10 @@ const SECTIONS = [
         en: 'Verify with Wallet Fingerprint',
         des: `Al agregar la passphrase, el <strong>fingerprint de la wallet actualiza</strong> en la pantalla. Ese cambio de fingerprint confirma que la passphrase fue aplicada correctamente.<br><br>
         Guardá el fingerprint para verificaciones futuras. La billetera derivada de seed + passphrase aparecerá como un key separado en tu configuración de Nunchuk.<br><br>
-        <div class="tip">Para recovery: al restaurar en Nunchuk, seleccionar <strong>Mnemonic Words (BIP39)</strong> â†’ ingresar seed â†’ ingresar passphrase. Ambos datos son necesarios para recuperar la billetera.</div>`,
+        <div class="tip">Para recovery: al restaurar en Nunchuk, seleccionar <strong>Mnemonic Words (BIP39)</strong> → ingresar seed → ingresar passphrase. Ambos datos son necesarios para recuperar la billetera.</div>`,
         den: `When adding the passphrase, the <strong>wallet fingerprint updates</strong> on screen. That fingerprint change confirms the passphrase was applied correctly.<br><br>
         Save the fingerprint for future verification. The wallet derived from seed + passphrase will appear as a separate key in your Nunchuk configuration.<br><br>
-        <div class="tip">For recovery: when restoring in Nunchuk, select <strong>Mnemonic Words (BIP39)</strong> â†’ enter seed â†’ enter passphrase. Both pieces of data are needed to recover the wallet.</div>`
+        <div class="tip">For recovery: when restoring in Nunchuk, select <strong>Mnemonic Words (BIP39)</strong> → enter seed → enter passphrase. Both pieces of data are needed to recover the wallet.</div>`
       },
     ]
   },
@@ -2106,9 +2125,9 @@ const SECTIONS = [
     ]
   },
 
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
   // BLOQUE 4 -HOT WALLETS BROWSER
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─────────────────────────────────────────────────────────────
 
   {
     id: 'br-overview', group: 'browser',
@@ -2124,23 +2143,23 @@ const SECTIONS = [
         • <strong>OKX Wallet</strong> -soporta BIP39 passphrase pero es multi-chain<br>
         • <strong>Sparrow (web)</strong> -Sparrow no tiene versión web, solo desktop<br><br>
         <strong>Recomendación:</strong> para Bitcoin con passphrase, las browser extensions no son el camino recomendado. Preferir hardware wallets + Sparrow Desktop.<br><br>
-        <div class="warn">âš ï¸ Las browser wallets tienen mayor superficie de ataque (extensiones maliciosas, phishing). Evitá guardar fondos significativos en ellas.</div>`,
+        <div class="warn">⚠️ Las browser wallets tienen mayor superficie de ataque (extensiones maliciosas, phishing). Evitá guardar fondos significativos en ellas.</div>`,
         den: `Most Bitcoin-focused browser wallets are Chrome/Firefox extensions. BIP39 passphrase support varies:<br><br>
         <strong>Wallets with support:</strong><br>
         • <strong>Alby (alby.guide)</strong> -Lightning extension, not traditional BIP39 passphrase<br>
         • <strong>OKX Wallet</strong> -supports BIP39 passphrase but is multi-chain<br>
         • <strong>Sparrow (web)</strong> -Sparrow has no web version, desktop only<br><br>
         <strong>Recommendation:</strong> for Bitcoin with passphrase, browser extensions are not the recommended path. Prefer hardware wallets + Sparrow Desktop.<br><br>
-        <div class="warn">âš ï¸ Browser wallets have a larger attack surface (malicious extensions, phishing). Avoid storing significant funds in them.</div>`
+        <div class="warn">⚠️ Browser wallets have a larger attack surface (malicious extensions, phishing). Avoid storing significant funds in them.</div>`
       },
     ]
   },
 
 ]; // END SECTIONS
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // NAV TREE BUILD
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 const GROUPS = [
   { id: 'intro',   es: 'Introducción',          en: 'Introduction',          color: 'var(--text)' },
   { id: 'hw',      es: 'Cold-Wallets (hardware)', en: 'Cold-Wallets (hardware)', color: '#4fc3f7' },
@@ -2161,7 +2180,7 @@ function buildNav() {
     hdr.className = 'sec-header';
     hdr.dataset.gid = g.id;
     const label = t(g.es, g.en).replace(/(\(.*?\))/, `<span style="color:${g.color || 'var(--text)'}">\$1</span>`);
-    hdr.innerHTML = `<span>${label}</span><span class="arrow">â–¶</span>`;
+    hdr.innerHTML = `<span>${label}</span><span class="arrow">▶</span>`;
     const items = document.createElement('div');
     items.className = 'sec-items';
     secs.forEach(sec => {
@@ -2185,9 +2204,9 @@ function buildNav() {
   if (first) { first.click(); }
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // RENDER SECTION
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 function loadSection(sid) {
   const sec = SECTIONS.find(s => s.id === sid);
   if (!sec) return;
@@ -2232,9 +2251,9 @@ function loadSection(sid) {
   updateProgress(sid);
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // PROGRESS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 function updateProgress(sid) {
   const ids = SECTIONS.map(s => s.id);
   const idx = ids.indexOf(sid);
@@ -2242,9 +2261,9 @@ function updateProgress(sid) {
   document.getElementById('progress-fill').style.width = pct + '%';
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // SEARCH
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 function buildSearchIndex() {
   const idx = [];
   SECTIONS.forEach(sec => {
@@ -2293,9 +2312,9 @@ document.addEventListener('click', e => {
     searchResults.classList.remove('open');
 });
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // LANG TOGGLE
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 document.getElementById('lang-toggle').addEventListener('click', function() {
   LANG = LANG === 'es' ? 'en' : 'es';
   this.textContent = LANG === 'es' ? 'EN' : 'ES';
@@ -2306,9 +2325,9 @@ document.getElementById('lang-toggle').addEventListener('click', function() {
   else loadSection(SECTIONS[0].id);
 });
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // HAMBURGER (mobile)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('sidebar-overlay');
 document.getElementById('hamburger').addEventListener('click', () => {
@@ -2320,9 +2339,9 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('open');
 });
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // LIGHTBOX
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 function openLightbox(src, caption) {
   document.getElementById('lightbox-img').src = src;
   document.getElementById('lightbox-caption').textContent = caption;
@@ -2336,9 +2355,9 @@ document.getElementById('lightbox').addEventListener('click', e => {
     document.getElementById('lightbox').classList.remove('open');
 });
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 // INIT
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══════════════════════════════════════════════════════════════
 buildNav();
 loadSection('intro-01');
 </script>
