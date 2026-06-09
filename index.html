@@ -1589,9 +1589,9 @@ const SECTIONS = [
 
   // PASSPORT — PASOS EN EL DISPOSITIVO (aplica a todos los modelos)
   {
-    id: 'hw-passport-flow', ready: true, group: 'hw',
+    id: 'hw-passport-core', ready: true, group: 'hw',
     brand: 'Foundation',
-    es: 'Passport (Todos los Modelos)', en: 'Passport (All Models)',
+    es: 'Passport Core', en: 'Passport Core',
     steps: [
       {
         f: 'hw-passport-01.png', imgW: 340,
@@ -1671,25 +1671,6 @@ const SECTIONS = [
         Compare with the value written on paper. If it matches → correct passphrase, correct wallet.<br><br>
         When passphrase is active, the <strong>"P" in the shield</strong> appears on the account card.<br><br>
         <div class="warn">⚠️ The passphrase does not persist between sessions. Each time: device PIN + passphrase.</div>`
-      },
-    ]
-  },
-
-  // PASSPORT CORE
-  {
-    id: 'hw-passport-core', group: 'hw',
-    brand: 'Foundation',
-    es: 'Passport Core', en: 'Passport Core',
-    steps: [
-      {
-        es: 'Teclado Físico Alfanumérico — Modelo Actual',
-        en: 'Physical Alphanumeric Keyboard — Current Model',
-        des: `El <strong>Passport Core</strong> es el modelo actual de Foundation. Tiene teclado físico alfanumérico completo (estilo BlackBerry) con rueda de navegación lateral.<br><br>
-        Para la passphrase: navegar con el pad direccional → <strong>MORE → Settings → Advanced → Passphrase</strong>.<br><br>
-        <div class="info">Las instrucciones del Core aplican también a los dispositivos <strong>Founder's Edition</strong> con firmware v2.1.0 o superior.</div>`,
-        den: `The <strong>Passport Core</strong> is Foundation's current model. It has a full physical alphanumeric keyboard (BlackBerry style) with side navigation wheel.<br><br>
-        For passphrase: navigate with directional pad → <strong>MORE → Settings → Advanced → Passphrase</strong>.<br><br>
-        <div class="info">Core instructions also apply to <strong>Founder's Edition</strong> devices running firmware v2.1.0 or above.</div>`
       },
     ]
   },
