@@ -1587,6 +1587,94 @@ const SECTIONS = [
     ]
   },
 
+  // PASSPORT — PASOS EN EL DISPOSITIVO (aplica a todos los modelos)
+  {
+    id: 'hw-passport-flow', ready: true, group: 'hw',
+    brand: 'Foundation',
+    es: 'Passport (Todos los Modelos)', en: 'Passport (All Models)',
+    steps: [
+      {
+        f: 'hw-passport-01.png', imgW: 340,
+        es: 'Menú Principal del Passport',
+        en: 'Passport Main Menu',
+        des: `El <strong>Passport</strong> (Gen2, 02 y Prime) usa la misma ruta de menú para activar la passphrase.<br><br>
+        Desde la pantalla principal, navegar al menú lateral (<strong>pad derecho → MORE</strong> en Gen2/02, o tocar el ícono de menú en Prime).<br><br>
+        <div class="info">El flujo de pasos es idéntico en los tres modelos. Prime usa pantalla táctil; Gen2/02 usan teclado físico.</div>`,
+        den: `The <strong>Passport</strong> (Gen2, 02 and Prime) uses the same menu path to activate passphrase.<br><br>
+        From the main screen, navigate to the side menu (<strong>right pad → MORE</strong> on Gen2/02, or tap the menu icon on Prime).<br><br>
+        <div class="info">The step flow is identical on all three models. Prime uses touchscreen; Gen2/02 use physical keyboard.</div>`
+      },
+      {
+        f: 'hw-passport-02.png', imgW: 340,
+        es: 'MORE → Settings → Advanced → Passphrase',
+        en: 'MORE → Settings → Advanced → Passphrase',
+        des: `En el menú <strong>MORE</strong>, navegar: <strong>Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
+        En Gen2/02 navegar con la rueda lateral y confirmar con el botón central. En Prime, tocar cada opción en la pantalla táctil.`,
+        den: `In the <strong>MORE</strong> menu, navigate: <strong>Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
+        On Gen2/02 navigate with the side wheel and confirm with the center button. On Prime, tap each option on the touchscreen.`
+      },
+      {
+        f: 'hw-passport-03.png', imgW: 340,
+        es: 'Advertencia — Leer Antes de Continuar',
+        en: 'Warning — Read Before Continuing',
+        des: `Passport muestra una pantalla de <strong>advertencia</strong> explicando que la passphrase crea una billetera diferente y que si se pierde, los fondos son irrecuperables.<br><br>
+        Confirmar para continuar.<br><br>
+        <div class="warn">⚠️ Leer con atención. La passphrase NO se guarda en el dispositivo — si la olvidás, perdés el acceso permanentemente.</div>`,
+        den: `Passport shows a <strong>warning</strong> screen explaining that the passphrase creates a different wallet and if lost, funds are unrecoverable.<br><br>
+        Confirm to continue.<br><br>
+        <div class="warn">⚠️ Read carefully. The passphrase is NOT saved on the device — if you forget it, you lose access permanently.</div>`
+      },
+      {
+        f: 'hw-passport-04.png', imgW: 340,
+        es: 'Ingresar la Passphrase',
+        en: 'Enter the Passphrase',
+        des: `Passport muestra el campo para ingresar la passphrase.<br><br>
+        En <strong>Gen2/02</strong>: tipear con el teclado físico alfanumérico (estilo BlackBerry). Cómodo para passphrases largas.<br>
+        En <strong>Prime</strong>: teclado QWERTY táctil en pantalla.<br><br>
+        La passphrase nunca se muestra completa en pantalla durante el ingreso.`,
+        den: `Passport shows the field to enter the passphrase.<br><br>
+        On <strong>Gen2/02</strong>: type with the physical alphanumeric keyboard (BlackBerry style). Comfortable for long passphrases.<br>
+        On <strong>Prime</strong>: on-screen QWERTY touchscreen keyboard.<br><br>
+        The passphrase is never fully displayed on screen during entry.`
+      },
+      {
+        f: 'hw-passport-05.png', imgW: 340,
+        es: 'Passphrase Ingresada — Confirmar',
+        en: 'Passphrase Entered — Confirm',
+        des: `Con la passphrase ingresada, Passport muestra el campo completo para revisar (caracteres enmascarados).<br><br>
+        Verificar que no hay errores tipográficos antes de confirmar. Presionar <strong>Confirm</strong> / <strong>Apply</strong>.<br><br>
+        <div class="tip">Es la última oportunidad para corregir antes de derivar la billetera. Un carácter incorrecto genera una billetera diferente sin aviso.</div>`,
+        den: `With the passphrase entered, Passport shows the full field for review (masked characters).<br><br>
+        Verify there are no typos before confirming. Press <strong>Confirm</strong> / <strong>Apply</strong>.<br><br>
+        <div class="tip">This is the last chance to correct before deriving the wallet. One wrong character generates a different wallet without warning.</div>`
+      },
+      {
+        f: 'hw-passport-06.png', imgW: 340,
+        es: 'Wallet Fingerprint — Anotar en Papel',
+        en: 'Wallet Fingerprint — Write on Paper',
+        des: `Passport muestra el <strong>wallet fingerprint</strong>: una cadena corta única derivada de tu seed + passphrase.<br><br>
+        <strong>Anotar este fingerprint en papel</strong> junto a la passphrase (en lugar seguro separado de la seed).<br><br>
+        En sesiones futuras, verificar que el fingerprint coincide antes de usar la billetera.`,
+        den: `Passport shows the <strong>wallet fingerprint</strong>: a unique short string derived from your seed + passphrase.<br><br>
+        <strong>Write this fingerprint on paper</strong> alongside the passphrase (in a secure place separate from the seed).<br><br>
+        In future sessions, verify the fingerprint matches before using the wallet.`
+      },
+      {
+        f: 'hw-passport-07.png', imgW: 340,
+        es: 'Verificar Fingerprint — Sesiones Futuras',
+        en: 'Verify Fingerprint — Future Sessions',
+        des: `Cada vez que abrís la billetera con passphrase, Passport muestra el fingerprint.<br><br>
+        Comparar con el valor anotado en papel. Si coincide → passphrase correcta, billetera correcta.<br><br>
+        Cuando la passphrase está activa, aparece la <strong>"P" en el escudo</strong> de la tarjeta de cuenta.<br><br>
+        <div class="warn">⚠️ La passphrase no persiste entre sesiones. Cada vez: PIN del dispositivo + passphrase.</div>`,
+        den: `Every time you open the passphrase wallet, Passport shows the fingerprint.<br><br>
+        Compare with the value written on paper. If it matches → correct passphrase, correct wallet.<br><br>
+        When passphrase is active, the <strong>"P" in the shield</strong> appears on the account card.<br><br>
+        <div class="warn">⚠️ The passphrase does not persist between sessions. Each time: device PIN + passphrase.</div>`
+      },
+    ]
+  },
+
   // PASSPORT GEN2
   {
     id: 'hw-passport-gen2', group: 'hw',
@@ -1594,28 +1682,14 @@ const SECTIONS = [
     es: 'Passport Gen2', en: 'Passport Gen2',
     steps: [
       {
-        f: 'hw-passport-gen2-01.png',
-        es: 'MORE (↑) → Settings → Advanced → Passphrase',
-        en: 'MORE (↑) → Settings → Advanced → Passphrase',
-        des: `El Passport Gen2 usa <strong>teclado alfanumérico físico</strong> (estilo BlackBerry) con rueda de navegación lateral.<br><br>
-        Presionar el pad direccional hacia la derecha para llegar al menú <strong>MORE</strong>. Navegar: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
-        <div class="info">El Gen2 es el modelo original con teclado físico completo -cómodo para ingresar passphrases directamente en el dispositivo.</div>`,
-        den: `Passport Gen2 uses a <strong>physical alphanumeric keyboard</strong> (BlackBerry style) with side navigation wheel.<br><br>
-        Press the directional pad right to reach the <strong>MORE</strong> menu. Navigate: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
-        <div class="info">Gen2 is the original model with full physical keyboard -comfortable for entering passphrases directly on the device.</div>`
-      },
-      {
-        f: 'hw-passport-gen2-02.png',
-        es: 'Teclado Físico → Fingerprint → Apply',
-        en: 'Physical Keyboard → Fingerprint → Apply',
-        des: `Escribir la passphrase con el teclado físico alfanumérico del Gen2. El teclado completo hace que la entrada sea más cómoda que en dispositivos con solo botones.<br><br>
-        Confirmar → Passport mostrará el <strong>wallet fingerprint</strong>. Anotarlo en papel.<br><br>
-        Seleccionar <strong>Apply</strong>. Cuando la passphrase está activa, aparece una <strong>"P" en el escudo</strong> de la tarjeta de cuenta.<br><br>
-        <div class="warn">⚠️ La passphrase no persiste. Cada sesión: PIN + passphrase.</div>`,
-        den: `Type the passphrase with Gen2's physical alphanumeric keyboard. The full keyboard makes entry more comfortable than button-only devices.<br><br>
-        Confirm → Passport shows the <strong>wallet fingerprint</strong>. Write it on paper.<br><br>
-        Select <strong>Apply</strong>. When passphrase is active, a <strong>"P" in the shield</strong> appears on the account card.<br><br>
-        <div class="warn">⚠️ Passphrase doesn't persist. Each session: PIN + passphrase.</div>`
+        es: 'Teclado Físico Alfanumérico (BlackBerry)',
+        en: 'Physical Alphanumeric Keyboard (BlackBerry)',
+        des: `El <strong>Passport Gen2</strong> tiene teclado físico alfanumérico completo estilo BlackBerry con rueda de navegación lateral.<br><br>
+        Es el modelo original de Foundation. Para la passphrase: navegar con el pad direccional → <strong>MORE → Settings → Advanced → Passphrase</strong>.<br><br>
+        <div class="info">El teclado físico completo hace que ingresar passphrases sea más cómodo que en dispositivos con solo botones de navegación.</div>`,
+        den: `The <strong>Passport Gen2</strong> has a full BlackBerry-style physical alphanumeric keyboard with side navigation wheel.<br><br>
+        It is Foundation's original model. For passphrase: navigate with directional pad → <strong>MORE → Settings → Advanced → Passphrase</strong>.<br><br>
+        <div class="info">The full physical keyboard makes entering passphrases more comfortable than button-only navigation devices.</div>`
       },
     ]
   },
@@ -1627,28 +1701,14 @@ const SECTIONS = [
     es: 'Passport 02', en: 'Passport 02',
     steps: [
       {
-        f: 'hw-passport-02-01.png',
-        es: 'MORE (↑) → Settings → Advanced → Passphrase',
-        en: 'MORE (↑) → Settings → Advanced → Passphrase',
-        des: `El Passport 02 mantiene la misma ruta de menú que el Gen2: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
-        El 02 tiene mejoras de hardware sobre el Gen2 pero conserva el mismo diseño físico con teclado alfanumérico.<br><br>
-        <div class="info">Passport 02 es la actualización del Gen2 -mismo form factor, hardware interno mejorado (nuevo chip de seguridad).</div>`,
-        den: `Passport 02 maintains the same menu path as Gen2: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>.<br><br>
-        The 02 has hardware improvements over Gen2 but retains the same physical design with alphanumeric keyboard.<br><br>
-        <div class="info">Passport 02 is the Gen2 update -same form factor, improved internal hardware (new security chip).</div>`
-      },
-      {
-        f: 'hw-passport-02-02.png',
-        es: 'Teclado Físico → Fingerprint → Apply',
-        en: 'Physical Keyboard → Fingerprint → Apply',
-        des: `Ingresar la passphrase con el teclado físico. El proceso es idéntico al Gen2.<br><br>
-        Confirmar → ver el <strong>wallet fingerprint</strong> → anotarlo → <strong>Apply</strong>.<br><br>
-        Indicador visual activo: <strong>"P" en el escudo</strong> en la tarjeta de cuenta.<br><br>
-        <div class="tip">Si venís del Gen2, el proceso en el 02 es exactamente el mismo -no hay curva de aprendizaje.</div>`,
-        den: `Enter the passphrase with the physical keyboard. The process is identical to Gen2.<br><br>
-        Confirm → see the <strong>wallet fingerprint</strong> → write it down → <strong>Apply</strong>.<br><br>
-        Active visual indicator: <strong>"P" in the shield</strong> on the account card.<br><br>
-        <div class="tip">If you're coming from Gen2, the process on the 02 is exactly the same -no learning curve.</div>`
+        es: 'Mismo Flujo que Gen2 — Hardware Mejorado',
+        en: 'Same Flow as Gen2 — Improved Hardware',
+        des: `El <strong>Passport 02</strong> mantiene el mismo diseño físico y flujo de menú que el Gen2. La ruta de passphrase es idéntica: <strong>MORE → Settings → Advanced → Passphrase</strong>.<br><br>
+        Diferencias respecto al Gen2: nuevo chip de seguridad interno, hardware actualizado.<br><br>
+        <div class="tip">Si venís del Gen2, el proceso es exactamente el mismo — sin curva de aprendizaje.</div>`,
+        den: `The <strong>Passport 02</strong> maintains the same physical design and menu flow as Gen2. The passphrase path is identical: <strong>MORE → Settings → Advanced → Passphrase</strong>.<br><br>
+        Differences from Gen2: new internal security chip, updated hardware.<br><br>
+        <div class="tip">If you're coming from Gen2, the process is exactly the same — no learning curve.</div>`
       },
     ]
   },
@@ -1660,28 +1720,14 @@ const SECTIONS = [
     es: 'Passport Prime', en: 'Passport Prime',
     steps: [
       {
-        f: 'hw-passport-prime-01.png',
-        es: 'MORE (↑) → Settings → Advanced → Passphrase',
-        en: 'MORE (↑) → Settings → Advanced → Passphrase',
-        des: `El Passport Prime es el modelo más nuevo y premium de Foundation. Tiene <strong>pantalla táctil a color</strong> y corre <strong>KeyOS</strong> (microkernel en Rust con apps sandboxeadas).<br><br>
-        Ruta idéntica a Gen2/02: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>, pero la navegación es táctil -mucho más fluida.<br><br>
-        <div class="info">Prime incluye apps adicionales: 2FA, Security Keys, almacenamiento cifrado de archivos, Seed Vault.</div>`,
-        den: `Passport Prime is Foundation's newest and most premium model. Has a <strong>color touchscreen</strong> and runs <strong>KeyOS</strong> (Rust microkernel with sandboxed apps).<br><br>
-        Same path as Gen2/02: <strong>MORE → Settings → Advanced → Passphrase → Set Passphrase</strong>, but navigation is touchscreen -much smoother.<br><br>
-        <div class="info">Prime includes additional apps: 2FA, Security Keys, encrypted file storage, Seed Vault.</div>`
-      },
-      {
-        f: 'hw-passport-prime-02.png',
-        es: 'Teclado Táctil → Fingerprint → Apply',
-        en: 'Touch Keyboard → Fingerprint → Apply',
-        des: `La pantalla táctil del Prime muestra un <strong>teclado QWERTY completo</strong>. Ingresar la passphrase es rápido y cómodo, incluso para frases largas con símbolos.<br><br>
-        Confirmar → <strong>wallet fingerprint</strong> → anotarlo → <strong>Apply</strong>.<br><br>
-        Indicador <strong>"P" en el escudo</strong> visible en la cuenta activa.<br><br>
-        <div class="tip">El Prime es la mejor opción Foundation para usuarios que quieren la experiencia más fluida con passphrase.</div>`,
-        den: `Prime's touchscreen shows a <strong>full QWERTY keyboard</strong>. Entering the passphrase is fast and comfortable, even for long phrases with symbols.<br><br>
-        Confirm → <strong>wallet fingerprint</strong> → write it down → <strong>Apply</strong>.<br><br>
-        <strong>"P" in shield</strong> indicator visible on the active account.<br><br>
-        <div class="tip">Prime is the best Foundation option for users who want the smoothest passphrase experience.</div>`
+        es: 'Pantalla Táctil + KeyOS — Misma Ruta de Menú',
+        en: 'Touchscreen + KeyOS — Same Menu Path',
+        des: `El <strong>Passport Prime</strong> es el modelo más nuevo y premium. Tiene <strong>pantalla táctil a color</strong> y corre <strong>KeyOS</strong> (microkernel en Rust con apps sandboxeadas).<br><br>
+        La ruta es la misma que Gen2/02: <strong>MORE → Settings → Advanced → Passphrase</strong>, pero la navegación es táctil — más fluida.<br><br>
+        <div class="info">Prime agrega apps: 2FA, Security Keys, almacenamiento cifrado, Seed Vault. Para passphrase: teclado QWERTY en pantalla táctil.</div>`,
+        den: `The <strong>Passport Prime</strong> is the newest and most premium model. Has a <strong>color touchscreen</strong> and runs <strong>KeyOS</strong> (Rust microkernel with sandboxed apps).<br><br>
+        Same path as Gen2/02: <strong>MORE → Settings → Advanced → Passphrase</strong>, but navigation is touchscreen — smoother.<br><br>
+        <div class="info">Prime adds apps: 2FA, Security Keys, encrypted storage, Seed Vault. For passphrase: QWERTY keyboard on touchscreen.</div>`
       },
     ]
   },
