@@ -2004,27 +2004,60 @@ const SECTIONS = [
 
   // BLUEWALLET
   {
-    id: 'mob-blue', group: 'mobile',
+    id: 'mob-blue', ready: true, group: 'mobile',
     brand: 'BlueWallet',
     es: 'BlueWallet', en: 'BlueWallet',
     steps: [
       {
-        f: 'mob-blue-01.png',
-        es: 'Importar Wallet con Seed Existente',
-        en: 'Import Wallet with Existing Seed',
-        des: `En BlueWallet, tocar <strong>"+ Agregar billetera"</strong> → <strong>Importar billetera</strong>. Ingresar las 12/24 palabras de la semilla.<br><br>
-        <div class="info">BlueWallet soporta passphrase BIP39 para wallets de tipo HD (Hierarchical Deterministic). Las wallets Lightning no soportan passphrase.</div>`,
-        den: `In BlueWallet, tap <strong>"+ Add wallet"</strong> → <strong>Import wallet</strong>. Enter the 12/24 seed words.<br><br>
-        <div class="info">BlueWallet supports BIP39 passphrase for HD (Hierarchical Deterministic) wallet types. Lightning wallets do not support passphrase.</div>`
+        f: 'mob-blue-01.png', imgW: 380,
+        es: '+ Agregar Billetera → Importar Billetera',
+        en: '+ Add Wallet → Import Wallet',
+        des: `En BlueWallet, tocar <strong>"+ Agregar billetera"</strong> en la pantalla principal.<br><br>
+        Seleccionar <strong>"Importar billetera"</strong>. Esta opción permite importar una seed existente con o sin passphrase.<br><br>
+        <div class="info">Solo las wallets HD Bitcoin soportan passphrase BIP39. Las wallets Lightning no tienen esta opción.</div>`,
+        den: `In BlueWallet, tap <strong>"+ Add wallet"</strong> on the main screen.<br><br>
+        Select <strong>"Import wallet"</strong>. This option lets you import an existing seed with or without a passphrase.<br><br>
+        <div class="info">Only HD Bitcoin wallets support BIP39 passphrase. Lightning wallets do not have this option.</div>`
       },
       {
-        f: 'mob-blue-02.png',
-        es: 'Ingresar la Passphrase en el Campo BIP39',
-        en: 'Enter Passphrase in BIP39 Field',
-        des: `Al importar con seed, BlueWallet muestra un campo opcional <strong>"BIP39 Passphrase"</strong>. Ingresá tu passphrase ahí.<br><br>
-        <div class="warn">⚠️ La passphrase se ingresa en el teléfono. Asegurate de que el dispositivo esté libre de malware y no tengas capturas de pantalla automáticas activadas.</div>`,
-        den: `When importing with seed, BlueWallet shows an optional <strong>"BIP39 Passphrase"</strong> field. Enter your passphrase there.<br><br>
-        <div class="warn">⚠️ The passphrase is entered on the phone. Make sure the device is malware-free and you don't have automatic screenshots enabled.</div>`
+        f: 'mob-blue-02.png', imgW: 380,
+        es: 'Tocar los Tres Puntos (⋯) para Opciones Avanzadas',
+        en: 'Tap Three Dots (⋯) for Advanced Options',
+        des: `En la pantalla de importación, tocar el ícono de <strong>tres puntos (⋯)</strong> en la esquina superior derecha.<br><br>
+        Esto abre el menú de opciones avanzadas donde se encuentra la configuración de passphrase.`,
+        den: `On the import screen, tap the <strong>three dots (⋯)</strong> icon in the top right corner.<br><br>
+        This opens the advanced options menu where the passphrase setting is found.`
+      },
+      {
+        f: 'mob-blue-03.png', imgW: 380,
+        es: 'Activar la Opción de Passphrase BIP39',
+        en: 'Enable the BIP39 Passphrase Option',
+        des: `En el menú de opciones, activar el toggle o checkbox <strong>"Passphrase BIP39"</strong>.<br><br>
+        Una vez activado, aparecerá el campo para ingresar la passphrase en la pantalla de importación.<br><br>
+        <div class="warn">⚠️ Si no activás esta opción, la billetera se importa sin passphrase y accedés a la wallet estándar.</div>`,
+        den: `In the options menu, enable the <strong>"BIP39 Passphrase"</strong> toggle or checkbox.<br><br>
+        Once enabled, the passphrase field will appear on the import screen.<br><br>
+        <div class="warn">⚠️ If you don't enable this option, the wallet imports without passphrase and you access the standard wallet.</div>`
+      },
+      {
+        f: 'mob-blue-04.png', imgW: 380,
+        es: 'Ingresar las Palabras de la Semilla',
+        en: 'Enter the Seed Words',
+        des: `Ingresar las 12 o 24 palabras de la semilla en el campo correspondiente.<br><br>
+        BlueWallet ofrece autocompletado de palabras BIP39. Verificar que cada palabra sea correcta antes de continuar.`,
+        den: `Enter your 12 or 24 seed words in the corresponding field.<br><br>
+        BlueWallet offers BIP39 word autocomplete. Verify each word is correct before continuing.`
+      },
+      {
+        f: 'mob-blue-05.png', imgW: 380,
+        es: 'Tipear la Passphrase y Confirmar',
+        en: 'Type the Passphrase and Confirm',
+        des: `Con la opción de passphrase activada, aparece el campo <strong>"BIP39 Passphrase"</strong>. Ingresar la passphrase exactamente como fue definida — es case-sensitive.<br><br>
+        Tocar <strong>Importar</strong>. BlueWallet deriva la billetera usando seed + passphrase y la carga directamente.<br><br>
+        <div class="warn">⚠️ La passphrase se tipea en el teléfono. Asegurate de estar en un ambiente seguro, sin capturas de pantalla automáticas ni software malicioso.</div>`,
+        den: `With the passphrase option enabled, the <strong>"BIP39 Passphrase"</strong> field appears. Enter the passphrase exactly as defined — it is case-sensitive.<br><br>
+        Tap <strong>Import</strong>. BlueWallet derives the wallet using seed + passphrase and loads it directly.<br><br>
+        <div class="warn">⚠️ The passphrase is typed on the phone. Make sure you are in a safe environment, with no automatic screenshots or malicious software.</div>`
       },
     ]
   },
