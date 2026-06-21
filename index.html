@@ -2091,20 +2091,99 @@ const SECTIONS = [
 
   // BULL BITCOIN
   {
-    id: 'mob-bull', group: 'mobile',
+    id: 'mob-bull', ready: true, group: 'mobile',
     brand: 'Bull Bitcoin',
     es: 'Bull Bitcoin Wallet', en: 'Bull Bitcoin Wallet',
     steps: [
       {
-        noImg: true,
-        es: 'Bull Bitcoin -Soporte de Passphrase',
-        en: 'Bull Bitcoin -Passphrase Support',
-        des: `Bull Bitcoin Wallet es una wallet Bitcoin-only desarrollada por el equipo de Bull Bitcoin (exchange canadiense). Soporta passphrase BIP39 al importar o restaurar una wallet con semilla.<br><br>
-        El proceso es similar al de otras wallets móviles: importar semilla → campo opcional de passphrase → confirmar.<br><br>
-        <div class="info">Pendiente: capturas de pantalla del proceso actualizado. Ver documentación oficial en bullbitcoin.com/wallet.</div>`,
-        den: `Bull Bitcoin Wallet is a Bitcoin-only wallet developed by the Bull Bitcoin team (Canadian exchange). It supports BIP39 passphrase when importing or restoring a wallet with seed.<br><br>
-        The process is similar to other mobile wallets: import seed → optional passphrase field → confirm.<br><br>
-        <div class="info">Pending: screenshots of the updated process. See official documentation at bullbitcoin.com/wallet.</div>`
+        f: 'mob-bull-01.png', imgW: 380,
+        es: 'Ícono de Configuración (Hexágono)',
+        en: 'Settings Icon (Hexagon)',
+        des: `Abrir <strong>Bull Bitcoin Wallet</strong>. En la pantalla principal, tocar el <strong>ícono hexagonal de configuración</strong> para acceder a los ajustes de la wallet.<br><br>
+        <div class="info">Bull Bitcoin Wallet es Bitcoin-only, desarrollada por el equipo de Bull Bitcoin (exchange canadiense).</div>`,
+        den: `Open <strong>Bull Bitcoin Wallet</strong>. On the main screen, tap the <strong>hexagonal settings icon</strong> to access wallet settings.<br><br>
+        <div class="info">Bull Bitcoin Wallet is Bitcoin-only, developed by the Bull Bitcoin team (Canadian exchange).</div>`
+      },
+      {
+        f: 'mob-bull-02.png', imgW: 380,
+        es: 'Bitcoin Settings',
+        en: 'Bitcoin Settings',
+        des: `Dentro de configuración, seleccionar <strong>Bitcoin Settings</strong>.<br><br>
+        Desde aquí se gestionan las opciones avanzadas de la wallet, incluyendo la importación con semilla y passphrase.`,
+        den: `Inside settings, select <strong>Bitcoin Settings</strong>.<br><br>
+        From here you manage advanced wallet options, including import with seed and passphrase.`
+      },
+      {
+        f: 'mob-bull-03.png', imgW: 380,
+        es: 'Import Mnemonic',
+        en: 'Import Mnemonic',
+        des: `En Bitcoin Settings, seleccionar <strong>Import Mnemonic</strong>.<br><br>
+        Esta es la opción para importar una wallet existente usando las palabras de la semilla (12 o 24 palabras).`,
+        den: `In Bitcoin Settings, select <strong>Import Mnemonic</strong>.<br><br>
+        This is the option to import an existing wallet using the seed words (12 or 24 words).`
+      },
+      {
+        f: 'mob-bull-04.png', imgW: 380,
+        es: 'Import Wallet — Pantalla de Importación',
+        en: 'Import Wallet — Import Screen',
+        des: `La app muestra la pantalla de <strong>Import Wallet</strong> con el campo para las palabras de la semilla y la opción de passphrase.<br><br>
+        Aquí se ingresa todo lo necesario para derivar la billetera correcta.`,
+        den: `The app shows the <strong>Import Wallet</strong> screen with the field for seed words and the passphrase option.<br><br>
+        Here you enter everything needed to derive the correct wallet.`
+      },
+      {
+        f: 'mob-bull-05.png', imgW: 380,
+        es: 'Completar Seed + Passphrase',
+        en: 'Complete Seed + Passphrase',
+        des: `Ingresar las <strong>12 o 24 palabras</strong> de la semilla en el campo correspondiente y la <strong>passphrase</strong> en el campo de passphrase BIP39.<br><br>
+        La passphrase es case-sensitive — un carácter incorrecto deriva una billetera diferente.<br><br>
+        <div class="warn">⚠️ La passphrase se tipea en el teléfono. Asegurate de estar en un entorno seguro, sin capturas automáticas activadas.</div>`,
+        den: `Enter the <strong>12 or 24 seed words</strong> in the corresponding field and the <strong>passphrase</strong> in the BIP39 passphrase field.<br><br>
+        The passphrase is case-sensitive — one wrong character derives a different wallet.<br><br>
+        <div class="warn">⚠️ The passphrase is typed on the phone. Make sure you're in a safe environment, with no automatic screenshots enabled.</div>`
+      },
+      {
+        f: 'mob-bull-06.png', imgW: 380,
+        es: 'Tipo de Dirección — Mantener SegWit (por Defecto)',
+        en: 'Address Type — Keep SegWit (Default)',
+        des: `La app pregunta el tipo de dirección. Dejar seleccionado <strong>SegWit (Native SegWit / BIP84)</strong> que es el estándar moderno de Bitcoin.<br><br>
+        <div class="tip">SegWit genera direcciones que empiezan con <strong>bc1</strong> — comisiones más bajas y estándar más seguro. Solo cambiar si sabés que tu wallet original usaba otro tipo.</div>`,
+        den: `The app asks for the address type. Keep <strong>SegWit (Native SegWit / BIP84)</strong> selected — it's the modern Bitcoin standard.<br><br>
+        <div class="tip">SegWit generates addresses starting with <strong>bc1</strong> — lower fees and more secure standard. Only change if you know your original wallet used a different type.</div>`
+      },
+      {
+        f: 'mob-bull-07.png', imgW: 380,
+        es: 'Wallet Importada — Tocar en la Franja de la Wallet',
+        en: 'Wallet Imported — Tap the Wallet Strip',
+        des: `La wallet con passphrase queda importada. En la pantalla principal aparece la <strong>franja de la wallet</strong> en la parte inferior.<br><br>
+        Tocar la franja para acceder a la billetera derivada y ver el saldo y las direcciones.`,
+        den: `The passphrase wallet is now imported. On the main screen the <strong>wallet strip</strong> appears at the bottom.<br><br>
+        Tap the strip to access the derived wallet and view balance and addresses.`
+      },
+      {
+        f: 'mob-bull-08.png', imgW: 380,
+        es: 'Ícono de Engranaje para Ver Detalles',
+        en: 'Gear Icon to View Details',
+        des: `Dentro de la wallet, tocar el <strong>ícono de engranaje</strong> (configuración de la wallet individual) para ver los detalles y verificar que la billetera es la correcta.`,
+        den: `Inside the wallet, tap the <strong>gear icon</strong> (individual wallet settings) to see details and verify the wallet is the correct one.`
+      },
+      {
+        f: 'mob-bull-09.png', imgW: 380,
+        es: 'Wallet Details — Verificar la Billetera',
+        en: 'Wallet Details — Verify the Wallet',
+        des: `La pantalla de <strong>Wallet Details</strong> muestra la información de la billetera derivada.<br><br>
+        Verificar que la primera dirección de recepción coincide con el registro previo — confirma que la seed + passphrase fueron ingresadas correctamente.`,
+        den: `The <strong>Wallet Details</strong> screen shows information about the derived wallet.<br><br>
+        Verify that the first receiving address matches your previous record — confirms seed + passphrase were entered correctly.`
+      },
+      {
+        f: 'mob-bull-10.png', imgW: 380,
+        es: 'Configuración General — Hexágono Principal',
+        en: 'General Settings — Main Hexagon',
+        des: `Desde el ícono hexagonal de la pantalla principal podés volver a la configuración general de la app en cualquier momento.<br><br>
+        <div class="info">Bull Bitcoin Wallet guarda la wallet importada. En cada sesión no es necesario reingresar la passphrase — pero si hacés backup y restaurás el dispositivo, hay que reimportar con seed + passphrase.</div>`,
+        den: `From the hexagonal icon on the main screen you can return to the app's general settings at any time.<br><br>
+        <div class="info">Bull Bitcoin Wallet saves the imported wallet. Each session you don't need to re-enter the passphrase — but if you backup and restore the device, you must re-import with seed + passphrase.</div>`
       },
     ]
   },
