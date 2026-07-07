@@ -1097,42 +1097,177 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-ledger-nanox-01.png',
-        es: 'Settings → Security → Passphrase',
-        en: 'Settings → Security → Passphrase',
-        des: `En la Nano X, navegar con los <strong>dos botones físicos</strong> (izquierdo/derecho) y confirmar presionando ambos a la vez.<br><br>
-        Ruta: <strong>Settings → Security → Passphrase</strong>.<br><br>
-        Ledger ofrece dos modos:<br>
-        • <strong>Set temporary:</strong> ingresás la passphrase manualmente cada sesión<br>
-        • <strong>Attach to PIN:</strong> asocia la passphrase a un segundo PIN de 8 dígitos<br><br>
-        <div class="info">La Nano X tiene Bluetooth -asegurate de estar en un lugar privado al ingresar la passphrase.</div>`,
-        den: `On the Nano X, navigate with the <strong>two physical buttons</strong> (left/right) and confirm by pressing both simultaneously.<br><br>
-        Path: <strong>Settings → Security → Passphrase</strong>.<br><br>
-        Ledger offers two modes:<br>
-        • <strong>Set temporary:</strong> enter the passphrase manually each session<br>
-        • <strong>Attach to PIN:</strong> associates the passphrase with a second 8-digit PIN<br><br>
-        <div class="info">Nano X has Bluetooth -make sure you're in a private place when entering the passphrase.</div>`
+        es: 'Ingresar PIN',
+        en: 'Enter PIN',
+        des: `Encendé el dispositivo presionando el botón derecho. Ingresá tu <strong>PIN actual</strong> navegando con los botones izquierdo/derecho y confirmando con ambos a la vez.<br><br>
+        <div class="info">La Nano X usa dos botones físicos para toda la navegación: botón izquierdo retrocede, botón derecho avanza, ambos juntos confirman.</div>`,
+        den: `Power on the device by pressing the right button. Enter your <strong>current PIN</strong> by navigating with left/right buttons and confirming with both simultaneously.<br><br>
+        <div class="info">Nano X uses two physical buttons for all navigation: left button goes back, right button goes forward, both together confirm.</div>`
       },
       {
         f: 'hw-ledger-nanox-02.png',
-        es: 'Ingresar Passphrase con Dos Botones',
-        en: 'Enter Passphrase with Two Buttons',
-        des: `La Nano X usa el teclado en pantalla navegado con los dos botones físicos. <strong>Botón izquierdo</strong>: retroceder / <strong>Botón derecho</strong>: avanzar / <strong>Ambos</strong>: confirmar.<br><br>
-        Para ingresar cada carácter: navegar hasta la letra/número deseado y presionar ambos botones para seleccionar.<br><br>
-        <div class="warn">⚠️ Ingresar passphrases largas con solo dos botones es <strong>muy lento</strong>. Recomendado: passphrases de 8-12 caracteres máximo para uso diario con Nano X.</div>`,
-        den: `Nano X uses an on-screen keyboard navigated with two physical buttons. <strong>Left button</strong>: back / <strong>Right button</strong>: forward / <strong>Both</strong>: confirm.<br><br>
-        To enter each character: navigate to the desired letter/number and press both buttons to select.<br><br>
-        <div class="warn">⚠️ Entering long passphrases with only two buttons is <strong>very slow</strong>. Recommended: passphrases of 8-12 characters max for daily Nano X use.</div>`
+        es: 'Confirmar PIN',
+        en: 'Confirm PIN',
+        des: `El dispositivo solicita confirmar el PIN. Ingresalo nuevamente con los botones físicos.<br><br>
+        Una vez confirmado, el Ledger desbloquea y muestra el menú principal.`,
+        den: `The device asks to confirm the PIN. Enter it again using the physical buttons.<br><br>
+        Once confirmed, the Ledger unlocks and shows the main menu.`
       },
       {
         f: 'hw-ledger-nanox-03.png',
-        es: 'Confirmar y Abrir App Bitcoin',
-        en: 'Confirm and Open Bitcoin App',
-        des: `Confirmar la passphrase ingresándola una segunda vez. El dispositivo procesará y cargará la billetera con passphrase.<br><br>
-        Abrir la <strong>app Bitcoin</strong> en el Ledger. En Ledger Live o en Sparrow/Electrum conectado, verás las direcciones de la billetera con passphrase activa.<br><br>
-        <div class="tip">Modo <strong>Attach to PIN</strong>: con este modo podés tener PIN principal (billetera normal) + PIN2 de 8 dígitos (billetera con passphrase). Útil para plausible deniability.</div>`,
-        den: `Confirm the passphrase by entering it a second time. The device will process and load the passphrase wallet.<br><br>
-        Open the <strong>Bitcoin app</strong> on the Ledger. In Ledger Live or connected Sparrow/Electrum, you'll see the addresses of the active passphrase wallet.<br><br>
-        <div class="tip"><strong>Attach to PIN</strong> mode: with this mode you can have main PIN (normal wallet) + 8-digit PIN2 (passphrase wallet). Useful for plausible deniability.</div>`
+        es: 'Menú Principal',
+        en: 'Main Menu',
+        des: `Desde el menú principal navegá hacia <strong>Settings</strong> usando el botón derecho y confirmá con ambos botones.<br><br>
+        El menú principal muestra todas las apps instaladas y el acceso a configuración.`,
+        den: `From the main menu navigate to <strong>Settings</strong> using the right button and confirm with both buttons.<br><br>
+        The main menu shows all installed apps and access to settings.`
+      },
+      {
+        f: 'hw-ledger-nanox-04.png',
+        es: 'Ajustes',
+        en: 'Settings',
+        des: `Dentro de <strong>Settings</strong>, navegá hasta <strong>Security</strong> y confirmá con ambos botones.`,
+        den: `Inside <strong>Settings</strong>, navigate to <strong>Security</strong> and confirm with both buttons.`
+      },
+      {
+        f: 'hw-ledger-nanox-05.png',
+        es: 'Seguridad',
+        en: 'Security',
+        des: `En el menú de <strong>Security</strong>, navegá hasta <strong>Passphrase</strong> y confirmá con ambos botones.<br><br>
+        <div class="info">Aquí también encontrás opciones como cambio de PIN y bloqueo automático.</div>`,
+        den: `In the <strong>Security</strong> menu, navigate to <strong>Passphrase</strong> and confirm with both buttons.<br><br>
+        <div class="info">Here you also find options like PIN change and auto-lock.</div>`
+      },
+      {
+        f: 'hw-ledger-nanox-06.png',
+        es: 'Características Avanzadas',
+        en: 'Advanced Features',
+        des: `La Nano X agrupa la passphrase dentro de <strong>Advanced Features</strong>. Confirmá con ambos botones para acceder.`,
+        den: `Nano X groups the passphrase under <strong>Advanced Features</strong>. Confirm with both buttons to access.`
+      },
+      {
+        f: 'hw-ledger-nanox-07.png',
+        es: 'Configurar Passphrase',
+        en: 'Set up Passphrase',
+        des: `Ledger Nano X ofrece <strong>dos modos</strong> de passphrase:<br><br>
+        • <strong>Set temporary:</strong> ingresás la passphrase manualmente en cada sesión. No queda guardada en el dispositivo.<br>
+        • <strong>Attach to PIN:</strong> asocia la passphrase a un segundo PIN de 8 dígitos. Al ingresar ese PIN, la billetera con passphrase se abre automáticamente.<br><br>
+        <div class="tip">Para uso diario, <strong>Attach to PIN</strong> es más cómodo. Para máxima seguridad, <strong>Set temporary</strong> no deja rastro en el dispositivo.</div>`,
+        den: `Ledger Nano X offers <strong>two passphrase modes</strong>:<br><br>
+        • <strong>Set temporary:</strong> enter the passphrase manually each session. Not stored on the device.<br>
+        • <strong>Attach to PIN:</strong> associates the passphrase with a second 8-digit PIN. Entering that PIN automatically opens the passphrase wallet.<br><br>
+        <div class="tip">For daily use, <strong>Attach to PIN</strong> is more convenient. For maximum security, <strong>Set temporary</strong> leaves no trace on the device.</div>`
+      },
+      {
+        f: 'hw-ledger-nanox-08.png',
+        es: 'Attach to PIN',
+        en: 'Attach to PIN',
+        des: `Seleccioná <strong>Attach to PIN</strong> para asociar la passphrase a un segundo PIN dedicado.<br><br>
+        Con este modo tenés dos PINs:<br>
+        • <strong>PIN principal</strong> → billetera base (sin passphrase)<br>
+        • <strong>PIN secundario de 8 dígitos</strong> → billetera con passphrase<br><br>
+        <div class="info">Útil para plausible deniability: bajo coacción podés mostrar la billetera base sin revelar la passphrase.</div>`,
+        den: `Select <strong>Attach to PIN</strong> to associate the passphrase with a dedicated second PIN.<br><br>
+        With this mode you have two PINs:<br>
+        • <strong>Main PIN</strong> → base wallet (no passphrase)<br>
+        • <strong>Secondary 8-digit PIN</strong> → passphrase wallet<br><br>
+        <div class="info">Useful for plausible deniability: under coercion you can show the base wallet without revealing the passphrase.</div>`
+      },
+      {
+        f: 'hw-ledger-nanox-09.png',
+        es: 'Elegir PIN de Passphrase',
+        en: 'Choose Passphrase PIN',
+        des: `El dispositivo pide elegir el <strong>PIN secundario de 8 dígitos</strong> que se usará para acceder a la billetera con passphrase.<br><br>
+        <div class="warn">⚠️ Este PIN debe ser <strong>distinto</strong> del PIN principal. Usá una combinación que puedas recordar pero que no sea obvia.</div>`,
+        den: `The device asks you to choose the <strong>secondary 8-digit PIN</strong> that will be used to access the passphrase wallet.<br><br>
+        <div class="warn">⚠️ This PIN must be <strong>different</strong> from the main PIN. Use a combination you can remember but that isn't obvious.</div>`
+      },
+      {
+        f: 'hw-ledger-nanox-10.png',
+        es: 'Ingresar PIN de Passphrase',
+        en: 'Enter Passphrase PIN',
+        des: `Ingresá los <strong>8 dígitos</strong> del PIN secundario navegando con los botones físicos.<br><br>
+        Cada dígito se selecciona avanzando/retrocediendo con los botones y confirmando con ambos.`,
+        den: `Enter the <strong>8 digits</strong> of the secondary PIN by navigating with the physical buttons.<br><br>
+        Each digit is selected by advancing/going back with the buttons and confirming with both.`
+      },
+      {
+        f: 'hw-ledger-nanox-11.png',
+        es: 'Confirmar PIN de Passphrase',
+        en: 'Confirm Passphrase PIN',
+        des: `Ingresá el PIN secundario una segunda vez para confirmarlo.<br><br>
+        Si los dos PINs coinciden, el dispositivo avanzará a la pantalla de ingreso de passphrase.`,
+        den: `Enter the secondary PIN a second time to confirm it.<br><br>
+        If both PINs match, the device will advance to the passphrase entry screen.`
+      },
+      {
+        f: 'hw-ledger-nanox-12.png',
+        es: 'Ingresar Passphrase',
+        en: 'Enter Passphrase',
+        des: `El dispositivo muestra la pantalla de ingreso de <strong>passphrase</strong>. Navegá a cada carácter con los botones y confirmá con ambos.<br><br>
+        Ledger Nano X acepta hasta <strong>100 caracteres</strong>. Usa letras, números y símbolos.`,
+        den: `The device shows the <strong>passphrase</strong> entry screen. Navigate to each character with the buttons and confirm with both.<br><br>
+        Ledger Nano X accepts up to <strong>100 characters</strong>. Use letters, numbers, and symbols.`
+      },
+      {
+        f: 'hw-ledger-nanox-13.png',
+        es: 'Escribir Passphrase',
+        en: 'Type Passphrase',
+        des: `Usá el teclado en pantalla para escribir tu passphrase carácter por carácter.<br><br>
+        <div class="warn">⚠️ Ingresar passphrases largas con dos botones es <strong>muy lento</strong>. Recomendado: passphrases de 8-12 caracteres para uso diario con Nano X.</div>`,
+        den: `Use the on-screen keyboard to type your passphrase character by character.<br><br>
+        <div class="warn">⚠️ Entering long passphrases with two buttons is <strong>very slow</strong>. Recommended: 8-12 character passphrases for daily Nano X use.</div>`
+      },
+      {
+        f: 'hw-ledger-nanox-14.png',
+        es: 'Revisar Passphrase',
+        en: 'Review Passphrase',
+        des: `El dispositivo muestra la passphrase completa para que la revises antes de confirmar.<br><br>
+        <div class="warn">⚠️ Verificá cada carácter con cuidado. Un error en la passphrase genera una billetera completamente diferente e inaccesible.</div>`,
+        den: `The device shows the complete passphrase for you to review before confirming.<br><br>
+        <div class="warn">⚠️ Verify each character carefully. A mistake in the passphrase generates a completely different and inaccessible wallet.</div>`
+      },
+      {
+        f: 'hw-ledger-nanox-15.png',
+        es: 'Re-ingresar Passphrase',
+        en: 'Re-enter Passphrase',
+        des: `Ingresá la passphrase una segunda vez para confirmarla.<br><br>
+        Esto es una verificación de seguridad para asegurar que escribiste correctamente lo que pretendías escribir.`,
+        den: `Enter the passphrase a second time to confirm it.<br><br>
+        This is a security check to ensure you typed exactly what you intended.`
+      },
+      {
+        f: 'hw-ledger-nanox-16.png',
+        es: 'Confirmar Passphrase',
+        en: 'Confirm Passphrase',
+        des: `El dispositivo confirma que ambas entradas de passphrase coinciden y solicita confirmación final.<br><br>
+        Presioná ambos botones para confirmar y continuar.`,
+        den: `The device confirms that both passphrase entries match and asks for final confirmation.<br><br>
+        Press both buttons to confirm and continue.`
+      },
+      {
+        f: 'hw-ledger-nanox-17.png',
+        es: 'Confirmar con PIN Actual',
+        en: 'Confirm with Current PIN',
+        des: `Para finalizar la configuración, el dispositivo pide confirmación ingresando el <strong>PIN principal</strong> (no el secundario).<br><br>
+        Esta es una medida de seguridad para verificar que sos el dueño del dispositivo.`,
+        den: `To complete the setup, the device asks for confirmation by entering the <strong>main PIN</strong> (not the secondary one).<br><br>
+        This is a security measure to verify you are the device owner.`
+      },
+      {
+        f: 'hw-ledger-nanox-18.png',
+        es: 'Passphrase Configurada',
+        en: 'Passphrase Set',
+        des: `¡Passphrase configurada correctamente! El dispositivo confirma que la passphrase fue asociada al PIN secundario.<br><br>
+        Desde ahora:<br>
+        • <strong>PIN principal</strong> → abre tu billetera base<br>
+        • <strong>PIN secundario</strong> → abre tu billetera con passphrase<br><br>
+        <div class="tip">Abrí la app Bitcoin y verificá que las direcciones son distintas a las de tu billetera base. Eso confirma que la passphrase está activa.</div>`,
+        den: `Passphrase configured successfully! The device confirms the passphrase was associated with the secondary PIN.<br><br>
+        From now on:<br>
+        • <strong>Main PIN</strong> → opens your base wallet<br>
+        • <strong>Secondary PIN</strong> → opens your passphrase wallet<br><br>
+        <div class="tip">Open the Bitcoin app and verify that the addresses differ from your base wallet. This confirms the passphrase is active.</div>`
       },
     ]
   },
