@@ -773,34 +773,26 @@ const SECTIONS = [
         es: 'Aviso del Dispositivo',
         en: 'Device Warning',
         des: `La Mk4 muestra un <strong>mensaje informativo</strong> antes de permitir ingresar la passphrase.<br><br>
-        El aviso recuerda que:<br>
-        - La passphrase es <strong>case-sensitive</strong> (mayúsculas y minúsculas importan)<br>
-        - Una passphrase diferente abre una billetera diferente<br>
-        - No hay forma de recuperar fondos si olvidás la passphrase<br><br>
+        La passphrase se suma a sus 24 palabras BIP-39 para crear una billetera completamente nueva por cada passphrase posible.<br><br>
         Confirmar para continuar.`,
         den: `Mk4 shows an <strong>informational message</strong> before allowing passphrase entry.<br><br>
-        The warning reminds you that:<br>
-        - The passphrase is <strong>case-sensitive</strong> (uppercase and lowercase matter)<br>
-        - A different passphrase opens a different wallet<br>
-        - There is no way to recover funds if you forget the passphrase<br><br>
+        The passphrase is added to your 24 BIP-39 words to create a completely new wallet for each possible passphrase.<br><br>
         Confirm to continue.`
       },
       {
         noImg: true,
-        es: 'Menú de Passphrase - Opciones Disponibles',
-        en: 'Passphrase Menu - Available Options',
-        des: `La Mk4 muestra el menú de ingreso con cuatro opciones:<br><br>
-        - <strong>Edit Phrase</strong> - abre el teclado en pantalla para tipear carácter a carácter<br>
-        - <strong>Add Word</strong> - agrega una palabra del listado BIP39 (útil para passphrases tipo "correct horse battery")<br>
-        - <strong>Add Number</strong> - agrega un número directamente sin navegar el teclado<br>
-        - <strong>Clear All</strong> - borra todo lo ingresado y empieza de cero<br><br>
-        <div class="tip">Para una passphrase normal con letras y símbolos ➜ usar <strong>Edit Phrase</strong>. Para passphrases de palabras BIP39 ➜ usar <strong>Add Word</strong> (más rápido y sin errores tipográficos).</div>`,
-        den: `Mk4 shows the entry menu with four options:<br><br>
-        - <strong>Edit Phrase</strong> - opens the on-screen keyboard to type character by character<br>
-        - <strong>Add Word</strong> - adds a BIP39 wordlist word (useful for passphrases like "correct horse battery")<br>
-        - <strong>Add Number</strong> - adds a number directly without navigating the keyboard<br>
-        - <strong>Clear All</strong> - erases everything entered and starts over<br><br>
-        <div class="tip">For a regular passphrase with letters and symbols ➜ use <strong>Edit Phrase</strong>. For BIP39 word passphrases ➜ use <strong>Add Word</strong> (faster and no typos).</div>`
+        es: 'Elegir el Método de Ingreso',
+        en: 'Choose Entry Method',
+        des: `La Mk4 muestra el menú de ingreso con tres opciones:<br><br>
+        - <strong>Edit Phrase</strong> - escribirla carácter a carácter con el teclado en pantalla<br>
+        - <strong>Add Word</strong> - elegir una palabra del listado BIP-39<br>
+        - <strong>Add Numbers</strong> - agregar números<br><br>
+        <div class="tip">Para una passphrase normal ➜ usar <strong>Edit Phrase</strong>. Para passphrases de palabras BIP-39 ➜ usar <strong>Add Word</strong> (más rápido y sin errores tipográficos).</div>`,
+        den: `Mk4 shows the entry menu with three options:<br><br>
+        - <strong>Edit Phrase</strong> - type it character by character with the on-screen keyboard<br>
+        - <strong>Add Word</strong> - choose a word from the BIP-39 wordlist<br>
+        - <strong>Add Numbers</strong> - add numbers<br><br>
+        <div class="tip">For a regular passphrase ➜ use <strong>Edit Phrase</strong>. For BIP-39 word passphrases ➜ use <strong>Add Word</strong> (faster and no typos).</div>`
       },
       {
         f: 'hw-coldcard-mk4-03.png',
@@ -821,28 +813,30 @@ const SECTIONS = [
         f: 'hw-coldcard-mk4-04.png',
         es: 'Tipear la Passphrase',
         en: 'Type the Passphrase',
-        des: `La Mk4 muestra el campo de ingreso con los caracteres seleccionados hasta el momento.<br><br>
-        Verificar cada carácter antes de continuar - no hay corrección fácil una vez confirmada.<br><br>
-        Al terminar de ingresar todos los caracteres, confirmar con <strong>OK / ✓</strong>.<br><br>
+        des: `El dispositivo muestra la fuerza y el largo de la passphrase ingresada hasta el momento.<br><br>
+        Ej. de la foto: <strong>strength: maximum plausible | passphrase length: 14</strong>.<br><br>
+        Al terminar, confirmar con <strong>OK / ✓</strong>.<br><br>
         <div class="tip">La passphrase aparece oculta en pantalla. Tomá tu tiempo para ingresar cada carácter correctamente.</div>`,
-        den: `Mk4 shows the entry field with the characters selected so far.<br><br>
-        Verify each character before continuing - there is no easy correction once confirmed.<br><br>
-        Once all characters are entered, confirm with <strong>OK / ✓</strong>.<br><br>
-        <div class="tip">The passphrase appears hidden on screen. Take your time to enter each character correctly.</div>`
+        den: `The device shows the strength and length of the passphrase entered so far.<br><br>
+        E.g. from the photo: <strong>strength: maximum plausible | passphrase length: 14</strong>.<br><br>
+        When done, confirm with <strong>OK / ✓</strong>.<br><br>
+        <div class="tip">The passphrase is hidden on screen. Take your time to enter each character correctly.</div>`
       },
       {
         f: 'hw-coldcard-mk4-05.png',
-        es: 'Apply -Activar la Wallet con Passphrase',
-        en: 'Apply -Activate the Passphrase Wallet',
-        des: `La Mk4 muestra la passphrase ingresada y el <strong>wallet fingerprint</strong> (8 caracteres hex) para verificar antes de aplicar.<br><br>
-        - Primera vez: anotá el fingerprint en papel, guardalo separado de la seed<br>
+        es: 'Apply -Confirmar el Fingerprint de la Nueva Billetera',
+        en: 'Apply -Confirm the New Wallet Fingerprint',
+        des: `La Mk4 muestra el <strong>master key fingerprint</strong> de la billetera creada al sumar la passphrase a la seed maestra.<br><br>
+        Ej. de la foto: <strong>[140ABEF0]</strong><br><br>
+        - Primera vez: anotar el fingerprint en papel, guardarlo separado de la seed<br>
         - Sesiones siguientes: si el fingerprint coincide ➜ passphrase ingresada correctamente<br><br>
-        Seleccionar <strong>"Apply"</strong> para activar la billetera con passphrase en la sesión actual.<br><br>
-        <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase | cancelá antes de cualquier transacción.</div>`,
-        den: `Mk4 shows the entered passphrase and the <strong>wallet fingerprint</strong> (8 hex characters) to verify before applying.<br><br>
+        Seleccionar <strong>"Apply"</strong> para activar la billetera en la sesión actual.<br><br>
+        <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase | cancelar antes de cualquier transacción.</div>`,
+        den: `Mk4 shows the <strong>master key fingerprint</strong> of the wallet created by adding the passphrase to the master seed.<br><br>
+        E.g. from the photo: <strong>[140ABEF0]</strong><br><br>
         - First time: write down the fingerprint on paper, store it separate from the seed<br>
-        - Subsequent sessions: if fingerprint matches ➜ passphrase entered correctly<br><br>
-        Select <strong>"Apply"</strong> to activate the passphrase wallet in the current session.<br><br>
+        - Future sessions: if fingerprint matches ➜ passphrase entered correctly<br><br>
+        Select <strong>"Apply"</strong> to activate the wallet in the current session.<br><br>
         <div class="warn">⚠️ Different fingerprint than expected = typo in passphrase | cancel before any transaction.</div>`
       },
       {
@@ -898,17 +892,17 @@ const SECTIONS = [
         es: 'Menú de Passphrase - Opciones Disponibles',
         en: 'Passphrase Menu - Available Options',
         des: `La Mk5 muestra el menú de ingreso con cuatro opciones:<br><br>
-        - <strong>Edit Phrase</strong> - abre el teclado en pantalla para tipear carácter a carácter<br>
-        - <strong>Add Word</strong> - agrega una palabra del listado BIP39 (útil para passphrases tipo "correct horse battery")<br>
-        - <strong>Add Number</strong> - agrega un número directamente sin navegar el teclado<br>
-        - <strong>Clear All</strong> - borra todo lo ingresado y empieza de cero<br><br>
-        <div class="tip">Para una passphrase normal con letras y símbolos ➜ usar <strong>Edit Phrase</strong>. Para passphrases de palabras BIP39 ➜ usar <strong>Add Word</strong> (más rápido y sin errores tipográficos).</div>`,
+        - <strong>Edit Phrase</strong> - escribirla carácter a carácter con el teclado en pantalla<br>
+        - <strong>Add Word</strong> - elegir una palabra del listado BIP-39<br>
+        - <strong>Add Numbers</strong> - agregar números<br>
+        - <strong>Clear ALL</strong> - borrar todo lo tipeado<br><br>
+        <div class="tip">Para una passphrase normal ➜ usar <strong>Edit Phrase</strong>. Para passphrases de palabras BIP-39 ➜ usar <strong>Add Word</strong> (más rápido y sin errores tipográficos).</div>`,
         den: `Mk5 shows the entry menu with four options:<br><br>
-        - <strong>Edit Phrase</strong> - opens the on-screen keyboard to type character by character<br>
-        - <strong>Add Word</strong> - adds a BIP39 wordlist word (useful for passphrases like "correct horse battery")<br>
-        - <strong>Add Number</strong> - adds a number directly without navigating the keyboard<br>
-        - <strong>Clear All</strong> - erases everything entered and starts over<br><br>
-        <div class="tip">For a regular passphrase with letters and symbols ➜ use <strong>Edit Phrase</strong>. For BIP39 word passphrases ➜ use <strong>Add Word</strong> (faster and no typos).</div>`
+        - <strong>Edit Phrase</strong> - type it character by character with the on-screen keyboard<br>
+        - <strong>Add Word</strong> - choose a word from the BIP-39 wordlist<br>
+        - <strong>Add Numbers</strong> - add numbers<br>
+        - <strong>Clear ALL</strong> - erase everything typed<br><br>
+        <div class="tip">For a regular passphrase ➜ use <strong>Edit Phrase</strong>. For BIP-39 word passphrases ➜ use <strong>Add Word</strong> (faster and no typos).</div>`
       },
       {
         f: 'hw-coldcard-mk5-03.png',
@@ -929,26 +923,28 @@ const SECTIONS = [
         f: 'hw-coldcard-mk5-04.png',
         es: 'Tipear la Passphrase',
         en: 'Type the Passphrase',
-        des: `La Mk5 muestra el campo de ingreso con los caracteres seleccionados hasta el momento.<br><br>
-        Verificar cada carácter antes de continuar - no hay corrección fácil una vez confirmada.<br><br>
-        Al terminar de ingresar todos los caracteres, confirmar con <strong>OK / ✓</strong>.<br><br>
+        des: `Se elige entre <strong>letters | numbers | symbols + space</strong>.<br><br>
+        Ej. de la foto: <strong>8x33</strong>.<br><br>
+        Al terminar, confirmar con <strong>OK / ✓</strong>.<br><br>
         <div class="tip">La passphrase aparece oculta en pantalla. Tomá tu tiempo para ingresar cada carácter correctamente.</div>`,
-        den: `Mk5 shows the entry field with the characters selected so far.<br><br>
-        Verify each character before continuing - there is no easy correction once confirmed.<br><br>
-        Once all characters are entered, confirm with <strong>OK / ✓</strong>.<br><br>
-        <div class="tip">The passphrase appears hidden on screen. Take your time to enter each character correctly.</div>`
+        den: `Choose between <strong>letters | numbers | symbols + space</strong>.<br><br>
+        E.g. from the photo: <strong>8x33</strong>.<br><br>
+        When done, confirm with <strong>OK / ✓</strong>.<br><br>
+        <div class="tip">The passphrase is hidden on screen. Take your time to enter each character correctly.</div>`
       },
       {
         f: 'hw-coldcard-mk5-05.png',
-        es: 'Wallet Fingerprint -Verificar antes de Aplicar',
-        en: 'Wallet Fingerprint -Verify before Applying',
-        des: `La Mk5 muestra el <strong>wallet fingerprint</strong> (8 caracteres hex) único para esa combinación seed + passphrase.<br><br>
-        - Primera vez: anotá el fingerprint en papel, guardalo separado de la seed<br>
+        es: 'Apply -Confirmar el Fingerprint de la Nueva Billetera',
+        en: 'Apply -Confirm the New Wallet Fingerprint',
+        des: `La Mk5 muestra el <strong>master key fingerprint</strong> de la billetera creada al sumar la passphrase a la seed maestra.<br><br>
+        Ej. de la foto: <strong>[F653F165]</strong><br><br>
+        - Primera vez: anotar el fingerprint en papel, guardarlo separado de la seed<br>
         - Sesiones siguientes: si el fingerprint coincide ➜ passphrase ingresada correctamente<br><br>
-        <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase | cancelá antes de continuar.</div>`,
-        den: `Mk5 shows the <strong>wallet fingerprint</strong> (8 hex characters) unique to that seed + passphrase combination.<br><br>
+        <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase | cancelar antes de continuar.</div>`,
+        den: `Mk5 shows the <strong>master key fingerprint</strong> of the wallet created by adding the passphrase to the master seed.<br><br>
+        E.g. from the photo: <strong>[F653F165]</strong><br><br>
         - First time: write down the fingerprint on paper, store it separate from the seed<br>
-        - Subsequent sessions: if fingerprint matches ➜ passphrase entered correctly<br><br>
+        - Future sessions: if fingerprint matches ➜ passphrase entered correctly<br><br>
         <div class="warn">⚠️ Different fingerprint than expected = typo in passphrase | cancel before continuing.</div>`
       },
       {
@@ -1000,74 +996,53 @@ const SECTIONS = [
         es: 'Aviso del Dispositivo',
         en: 'Device Warning',
         des: `La Coldcard Q muestra un <strong>mensaje informativo</strong> antes de permitir ingresar la passphrase.<br><br>
-        El aviso recuerda que:<br>
-        - La passphrase es <strong>case-sensitive</strong> (mayúsculas y minúsculas importan)<br>
-        - Una passphrase diferente abre una billetera diferente<br>
-        - No hay forma de recuperar fondos si olvidás la passphrase<br><br>
+        - La passphrase se suma a sus 24 palabras BIP-39 para crear una billetera completamente nueva por cada passphrase posible<br>
+        - Anotar el fingerprint de cada billetera para confirmar que ingresó a la correcta<br><br>
         Confirmar para continuar.`,
         den: `Coldcard Q shows an <strong>informational message</strong> before allowing passphrase entry.<br><br>
-        The warning reminds you that:<br>
-        - The passphrase is <strong>case-sensitive</strong> (uppercase and lowercase matter)<br>
-        - A different passphrase opens a different wallet<br>
-        - There is no way to recover funds if you forget the passphrase<br><br>
+        - The passphrase is added to your 24 BIP-39 words to create a completely new wallet for each possible passphrase<br>
+        - Write down the fingerprint of each wallet to confirm you accessed the correct one<br><br>
         Confirm to continue.`
-      },
-      {
-        noImg: true,
-        es: 'Menú de Passphrase - Opciones Disponibles',
-        en: 'Passphrase Menu - Available Options',
-        des: `La Coldcard Q muestra el menú de ingreso con cuatro opciones:<br><br>
-        - <strong>Edit Phrase</strong> - abre el campo de texto para tipear con el teclado QWERTY físico<br>
-        - <strong>Add Word</strong> - agrega una palabra del listado BIP39 (útil para passphrases tipo "correct horse battery")<br>
-        - <strong>Add Number</strong> - agrega un número directamente<br>
-        - <strong>Clear All</strong> - borra todo lo ingresado y empieza de cero<br><br>
-        <div class="tip">Para una passphrase normal ➜ usar <strong>Edit Phrase</strong> y tipear con el teclado QWERTY. Para passphrases de palabras BIP39 ➜ <strong>Add Word</strong> (más rápido y sin errores tipográficos).</div>`,
-        den: `Coldcard Q shows the entry menu with four options:<br><br>
-        - <strong>Edit Phrase</strong> - opens the text field to type with the physical QWERTY keyboard<br>
-        - <strong>Add Word</strong> - adds a BIP39 wordlist word (useful for passphrases like "correct horse battery")<br>
-        - <strong>Add Number</strong> - adds a number directly<br>
-        - <strong>Clear All</strong> - erases everything entered and starts over<br><br>
-        <div class="tip">For a regular passphrase ➜ use <strong>Edit Phrase</strong> and type with the QWERTY keyboard. For BIP39 word passphrases ➜ <strong>Add Word</strong> (faster and no typos).</div>`
       },
       {
         f: 'hw-coldcard-q-03.png',
         es: 'Tipear la Passphrase -Teclado QWERTY Físico',
         en: 'Type the Passphrase -Physical QWERTY Keyboard',
-        des: `La Q muestra el campo de ingreso. Escribís la passphrase <strong>directamente con el teclado QWERTY físico</strong> -igual que en una computadora.<br><br>
-        - Mayúsculas con Shift<br>
-        - Números con la fila numérica<br>
-        - Símbolos con Shift + teclas<br><br>
+        des: `Escribís la passphrase <strong>directamente con el teclado QWERTY físico</strong> -igual que en una computadora.<br><br>
+        Verificar el fingerprint de la sesión actual.<br>
+        Ej. de la foto: <strong>[BR034270]</strong> - cadena única para esta billetera.<br><br>
         Confirmar con <strong>Enter / OK</strong> al terminar.<br><br>
         <div class="tip">La Q es ideal para passphrases largas (20+ caracteres) o con símbolos especiales | en Mk4/Mk5 el mismo proceso toma mucho más tiempo.</div>`,
-        den: `The Q shows the entry field. Type the passphrase <strong>directly with the physical QWERTY keyboard</strong> -just like on a computer.<br><br>
-        - Uppercase with Shift<br>
-        - Numbers with the number row<br>
-        - Symbols with Shift + keys<br><br>
+        den: `Type the passphrase <strong>directly with the physical QWERTY keyboard</strong> -just like on a computer.<br><br>
+        Verify the current session fingerprint.<br>
+        E.g. from the photo: <strong>[BR034270]</strong> - unique string for this wallet.<br><br>
         Confirm with <strong>Enter / OK</strong> when done.<br><br>
         <div class="tip">The Q is ideal for long passphrases (20+ characters) or ones with special symbols | on Mk4/Mk5 the same process takes much longer.</div>`
       },
       {
         f: 'hw-coldcard-q-04.png',
-        es: 'Fingerprint + Passphrase en Pantalla',
-        en: 'Fingerprint + Passphrase on Screen',
-        des: `La Q muestra simultáneamente la <strong>passphrase ingresada</strong> y el <strong>wallet fingerprint</strong> (8 caracteres hex) antes de aplicar.<br><br>
-        Verificar que la passphrase en pantalla es exactamente la que querías escribir -esto incluye mayúsculas, espacios y símbolos.<br><br>
-        El fingerprint es único para esa combinación seed + passphrase. Anotalo en papel la primera vez.<br><br>
-        <div class="warn">⚠️ Si el fingerprint no coincide con el esperado = typo en la passphrase. Cancelá antes de continuar.</div>`,
-        den: `The Q simultaneously shows the <strong>entered passphrase</strong> and the <strong>wallet fingerprint</strong> (8 hex characters) before applying.<br><br>
-        Verify that the passphrase on screen is exactly what you intended -including uppercase, spaces and symbols.<br><br>
-        The fingerprint is unique to that seed + passphrase combination. Write it on paper the first time.<br><br>
-        <div class="warn">⚠️ If the fingerprint doesn't match what you expected = typo in the passphrase. Cancel before continuing.</div>`
+        es: 'Confirmar el Fingerprint de la Nueva Billetera',
+        en: 'Confirm the New Wallet Fingerprint',
+        des: `La Q muestra el <strong>master key fingerprint</strong> de la billetera creada al sumar la passphrase a la seed maestra.<br><br>
+        Ej. de la foto: <strong>E2F33247</strong><br><br>
+        - Primera vez: anotar en papel, guardar separado de la seed<br>
+        - Sesiones siguientes: verificar que coincide antes de operar<br><br>
+        <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase | cancelar antes de cualquier transacción.</div>`,
+        den: `The Q shows the <strong>master key fingerprint</strong> of the wallet created by adding the passphrase to the master seed.<br><br>
+        E.g. from the photo: <strong>E2F33247</strong><br><br>
+        - First time: write on paper, store separate from the seed<br>
+        - Future sessions: verify it matches before operating<br><br>
+        <div class="warn">⚠️ Different fingerprint than expected = typo in passphrase | cancel before any transaction.</div>`
       },
       {
         f: 'hw-coldcard-q-05.png',
-        es: 'Listo -Nuevo Fingerprint Activo',
-        en: 'Done -New Fingerprint Active',
-        des: `La Coldcard Q confirma que la wallet con passphrase está activa. La pantalla muestra el <strong>nuevo fingerprint</strong> correspondiente a la billetera derivada.<br><br>
-        Desde este momento la sesión está en la billetera con passphrase. Al apagar y volver a encender, la Q volverá a la billetera base -la passphrase debe ingresarse nuevamente.<br><br>
+        es: 'Sesión Activa con la Nueva Identidad',
+        en: 'Active Session with New Identity',
+        des: `La Coldcard Q confirma que la wallet con passphrase está activa y lista para operar.<br><br>
+        Al apagar y volver a encender, la Q regresa a la billetera base -la passphrase debe ingresarse nuevamente en cada sesión.<br><br>
         <div class="info">MicroSD cifrado también disponible en Q ➜ <strong>Passphrase ➜ Restore Saved</strong>. El teclado QWERTY facilita ingresar el PIN de la SD si es alfanumérico.</div>`,
-        den: `Coldcard Q confirms the passphrase wallet is active. The screen shows the <strong>new fingerprint</strong> corresponding to the derived wallet.<br><br>
-        From this moment the session is in the passphrase wallet. When powered off and back on, the Q returns to the base wallet -the passphrase must be entered again.<br><br>
+        den: `Coldcard Q confirms the passphrase wallet is active and ready to operate.<br><br>
+        When powered off and back on, the Q returns to the base wallet -the passphrase must be entered again each session.<br><br>
         <div class="info">Encrypted MicroSD also available on Q ➜ <strong>Passphrase ➜ Restore Saved</strong>. The QWERTY keyboard makes it easy to enter an alphanumeric SD PIN.</div>`
       },
     ]
@@ -1322,17 +1297,15 @@ const SECTIONS = [
         f: 'hw-ledger-nanox-04.png',
         es: 'Ajustes',
         en: 'Settings',
-        des: `Dentro de <strong>Settings</strong>, navegá hasta <strong>Security</strong> y confirmá con ambos botones.`,
-        den: `Inside <strong>Settings</strong>, navigate to <strong>Security</strong> and confirm with both buttons.`
+        des: `Dentro de <strong>Settings</strong>, navegá hasta <strong>Manage device</strong> y confirmá con ambos botones.`,
+        den: `Inside <strong>Settings</strong>, navigate to <strong>Manage device</strong> and confirm with both buttons.`
       },
       {
         f: 'hw-ledger-nanox-05.png',
         es: 'Seguridad',
         en: 'Security',
-        des: `En el menú de <strong>Security</strong>, navegá hasta <strong>Passphrase</strong> y confirmá con ambos botones.<br><br>
-        <div class="info">Aquí también encontrás opciones como cambio de PIN y bloqueo automático.</div>`,
-        den: `In the <strong>Security</strong> menu, navigate to <strong>Passphrase</strong> and confirm with both buttons.<br><br>
-        <div class="info">Here you also find options like PIN change and auto-lock.</div>`
+        des: `Dentro de <strong>Manage device</strong>, navegá hasta <strong>Security</strong> y confirmá con ambos botones.`,
+        den: `Inside <strong>Manage device</strong>, navigate to <strong>Security</strong> and confirm with both buttons.`
       },
       {
         f: 'hw-ledger-nanox-06.png',
@@ -1409,9 +1382,13 @@ const SECTIONS = [
         f: 'hw-ledger-nanox-13.png',
         es: 'Escribir Passphrase',
         en: 'Type Passphrase',
-        des: `Usá el teclado en pantalla para escribir tu passphrase carácter por carácter.<br><br>
+        des: `Escribir la passphrase carácter por carácter:<br><br>
+        - Botón izquierdo | derecho para buscar cada tipo de caracteres<br>
+        - Ambos botones para seleccionar cada uno<br><br>
         <div class="warn">⚠️ Ingresar passphrases largas con dos botones es <strong>muy lento</strong>. Recomendado: passphrases de 8-12 caracteres para uso diario con Nano X.</div>`,
-        den: `Use the on-screen keyboard to type your passphrase character by character.<br><br>
+        den: `Type the passphrase character by character:<br><br>
+        - Left | right button to browse each character type<br>
+        - Both buttons to select each one<br><br>
         <div class="warn">⚠️ Entering long passphrases with two buttons is <strong>very slow</strong>. Recommended: 8-12 character passphrases for daily Nano X use.</div>`
       },
       {
@@ -1419,8 +1396,10 @@ const SECTIONS = [
         es: 'Revisar Passphrase',
         en: 'Review Passphrase',
         des: `El dispositivo muestra la passphrase completa para que la revises antes de confirmar.<br><br>
+        Podés ir hacia la derecha para ver el texto completo.<br><br>
         <div class="warn">⚠️ Verificá cada carácter con cuidado. Un error en la passphrase genera una billetera completamente diferente e inaccesible.</div>`,
         den: `The device shows the complete passphrase for you to review before confirming.<br><br>
+        You can scroll right to see the full text.<br><br>
         <div class="warn">⚠️ Verify each character carefully. A mistake in the passphrase generates a completely different and inaccessible wallet.</div>`
       },
       {
@@ -1929,81 +1908,75 @@ const SECTIONS = [
     steps: [
       {
         f: 'hw-passport-01.png', imgW: 340,
-        es: 'Menú Principal del Passport',
-        en: 'Passport Main Menu',
-        des: `El <strong>Passport</strong> (Gen2, 02 y Prime) usa la misma ruta de menú para activar la passphrase.<br><br>
-        Desde la pantalla principal, navegar al menú lateral (<strong>pad derecho ➜ MORE</strong> en Gen2/02, o tocar el ícono de menú en Prime).<br><br>
-        <div class="info">El flujo de pasos es idéntico en los tres modelos. Prime usa pantalla táctil; Gen2/02 usan teclado físico.</div>`,
-        den: `The <strong>Passport</strong> (Gen2, 02 and Prime) uses the same menu path to activate passphrase.<br><br>
-        From the main screen, navigate to the side menu (<strong>right pad ➜ MORE</strong> on Gen2/02, or tap the menu icon on Prime).<br><br>
-        <div class="info">The step flow is identical on all three models. Prime uses touchscreen; Gen2/02 use physical keyboard.</div>`
+        es: 'Menú Principal ➜ Account',
+        en: 'Main Menu ➜ Account',
+        des: `Desde la pantalla principal del Passport, seleccionar <strong>Account</strong>.`,
+        den: `From the Passport main screen, select <strong>Account</strong>.`
       },
       {
         f: 'hw-passport-02.png', imgW: 340,
-        es: 'MORE ➜ Settings ➜ Advanced ➜ Passphrase',
-        en: 'MORE ➜ Settings ➜ Advanced ➜ Passphrase',
-        des: `En el menú <strong>MORE</strong>, navegar: <strong>Settings ➜ Advanced ➜ Passphrase ➜ Set Passphrase</strong>.<br><br>
-        En Gen2/02 navegar con la rueda lateral y confirmar con el botón central. En Prime, tocar cada opción en la pantalla táctil.`,
-        den: `In the <strong>MORE</strong> menu, navigate: <strong>Settings ➜ Advanced ➜ Passphrase ➜ Set Passphrase</strong>.<br><br>
-        On Gen2/02 navigate with the side wheel and confirm with the center button. On Prime, tap each option on the touchscreen.`
+        es: 'Seleccionar: Enter Passphrase',
+        en: 'Select: Enter Passphrase',
+        des: `Dentro de Account, seleccionar <strong>Enter Passphrase</strong>.`,
+        den: `Inside Account, select <strong>Enter Passphrase</strong>.`
       },
       {
         f: 'hw-passport-03.png', imgW: 340,
-        es: 'Advertencia - Leer Antes de Continuar',
-        en: 'Warning - Read Before Continuing',
-        des: `Passport muestra una pantalla de <strong>advertencia</strong> explicando que la passphrase crea una billetera diferente y que si se pierde, los fondos son irrecuperables.<br><br>
-        Confirmar para continuar.<br><br>
-        <div class="warn">⚠️ Leer con atención. La passphrase NO se guarda en el dispositivo - si la olvidás, perdés el acceso permanentemente.</div>`,
-        den: `Passport shows a <strong>warning</strong> screen explaining that the passphrase creates a different wallet and if lost, funds are unrecoverable.<br><br>
-        Confirm to continue.<br><br>
-        <div class="warn">⚠️ Read carefully. The passphrase is NOT saved on the device - if you forget it, you lose access permanently.</div>`
+        es: 'Leer la Advertencia de Seguridad',
+        en: 'Read the Security Warning',
+        des: `Passport muestra una advertencia antes de continuar:<br><br>
+        - Todas las Passphrases son válidas<br>
+        - Tu Passphrase solo permanece activa mientras el dispositivo está encendido<br>
+        - Una letra incorrecta crea una billetera distinta<br><br>
+        <div class="warn">⚠️ La passphrase NO se guarda en el dispositivo - si la olvidás, perdés el acceso permanentemente.</div>`,
+        den: `Passport shows a warning before continuing:<br><br>
+        - All Passphrases are valid<br>
+        - Your Passphrase is only active while the device is on<br>
+        - One wrong letter creates a different wallet<br><br>
+        <div class="warn">⚠️ The passphrase is NOT saved on the device - if you forget it, you lose access permanently.</div>`
       },
       {
         f: 'hw-passport-04.png', imgW: 340,
-        es: 'Ingresar la Passphrase',
-        en: 'Enter the Passphrase',
-        des: `Passport muestra el campo para ingresar la passphrase.<br><br>
-        En <strong>Gen2/02</strong>: tipear con el teclado físico alfanumérico (estilo BlackBerry). Cómodo para passphrases largas.<br>
-        En <strong>Prime</strong>: teclado QWERTY táctil en pantalla.<br><br>
-        La passphrase nunca se muestra completa en pantalla durante el ingreso.`,
-        den: `Passport shows the field to enter the passphrase.<br><br>
-        On <strong>Gen2/02</strong>: type with the physical alphanumeric keyboard (BlackBerry style). Comfortable for long passphrases.<br>
-        On <strong>Prime</strong>: on-screen QWERTY touchscreen keyboard.<br><br>
-        The passphrase is never fully displayed on screen during entry.`
+        es: 'Seleccionar el Campo de Entrada',
+        en: 'Select the Entry Field',
+        des: `Passport muestra el campo de ingreso de passphrase.<br><br>
+        Seleccionar el campo para comenzar a tipear.`,
+        den: `Passport shows the passphrase entry field.<br><br>
+        Select the field to start typing.`
       },
       {
         f: 'hw-passport-05.png', imgW: 340,
-        es: 'Passphrase Ingresada - Confirmar',
-        en: 'Passphrase Entered - Confirm',
-        des: `Con la passphrase ingresada, Passport muestra el campo completo para revisar (caracteres enmascarados).<br><br>
-        Verificar que no hay errores tipográficos antes de confirmar. Presionar <strong>Confirm</strong> / <strong>Apply</strong>.<br><br>
-        <div class="tip">Es la última oportunidad para corregir antes de derivar la billetera. Un carácter incorrecto genera una billetera diferente sin aviso.</div>`,
-        den: `With the passphrase entered, Passport shows the full field for review (masked characters).<br><br>
-        Verify there are no typos before confirming. Press <strong>Confirm</strong> / <strong>Apply</strong>.<br><br>
-        <div class="tip">This is the last chance to correct before deriving the wallet. One wrong character generates a different wallet without warning.</div>`
+        es: 'Tipear la Passphrase',
+        en: 'Type the Passphrase',
+        des: `Tipear la passphrase con el teclado físico alfanumérico del Passport.<br><br>
+        Puede contener letras | números | símbolos compatibles.`,
+        den: `Type the passphrase using the Passport's physical alphanumeric keyboard.<br><br>
+        It can contain letters | numbers | compatible symbols.`
       },
       {
         f: 'hw-passport-06.png', imgW: 340,
-        es: 'Wallet Fingerprint - Anotar en Papel',
-        en: 'Wallet Fingerprint - Write on Paper',
-        des: `Passport muestra el <strong>wallet fingerprint</strong>: una cadena corta única derivada de tu seed + passphrase.<br><br>
-        <strong>Anotar este fingerprint en papel</strong> junto a la passphrase (en lugar seguro separado de la seed).<br><br>
-        En sesiones futuras, verificar que el fingerprint coincide antes de usar la billetera.`,
-        den: `Passport shows the <strong>wallet fingerprint</strong>: a unique short string derived from your seed + passphrase.<br><br>
-        <strong>Write this fingerprint on paper</strong> alongside the passphrase (in a secure place separate from the seed).<br><br>
-        In future sessions, verify the fingerprint matches before using the wallet.`
+        es: 'Confirmar',
+        en: 'Confirm',
+        des: `Revisar la passphrase ingresada y confirmar.<br><br>
+        <div class="tip">Un carácter incorrecto genera una billetera completamente diferente sin aviso.</div>`,
+        den: `Review the entered passphrase and confirm.<br><br>
+        <div class="tip">One wrong character generates a completely different wallet without warning.</div>`
       },
       {
         f: 'hw-passport-07.png', imgW: 340,
-        es: 'Verificar Fingerprint - Sesiones Futuras',
-        en: 'Verify Fingerprint - Future Sessions',
-        des: `Cada vez que abrís la billetera con passphrase, Passport muestra el fingerprint.<br><br>
-        Comparar con el valor anotado en papel. Si coincide ➜ passphrase correcta, billetera correcta.<br><br>
-        Cuando la passphrase está activa, aparece la <strong>"P" en el escudo</strong> de la tarjeta de cuenta.<br><br>
+        es: 'Verificar el Master Fingerprint',
+        en: 'Verify the Master Fingerprint',
+        des: `Passport muestra el <strong>Master Fingerprint</strong> de la billetera iniciada - corresponde a la combinación seed + passphrase.<br><br>
+        Ej. de la foto: <strong>715498ES</strong><br><br>
+        Debe coincidir con el fingerprint esperado para esa Passphrase.<br><br>
+        - Primera vez: anotar en papel, guardar separado de la seed<br>
+        - Sesiones futuras: verificar que coincide antes de operar<br><br>
         <div class="warn">⚠️ La passphrase no persiste entre sesiones. Cada vez: PIN del dispositivo + passphrase.</div>`,
-        den: `Every time you open the passphrase wallet, Passport shows the fingerprint.<br><br>
-        Compare with the value written on paper. If it matches ➜ correct passphrase, correct wallet.<br><br>
-        When passphrase is active, the <strong>"P" in the shield</strong> appears on the account card.<br><br>
+        den: `Passport shows the <strong>Master Fingerprint</strong> of the wallet opened - corresponds to the seed + passphrase combination.<br><br>
+        E.g. from the photo: <strong>715498ES</strong><br><br>
+        It must match the expected fingerprint for that Passphrase.<br><br>
+        - First time: write on paper, store separate from the seed<br>
+        - Future sessions: verify it matches before operating<br><br>
         <div class="warn">⚠️ The passphrase does not persist between sessions. Each time: device PIN + passphrase.</div>`
       },
     ]
@@ -2383,10 +2356,14 @@ const SECTIONS = [
         f: 'mob-blue-05.png', imgW: 380,
         es: 'Tipear la Passphrase y Confirmar',
         en: 'Type the Passphrase and Confirm',
-        des: `Con la opción de passphrase activada, aparece el campo <strong>"BIP39 Passphrase"</strong>. Ingresar la passphrase exactamente como fue definida - es case-sensitive.<br><br>
+        des: `Con la opción de passphrase activada, aparece el campo <strong>"BIP39 Passphrase"</strong>. Ingresar la passphrase exactamente como fue definida.<br><br>
+        Puede contener letras | números | símbolos compatibles.<br>
+        Diferencia mayúsculas | minúsculas | espacios.<br><br>
         Tocar <strong>Importar</strong>. BlueWallet deriva la billetera usando seed + passphrase y la carga directamente.<br><br>
         <div class="warn">⚠️ La passphrase se tipea en el teléfono. Asegurate de estar en un ambiente seguro, sin capturas de pantalla automáticas ni software malicioso.</div>`,
-        den: `With the passphrase option enabled, the <strong>"BIP39 Passphrase"</strong> field appears. Enter the passphrase exactly as defined - it is case-sensitive.<br><br>
+        den: `With the passphrase option enabled, the <strong>"BIP39 Passphrase"</strong> field appears. Enter the passphrase exactly as defined.<br><br>
+        It can contain letters | numbers | compatible symbols.<br>
+        Case-sensitive: uppercase | lowercase | spaces all matter.<br><br>
         Tap <strong>Import</strong>. BlueWallet derives the wallet using seed + passphrase and loads it directly.<br><br>
         <div class="warn">⚠️ The passphrase is typed on the phone. Make sure you are in a safe environment, with no automatic screenshots or malicious software.</div>`
       },
@@ -2467,9 +2444,13 @@ const SECTIONS = [
         es: 'Completar Seed + Passphrase',
         en: 'Complete Seed + Passphrase',
         des: `Ingresar las <strong>12 o 24 palabras</strong> de la semilla en el campo correspondiente y la <strong>passphrase</strong> en el campo de passphrase BIP39.<br><br>
+        Ej. de la foto: <strong>"Bull Bitcoin"</strong> como Passphrase.<br><br>
+        Escribir también un nombre para identificar la wallet.<br><br>
         La passphrase es case-sensitive - un carácter incorrecto deriva una billetera diferente.<br><br>
         <div class="warn">⚠️ La passphrase se tipea en el teléfono. Asegurate de estar en un entorno seguro, sin capturas automáticas activadas.</div>`,
         den: `Enter the <strong>12 or 24 seed words</strong> in the corresponding field and the <strong>passphrase</strong> in the BIP39 passphrase field.<br><br>
+        E.g. from the photo: <strong>"Bull Bitcoin"</strong> as Passphrase.<br><br>
+        Also write a name to identify the wallet.<br><br>
         The passphrase is case-sensitive - one wrong character derives a different wallet.<br><br>
         <div class="warn">⚠️ The passphrase is typed on the phone. Make sure you're in a safe environment, with no automatic screenshots enabled.</div>`
       },
@@ -2503,9 +2484,11 @@ const SECTIONS = [
         es: 'Wallet Details - Verificar la Billetera',
         en: 'Wallet Details - Verify the Wallet',
         des: `La pantalla de <strong>Wallet Details</strong> muestra la información de la billetera derivada.<br><br>
-        Verificar que la primera dirección de recepción coincide con el registro previo - confirma que la seed + passphrase fueron ingresadas correctamente.`,
+        Verificar el campo <strong>Wallet Fingerprint</strong> - ese valor identifica de forma única la billetera derivada de esa seed + passphrase.<br><br>
+        <div class="tip">Ej. de la foto: [e19c9e86] - Anotar este fingerprint. Si en el futuro reimportás la wallet y el fingerprint coincide, confirmás que ingresaste la passphrase exacta.</div>`,
         den: `The <strong>Wallet Details</strong> screen shows information about the derived wallet.<br><br>
-        Verify that the first receiving address matches your previous record - confirms seed + passphrase were entered correctly.`
+        Verify the <strong>Wallet Fingerprint</strong> field - that value uniquely identifies the wallet derived from that seed + passphrase.<br><br>
+        <div class="tip">Ex. from the photo: [e19c9e86] - Write down this fingerprint. If you re-import the wallet in the future and the fingerprint matches, you confirm you entered the exact passphrase.</div>`
       },
       {
         f: 'mob-bull-10.png', imgW: 380,
