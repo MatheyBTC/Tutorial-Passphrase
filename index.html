@@ -238,12 +238,14 @@
   .block-count { font-size: 11px; color: var(--muted); margin-left: auto; }
 
   /* HOME / PORTADA */
-  .home-hero { text-align: center; padding: 20px 0 16px; }
+  .home-hero { text-align: center; padding: 20px 0 8px; }
   .home-hero h1 { font-size: 28px; font-weight: 800; color: var(--text); margin: 0 0 8px; }
   .home-hero p { font-size: 15px; color: var(--muted); max-width: 560px; margin: 0 auto 14px; line-height: 1.6; }
-  .home-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 20px; }
+  .home-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 10px; }
   .home-stat { text-align: center; }
-  .home-stat .num { font-size: 32px; font-weight: 800; color: var(--accent); line-height: 1; }
+  .home-stat .num { font-size: 32px; font-weight: 800; line-height: 1; }
+  .home-stat .num-orange { color: #f7931a; }
+  .home-stat .num-yellow { color: #eab308; }
   .home-stat .lbl { font-size: 14px; color: var(--muted); margin-top: 4px; }
   .home-group-title { font-size: 14px; font-weight: 700; color: var(--muted); margin: 14px 0 5px; }
   .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-bottom: 4px; }
@@ -2884,8 +2886,8 @@ function loadHome() {
     <div class="home-hero">
       <h1>${heroTitle}</h1>
       <div class="home-stats">
-        <div class="home-stat"><div class="num">${readySecs.length}</div><div class="lbl">${statWallets}</div></div>
-        <div class="home-stat"><div class="num">${pendingSecs.length}</div><div class="lbl">${statPending}</div></div>
+        <div class="home-stat"><div class="num num-orange">${readySecs.filter(s => !s.id.includes('trezor-suite')).length}</div><div class="lbl">${statWallets}</div></div>
+        <div class="home-stat"><div class="num num-yellow">${pendingSecs.length}</div><div class="lbl">${statPending}</div></div>
       </div>
     </div>
     ${groupsHtml}
