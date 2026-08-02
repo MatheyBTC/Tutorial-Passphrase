@@ -238,10 +238,10 @@
   .block-count { font-size: 11px; color: var(--muted); margin-left: auto; }
 
   /* HOME / PORTADA */
-  .home-hero { text-align: center; padding: 40px 0 32px; }
+  .home-hero { text-align: center; padding: 20px 0 16px; }
   .home-hero h1 { font-size: 28px; font-weight: 800; color: var(--text); margin: 0 0 8px; }
-  .home-hero p { font-size: 15px; color: var(--muted); max-width: 560px; margin: 0 auto 28px; line-height: 1.6; }
-  .home-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
+  .home-hero p { font-size: 15px; color: var(--muted); max-width: 560px; margin: 0 auto 14px; line-height: 1.6; }
+  .home-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 20px; }
   .home-stat { text-align: center; }
   .home-stat .num { font-size: 32px; font-weight: 800; color: var(--accent); line-height: 1; }
   .home-stat .lbl { font-size: 14px; color: var(--muted); margin-top: 4px; }
@@ -786,6 +786,23 @@ const SECTIONS = [
         Confirm to continue.`
       },
       {
+        noImg: true,
+        es: 'Menú de Passphrase - Opciones Disponibles',
+        en: 'Passphrase Menu - Available Options',
+        des: `La Mk4 muestra el menú de ingreso con cuatro opciones:<br><br>
+        - <strong>Edit Phrase</strong> - abre el teclado en pantalla para tipear carácter a carácter<br>
+        - <strong>Add Word</strong> - agrega una palabra del listado BIP39 (útil para passphrases tipo "correct horse battery")<br>
+        - <strong>Add Number</strong> - agrega un número directamente sin navegar el teclado<br>
+        - <strong>Clear All</strong> - borra todo lo ingresado y empieza de cero<br><br>
+        <div class="tip">Para una passphrase normal con letras y símbolos ➜ usar <strong>Edit Phrase</strong>. Para passphrases de palabras BIP39 ➜ usar <strong>Add Word</strong> (más rápido y sin errores tipográficos).</div>`,
+        den: `Mk4 shows the entry menu with four options:<br><br>
+        - <strong>Edit Phrase</strong> - opens the on-screen keyboard to type character by character<br>
+        - <strong>Add Word</strong> - adds a BIP39 wordlist word (useful for passphrases like "correct horse battery")<br>
+        - <strong>Add Number</strong> - adds a number directly without navigating the keyboard<br>
+        - <strong>Clear All</strong> - erases everything entered and starts over<br><br>
+        <div class="tip">For a regular passphrase with letters and symbols ➜ use <strong>Edit Phrase</strong>. For BIP39 word passphrases ➜ use <strong>Add Word</strong> (faster and no typos).</div>`
+      },
+      {
         f: 'hw-coldcard-mk4-03.png',
         es: 'Edit Phrase -Teclado en Pantalla',
         en: 'Edit Phrase -On-Screen Keyboard',
@@ -875,6 +892,23 @@ const SECTIONS = [
         - A different passphrase opens a different wallet<br>
         - There is no way to recover funds if you forget the passphrase<br><br>
         Confirm to continue.`
+      },
+      {
+        noImg: true,
+        es: 'Menú de Passphrase - Opciones Disponibles',
+        en: 'Passphrase Menu - Available Options',
+        des: `La Mk5 muestra el menú de ingreso con cuatro opciones:<br><br>
+        - <strong>Edit Phrase</strong> - abre el teclado en pantalla para tipear carácter a carácter<br>
+        - <strong>Add Word</strong> - agrega una palabra del listado BIP39 (útil para passphrases tipo "correct horse battery")<br>
+        - <strong>Add Number</strong> - agrega un número directamente sin navegar el teclado<br>
+        - <strong>Clear All</strong> - borra todo lo ingresado y empieza de cero<br><br>
+        <div class="tip">Para una passphrase normal con letras y símbolos ➜ usar <strong>Edit Phrase</strong>. Para passphrases de palabras BIP39 ➜ usar <strong>Add Word</strong> (más rápido y sin errores tipográficos).</div>`,
+        den: `Mk5 shows the entry menu with four options:<br><br>
+        - <strong>Edit Phrase</strong> - opens the on-screen keyboard to type character by character<br>
+        - <strong>Add Word</strong> - adds a BIP39 wordlist word (useful for passphrases like "correct horse battery")<br>
+        - <strong>Add Number</strong> - adds a number directly without navigating the keyboard<br>
+        - <strong>Clear All</strong> - erases everything entered and starts over<br><br>
+        <div class="tip">For a regular passphrase with letters and symbols ➜ use <strong>Edit Phrase</strong>. For BIP39 word passphrases ➜ use <strong>Add Word</strong> (faster and no typos).</div>`
       },
       {
         f: 'hw-coldcard-mk5-03.png',
@@ -977,6 +1011,23 @@ const SECTIONS = [
         - A different passphrase opens a different wallet<br>
         - There is no way to recover funds if you forget the passphrase<br><br>
         Confirm to continue.`
+      },
+      {
+        noImg: true,
+        es: 'Menú de Passphrase - Opciones Disponibles',
+        en: 'Passphrase Menu - Available Options',
+        des: `La Coldcard Q muestra el menú de ingreso con cuatro opciones:<br><br>
+        - <strong>Edit Phrase</strong> - abre el campo de texto para tipear con el teclado QWERTY físico<br>
+        - <strong>Add Word</strong> - agrega una palabra del listado BIP39 (útil para passphrases tipo "correct horse battery")<br>
+        - <strong>Add Number</strong> - agrega un número directamente<br>
+        - <strong>Clear All</strong> - borra todo lo ingresado y empieza de cero<br><br>
+        <div class="tip">Para una passphrase normal ➜ usar <strong>Edit Phrase</strong> y tipear con el teclado QWERTY. Para passphrases de palabras BIP39 ➜ <strong>Add Word</strong> (más rápido y sin errores tipográficos).</div>`,
+        den: `Coldcard Q shows the entry menu with four options:<br><br>
+        - <strong>Edit Phrase</strong> - opens the text field to type with the physical QWERTY keyboard<br>
+        - <strong>Add Word</strong> - adds a BIP39 wordlist word (useful for passphrases like "correct horse battery")<br>
+        - <strong>Add Number</strong> - adds a number directly<br>
+        - <strong>Clear All</strong> - erases everything entered and starts over<br><br>
+        <div class="tip">For a regular passphrase ➜ use <strong>Edit Phrase</strong> and type with the QWERTY keyboard. For BIP39 word passphrases ➜ <strong>Add Word</strong> (faster and no typos).</div>`
       },
       {
         f: 'hw-coldcard-q-03.png',
