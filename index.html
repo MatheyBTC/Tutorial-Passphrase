@@ -244,10 +244,10 @@
   .home-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
   .home-stat { text-align: center; }
   .home-stat .num { font-size: 32px; font-weight: 800; color: var(--accent); line-height: 1; }
-  .home-stat .lbl { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .06em; }
-  .home-group-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin: 32px 0 12px; }
-  .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-bottom: 8px; }
-  .home-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; cursor: pointer; transition: border-color .15s, background .15s; display: flex; flex-direction: column; gap: 4px; }
+  .home-stat .lbl { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .home-group-title { font-size: 11px; font-weight: 700; color: var(--muted); margin: 28px 0 10px; }
+  .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-bottom: 4px; }
+  .home-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; cursor: pointer; transition: border-color .15s, background .15s; display: flex; flex-direction: column; gap: 3px; }
   .home-card:hover { border-color: var(--accent-dim); background: #1a1a1a; }
   .home-card .hc-name { font-size: 14px; font-weight: 600; color: var(--text); }
   .home-card .hc-steps { font-size: 11px; color: var(--muted); }
@@ -2773,14 +2773,13 @@ function loadHome() {
 
   const readySecs = SECTIONS.filter(s => s.ready && s.group !== 'pending');
   const pendingSecs = SECTIONS.filter(s => s.group === 'pending' || !s.ready);
-  const totalSteps = readySecs.reduce((acc, s) => acc + s.steps.length, 0);
 
   const groupMeta = {
-    intro:   { label: 'Introducción',   labelEn: 'Introduction' },
-    hw:      { label: 'Cold-Wallets · Hardware', labelEn: 'Cold-Wallets · Hardware' },
-    desktop: { label: 'Hot-Wallets · Desktop',   labelEn: 'Hot-Wallets · Desktop' },
-    mobile:  { label: 'Hot-Wallets · Mobile',    labelEn: 'Hot-Wallets · Mobile' },
-    browser: { label: 'Hot-Wallets · Browser',   labelEn: 'Hot-Wallets · Browser' },
+    intro:   { label: 'Introducción', labelEn: 'Introduction' },
+    hw:      { label: 'Cold-Wallet (Hardware)', labelEn: 'Cold-Wallet (Hardware)' },
+    desktop: { label: 'Hot-Wallet (Desktop)',   labelEn: 'Hot-Wallet (Desktop)' },
+    mobile:  { label: 'Hot-Wallet (Mobile)',    labelEn: 'Hot-Wallet (Mobile)' },
+    browser: { label: 'Hot-Wallet (Browser)',   labelEn: 'Hot-Wallet (Browser)' },
   };
 
   let groupsHtml = '';
@@ -2791,31 +2790,16 @@ function loadHome() {
     const title = LANG === 'en' ? meta.labelEn : meta.label;
     const cards = secs.map(s => {
       const name = LANG === 'en' ? s.en : s.es;
-      const stepWord = LANG === 'en' ? 'step' : 'paso';
       return `<div class="home-card" onclick="loadSection('${s.id}')">
         <span class="hc-name">${name}</span>
-        <span class="hc-steps">${s.steps.length} ${stepWord}${s.steps.length !== 1 ? 's' : ''}</span>
       </div>`;
     }).join('');
     groupsHtml += `<div class="home-group-title">${title}</div><div class="home-grid">${cards}</div>`;
   });
 
-  const pendingCards = pendingSecs.map(s => {
-    const name = LANG === 'en' ? s.en : s.es;
-    return `<div class="home-card home-card-pending"><span class="hc-name">${name}</span></div>`;
-  }).join('');
-  const pendingTitle = LANG === 'en' ? 'Pending' : 'Pendientes';
-  if (pendingCards) {
-    groupsHtml += `<div class="home-group-title">${pendingTitle}</div><div class="home-grid">${pendingCards}</div>`;
-  }
-
   const heroTitle = LANG === 'en' ? '🔐 BIP39 Passphrase Tutorials' : '🔐 Tutoriales de Passphrase BIP39';
-  const heroDesc = LANG === 'en'
-    ? 'Step-by-step guides to set up a BIP39 passphrase on the most popular Bitcoin hardware and software wallets.'
-    : 'Guías paso a paso para configurar una passphrase BIP39 en las wallets de Bitcoin más populares.';
   const statWallets = LANG === 'en' ? 'Wallets' : 'Wallets';
-  const statSteps = LANG === 'en' ? 'Steps' : 'Pasos';
-  const statPending = LANG === 'en' ? 'Pending' : 'Pendientes';
+  const statPending = LANG === 'en' ? 'Pendientes' : 'Pendientes';
   const footerText = LANG === 'en'
     ? '¿Encontraste un error o falta tu wallet? <a href="https://github.com/MatheyBTC/Tutorial-Passphrase/issues/new/choose" target="_blank">Open an issue on GitHub</a> — contributions are welcome.'
     : '¿Encontraste un error o falta tu wallet? <a href="https://github.com/MatheyBTC/Tutorial-Passphrase/issues/new/choose" target="_blank">Abrí un issue en GitHub</a> — las contribuciones son bienvenidas.';
@@ -2823,10 +2807,8 @@ function loadHome() {
   document.getElementById('content').innerHTML = `
     <div class="home-hero">
       <h1>${heroTitle}</h1>
-      <p>${heroDesc}</p>
       <div class="home-stats">
         <div class="home-stat"><div class="num">${readySecs.length}</div><div class="lbl">${statWallets}</div></div>
-        <div class="home-stat"><div class="num">${totalSteps}</div><div class="lbl">${statSteps}</div></div>
         <div class="home-stat"><div class="num">${pendingSecs.length}</div><div class="lbl">${statPending}</div></div>
       </div>
     </div>
