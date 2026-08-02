@@ -2549,6 +2549,44 @@ const SECTIONS = [
     ]
   },
 
+  // TREZOR ONE
+  {
+    id: 'hw-trezor-one', group: 'pending',
+    brand: 'Trezor',
+    es: 'Trezor One', en: 'Trezor One',
+    steps: [
+      {
+        f: 'hw-trezor-one-01.png',
+        es: 'Trezor Suite ➜ Configuración ➜ Dispositivo ➜ Passphrase',
+        en: 'Trezor Suite ➜ Settings ➜ Device ➜ Passphrase',
+        des: `Conectar la Trezor One y abrir <strong>Trezor Suite</strong> (desktop). Ir a <strong>Configuración ➜ Dispositivo</strong> y activar el toggle <strong>"Usar billeteras con passphrase"</strong>.<br><br>
+        La confirmación se hace presionando el <strong>botón derecho físico</strong> del dispositivo (no tiene pantalla táctil).`,
+        den: `Connect the Trezor One and open <strong>Trezor Suite</strong> (desktop). Go to <strong>Settings ➜ Device</strong> and enable the <strong>"Use passphrase wallets"</strong> toggle.<br><br>
+        Confirm by pressing the <strong>right physical button</strong> on the device (no touchscreen).`
+      },
+      {
+        f: 'hw-trezor-one-02.png',
+        es: 'Ingresar Passphrase en el PC (teclado randomizado)',
+        en: 'Enter Passphrase on PC (randomized keyboard)',
+        des: `A diferencia de los modelos Safe/Model T, la Trezor One muestra un <strong>teclado randomizado en Suite</strong> para ingresar la passphrase. Hacer clic en cada carácter desde la pantalla del PC.<br><br>
+        <div class="warn">⚠️ La passphrase viaja cifrada al dispositivo, pero el ingreso es en pantalla. Evitá hacerlo en computadoras no confiables.</div>`,
+        den: `Unlike Safe/Model T, Trezor One shows a <strong>randomized keyboard in Suite</strong> to enter the passphrase. Click each character on the PC screen.<br><br>
+        <div class="warn">⚠️ The passphrase travels encrypted to the device, but entry is on screen. Avoid doing this on untrusted computers.</div>`
+      },
+      {
+        f: 'hw-trezor-one-03.png',
+        es: 'Confirmar en el Dispositivo (2 botones)',
+        en: 'Confirm on Device (2 buttons)',
+        des: `La Trezor One pide confirmación final con sus <strong>dos botones físicos</strong>. El botón izquierdo cancela, el derecho confirma.<br><br>
+        Suite abre la billetera derivada con la passphrase aplicada.<br><br>
+        <div class="tip">Primera vez: anotá la primera dirección de recepción para verificar en sesiones futuras.</div>`,
+        den: `Trezor One asks for final confirmation with its <strong>two physical buttons</strong>. Left button cancels, right button confirms.<br><br>
+        Suite opens the derived wallet with the passphrase applied.<br><br>
+        <div class="tip">First time: write down the first receiving address to verify in future sessions.</div>`
+      },
+    ]
+  },
+
 ]; // END SECTIONS
 
 // ═══════════════════════════════════════════════════════════════
