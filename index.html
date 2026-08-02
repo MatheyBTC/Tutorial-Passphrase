@@ -2478,12 +2478,24 @@ const SECTIONS = [
 // NAV TREE BUILD
 // ═══════════════════════════════════════════════════════════════
 const GROUPS = [
-  { id: 'intro',   es: 'Introducción',          en: 'Introduction',          color: 'var(--text)' },
-  { id: 'hw',      es: 'Cold-Wallets (hardware)', en: 'Cold-Wallets (hardware)', color: '#4fc3f7' },
-  { id: 'desktop', es: 'Hot-Wallets (desktop)',  en: 'Hot-Wallets (desktop)',  color: '#f7931a' },
-  { id: 'mobile',  es: 'Hot-Wallets (mobile)',   en: 'Hot-Wallets (mobile)',   color: '#ffd600' },
-  { id: 'browser', es: 'Hot-Wallets (browser)',  en: 'Hot-Wallets (browser)',  color: '#ef5350' },
-  { id: 'pending', es: 'Pendientes',             en: 'Pending',               color: '#555' },
+  { id: 'intro',
+    label: `<span style="color:var(--text)">Introducción</span>`,
+    labelEn: `<span style="color:var(--text)">Introduction</span>` },
+  { id: 'hw',
+    label: `<span style="color:#4fc3f7">Cold</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Hardware]</span>`,
+    labelEn: `<span style="color:#4fc3f7">Cold</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Hardware]</span>` },
+  { id: 'desktop',
+    label: `<span style="color:#ef5350">Hot</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Desktop]</span>`,
+    labelEn: `<span style="color:#ef5350">Hot</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Desktop]</span>` },
+  { id: 'mobile',
+    label: `<span style="color:#ef5350">Hot</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Mobile]</span>`,
+    labelEn: `<span style="color:#ef5350">Hot</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Mobile]</span>` },
+  { id: 'browser',
+    label: `<span style="color:#ef5350">Hot</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Browser]</span>`,
+    labelEn: `<span style="color:#ef5350">Hot</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Browser]</span>` },
+  { id: 'pending',
+    label: `<span style="color:#ffd600">Pendientes</span>`,
+    labelEn: `<span style="color:#ffd600">Pending</span>` },
 ];
 
 function buildNav() {
@@ -2497,7 +2509,7 @@ function buildNav() {
     const hdr = document.createElement('div');
     hdr.className = 'sec-header';
     hdr.dataset.gid = g.id;
-    const label = t(g.es, g.en).replace(/(\(.*?\))/, `<span style="color:${g.color || 'var(--text)'}">\$1</span>`);
+    const label = LANG === 'en' ? g.labelEn : g.label;
     hdr.innerHTML = `<span>${label}</span><span class="arrow">▶</span>`;
     const items = document.createElement('div');
     items.className = 'sec-items';
