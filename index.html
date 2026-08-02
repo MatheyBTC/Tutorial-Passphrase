@@ -823,7 +823,7 @@ const SECTIONS = [
 
   // COLDCARD Mk5
   {
-    id: 'hw-coldcard-mk5', group: 'pending',
+    id: 'hw-coldcard-mk5', group: 'hw', ready: true,
     brand: 'Coinkite',
     es: 'Coldcard Mk5', en: 'Coldcard Mk5',
     steps: [
@@ -831,36 +831,92 @@ const SECTIONS = [
         f: 'hw-coldcard-mk5-01.png',
         es: 'PIN → Menú Principal → Passphrase',
         en: 'PIN → Main Menu → Passphrase',
-        des: `La Coldcard Mk5 tiene el mismo proceso que la Mk4 -pad numérico y pantalla OLED. La diferencia principal es hardware interno (seguridad mejorada, chip SE2 dual).<br><br>
+        des: `La Coldcard Mk5 corre el mismo firmware que la Mk4 | pad numérico (5×5) y pantalla OLED monocromática.<br><br>
         Ingresar el PIN → navegar con el pad numérico → seleccionar <strong>"Passphrase"</strong> en el menú principal.<br><br>
-        <div class="info">Mk5 corre el mismo firmware que Mk4. Los pasos del menú son idénticos.</div>`,
-        den: `Coldcard Mk5 has the same process as Mk4 -numeric pad and OLED screen. The main difference is internal hardware (improved security, dual SE2 chip).<br><br>
+        <div class="info">La diferencia Mk4 vs Mk5 es interna: chip SE2 dual (seguridad mejorada). Los pasos del menú son idénticos.</div>`,
+        den: `Coldcard Mk5 runs the same firmware as Mk4 | numeric pad (5×5) and monochrome OLED screen.<br><br>
         Enter PIN → navigate with numeric pad → select <strong>"Passphrase"</strong> in the main menu.<br><br>
-        <div class="info">Mk5 runs the same firmware as Mk4. The menu steps are identical.</div>`
+        <div class="info">The Mk4 vs Mk5 difference is internal: dual SE2 chip (improved security). The menu steps are identical.</div>`
       },
       {
         f: 'hw-coldcard-mk5-02.png',
-        es: 'Edit Phrase -Mismo Teclado que Mk4',
-        en: 'Edit Phrase -Same Keyboard as Mk4',
-        des: `Seleccionar <strong>"Edit Phrase"</strong>. El teclado en pantalla y la navegación son idénticos a la Mk4.<br><br>
-        Ingresar la passphrase carácter por carácter o via WordList BIP39. Confirmar con <strong>OK / ✓</strong>.<br><br>
-        <div class="tip">Al igual que en Mk4, passphrases largas son lentas de ingresar. La Coldcard Q resuelve esto con teclado QWERTY físico.</div>`,
-        den: `Select <strong>"Edit Phrase"</strong>. The on-screen keyboard and navigation are identical to Mk4.<br><br>
-        Enter the passphrase character by character or via BIP39 WordList. Confirm with <strong>OK / ✓</strong>.<br><br>
-        <div class="tip">As with Mk4, long passphrases are slow to enter. The Coldcard Q solves this with a physical QWERTY keyboard.</div>`
+        es: 'Aviso del Dispositivo',
+        en: 'Device Warning',
+        des: `La Mk5 muestra el mismo <strong>mensaje informativo</strong> que la Mk4 antes de permitir ingresar la passphrase.<br><br>
+        El aviso recuerda que:<br>
+        - La passphrase es <strong>case-sensitive</strong> (mayúsculas y minúsculas importan)<br>
+        - Una passphrase diferente abre una billetera diferente<br>
+        - No hay forma de recuperar fondos si olvidás la passphrase<br><br>
+        Confirmar para continuar.`,
+        den: `Mk5 shows the same <strong>informational message</strong> as Mk4 before allowing passphrase entry.<br><br>
+        The warning reminds you that:<br>
+        - The passphrase is <strong>case-sensitive</strong> (uppercase and lowercase matter)<br>
+        - A different passphrase opens a different wallet<br>
+        - There is no way to recover funds if you forget the passphrase<br><br>
+        Confirm to continue.`
       },
       {
         f: 'hw-coldcard-mk5-03.png',
-        es: 'Wallet Fingerprint + Apply',
-        en: 'Wallet Fingerprint + Apply',
-        des: `Coldcard Mk5 muestra el mismo <strong>wallet fingerprint</strong> de 8 caracteres hex que la Mk4.<br><br>
-        Verificar que coincide con el fingerprint guardado → seleccionar <strong>"Apply"</strong>.<br><br>
-        Opción MicroSD cifrada disponible igual que en Mk4: <strong>Passphrase → Restore Saved</strong>.<br><br>
-        <div class="info">La diferencia Mk4 vs Mk5 es de seguridad interna (chip SE2 adicional), no de funcionalidad de passphrase -el proceso es exactamente el mismo.</div>`,
-        den: `Coldcard Mk5 shows the same 8-character hex <strong>wallet fingerprint</strong> as Mk4.<br><br>
-        Verify it matches your saved fingerprint → select <strong>"Apply"</strong>.<br><br>
-        Encrypted MicroSD option available same as Mk4: <strong>Passphrase → Restore Saved</strong>.<br><br>
-        <div class="info">The Mk4 vs Mk5 difference is internal security (additional SE2 chip), not passphrase functionality -the process is exactly the same.</div>`
+        es: 'Edit Phrase -Teclado en Pantalla',
+        en: 'Edit Phrase -On-Screen Keyboard',
+        des: `Seleccionar <strong>"Edit Phrase"</strong>. El teclado en pantalla y la navegación son idénticos a la Mk4.<br><br>
+        - Cambiar entre grupos de caracteres (letras | números | símbolos) con las teclas de función<br>
+        - Navegar hasta cada letra y confirmar carácter por carácter<br>
+        - También podés ingresar palabras BIP39 desde <strong>WordList</strong> (más rápido)<br><br>
+        <div class="tip">Al igual que en Mk4, passphrases largas son lentas de ingresar. La Coldcard Q resuelve esto con teclado QWERTY físico.</div>`,
+        den: `Select <strong>"Edit Phrase"</strong>. The on-screen keyboard and navigation are identical to Mk4.<br><br>
+        - Switch between character groups (letters | numbers | symbols) with function keys<br>
+        - Navigate to each letter and confirm character by character<br>
+        - You can also enter BIP39 words from <strong>WordList</strong> (faster)<br><br>
+        <div class="tip">As with Mk4, long passphrases are slow to enter. The Coldcard Q solves this with a physical QWERTY keyboard.</div>`
+      },
+      {
+        f: 'hw-coldcard-mk5-04.png',
+        es: 'Tipear la Passphrase',
+        en: 'Type the Passphrase',
+        des: `La Mk5 muestra el campo de ingreso con los caracteres seleccionados hasta el momento.<br><br>
+        Verificar cada carácter antes de continuar — no hay corrección fácil una vez confirmada.<br><br>
+        Al terminar de ingresar todos los caracteres, confirmar con <strong>OK / ✓</strong>.<br><br>
+        <div class="tip">La passphrase aparece oculta en pantalla. Tomá tu tiempo para ingresar cada carácter correctamente.</div>`,
+        den: `Mk5 shows the entry field with the characters selected so far.<br><br>
+        Verify each character before continuing — there is no easy correction once confirmed.<br><br>
+        Once all characters are entered, confirm with <strong>OK / ✓</strong>.<br><br>
+        <div class="tip">The passphrase appears hidden on screen. Take your time to enter each character correctly.</div>`
+      },
+      {
+        f: 'hw-coldcard-mk5-05.png',
+        es: 'Wallet Fingerprint -Verificar antes de Aplicar',
+        en: 'Wallet Fingerprint -Verify before Applying',
+        des: `La Mk5 muestra el <strong>wallet fingerprint</strong> (8 caracteres hex) único para esa combinación seed + passphrase.<br><br>
+        - Primera vez: anotá el fingerprint en papel, guardalo separado de la seed<br>
+        - Sesiones siguientes: si el fingerprint coincide → passphrase ingresada correctamente<br><br>
+        <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase | cancelá antes de continuar.</div>`,
+        den: `Mk5 shows the <strong>wallet fingerprint</strong> (8 hex characters) unique to that seed + passphrase combination.<br><br>
+        - First time: write down the fingerprint on paper, store it separate from the seed<br>
+        - Subsequent sessions: if fingerprint matches → passphrase entered correctly<br><br>
+        <div class="warn">⚠️ Different fingerprint than expected = typo in passphrase | cancel before continuing.</div>`
+      },
+      {
+        f: 'hw-coldcard-mk5-06.png',
+        es: 'Apply -Activar la Wallet con Passphrase',
+        en: 'Apply -Activate the Passphrase Wallet',
+        des: `Seleccionar <strong>"Apply"</strong> para activar la billetera con passphrase en la sesión actual.<br><br>
+        La passphrase <strong>no persiste</strong> entre reinicios — cada sesión debés ingresarla nuevamente.<br><br>
+        <div class="info">Opción MicroSD cifrado (avanzado): guardá la passphrase en MicroSD con AES-256. En sesiones futuras → <strong>Passphrase → Restore Saved</strong> → verificar primera letra + longitud → confirmar fingerprint.</div>`,
+        den: `Select <strong>"Apply"</strong> to activate the passphrase wallet in the current session.<br><br>
+        The passphrase <strong>does not persist</strong> between reboots — each session you must enter it again.<br><br>
+        <div class="info">Encrypted MicroSD option (advanced): store the passphrase on MicroSD with AES-256. In future sessions → <strong>Passphrase → Restore Saved</strong> → verify first letter + length → confirm fingerprint.</div>`
+      },
+      {
+        f: 'hw-coldcard-mk5-07.png',
+        es: 'Listo -Lista para Firmar',
+        en: 'Done -Ready to Sign',
+        des: `La Coldcard Mk5 confirma que la wallet con passphrase está activa y lista para operar.<br><br>
+        Al apagar y volver a encender, la Mk5 regresa a la billetera base — la passphrase debe ingresarse nuevamente en cada sesión.<br><br>
+        <div class="info">El proceso es idéntico al de la Mk4. La ventaja de la Mk5 es seguridad de hardware superior (chip SE2 dual), no diferencias en el flujo de passphrase.</div>`,
+        den: `Coldcard Mk5 confirms the passphrase wallet is active and ready to operate.<br><br>
+        When powered off and back on, Mk5 returns to the base wallet — the passphrase must be entered again each session.<br><br>
+        <div class="info">The process is identical to Mk4. The Mk5 advantage is superior hardware security (dual SE2 chip), not differences in the passphrase flow.</div>`
       },
     ]
   },
