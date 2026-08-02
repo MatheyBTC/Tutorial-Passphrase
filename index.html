@@ -369,7 +369,7 @@ const SECTIONS = [
         Seed (12/24 palabras) + sin passphrase = Billetera A<br>
         Seed (12/24 palabras) + passphrase <code>bitcoin</code> = Billetera B<br>
         Seed (12/24 palabras) + passphrase <code>Bitcoin</code> = Billetera C<br><br>
-        Son tres billeteras completamente distintas. No es la misma billetera con una contraseña — son direcciones y claves diferentes.
+        Son tres billeteras completamente distintas. No es la misma billetera con una contraseña - son direcciones y claves diferentes.
         </div><br>
         <strong>No existe una passphrase "incorrecta"</strong><br>
         Cualquier cadena de caracteres que tipees, inclusive sin datos, produce una billetera válida con sus propias direcciones. Tu dispositivo nunca te alerta que cometiste un error de tipeo.<br><br>
@@ -390,7 +390,7 @@ const SECTIONS = [
         Seed (12/24 words) + no passphrase = Wallet A<br>
         Seed (12/24 words) + passphrase <code>bitcoin</code> = Wallet B<br>
         Seed (12/24 words) + passphrase <code>Bitcoin</code> = Wallet C<br><br>
-        These are three completely different wallets. It is not the same wallet with a password — they have different addresses and keys.
+        These are three completely different wallets. It is not the same wallet with a password - they have different addresses and keys.
         </div><br>
         <strong>There is no "incorrect" passphrase</strong><br>
         Any string of characters you type, including nothing, produces a valid wallet with its own addresses. Your device never alerts you that you made a typo.<br><br>
@@ -412,24 +412,24 @@ const SECTIONS = [
         es: '¿Para Qué Sirve la Passphrase?',
         en: 'What is the Passphrase For?',
         des: `<strong>1. Protección si te roban o exponen la semilla</strong><br>
-        Si alguien encuentra tus 12 o 24 palabras, sin la passphrase solo accede a tu billetera base —que puede estar vacía o tener un saldo señuelo. Tus fondos reales permanecen inaccesibles sin la passphrase correcta.<br><br>
+        Si alguien encuentra tus 12 o 24 palabras, sin la passphrase solo accede a tu billetera base -que puede estar vacía o tener un saldo señuelo. Tus fondos reales permanecen inaccesibles sin la passphrase correcta.<br><br>
         <strong>2. Negación plausible (plausible deniability)</strong><br>
         Podés mantener una billetera con poco saldo sin passphrase (o con una passphrase simple conocida) como señuelo bajo coerción, mientras tu billetera principal está protegida por una passphrase fuerte y secreta.<br><br>
         <strong>3. Múltiples billeteras desde una misma semilla</strong><br>
-        Usando passphrases diferentes podés derivar billeteras separadas para distintos propósitos —todo desde el mismo dispositivo físico y la misma seed.<br><br>
+        Usando passphrases diferentes podés derivar billeteras separadas para distintos propósitos -todo desde el mismo dispositivo físico y la misma seed.<br><br>
         <strong>4. Protección anti-extracción física</strong><br>
-        Si alguien comprometiera físicamente tu hardware wallet, no podría extraer la passphrase —porque simplemente no está almacenada en el dispositivo.<br><br>
+        Si alguien comprometiera físicamente tu hardware wallet, no podría extraer la passphrase -porque simplemente no está almacenada en el dispositivo.<br><br>
         <div class="info">
         La passphrase no reemplaza tu semilla: la complementa. Necesitás <strong>ambas</strong> para acceder a tu billetera protegida.
         </div>`,
         den: `<strong>1. Protection if your seed is stolen or exposed</strong><br>
-        If someone finds your 12 or 24 words, without the passphrase they can only access your base wallet —which can be empty or hold a decoy balance. Your real funds remain inaccessible without the correct passphrase.<br><br>
+        If someone finds your 12 or 24 words, without the passphrase they can only access your base wallet -which can be empty or hold a decoy balance. Your real funds remain inaccessible without the correct passphrase.<br><br>
         <strong>2. Plausible deniability</strong><br>
         You can maintain a wallet with a small balance without a passphrase (or with a simple known one) as a decoy under coercion, while your main wallet is protected by a strong, secret passphrase.<br><br>
         <strong>3. Multiple wallets from the same seed</strong><br>
-        Using different passphrases you can derive separate wallets for different purposes —all from the same physical device and the same seed.<br><br>
+        Using different passphrases you can derive separate wallets for different purposes -all from the same physical device and the same seed.<br><br>
         <strong>4. Physical extraction protection</strong><br>
-        If someone physically compromised your hardware wallet, they could not extract the passphrase —because it is simply not stored on the device.<br><br>
+        If someone physically compromised your hardware wallet, they could not extract the passphrase -because it is simply not stored on the device.<br><br>
         <div class="info">
         The passphrase does not replace your seed: it complements it. You need <strong>both</strong> to access your protected wallet.
         </div>`
@@ -494,11 +494,11 @@ const SECTIONS = [
         es: 'Qué Considerar Antes de Usar una Passphrase',
         en: 'What to Consider Before Using a Passphrase',
         des: `➜ <strong>Cada passphrase deriva una billetera completamente diferente.</strong><br>
-        No hay billetera "incorrecta" —cualquier passphrase abre una billetera válida.<br><br>
+        No hay billetera "incorrecta" -cualquier passphrase abre una billetera válida.<br><br>
         ➜ <strong>Perder la passphrase equivale a perder el acceso a esa billetera.</strong><br>
         Sin recuperación posible. Sin excepción.<br><br>
         ➜ <strong>Mayúsculas y minúsculas importan.</strong><br>
-        <code>Bitcoin</code> ≠ <code>bitcoin</code> — son billeteras distintas.<br><br>
+        <code>Bitcoin</code> ≠ <code>bitcoin</code> - son billeteras distintas.<br><br>
         ➜ <strong>Los espacios también importan.</strong><br>
         <code>"bitcoin"</code> ≠ <code>" bitcoin"</code> ≠ <code>"bitcoin "</code><br><br>
         ➜ <strong>Un error de tipeo crea otra billetera.</strong><br>
@@ -508,17 +508,17 @@ const SECTIONS = [
         ➜ <strong>Tu passphrase no es parte de tu seed (12/24 palabras).</strong><br>
         Ambas son secretos independientes. Perder cualquiera de los dos significa perder acceso.<br><br>
         ➜ <strong>Verificá recuperación y acceso antes de hacer cualquier transacción.</strong><br>
-        Enviá una cantidad pequeña, desconectá el dispositivo, volvé a conectar e ingresá la passphrase —verificá que los fondos aparecen.<br><br>
+        Enviá una cantidad pequeña, desconectá el dispositivo, volvé a conectar e ingresá la passphrase -verificá que los fondos aparecen.<br><br>
         ➜ <strong>No uses una passphrase demasiado compleja sin un plan de respaldo claro.</strong><br>
         La complejidad es buena, pero solo si podés reproducirla exactamente cuando la necesites.<br><br>
         ➜ <strong>Tus herederos necesitan conocer el procedimiento completo.</strong><br>
         Si fallecés sin dejar instrucciones, nadie podrá acceder a esos fondos.`,
         den: `➜ <strong>Each passphrase derives a completely different wallet.</strong><br>
-        There is no "wrong" wallet —any passphrase opens a valid wallet.<br><br>
+        There is no "wrong" wallet -any passphrase opens a valid wallet.<br><br>
         ➜ <strong>Losing the passphrase means losing access to that wallet.</strong><br>
         No recovery possible. No exceptions.<br><br>
         ➜ <strong>Uppercase and lowercase matter.</strong><br>
-        <code>Bitcoin</code> ≠ <code>bitcoin</code> — these are different wallets.<br><br>
+        <code>Bitcoin</code> ≠ <code>bitcoin</code> - these are different wallets.<br><br>
         ➜ <strong>Spaces also matter.</strong><br>
         <code>"bitcoin"</code> ≠ <code>" bitcoin"</code> ≠ <code>"bitcoin "</code><br><br>
         ➜ <strong>A typo creates another wallet.</strong><br>
@@ -528,7 +528,7 @@ const SECTIONS = [
         ➜ <strong>Your passphrase is not part of your seed (12/24 words).</strong><br>
         Both are independent secrets. Losing either one means losing access.<br><br>
         ➜ <strong>Verify recovery and access before making any transaction.</strong><br>
-        Send a small amount, disconnect the device, reconnect and enter the passphrase —verify that the funds appear.<br><br>
+        Send a small amount, disconnect the device, reconnect and enter the passphrase -verify that the funds appear.<br><br>
         ➜ <strong>Don't use an overly complex passphrase without a clear backup plan.</strong><br>
         Complexity is good, but only if you can reproduce it exactly when needed.<br><br>
         ➜ <strong>Your heirs need to know the complete procedure.</strong><br>
@@ -545,38 +545,38 @@ const SECTIONS = [
         noImg: true,
         es: 'Cómo Respaldar una Passphrase',
         en: 'How to Back Up a Passphrase',
-        des: `La passphrase <strong>nunca se guarda automáticamente</strong> —ni en el dispositivo, ni en la app, ni en ningún software. La responsabilidad del respaldo es completamente tuya.<br><br>
+        des: `La passphrase <strong>nunca se guarda automáticamente</strong> -ni en el dispositivo, ni en la app, ni en ningún software. La responsabilidad del respaldo es completamente tuya.<br><br>
         <strong>Regla fundamental: guardá la passphrase SEPARADA de tu seed</strong><br>
         Si alguien encuentra la seed, que no encuentre también la passphrase en el mismo lugar. Guardadas juntas, la passphrase no agrega ninguna protección.<br><br>
         <strong>Opciones de respaldo físico</strong><br>
         ➜ <strong>Papel:</strong> escríbila con bolígrafo en papel resistente. Guardalo en un lugar seguro, seco y protegido del fuego.<br>
-        ➜ <strong>Metal:</strong> grábar o estampar en acero inoxidable o titanio —resistente al fuego, agua y corrosión. Opción más durable.<br>
+        ➜ <strong>Metal:</strong> grábar o estampar en acero inoxidable o titanio -resistente al fuego, agua y corrosión. Opción más durable.<br>
         ➜ <strong>Múltiples copias:</strong> considerá tener al menos dos copias físicas en ubicaciones distintas.<br><br>
         <strong>Qué NO hacer</strong><br>
         ➜ No la guardes en formato digital: ni en email, ni en notas del teléfono, ni en la nube, ni en fotos.<br>
         ➜ No la guardes junto a tu seed o en el mismo lugar físico.<br>
         ➜ No la compartas con nadie que no deba tener acceso a tus fondos.<br><br>
         <strong>Verificación del fingerprint</strong><br>
-        Algunos dispositivos (Jade, BitBox02, Coldcard) muestran un <strong>fingerprint o huella raíz</strong> al cargar la wallet con passphrase. Este código corto es único para cada combinación semilla + passphrase. Anotalo junto a la passphrase —te sirve para confirmar en sesiones futuras que ingresaste la passphrase correctamente.<br><br>
+        Algunos dispositivos (Jade, BitBox02, Coldcard) muestran un <strong>fingerprint o huella raíz</strong> al cargar la wallet con passphrase. Este código corto es único para cada combinación semilla + passphrase. Anotalo junto a la passphrase -te sirve para confirmar en sesiones futuras que ingresaste la passphrase correctamente.<br><br>
         <strong>Plan de herencia</strong><br>
         ➜ Dejá instrucciones escritas y seguras para tus herederos.<br>
         ➜ Explicá que existe una passphrase, dónde está guardada y cómo usarla para acceder a los fondos.<br><br>
         <div class="warn">
         Sin passphrase + sin seed = sin acceso. Tratá ambos secretos con el mismo nivel de cuidado y seriedad.
         </div>`,
-        den: `The passphrase is <strong>never saved automatically</strong> —not on the device, not in the app, not in any software. The backup responsibility is entirely yours.<br><br>
+        den: `The passphrase is <strong>never saved automatically</strong> -not on the device, not in the app, not in any software. The backup responsibility is entirely yours.<br><br>
         <strong>Fundamental rule: store the passphrase SEPARATELY from your seed</strong><br>
         If someone finds the seed, they should not also find the passphrase in the same place. Stored together, the passphrase adds no protection.<br><br>
         <strong>Physical backup options</strong><br>
         ➜ <strong>Paper:</strong> write it with a pen on sturdy paper. Store in a safe, dry, fire-protected place.<br>
-        ➜ <strong>Metal:</strong> engrave or stamp on stainless steel or titanium —resistant to fire, water and corrosion. Most durable option.<br>
+        ➜ <strong>Metal:</strong> engrave or stamp on stainless steel or titanium -resistant to fire, water and corrosion. Most durable option.<br>
         ➜ <strong>Multiple copies:</strong> consider having at least two physical copies in different locations.<br><br>
         <strong>What NOT to do</strong><br>
         ➜ Don't store it digitally: not in email, phone notes, the cloud, or photos.<br>
         ➜ Don't store it with your seed or in the same physical location.<br>
         ➜ Don't share it with anyone who should not have access to your funds.<br><br>
         <strong>Fingerprint verification</strong><br>
-        Some devices (Jade, BitBox02, Coldcard) show a <strong>fingerprint or root fingerprint</strong> when loading the wallet with passphrase. This short code is unique to each seed + passphrase combination. Write it down alongside the passphrase —it helps you confirm in future sessions that you entered the passphrase correctly.<br><br>
+        Some devices (Jade, BitBox02, Coldcard) show a <strong>fingerprint or root fingerprint</strong> when loading the wallet with passphrase. This short code is unique to each seed + passphrase combination. Write it down alongside the passphrase -it helps you confirm in future sessions that you entered the passphrase correctly.<br><br>
         <strong>Inheritance plan</strong><br>
         ➜ Leave written and secure instructions for your heirs.<br>
         ➜ Explain that a passphrase exists, where it is stored and how to use it to access the funds.<br><br>
@@ -805,11 +805,11 @@ const SECTIONS = [
         es: 'Tipear la Passphrase',
         en: 'Type the Passphrase',
         des: `La Mk4 muestra el campo de ingreso con los caracteres seleccionados hasta el momento.<br><br>
-        Verificar cada carácter antes de continuar — no hay corrección fácil una vez confirmada.<br><br>
+        Verificar cada carácter antes de continuar - no hay corrección fácil una vez confirmada.<br><br>
         Al terminar de ingresar todos los caracteres, confirmar con <strong>OK / ✓</strong>.<br><br>
         <div class="tip">La passphrase aparece oculta en pantalla. Tomá tu tiempo para ingresar cada carácter correctamente.</div>`,
         den: `Mk4 shows the entry field with the characters selected so far.<br><br>
-        Verify each character before continuing — there is no easy correction once confirmed.<br><br>
+        Verify each character before continuing - there is no easy correction once confirmed.<br><br>
         Once all characters are entered, confirm with <strong>OK / ✓</strong>.<br><br>
         <div class="tip">The passphrase appears hidden on screen. Take your time to enter each character correctly.</div>`
       },
@@ -833,10 +833,10 @@ const SECTIONS = [
         es: 'Listo -Nuevo Fingerprint Activo',
         en: 'Done -New Fingerprint Active',
         des: `La Coldcard Mk4 confirma que la wallet con passphrase está activa mostrando el <strong>nuevo fingerprint</strong>.<br><br>
-        Al apagar y volver a encender, la Mk4 regresa a la billetera base — la passphrase debe ingresarse nuevamente en cada sesión.<br><br>
+        Al apagar y volver a encender, la Mk4 regresa a la billetera base - la passphrase debe ingresarse nuevamente en cada sesión.<br><br>
         <div class="info">Opción MicroSD cifrado (avanzado): podés guardar la passphrase en MicroSD con AES-256. En sesiones futuras → <strong>Passphrase → Restore Saved</strong> → verificar primera letra + longitud → confirmar fingerprint.</div>`,
         den: `Coldcard Mk4 confirms the passphrase wallet is active by showing the <strong>new fingerprint</strong>.<br><br>
-        When powered off and back on, Mk4 returns to the base wallet — the passphrase must be entered again each session.<br><br>
+        When powered off and back on, Mk4 returns to the base wallet - the passphrase must be entered again each session.<br><br>
         <div class="info">Encrypted MicroSD option (advanced): you can store the passphrase on MicroSD with AES-256. In future sessions → <strong>Passphrase → Restore Saved</strong> → verify first letter + length → confirm fingerprint.</div>`
       },
     ]
@@ -896,11 +896,11 @@ const SECTIONS = [
         es: 'Tipear la Passphrase',
         en: 'Type the Passphrase',
         des: `La Mk5 muestra el campo de ingreso con los caracteres seleccionados hasta el momento.<br><br>
-        Verificar cada carácter antes de continuar — no hay corrección fácil una vez confirmada.<br><br>
+        Verificar cada carácter antes de continuar - no hay corrección fácil una vez confirmada.<br><br>
         Al terminar de ingresar todos los caracteres, confirmar con <strong>OK / ✓</strong>.<br><br>
         <div class="tip">La passphrase aparece oculta en pantalla. Tomá tu tiempo para ingresar cada carácter correctamente.</div>`,
         den: `Mk5 shows the entry field with the characters selected so far.<br><br>
-        Verify each character before continuing — there is no easy correction once confirmed.<br><br>
+        Verify each character before continuing - there is no easy correction once confirmed.<br><br>
         Once all characters are entered, confirm with <strong>OK / ✓</strong>.<br><br>
         <div class="tip">The passphrase appears hidden on screen. Take your time to enter each character correctly.</div>`
       },
@@ -922,10 +922,10 @@ const SECTIONS = [
         es: 'Apply -Activar la Wallet con Passphrase',
         en: 'Apply -Activate the Passphrase Wallet',
         des: `Seleccionar <strong>"Apply"</strong> para activar la billetera con passphrase en la sesión actual.<br><br>
-        La passphrase <strong>no persiste</strong> entre reinicios — cada sesión debés ingresarla nuevamente.<br><br>
+        La passphrase <strong>no persiste</strong> entre reinicios - cada sesión debés ingresarla nuevamente.<br><br>
         <div class="info">Opción MicroSD cifrado (avanzado): guardá la passphrase en MicroSD con AES-256. En sesiones futuras → <strong>Passphrase → Restore Saved</strong> → verificar primera letra + longitud → confirmar fingerprint.</div>`,
         den: `Select <strong>"Apply"</strong> to activate the passphrase wallet in the current session.<br><br>
-        The passphrase <strong>does not persist</strong> between reboots — each session you must enter it again.<br><br>
+        The passphrase <strong>does not persist</strong> between reboots - each session you must enter it again.<br><br>
         <div class="info">Encrypted MicroSD option (advanced): store the passphrase on MicroSD with AES-256. In future sessions → <strong>Passphrase → Restore Saved</strong> → verify first letter + length → confirm fingerprint.</div>`
       },
       {
@@ -933,10 +933,10 @@ const SECTIONS = [
         es: 'Listo -Lista para Firmar',
         en: 'Done -Ready to Sign',
         des: `La Coldcard Mk5 confirma que la wallet con passphrase está activa y lista para operar.<br><br>
-        Al apagar y volver a encender, la Mk5 regresa a la billetera base — la passphrase debe ingresarse nuevamente en cada sesión.<br><br>
+        Al apagar y volver a encender, la Mk5 regresa a la billetera base - la passphrase debe ingresarse nuevamente en cada sesión.<br><br>
         <div class="info">El proceso es idéntico al de la Mk4. La ventaja de la Mk5 es seguridad de hardware superior (chip SE2 dual), no diferencias en el flujo de passphrase.</div>`,
         den: `Coldcard Mk5 confirms the passphrase wallet is active and ready to operate.<br><br>
-        When powered off and back on, Mk5 returns to the base wallet — the passphrase must be entered again each session.<br><br>
+        When powered off and back on, Mk5 returns to the base wallet - the passphrase must be entered again each session.<br><br>
         <div class="info">The process is identical to Mk4. The Mk5 advantage is superior hardware security (dual SE2 chip), not differences in the passphrase flow.</div>`
       },
     ]
@@ -1545,7 +1545,7 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR SUITE — PC (aplica a todos los modelos Trezor)
+  // TREZOR SUITE - PC (aplica a todos los modelos Trezor)
   {
     id: 'hw-trezor-suite-pc', ready: true, group: 'hw',
     brand: 'Trezor',
@@ -1587,7 +1587,7 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR SUITE — MOBILE (aplica a todos los modelos Trezor)
+  // TREZOR SUITE - MOBILE (aplica a todos los modelos Trezor)
   {
     id: 'hw-trezor-suite-mob', ready: true, group: 'hw',
     brand: 'Trezor',
@@ -1626,20 +1626,20 @@ const SECTIONS = [
         en: 'Enable "Passphrase Wallets" Toggle',
         des: `La pantalla muestra dos opciones:<br>
         - <strong>Verificar la copia de seguridad de la billetera</strong><br>
-        - <strong>Billeteras con passphrase</strong> — toggle desactivado<br><br>
+        - <strong>Billeteras con passphrase</strong> - toggle desactivado<br><br>
         Tocar el toggle de <strong>"Billeteras con passphrase"</strong> para activar la función. La app pedirá confirmar la acción en el dispositivo físico.`,
         den: `The screen shows two options:<br>
         - <strong>Verify wallet backup</strong><br>
-        - <strong>Passphrase wallets</strong> — toggle disabled<br><br>
+        - <strong>Passphrase wallets</strong> - toggle disabled<br><br>
         Tap the <strong>"Passphrase wallets"</strong> toggle to enable the feature. The app will ask to confirm the action on the physical device.`
       },
       {
         f: 'hw-suite-mob-05.png', imgW: 380,
         es: 'Continúa en tu Trezor para Confirmar',
         en: 'Continue on your Trezor to Confirm',
-        des: `La app muestra la pantalla <strong>"Continúa en tu Trezor"</strong> — el dispositivo físico debe confirmar la activación.<br><br>
+        des: `La app muestra la pantalla <strong>"Continúa en tu Trezor"</strong> - el dispositivo físico debe confirmar la activación.<br><br>
         Mirá la pantalla del Safe 7 para el siguiente paso.`,
-        den: `The app shows the <strong>"Continue on your Trezor"</strong> screen — the physical device must confirm the activation.<br><br>
+        den: `The app shows the <strong>"Continue on your Trezor"</strong> screen - the physical device must confirm the activation.<br><br>
         Look at the Safe 7 screen for the next step.`
       },
       {
@@ -1665,13 +1665,13 @@ const SECTIONS = [
         es: 'Elegir Cómo Ingresar la Passphrase',
         en: 'Choose How to Enter the Passphrase',
         des: `La pantalla <strong>"Passphrase"</strong> ofrece dos opciones para ingresar:<br><br>
-        - <strong>"Ingresa tu passphrase"</strong> — tipear directamente en el campo del móvil<br>
-        - <strong>"Introduce la passphrase en tu Trezor"</strong> — tipear en el dispositivo físico<br><br>
-        <div class="tip">Ingresar en el dispositivo físico es más seguro — la passphrase nunca pasa por el móvil ni ningún software.</div>`,
+        - <strong>"Ingresa tu passphrase"</strong> - tipear directamente en el campo del móvil<br>
+        - <strong>"Introduce la passphrase en tu Trezor"</strong> - tipear en el dispositivo físico<br><br>
+        <div class="tip">Ingresar en el dispositivo físico es más seguro - la passphrase nunca pasa por el móvil ni ningún software.</div>`,
         den: `The <strong>"Passphrase"</strong> screen offers two options to enter:<br><br>
-        - <strong>"Enter your passphrase"</strong> — type directly in the mobile field<br>
-        - <strong>"Enter passphrase on your Trezor"</strong> — type on the physical device<br><br>
-        <div class="tip">Entering on the physical device is more secure — the passphrase never passes through the mobile or any software.</div>`
+        - <strong>"Enter your passphrase"</strong> - type directly in the mobile field<br>
+        - <strong>"Enter passphrase on your Trezor"</strong> - type on the physical device<br><br>
+        <div class="tip">Entering on the physical device is more secure - the passphrase never passes through the mobile or any software.</div>`
       },
       {
         f: 'hw-suite-mob-09.png', imgW: 380,
@@ -1714,7 +1714,7 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR MODEL T — pasos en el dispositivo
+  // TREZOR MODEL T - pasos en el dispositivo
   {
     id: 'hw-trezor-t', ready: true, group: 'hw',
     brand: 'Trezor',
@@ -1745,7 +1745,7 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR SAFE 3 — pasos en el dispositivo
+  // TREZOR SAFE 3 - pasos en el dispositivo
   {
     id: 'hw-trezor-safe3', ready: true, group: 'hw',
     brand: 'Trezor',
@@ -1783,7 +1783,7 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR SAFE 5 — pasos en el dispositivo
+  // TREZOR SAFE 5 - pasos en el dispositivo
   {
     id: 'hw-trezor-safe5', ready: true, group: 'hw',
     brand: 'Trezor',
@@ -1812,7 +1812,7 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR SAFE 7 — pasos en el dispositivo
+  // TREZOR SAFE 7 - pasos en el dispositivo
   {
     id: 'hw-trezor-safe7', ready: true, group: 'hw',
     brand: 'Trezor',
@@ -1870,7 +1870,7 @@ const SECTIONS = [
     ]
   },
 
-  // PASSPORT — PASOS EN EL DISPOSITIVO (aplica a todos los modelos)
+  // PASSPORT - PASOS EN EL DISPOSITIVO (aplica a todos los modelos)
   {
     id: 'hw-passport-core', ready: true, group: 'hw',
     brand: 'Foundation',
@@ -1898,14 +1898,14 @@ const SECTIONS = [
       },
       {
         f: 'hw-passport-03.png', imgW: 340,
-        es: 'Advertencia — Leer Antes de Continuar',
-        en: 'Warning — Read Before Continuing',
+        es: 'Advertencia - Leer Antes de Continuar',
+        en: 'Warning - Read Before Continuing',
         des: `Passport muestra una pantalla de <strong>advertencia</strong> explicando que la passphrase crea una billetera diferente y que si se pierde, los fondos son irrecuperables.<br><br>
         Confirmar para continuar.<br><br>
-        <div class="warn">⚠️ Leer con atención. La passphrase NO se guarda en el dispositivo — si la olvidás, perdés el acceso permanentemente.</div>`,
+        <div class="warn">⚠️ Leer con atención. La passphrase NO se guarda en el dispositivo - si la olvidás, perdés el acceso permanentemente.</div>`,
         den: `Passport shows a <strong>warning</strong> screen explaining that the passphrase creates a different wallet and if lost, funds are unrecoverable.<br><br>
         Confirm to continue.<br><br>
-        <div class="warn">⚠️ Read carefully. The passphrase is NOT saved on the device — if you forget it, you lose access permanently.</div>`
+        <div class="warn">⚠️ Read carefully. The passphrase is NOT saved on the device - if you forget it, you lose access permanently.</div>`
       },
       {
         f: 'hw-passport-04.png', imgW: 340,
@@ -1922,8 +1922,8 @@ const SECTIONS = [
       },
       {
         f: 'hw-passport-05.png', imgW: 340,
-        es: 'Passphrase Ingresada — Confirmar',
-        en: 'Passphrase Entered — Confirm',
+        es: 'Passphrase Ingresada - Confirmar',
+        en: 'Passphrase Entered - Confirm',
         des: `Con la passphrase ingresada, Passport muestra el campo completo para revisar (caracteres enmascarados).<br><br>
         Verificar que no hay errores tipográficos antes de confirmar. Presionar <strong>Confirm</strong> / <strong>Apply</strong>.<br><br>
         <div class="tip">Es la última oportunidad para corregir antes de derivar la billetera. Un carácter incorrecto genera una billetera diferente sin aviso.</div>`,
@@ -1933,8 +1933,8 @@ const SECTIONS = [
       },
       {
         f: 'hw-passport-06.png', imgW: 340,
-        es: 'Wallet Fingerprint — Anotar en Papel',
-        en: 'Wallet Fingerprint — Write on Paper',
+        es: 'Wallet Fingerprint - Anotar en Papel',
+        en: 'Wallet Fingerprint - Write on Paper',
         des: `Passport muestra el <strong>wallet fingerprint</strong>: una cadena corta única derivada de tu seed + passphrase.<br><br>
         <strong>Anotar este fingerprint en papel</strong> junto a la passphrase (en lugar seguro separado de la seed).<br><br>
         En sesiones futuras, verificar que el fingerprint coincide antes de usar la billetera.`,
@@ -1944,8 +1944,8 @@ const SECTIONS = [
       },
       {
         f: 'hw-passport-07.png', imgW: 340,
-        es: 'Verificar Fingerprint — Sesiones Futuras',
-        en: 'Verify Fingerprint — Future Sessions',
+        es: 'Verificar Fingerprint - Sesiones Futuras',
+        en: 'Verify Fingerprint - Future Sessions',
         des: `Cada vez que abrís la billetera con passphrase, Passport muestra el fingerprint.<br><br>
         Comparar con el valor anotado en papel. Si coincide → passphrase correcta, billetera correcta.<br><br>
         Cuando la passphrase está activa, aparece la <strong>"P" en el escudo</strong> de la tarjeta de cuenta.<br><br>
@@ -1965,13 +1965,13 @@ const SECTIONS = [
     es: 'Passport Prime', en: 'Passport Prime',
     steps: [
       {
-        es: 'Pantalla Táctil + Prime Apps — Misma Ruta de Menú',
-        en: 'Touchscreen + Prime Apps — Same Menu Path',
+        es: 'Pantalla Táctil + Prime Apps - Misma Ruta de Menú',
+        en: 'Touchscreen + Prime Apps - Same Menu Path',
         des: `El <strong>Passport Prime</strong> es el modelo premium de Foundation. Tiene <strong>pantalla táctil a color</strong> y corre <strong>KeyOS</strong> (microkernel en Rust con apps sandboxeadas).<br><br>
-        La ruta de passphrase es la misma: <strong>MORE → Settings → Advanced → Passphrase</strong>, pero la navegación es táctil — más fluida.<br><br>
+        La ruta de passphrase es la misma: <strong>MORE → Settings → Advanced → Passphrase</strong>, pero la navegación es táctil - más fluida.<br><br>
         <div class="info">Prime incluye <strong>Prime Apps</strong>: Bitcoin Wallet, Files, 2FA, Security Keys, Vault y QuantumLink. Para passphrase: teclado QWERTY en pantalla táctil.</div>`,
         den: `The <strong>Passport Prime</strong> is Foundation's premium model. Has a <strong>color touchscreen</strong> and runs <strong>KeyOS</strong> (Rust microkernel with sandboxed apps).<br><br>
-        The passphrase path is the same: <strong>MORE → Settings → Advanced → Passphrase</strong>, but navigation is touchscreen — smoother.<br><br>
+        The passphrase path is the same: <strong>MORE → Settings → Advanced → Passphrase</strong>, but navigation is touchscreen - smoother.<br><br>
         <div class="info">Prime includes <strong>Prime Apps</strong>: Bitcoin Wallet, Files, 2FA, Security Keys, Vault and QuantumLink. For passphrase: QWERTY keyboard on touchscreen.</div>`
       },
     ]
@@ -2332,10 +2332,10 @@ const SECTIONS = [
         f: 'mob-blue-05.png', imgW: 380,
         es: 'Tipear la Passphrase y Confirmar',
         en: 'Type the Passphrase and Confirm',
-        des: `Con la opción de passphrase activada, aparece el campo <strong>"BIP39 Passphrase"</strong>. Ingresar la passphrase exactamente como fue definida — es case-sensitive.<br><br>
+        des: `Con la opción de passphrase activada, aparece el campo <strong>"BIP39 Passphrase"</strong>. Ingresar la passphrase exactamente como fue definida - es case-sensitive.<br><br>
         Tocar <strong>Importar</strong>. BlueWallet deriva la billetera usando seed + passphrase y la carga directamente.<br><br>
         <div class="warn">⚠️ La passphrase se tipea en el teléfono. Asegurate de estar en un ambiente seguro, sin capturas de pantalla automáticas ni software malicioso.</div>`,
-        den: `With the passphrase option enabled, the <strong>"BIP39 Passphrase"</strong> field appears. Enter the passphrase exactly as defined — it is case-sensitive.<br><br>
+        den: `With the passphrase option enabled, the <strong>"BIP39 Passphrase"</strong> field appears. Enter the passphrase exactly as defined - it is case-sensitive.<br><br>
         Tap <strong>Import</strong>. BlueWallet derives the wallet using seed + passphrase and loads it directly.<br><br>
         <div class="warn">⚠️ The passphrase is typed on the phone. Make sure you are in a safe environment, with no automatic screenshots or malicious software.</div>`
       },
@@ -2404,8 +2404,8 @@ const SECTIONS = [
       },
       {
         f: 'mob-bull-04.png', imgW: 380,
-        es: 'Import Wallet — Pantalla de Importación',
-        en: 'Import Wallet — Import Screen',
+        es: 'Import Wallet - Pantalla de Importación',
+        en: 'Import Wallet - Import Screen',
         des: `La app muestra la pantalla de <strong>Import Wallet</strong> con el campo para las palabras de la semilla y la opción de passphrase.<br><br>
         Aquí se ingresa todo lo necesario para derivar la billetera correcta.`,
         den: `The app shows the <strong>Import Wallet</strong> screen with the field for seed words and the passphrase option.<br><br>
@@ -2416,25 +2416,25 @@ const SECTIONS = [
         es: 'Completar Seed + Passphrase',
         en: 'Complete Seed + Passphrase',
         des: `Ingresar las <strong>12 o 24 palabras</strong> de la semilla en el campo correspondiente y la <strong>passphrase</strong> en el campo de passphrase BIP39.<br><br>
-        La passphrase es case-sensitive — un carácter incorrecto deriva una billetera diferente.<br><br>
+        La passphrase es case-sensitive - un carácter incorrecto deriva una billetera diferente.<br><br>
         <div class="warn">⚠️ La passphrase se tipea en el teléfono. Asegurate de estar en un entorno seguro, sin capturas automáticas activadas.</div>`,
         den: `Enter the <strong>12 or 24 seed words</strong> in the corresponding field and the <strong>passphrase</strong> in the BIP39 passphrase field.<br><br>
-        The passphrase is case-sensitive — one wrong character derives a different wallet.<br><br>
+        The passphrase is case-sensitive - one wrong character derives a different wallet.<br><br>
         <div class="warn">⚠️ The passphrase is typed on the phone. Make sure you're in a safe environment, with no automatic screenshots enabled.</div>`
       },
       {
         f: 'mob-bull-06.png', imgW: 380,
-        es: 'Tipo de Dirección — Mantener SegWit (por Defecto)',
-        en: 'Address Type — Keep SegWit (Default)',
+        es: 'Tipo de Dirección - Mantener SegWit (por Defecto)',
+        en: 'Address Type - Keep SegWit (Default)',
         des: `La app pregunta el tipo de dirección. Dejar seleccionado <strong>SegWit (Native SegWit / BIP84)</strong> que es el estándar moderno de Bitcoin.<br><br>
-        <div class="tip">SegWit genera direcciones que empiezan con <strong>bc1</strong> — comisiones más bajas y estándar más seguro. Solo cambiar si sabés que tu wallet original usaba otro tipo.</div>`,
-        den: `The app asks for the address type. Keep <strong>SegWit (Native SegWit / BIP84)</strong> selected — it's the modern Bitcoin standard.<br><br>
-        <div class="tip">SegWit generates addresses starting with <strong>bc1</strong> — lower fees and more secure standard. Only change if you know your original wallet used a different type.</div>`
+        <div class="tip">SegWit genera direcciones que empiezan con <strong>bc1</strong> - comisiones más bajas y estándar más seguro. Solo cambiar si sabés que tu wallet original usaba otro tipo.</div>`,
+        den: `The app asks for the address type. Keep <strong>SegWit (Native SegWit / BIP84)</strong> selected - it's the modern Bitcoin standard.<br><br>
+        <div class="tip">SegWit generates addresses starting with <strong>bc1</strong> - lower fees and more secure standard. Only change if you know your original wallet used a different type.</div>`
       },
       {
         f: 'mob-bull-07.png', imgW: 380,
-        es: 'Wallet Importada — Tocar en la Franja de la Wallet',
-        en: 'Wallet Imported — Tap the Wallet Strip',
+        es: 'Wallet Importada - Tocar en la Franja de la Wallet',
+        en: 'Wallet Imported - Tap the Wallet Strip',
         des: `La wallet con passphrase queda importada. En la pantalla principal aparece la <strong>franja de la wallet</strong> en la parte inferior.<br><br>
         Tocar la franja para acceder a la billetera derivada y ver el saldo y las direcciones.`,
         den: `The passphrase wallet is now imported. On the main screen the <strong>wallet strip</strong> appears at the bottom.<br><br>
@@ -2449,21 +2449,21 @@ const SECTIONS = [
       },
       {
         f: 'mob-bull-09.png', imgW: 380,
-        es: 'Wallet Details — Verificar la Billetera',
-        en: 'Wallet Details — Verify the Wallet',
+        es: 'Wallet Details - Verificar la Billetera',
+        en: 'Wallet Details - Verify the Wallet',
         des: `La pantalla de <strong>Wallet Details</strong> muestra la información de la billetera derivada.<br><br>
-        Verificar que la primera dirección de recepción coincide con el registro previo — confirma que la seed + passphrase fueron ingresadas correctamente.`,
+        Verificar que la primera dirección de recepción coincide con el registro previo - confirma que la seed + passphrase fueron ingresadas correctamente.`,
         den: `The <strong>Wallet Details</strong> screen shows information about the derived wallet.<br><br>
-        Verify that the first receiving address matches your previous record — confirms seed + passphrase were entered correctly.`
+        Verify that the first receiving address matches your previous record - confirms seed + passphrase were entered correctly.`
       },
       {
         f: 'mob-bull-10.png', imgW: 380,
-        es: 'Configuración General — Hexágono Principal',
-        en: 'General Settings — Main Hexagon',
+        es: 'Configuración General - Hexágono Principal',
+        en: 'General Settings - Main Hexagon',
         des: `Desde el ícono hexagonal de la pantalla principal podés volver a la configuración general de la app en cualquier momento.<br><br>
-        <div class="info">Bull Bitcoin Wallet guarda la wallet importada. En cada sesión no es necesario reingresar la passphrase — pero si hacés backup y restaurás el dispositivo, hay que reimportar con seed + passphrase.</div>`,
+        <div class="info">Bull Bitcoin Wallet guarda la wallet importada. En cada sesión no es necesario reingresar la passphrase - pero si hacés backup y restaurás el dispositivo, hay que reimportar con seed + passphrase.</div>`,
         den: `From the hexagonal icon on the main screen you can return to the app's general settings at any time.<br><br>
-        <div class="info">Bull Bitcoin Wallet saves the imported wallet. Each session you don't need to re-enter the passphrase — but if you backup and restore the device, you must re-import with seed + passphrase.</div>`
+        <div class="info">Bull Bitcoin Wallet saves the imported wallet. Each session you don't need to re-enter the passphrase - but if you backup and restore the device, you must re-import with seed + passphrase.</div>`
       },
     ]
   },
@@ -2803,8 +2803,8 @@ function loadHome() {
   const statWallets = 'Wallets';
   const statPending = LANG === 'en' ? 'Pending' : 'Pendientes';
   const langNote = LANG === 'en'
-    ? '🌐 Also available in Spanish — use the ES toggle above.'
-    : '🌐 También disponible en inglés — usá el toggle EN arriba.';
+    ? '🌐 Also available in Spanish - use the ES toggle above.'
+    : '🌐 También disponible en inglés - usá el toggle EN arriba.';
   const footerText = LANG === 'en'
     ? `Found an error or missing wallet? You can <a href="https://github.com/MatheyBTC/Tutorial-Passphrase/issues/new/choose" target="_blank">open an issue on GitHub</a> (contributions are welcome).`
     : `¿Encontraste un error o falta tu wallet? Podés <a href="https://github.com/MatheyBTC/Tutorial-Passphrase/issues/new/choose" target="_blank">abrir un issue en GitHub</a> (las contribuciones son bienvenidas).`;
