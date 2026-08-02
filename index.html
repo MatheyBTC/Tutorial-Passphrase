@@ -245,7 +245,7 @@
   .home-stat { text-align: center; }
   .home-stat .num { font-size: 32px; font-weight: 800; color: var(--accent); line-height: 1; }
   .home-stat .lbl { font-size: 14px; color: var(--muted); margin-top: 4px; }
-  .home-group-title { font-size: 14px; font-weight: 700; color: var(--muted); margin: 28px 0 10px; }
+  .home-group-title { font-size: 14px; font-weight: 700; color: var(--muted); margin: 14px 0 5px; }
   .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-bottom: 4px; }
   .home-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; cursor: pointer; transition: border-color .15s, background .15s; display: flex; flex-direction: column; gap: 3px; }
   .home-card:hover { border-color: var(--accent-dim); background: #1a1a1a; }
@@ -254,7 +254,7 @@
   .home-card-pending { opacity: .45; cursor: default; }
   .home-card-pending:hover { border-color: var(--border); background: var(--surface); }
   #content.home-active { padding: 16px 23px; }
-  .home-footer { margin-top: 40px; padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; text-align: center; font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .home-footer { margin-top: 40px; padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; text-align: center; font-size: 15px; color: var(--muted); line-height: 1.6; }
   .home-footer a { color: var(--accent); text-decoration: none; }
   .home-footer a:hover { text-decoration: underline; }
 
@@ -2802,12 +2802,9 @@ function loadHome() {
   const heroTitle = LANG === 'en' ? '🔐 BIP39 Passphrase Tutorials' : '🔐 Tutoriales de Passphrase BIP39';
   const statWallets = 'Wallets';
   const statPending = LANG === 'en' ? 'Pending' : 'Pendientes';
-  const langNote = LANG === 'en'
-    ? '🌐 Also available in Spanish - use the ES toggle above.'
-    : '🌐 También disponible en inglés - usá el toggle EN arriba.';
   const footerText = LANG === 'en'
-    ? `Found an error or missing wallet? You can <a href="https://github.com/MatheyBTC/Tutorial-Passphrase/issues/new/choose" target="_blank">open an issue on GitHub</a> (contributions are welcome).`
-    : `¿Encontraste un error o falta tu wallet? Podés <a href="https://github.com/MatheyBTC/Tutorial-Passphrase/issues/new/choose" target="_blank">abrir un issue en GitHub</a> (las contribuciones son bienvenidas).`;
+    ? `Found an error or missing wallet? You can <a href="https://github.com/MatheyBTC/Tutorial-Passphrase/issues/new/choose" target="_blank">open an issue on GitHub</a> (contributions are welcome).<br>🌐 Available EN/ES (use the toggle above)`
+    : `¿Encontraste un error o falta tu wallet? Podés <a href="https://github.com/MatheyBTC/Tutorial-Passphrase/issues/new/choose" target="_blank">abrir un issue en GitHub</a> (las contribuciones son bienvenidas).<br>🌐 Disponible EN/ES (usar el toggle arriba)`;
 
   const content = document.getElementById('content');
   content.classList.add('home-active');
@@ -2820,7 +2817,7 @@ function loadHome() {
       </div>
     </div>
     ${groupsHtml}
-    <div class="home-footer">${footerText}<br><span style="font-size:12px;opacity:.6">${langNote}</span></div>
+    <div class="home-footer">${footerText}</div>
   `;
 }
 
