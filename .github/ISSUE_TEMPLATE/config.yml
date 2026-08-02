@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentación oficial de Ledger
+    url: https://support.ledger.com/article/115005214529
+    about: Guía oficial de passphrase en Ledger
+  - name: Documentación oficial de Trezor
+    url: https://trezor.io/learn/a/passphrases-and-hidden-wallets
+    about: Guía oficial de passphrase en Trezor
