@@ -436,9 +436,9 @@ const SECTIONS = [
         ➜ Un carácter de espacio en blanco (␣) es válido y forma parte de la passphrase<br><br>
         <strong>Longitud máxima</strong><br>
         ➜ El estándar BIP39 permite hasta <strong>127 caracteres</strong>. Algunos dispositivos aplican sus propios límites:<br>
-        &nbsp;&nbsp;&nbsp;• Trezor: hasta 50 caracteres<br>
-        &nbsp;&nbsp;&nbsp;• Ledger: hasta 100 caracteres<br>
-        &nbsp;&nbsp;&nbsp;• Jade / BitBox02: hasta 127 caracteres<br><br>
+        &nbsp;&nbsp;&nbsp;- Trezor: hasta 50 caracteres<br>
+        &nbsp;&nbsp;&nbsp;- Ledger: hasta 100 caracteres<br>
+        &nbsp;&nbsp;&nbsp;- Jade / BitBox02: hasta 127 caracteres<br><br>
         <div class="warn">
         <strong>Importante:</strong> mayúsculas y minúsculas son caracteres distintos. Los espacios al inicio, al final o en el medio también cuentan y forman parte de la passphrase.
         </div>`,
@@ -454,9 +454,9 @@ const SECTIONS = [
         ➜ A whitespace character (␣) is valid and is part of the passphrase<br><br>
         <strong>Maximum length</strong><br>
         ➜ The BIP39 standard allows up to <strong>127 characters</strong>. Some devices apply their own limits:<br>
-        &nbsp;&nbsp;&nbsp;• Trezor: up to 50 characters<br>
-        &nbsp;&nbsp;&nbsp;• Ledger: up to 100 characters<br>
-        &nbsp;&nbsp;&nbsp;• Jade / BitBox02: up to 127 characters<br><br>
+        &nbsp;&nbsp;&nbsp;- Trezor: up to 50 characters<br>
+        &nbsp;&nbsp;&nbsp;- Ledger: up to 100 characters<br>
+        &nbsp;&nbsp;&nbsp;- Jade / BitBox02: up to 127 characters<br><br>
         <div class="warn">
         <strong>Important:</strong> uppercase and lowercase are different characters. Spaces at the beginning, end or middle also count and are part of the passphrase.
         </div>`
@@ -600,15 +600,15 @@ const SECTIONS = [
         en: 'Select Frequency',
         des: `La pantalla muestra las dos opciones configurables. Navegar a <strong>Frequency</strong> y confirmar para cambiar el valor.<br><br>
         Opciones disponibles:<br>
-        • <code>Never</code> -passphrase desactivada<br>
-        • <code>Next Login Only</code> -solo la próxima sesión<br>
-        • <code>Always Ask</code> -en cada sesión <strong>(recomendado)</strong><br><br>
+        - <code>Never</code> -passphrase desactivada<br>
+        - <code>Next Login Only</code> -solo la próxima sesión<br>
+        - <code>Always Ask</code> -en cada sesión <strong>(recomendado)</strong><br><br>
         <div class="tip">Con <strong>Always Ask</strong> Jade te pedirá la passphrase en cada inicio -la forma más segura de operar.</div>`,
         den: `The screen shows the two configurable options. Navigate to <strong>Frequency</strong> and confirm to change the value.<br><br>
         Available options:<br>
-        • <code>Never</code> -passphrase disabled<br>
-        • <code>Next Login Only</code> -only next session<br>
-        • <code>Always Ask</code> -every session <strong>(recommended)</strong><br><br>
+        - <code>Never</code> -passphrase disabled<br>
+        - <code>Next Login Only</code> -only next session<br>
+        - <code>Always Ask</code> -every session <strong>(recommended)</strong><br><br>
         <div class="tip">With <strong>Always Ask</strong> Jade will prompt for the passphrase every startup -the safest way to operate.</div>`
       },
       {
@@ -616,12 +616,12 @@ const SECTIONS = [
         es: 'Seleccionar Method',
         en: 'Select Method',
         des: `Navegar a <strong>Method</strong> y confirmar para cambiar el método de entrada:<br><br>
-        • <code>Manual</code> -ingresás la passphrase carácter por carácter con el teclado en pantalla<br>
-        • <code>WordList</code> -ingresás palabras BIP39 con autocompletado (más fácil de tipear en el dispositivo)<br><br>
+        - <code>Manual</code> -ingresás la passphrase carácter por carácter con el teclado en pantalla<br>
+        - <code>WordList</code> -ingresás palabras BIP39 con autocompletado (más fácil de tipear en el dispositivo)<br><br>
         <div class="warn">⚠️ Sea cual sea el método, la passphrase es <strong>case-sensitive</strong>. Anotá exactamente cómo la ingresás.</div>`,
         den: `Navigate to <strong>Method</strong> and confirm to change the entry method:<br><br>
-        • <code>Manual</code> -enter the passphrase character by character with the on-screen keyboard<br>
-        • <code>WordList</code> -enter BIP39 words with autocomplete (easier to type on the device)<br><br>
+        - <code>Manual</code> -enter the passphrase character by character with the on-screen keyboard<br>
+        - <code>WordList</code> -enter BIP39 words with autocomplete (easier to type on the device)<br><br>
         <div class="warn">⚠️ Regardless of method, the passphrase is <strong>case-sensitive</strong>. Note exactly how you enter it.</div>`
       },
       {
@@ -630,13 +630,13 @@ const SECTIONS = [
         en: 'Enter Passphrase -On-Screen Keyboard',
         des: `Jade muestra la pantalla <strong>"Enter Passphrase"</strong> con el teclado QWERTY en azul.<br><br>
         Navegar con los botones laterales hasta cada letra, confirmar con el botón central. Al terminar:<br>
-        • <strong>→</strong> para avanzar al siguiente conjunto de caracteres<br>
-        • <strong>✓</strong> para confirmar la passphrase completa<br><br>
+        - <strong>→</strong> para avanzar al siguiente conjunto de caracteres<br>
+        - <strong>✓</strong> para confirmar la passphrase completa<br><br>
         <div class="tip">La primera vez que usás la passphrase: anotá una dirección de recepción en papel para verificar en sesiones futuras -Jade no guarda fingerprint como Coldcard.</div>`,
         den: `Jade shows the <strong>"Enter Passphrase"</strong> screen with the blue QWERTY keyboard.<br><br>
         Navigate with side buttons to each letter, confirm with center button. When done:<br>
-        • <strong>→</strong> to advance to the next character set<br>
-        • <strong>✓</strong> to confirm the complete passphrase<br><br>
+        - <strong>→</strong> to advance to the next character set<br>
+        - <strong>✓</strong> to confirm the complete passphrase<br><br>
         <div class="tip">First time using your passphrase: write down a receiving address on paper to verify in future sessions -Jade doesn't store a fingerprint like Coldcard.</div>`
       },
       {
@@ -682,25 +682,25 @@ const SECTIONS = [
         es: 'Seleccionar Frequency',
         en: 'Select Frequency',
         des: `La pantalla muestra las dos opciones. Tocar <strong>Frequency</strong> para cambiar el valor.<br><br>
-        • <code>Disabled</code> -passphrase desactivada<br>
-        • <code>Next Login Only</code> -solo la próxima sesión<br>
-        • <code>Always Ask</code> -en cada sesión <strong>(recomendado)</strong>`,
+        - <code>Disabled</code> -passphrase desactivada<br>
+        - <code>Next Login Only</code> -solo la próxima sesión<br>
+        - <code>Always Ask</code> -en cada sesión <strong>(recomendado)</strong>`,
         den: `The screen shows the two options. Tap <strong>Frequency</strong> to change the value.<br><br>
-        • <code>Disabled</code> -passphrase disabled<br>
-        • <code>Next Login Only</code> -only next session<br>
-        • <code>Always Ask</code> -every session <strong>(recommended)</strong>`
+        - <code>Disabled</code> -passphrase disabled<br>
+        - <code>Next Login Only</code> -only next session<br>
+        - <code>Always Ask</code> -every session <strong>(recommended)</strong>`
       },
       {
         f: 'hw-jade-plus-04.png',
         es: 'Seleccionar Method',
         en: 'Select Method',
         des: `Tocar <strong>Method</strong> para cambiar el método de entrada:<br><br>
-        • <code>Manual</code> -teclado QWERTY táctil carácter por carácter<br>
-        • <code>WordList</code> -palabras BIP39 con autocompletado<br><br>
+        - <code>Manual</code> -teclado QWERTY táctil carácter por carácter<br>
+        - <code>WordList</code> -palabras BIP39 con autocompletado<br><br>
         <div class="warn">⚠️ Passphrase es <strong>case-sensitive</strong>. Anotá exactamente el método y los caracteres usados.</div>`,
         den: `Tap <strong>Method</strong> to change the entry method:<br><br>
-        • <code>Manual</code> -QWERTY touch keyboard character by character<br>
-        • <code>WordList</code> -BIP39 words with autocomplete<br><br>
+        - <code>Manual</code> -QWERTY touch keyboard character by character<br>
+        - <code>WordList</code> -BIP39 words with autocomplete<br><br>
         <div class="warn">⚠️ Passphrase is <strong>case-sensitive</strong>. Note exactly the method and characters used.</div>`
       },
       {
@@ -833,7 +833,7 @@ const SECTIONS = [
 
   // COLDCARD Q
   {
-    id: 'hw-coldcard-q', group: 'hw',
+    id: 'hw-coldcard-q', group: 'hw', ready: true,
     brand: 'Coinkite',
     es: 'Coldcard Q', en: 'Coldcard Q',
     steps: [
@@ -841,38 +841,72 @@ const SECTIONS = [
         f: 'hw-coldcard-q-01.png',
         es: 'PIN → Menú Principal → Passphrase',
         en: 'PIN → Main Menu → Passphrase',
-        des: `La Coldcard Q tiene <strong>teclado QWERTY físico completo</strong> -la mayor diferencia respecto a Mk4/Mk5. La navegación del menú se hace con las teclas de dirección del teclado.<br><br>
+        des: `La Coldcard Q tiene <strong>teclado QWERTY físico completo</strong> | la mayor diferencia respecto a Mk4/Mk5.<br><br>
         Ingresar el PIN con el teclado numérico integrado → navegar al menú principal → seleccionar <strong>"Passphrase"</strong>.<br><br>
-        <div class="tip">La Q tiene también pantalla a color más grande. La experiencia general es mucho más cómoda que los modelos Mk.</div>`,
-        den: `Coldcard Q has a <strong>full physical QWERTY keyboard</strong> -the biggest difference from Mk4/Mk5. Menu navigation is done with the keyboard's direction keys.<br><br>
+        La navegación entre opciones del menú se hace con las teclas de dirección del teclado.<br><br>
+        <div class="tip">La Q tiene pantalla a color más grande que los modelos Mk. La experiencia es mucho más cómoda para passphrases largas.</div>`,
+        den: `Coldcard Q has a <strong>full physical QWERTY keyboard</strong> | the biggest difference from Mk4/Mk5.<br><br>
         Enter PIN with the integrated numeric keypad → navigate to main menu → select <strong>"Passphrase"</strong>.<br><br>
-        <div class="tip">The Q also has a larger color screen. The overall experience is much more comfortable than Mk models.</div>`
+        Menu navigation is done with the keyboard's direction keys.<br><br>
+        <div class="tip">The Q has a larger color screen than Mk models. The experience is much more comfortable for long passphrases.</div>`
       },
       {
         f: 'hw-coldcard-q-02.png',
-        es: 'Edit Phrase -Teclado QWERTY Físico',
-        en: 'Edit Phrase -Physical QWERTY Keyboard',
-        des: `Seleccionar <strong>"Edit Phrase"</strong>. En la Q, escribís la passphrase <strong>directamente con el teclado QWERTY físico</strong> -igual que en una computadora.<br><br>
-        Mayúsculas con Shift, números con la fila numérica, símbolos con Shift + teclas. La entrada es rápida y cómoda incluso para passphrases largas y complejas.<br><br>
-        Confirmar con <strong>Enter / OK</strong> al terminar.<br><br>
-        <div class="tip">La Q es ideal si usás passphrases largas (20+ caracteres) o con muchos símbolos especiales.</div>`,
-        den: `Select <strong>"Edit Phrase"</strong>. On the Q, you type the passphrase <strong>directly with the physical QWERTY keyboard</strong> -just like on a computer.<br><br>
-        Uppercase with Shift, numbers with the number row, symbols with Shift + keys. Entry is fast and comfortable even for long, complex passphrases.<br><br>
-        Confirm with <strong>Enter / OK</strong> when done.<br><br>
-        <div class="tip">The Q is ideal if you use long passphrases (20+ characters) or ones with many special symbols.</div>`
+        es: 'Aviso del Dispositivo',
+        en: 'Device Warning',
+        des: `La Coldcard Q muestra un <strong>mensaje informativo</strong> antes de permitir ingresar la passphrase.<br><br>
+        El aviso recuerda que:<br>
+        - La passphrase es <strong>case-sensitive</strong> (mayúsculas y minúsculas importan)<br>
+        - Una passphrase diferente abre una billetera diferente<br>
+        - No hay forma de recuperar fondos si olvidás la passphrase<br><br>
+        Confirmar para continuar.`,
+        den: `Coldcard Q shows an <strong>informational message</strong> before allowing passphrase entry.<br><br>
+        The warning reminds you that:<br>
+        - The passphrase is <strong>case-sensitive</strong> (uppercase and lowercase matter)<br>
+        - A different passphrase opens a different wallet<br>
+        - There is no way to recover funds if you forget the passphrase<br><br>
+        Confirm to continue.`
       },
       {
         f: 'hw-coldcard-q-03.png',
-        es: 'Wallet Fingerprint (8 chars hex) + Apply',
-        en: 'Wallet Fingerprint (8 hex chars) + Apply',
-        des: `La Q muestra el mismo <strong>wallet fingerprint</strong> de 8 caracteres hex que Mk4/Mk5.<br><br>
-        Verificar → <strong>"Apply"</strong>. La wallet con passphrase queda activa para la sesión.<br><br>
-        <strong>MicroSD cifrado:</strong> también disponible en Q -<strong>Passphrase → Restore Saved</strong>. El teclado QWERTY facilita también ingresar el PIN de la SD si es alfanumérico.<br><br>
-        <div class="info">La Q es el modelo más reciente y completo de Coinkite. Incluye cámara QR para operaciones air-gapped.</div>`,
-        den: `The Q shows the same 8-character hex <strong>wallet fingerprint</strong> as Mk4/Mk5.<br><br>
-        Verify → <strong>"Apply"</strong>. The passphrase wallet is active for the session.<br><br>
-        <strong>Encrypted MicroSD:</strong> also available on Q -<strong>Passphrase → Restore Saved</strong>. The QWERTY keyboard also makes it easier to enter an alphanumeric SD PIN.<br><br>
-        <div class="info">The Q is Coinkite's newest and most complete model. Includes QR camera for air-gapped operations.</div>`
+        es: 'Tipear la Passphrase -Teclado QWERTY Físico',
+        en: 'Type the Passphrase -Physical QWERTY Keyboard',
+        des: `La Q muestra el campo de ingreso. Escribís la passphrase <strong>directamente con el teclado QWERTY físico</strong> -igual que en una computadora.<br><br>
+        - Mayúsculas con Shift<br>
+        - Números con la fila numérica<br>
+        - Símbolos con Shift + teclas<br><br>
+        Confirmar con <strong>Enter / OK</strong> al terminar.<br><br>
+        <div class="tip">La Q es ideal para passphrases largas (20+ caracteres) o con símbolos especiales | en Mk4/Mk5 el mismo proceso toma mucho más tiempo.</div>`,
+        den: `The Q shows the entry field. Type the passphrase <strong>directly with the physical QWERTY keyboard</strong> -just like on a computer.<br><br>
+        - Uppercase with Shift<br>
+        - Numbers with the number row<br>
+        - Symbols with Shift + keys<br><br>
+        Confirm with <strong>Enter / OK</strong> when done.<br><br>
+        <div class="tip">The Q is ideal for long passphrases (20+ characters) or ones with special symbols | on Mk4/Mk5 the same process takes much longer.</div>`
+      },
+      {
+        f: 'hw-coldcard-q-04.png',
+        es: 'Fingerprint + Passphrase en Pantalla',
+        en: 'Fingerprint + Passphrase on Screen',
+        des: `La Q muestra simultáneamente la <strong>passphrase ingresada</strong> y el <strong>wallet fingerprint</strong> (8 caracteres hex) antes de aplicar.<br><br>
+        Verificar que la passphrase en pantalla es exactamente la que querías escribir -esto incluye mayúsculas, espacios y símbolos.<br><br>
+        El fingerprint es único para esa combinación seed + passphrase. Anotalo en papel la primera vez.<br><br>
+        <div class="warn">⚠️ Si el fingerprint no coincide con el esperado = typo en la passphrase. Cancelá antes de continuar.</div>`,
+        den: `The Q simultaneously shows the <strong>entered passphrase</strong> and the <strong>wallet fingerprint</strong> (8 hex characters) before applying.<br><br>
+        Verify that the passphrase on screen is exactly what you intended -including uppercase, spaces and symbols.<br><br>
+        The fingerprint is unique to that seed + passphrase combination. Write it on paper the first time.<br><br>
+        <div class="warn">⚠️ If the fingerprint doesn't match what you expected = typo in the passphrase. Cancel before continuing.</div>`
+      },
+      {
+        f: 'hw-coldcard-q-05.png',
+        es: 'Listo -Nuevo Fingerprint Activo',
+        en: 'Done -New Fingerprint Active',
+        des: `La Coldcard Q confirma que la wallet con passphrase está activa. La pantalla muestra el <strong>nuevo fingerprint</strong> correspondiente a la billetera derivada.<br><br>
+        Desde este momento la sesión está en la billetera con passphrase. Al apagar y volver a encender, la Q volverá a la billetera base -la passphrase debe ingresarse nuevamente.<br><br>
+        <div class="info">MicroSD cifrado también disponible en Q → <strong>Passphrase → Restore Saved</strong>. El teclado QWERTY facilita ingresar el PIN de la SD si es alfanumérico.</div>`,
+        den: `Coldcard Q confirms the passphrase wallet is active. The screen shows the <strong>new fingerprint</strong> corresponding to the derived wallet.<br><br>
+        From this moment the session is in the passphrase wallet. When powered off and back on, the Q returns to the base wallet -the passphrase must be entered again.<br><br>
+        <div class="info">Encrypted MicroSD also available on Q → <strong>Passphrase → Restore Saved</strong>. The QWERTY keyboard makes it easy to enter an alphanumeric SD PIN.</div>`
       },
     ]
   },
@@ -927,15 +961,15 @@ const SECTIONS = [
         en: 'What is a Passphrase?',
         des: `El wizard explica el concepto: una passphrase es un <strong>secreto opcional</strong> añadido a la semilla. Semilla + passphrase = nueva billetera completamente diferente.<br><br>
         Puntos clave que muestra la app:<br>
-        • Cualquiera con acceso a la semilla tiene control total de esa billetera<br>
-        • La passphrase crea una nueva billetera derivada de semilla + passphrase<br>
-        • Es compatible con el estándar BIP39<br><br>
+        - Cualquiera con acceso a la semilla tiene control total de esa billetera<br>
+        - La passphrase crea una nueva billetera derivada de semilla + passphrase<br>
+        - Es compatible con el estándar BIP39<br><br>
         Hacer clic en <strong>"Porqué utilizar una passphrase"</strong> para continuar.`,
         den: `The wizard explains the concept: a passphrase is an <strong>optional secret</strong> added to the seed. Seed + passphrase = a completely different new wallet.<br><br>
         Key points shown by the app:<br>
-        • Anyone with access to the seed has full control of that wallet<br>
-        • The passphrase creates a new wallet derived from seed + passphrase<br>
-        • It is compatible with the BIP39 standard<br><br>
+        - Anyone with access to the seed has full control of that wallet<br>
+        - The passphrase creates a new wallet derived from seed + passphrase<br>
+        - It is compatible with the BIP39 standard<br><br>
         Click <strong>"Why use a passphrase"</strong> to continue.`
       },
       {
@@ -967,14 +1001,14 @@ const SECTIONS = [
         es: 'Cómo Funciona -Última Pantalla Informativa',
         en: 'How It Works -Last Info Screen',
         des: `La app explica el comportamiento al conectar con passphrase habilitada:<br><br>
-        • Si te equivocás en un carácter, <strong>no serás notificado</strong> -abrirá una billetera diferente (también válida)<br>
-        • Al conectar, el BitBox pedirá la passphrase <strong>directamente en el dispositivo</strong><br>
-        • Tras ingresarla, la app mostrará lo que escribiste para confirmación visual<br><br>
+        - Si te equivocás en un carácter, <strong>no serás notificado</strong> -abrirá una billetera diferente (también válida)<br>
+        - Al conectar, el BitBox pedirá la passphrase <strong>directamente en el dispositivo</strong><br>
+        - Tras ingresarla, la app mostrará lo que escribiste para confirmación visual<br><br>
         Hacer clic en <strong>"Activar passphrase"</strong> para avanzar al resumen final.`,
         den: `The app explains behavior when connecting with passphrase enabled:<br><br>
-        • If you make a typo, <strong>you won't be notified</strong> -it will open a different (also valid) wallet<br>
-        • When connecting, BitBox will request the passphrase <strong>directly on the device</strong><br>
-        • After entering it, the app will show what you typed for visual confirmation<br><br>
+        - If you make a typo, <strong>you won't be notified</strong> -it will open a different (also valid) wallet<br>
+        - When connecting, BitBox will request the passphrase <strong>directly on the device</strong><br>
+        - After entering it, the app will show what you typed for visual confirmation<br><br>
         Click <strong>"Activate passphrase"</strong> to proceed to the final summary.`
       },
       {
@@ -982,16 +1016,16 @@ const SECTIONS = [
         es: 'Resumen -Tildar Checkbox y Confirmar',
         en: 'Summary -Check the Box and Confirm',
         des: `Pantalla de resumen con los 4 puntos clave antes de activar:<br>
-        • La passphrase es una capa adicional de seguridad<br>
-        • Una passphrase diferente genera una billetera diferente<br>
-        • Para restaurar necesitás <strong>semilla + passphrase</strong><br>
-        • Si olvidás la passphrase, <strong>perdés el acceso a tus fondos</strong><br><br>
+        - La passphrase es una capa adicional de seguridad<br>
+        - Una passphrase diferente genera una billetera diferente<br>
+        - Para restaurar necesitás <strong>semilla + passphrase</strong><br>
+        - Si olvidás la passphrase, <strong>perdés el acceso a tus fondos</strong><br><br>
         Tildar el checkbox <em>"Entiendo como funciona la passphrase y sus riesgos asociados"</em> para habilitar el botón. Luego hacer clic en <strong>"Activar passphrase"</strong>.`,
         den: `Summary screen with the 4 key points before activating:<br>
-        • The passphrase is an additional security layer<br>
-        • A different passphrase generates a different wallet<br>
-        • To restore you need <strong>seed + passphrase</strong><br>
-        • If you forget the passphrase, <strong>you lose access to your funds</strong><br><br>
+        - The passphrase is an additional security layer<br>
+        - A different passphrase generates a different wallet<br>
+        - To restore you need <strong>seed + passphrase</strong><br>
+        - If you forget the passphrase, <strong>you lose access to your funds</strong><br><br>
         Check the box <em>"I understand how the passphrase works and its associated risks"</em> to enable the button. Then click <strong>"Activate passphrase"</strong>.`
       },
       {
@@ -1150,12 +1184,12 @@ const SECTIONS = [
         es: 'Configurar Passphrase',
         en: 'Set up Passphrase',
         des: `Ledger Nano X ofrece <strong>dos modos</strong> de passphrase:<br><br>
-        • <strong>Set temporary:</strong> ingresás la passphrase manualmente en cada sesión. No queda guardada en el dispositivo.<br>
-        • <strong>Attach to PIN:</strong> asocia la passphrase a un segundo PIN de 8 dígitos. Al ingresar ese PIN, la billetera con passphrase se abre automáticamente.<br><br>
+        - <strong>Set temporary:</strong> ingresás la passphrase manualmente en cada sesión. No queda guardada en el dispositivo.<br>
+        - <strong>Attach to PIN:</strong> asocia la passphrase a un segundo PIN de 8 dígitos. Al ingresar ese PIN, la billetera con passphrase se abre automáticamente.<br><br>
         <div class="tip">Para uso diario, <strong>Attach to PIN</strong> es más cómodo. Para máxima seguridad, <strong>Set temporary</strong> no deja rastro en el dispositivo.</div>`,
         den: `Ledger Nano X offers <strong>two passphrase modes</strong>:<br><br>
-        • <strong>Set temporary:</strong> enter the passphrase manually each session. Not stored on the device.<br>
-        • <strong>Attach to PIN:</strong> associates the passphrase with a second 8-digit PIN. Entering that PIN automatically opens the passphrase wallet.<br><br>
+        - <strong>Set temporary:</strong> enter the passphrase manually each session. Not stored on the device.<br>
+        - <strong>Attach to PIN:</strong> associates the passphrase with a second 8-digit PIN. Entering that PIN automatically opens the passphrase wallet.<br><br>
         <div class="tip">For daily use, <strong>Attach to PIN</strong> is more convenient. For maximum security, <strong>Set temporary</strong> leaves no trace on the device.</div>`
       },
       {
@@ -1164,13 +1198,13 @@ const SECTIONS = [
         en: 'Attach to PIN',
         des: `Seleccioná <strong>Attach to PIN</strong> para asociar la passphrase a un segundo PIN dedicado.<br><br>
         Con este modo tenés dos PINs:<br>
-        • <strong>PIN principal</strong> → billetera base (sin passphrase)<br>
-        • <strong>PIN secundario de 8 dígitos</strong> → billetera con passphrase<br><br>
+        - <strong>PIN principal</strong> → billetera base (sin passphrase)<br>
+        - <strong>PIN secundario de 8 dígitos</strong> → billetera con passphrase<br><br>
         <div class="info">Útil para plausible deniability: bajo coacción podés mostrar la billetera base sin revelar la passphrase.</div>`,
         den: `Select <strong>Attach to PIN</strong> to associate the passphrase with a dedicated second PIN.<br><br>
         With this mode you have two PINs:<br>
-        • <strong>Main PIN</strong> → base wallet (no passphrase)<br>
-        • <strong>Secondary 8-digit PIN</strong> → passphrase wallet<br><br>
+        - <strong>Main PIN</strong> → base wallet (no passphrase)<br>
+        - <strong>Secondary 8-digit PIN</strong> → passphrase wallet<br><br>
         <div class="info">Useful for plausible deniability: under coercion you can show the base wallet without revealing the passphrase.</div>`
       },
       {
@@ -1260,13 +1294,13 @@ const SECTIONS = [
         en: 'Passphrase Set',
         des: `¡Passphrase configurada correctamente! El dispositivo confirma que la passphrase fue asociada al PIN secundario.<br><br>
         Desde ahora:<br>
-        • <strong>PIN principal</strong> → abre tu billetera base<br>
-        • <strong>PIN secundario</strong> → abre tu billetera con passphrase<br><br>
+        - <strong>PIN principal</strong> → abre tu billetera base<br>
+        - <strong>PIN secundario</strong> → abre tu billetera con passphrase<br><br>
         <div class="tip">Abrí la app Bitcoin y verificá que las direcciones son distintas a las de tu billetera base. Eso confirma que la passphrase está activa.</div>`,
         den: `Passphrase configured successfully! The device confirms the passphrase was associated with the secondary PIN.<br><br>
         From now on:<br>
-        • <strong>Main PIN</strong> → opens your base wallet<br>
-        • <strong>Secondary PIN</strong> → opens your passphrase wallet<br><br>
+        - <strong>Main PIN</strong> → opens your base wallet<br>
+        - <strong>Secondary PIN</strong> → opens your passphrase wallet<br><br>
         <div class="tip">Open the Bitcoin app and verify that the addresses differ from your base wallet. This confirms the passphrase is active.</div>`
       },
     ]
@@ -1284,12 +1318,12 @@ const SECTIONS = [
         en: 'Settings → Security → Passphrase',
         des: `La Nano S Plus usa los mismos <strong>dos botones físicos</strong> que la Nano X. La diferencia principal: no tiene Bluetooth y tiene más memoria para apps.<br><br>
         Ruta: <strong>Settings → Security → Passphrase</strong>. Los dos modos disponibles son idénticos a Nano X:<br>
-        • <strong>Set temporary</strong><br>
-        • <strong>Attach to PIN</strong>`,
+        - <strong>Set temporary</strong><br>
+        - <strong>Attach to PIN</strong>`,
         den: `Nano S Plus uses the same <strong>two physical buttons</strong> as Nano X. Main difference: no Bluetooth and more app memory.<br><br>
         Path: <strong>Settings → Security → Passphrase</strong>. The two available modes are identical to Nano X:<br>
-        • <strong>Set temporary</strong><br>
-        • <strong>Attach to PIN</strong>`
+        - <strong>Set temporary</strong><br>
+        - <strong>Attach to PIN</strong>`
       },
       {
         f: 'hw-ledger-splus-02.png',
@@ -1324,12 +1358,12 @@ const SECTIONS = [
         en: 'Settings → Security → Passphrase (Touchscreen)',
         des: `El Ledger Flex tiene <strong>pantalla táctil E Ink a color</strong> (2.84"). La navegación es por toques, mucho más cómoda que los botones físicos de Nano X/S Plus.<br><br>
         Tocar <strong>Settings → Security → Passphrase</strong> y elegir modo:<br>
-        • <strong>Set temporary</strong><br>
-        • <strong>Attach to PIN</strong>`,
+        - <strong>Set temporary</strong><br>
+        - <strong>Attach to PIN</strong>`,
         den: `Ledger Flex has a <strong>color E Ink touchscreen</strong> (2.84"). Navigation is by taps, much more comfortable than Nano X/S Plus physical buttons.<br><br>
         Tap <strong>Settings → Security → Passphrase</strong> and choose mode:<br>
-        • <strong>Set temporary</strong><br>
-        • <strong>Attach to PIN</strong>`
+        - <strong>Set temporary</strong><br>
+        - <strong>Attach to PIN</strong>`
       },
       {
         f: 'hw-ledger-flex-02.png',
@@ -1368,13 +1402,13 @@ const SECTIONS = [
         en: 'Settings → Security → Passphrase (Curved Screen)',
         des: `El Ledger Stax tiene la <strong>pantalla E Ink más grande</strong> de todos los Ledger (3.7", curvada en los bordes). Navegación completamente táctil.<br><br>
         Tocar <strong>Settings → Security → Passphrase</strong>. Elegir entre:<br>
-        • <strong>Set temporary</strong> -manual cada sesión<br>
-        • <strong>Attach to PIN</strong> -PIN secundario de 8 dígitos<br><br>
+        - <strong>Set temporary</strong> -manual cada sesión<br>
+        - <strong>Attach to PIN</strong> -PIN secundario de 8 dígitos<br><br>
         <div class="info">El Stax es el modelo premium de Ledger. La pantalla grande facilita ver y verificar la passphrase antes de confirmar.</div>`,
         den: `Ledger Stax has the <strong>largest E Ink screen</strong> of all Ledgers (3.7", curved at edges). Fully touchscreen navigation.<br><br>
         Tap <strong>Settings → Security → Passphrase</strong>. Choose between:<br>
-        • <strong>Set temporary</strong> -manual each session<br>
-        • <strong>Attach to PIN</strong> -secondary 8-digit PIN<br><br>
+        - <strong>Set temporary</strong> -manual each session<br>
+        - <strong>Attach to PIN</strong> -secondary 8-digit PIN<br><br>
         <div class="info">Stax is Ledger's premium model. The large screen makes it easier to see and verify the passphrase before confirming.</div>`
       },
       {
@@ -1480,12 +1514,12 @@ const SECTIONS = [
         es: 'Activar Toggle "Billeteras con Passphrase"',
         en: 'Enable "Passphrase Wallets" Toggle',
         des: `La pantalla muestra dos opciones:<br>
-        • <strong>Verificar la copia de seguridad de la billetera</strong><br>
-        • <strong>Billeteras con passphrase</strong> — toggle desactivado<br><br>
+        - <strong>Verificar la copia de seguridad de la billetera</strong><br>
+        - <strong>Billeteras con passphrase</strong> — toggle desactivado<br><br>
         Tocar el toggle de <strong>"Billeteras con passphrase"</strong> para activar la función. La app pedirá confirmar la acción en el dispositivo físico.`,
         den: `The screen shows two options:<br>
-        • <strong>Verify wallet backup</strong><br>
-        • <strong>Passphrase wallets</strong> — toggle disabled<br><br>
+        - <strong>Verify wallet backup</strong><br>
+        - <strong>Passphrase wallets</strong> — toggle disabled<br><br>
         Tap the <strong>"Passphrase wallets"</strong> toggle to enable the feature. The app will ask to confirm the action on the physical device.`
       },
       {
@@ -1520,12 +1554,12 @@ const SECTIONS = [
         es: 'Elegir Cómo Ingresar la Passphrase',
         en: 'Choose How to Enter the Passphrase',
         des: `La pantalla <strong>"Passphrase"</strong> ofrece dos opciones para ingresar:<br><br>
-        • <strong>"Ingresa tu passphrase"</strong> — tipear directamente en el campo del móvil<br>
-        • <strong>"Introduce la passphrase en tu Trezor"</strong> — tipear en el dispositivo físico<br><br>
+        - <strong>"Ingresa tu passphrase"</strong> — tipear directamente en el campo del móvil<br>
+        - <strong>"Introduce la passphrase en tu Trezor"</strong> — tipear en el dispositivo físico<br><br>
         <div class="tip">Ingresar en el dispositivo físico es más seguro — la passphrase nunca pasa por el móvil ni ningún software.</div>`,
         den: `The <strong>"Passphrase"</strong> screen offers two options to enter:<br><br>
-        • <strong>"Enter your passphrase"</strong> — type directly in the mobile field<br>
-        • <strong>"Enter passphrase on your Trezor"</strong> — type on the physical device<br><br>
+        - <strong>"Enter your passphrase"</strong> — type directly in the mobile field<br>
+        - <strong>"Enter passphrase on your Trezor"</strong> — type on the physical device<br><br>
         <div class="tip">Entering on the physical device is more secure — the passphrase never passes through the mobile or any software.</div>`
       },
       {
@@ -2388,16 +2422,16 @@ const SECTIONS = [
         en: 'Browser Wallets with Passphrase Support',
         des: `La mayoría de las browser wallets focalizadas en Bitcoin son extensiones de Chrome/Firefox. El soporte de passphrase BIP39 varía:<br><br>
         <strong>Wallets con soporte:</strong><br>
-        • <strong>Alby (alby.guide)</strong> -extensión Lightning, no passphrase BIP39 tradicional<br>
-        • <strong>OKX Wallet</strong> -soporta BIP39 passphrase pero es multi-chain<br>
-        • <strong>Sparrow (web)</strong> -Sparrow no tiene versión web, solo desktop<br><br>
+        - <strong>Alby (alby.guide)</strong> -extensión Lightning, no passphrase BIP39 tradicional<br>
+        - <strong>OKX Wallet</strong> -soporta BIP39 passphrase pero es multi-chain<br>
+        - <strong>Sparrow (web)</strong> -Sparrow no tiene versión web, solo desktop<br><br>
         <strong>Recomendación:</strong> para Bitcoin con passphrase, las browser extensions no son el camino recomendado. Preferir hardware wallets + Sparrow Desktop.<br><br>
         <div class="warn">⚠️ Las browser wallets tienen mayor superficie de ataque (extensiones maliciosas, phishing). Evitá guardar fondos significativos en ellas.</div>`,
         den: `Most Bitcoin-focused browser wallets are Chrome/Firefox extensions. BIP39 passphrase support varies:<br><br>
         <strong>Wallets with support:</strong><br>
-        • <strong>Alby (alby.guide)</strong> -Lightning extension, not traditional BIP39 passphrase<br>
-        • <strong>OKX Wallet</strong> -supports BIP39 passphrase but is multi-chain<br>
-        • <strong>Sparrow (web)</strong> -Sparrow has no web version, desktop only<br><br>
+        - <strong>Alby (alby.guide)</strong> -Lightning extension, not traditional BIP39 passphrase<br>
+        - <strong>OKX Wallet</strong> -supports BIP39 passphrase but is multi-chain<br>
+        - <strong>Sparrow (web)</strong> -Sparrow has no web version, desktop only<br><br>
         <strong>Recommendation:</strong> for Bitcoin with passphrase, browser extensions are not the recommended path. Prefer hardware wallets + Sparrow Desktop.<br><br>
         <div class="warn">⚠️ Browser wallets have a larger attack surface (malicious extensions, phishing). Avoid storing significant funds in them.</div>`
       },
