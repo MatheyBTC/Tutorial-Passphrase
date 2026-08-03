@@ -386,15 +386,15 @@ const SECTIONS = [
         Una función incluida dentro del estándar BIP39 que permite activar una palabra, frase y/o combinación de caracteres a tu semilla de recuperación (comúnmente de 12/24 palabras).<br><br>
         A veces conocida como: <strong>palabra 13/25</strong>, Frase de Contraseña, BIP39 Passphrase, Seed Extension.<br><br>
         Por defecto, todas las billeteras BIP39 usan una Passphrase vacía (sin nada). Esto implica que, aunque no la veas ni la configures, siempre forma parte del proceso de creación de tus claves.<br><br>
-        Puede ser cualquier cadena de caracteres, no necesariamente una sola palabra.<br><br>
+        Puede ser cualquier cadena de caracteres, no necesariamente una sola palabra. <em>Ver detalle en <a href="javascript:void(0)" onclick="loadSection('intro-03')">03 - ¿Qué Caracteres Puedo Usar?</a></em><br><br>
         Al definir una Passphrase, la misma semilla crea una billetera completamente diferente e independiente.<br><br>
-        <strong>Combinar tu semilla + tu Passphrase determina a qué billetera se deriva y a qué fondos tendrás acceso.</strong><br><br>
+        <strong>Combinar tu semilla + tu Passphrase determina a qué billetera se deriva, a qué fondos tendrás acceso.</strong><br><br>
         <div class="tip">
         <strong>Ejemplo concreto:</strong><br>
         Seed (12/24 palabras) + sin passphrase = Billetera A<br>
         Seed (12/24 palabras) + passphrase <code>bitcoin</code> = Billetera B<br>
         Seed (12/24 palabras) + passphrase <code>Bitcoin</code> = Billetera C<br><br>
-        Son tres billeteras completamente distintas. No es la misma billetera con una contraseña - son direcciones y claves diferentes.
+        Son tres billeteras completamente distintas. No es la misma billetera con una contraseña: son <strong>claves privadas y direcciones completamente diferentes</strong>. No hay relación entre ellas.
         </div><br>
         <strong>No existe una passphrase "incorrecta"</strong><br>
         Cualquier cadena de caracteres que tipees, inclusive sin datos, produce una billetera válida con sus propias direcciones. Tu dispositivo nunca te alerta que cometiste un error de tipeo.<br><br>
@@ -407,15 +407,15 @@ const SECTIONS = [
         A function included within the BIP39 standard that allows activating a word, phrase and/or combination of characters to your recovery seed (commonly 12/24 words).<br><br>
         Sometimes known as: <strong>word 13/25</strong>, Passphrase, BIP39 Passphrase, Seed Extension.<br><br>
         By default, all BIP39 wallets use an empty Passphrase (nothing). This means that, even if you don't see it or configure it, it is always part of the key creation process.<br><br>
-        It can be any string of characters, not necessarily a single word.<br><br>
+        It can be any string of characters, not necessarily a single word. <em>See details in <a href="javascript:void(0)" onclick="loadSection('intro-03')">03 - What Characters Can I Use?</a></em><br><br>
         By defining a Passphrase, the same seed creates a completely different and independent wallet.<br><br>
-        <strong>Combining your seed + your Passphrase determines which wallet is derived and which funds you will have access to.</strong><br><br>
+        <strong>Combining your seed + your Passphrase determines which wallet is derived, which funds you will have access to.</strong><br><br>
         <div class="tip">
         <strong>Concrete example:</strong><br>
         Seed (12/24 words) + no passphrase = Wallet A<br>
         Seed (12/24 words) + passphrase <code>bitcoin</code> = Wallet B<br>
         Seed (12/24 words) + passphrase <code>Bitcoin</code> = Wallet C<br><br>
-        These are three completely different wallets. It is not the same wallet with a password - they have different addresses and keys.
+        These are three completely different wallets. This is not the same wallet with a password: they have <strong>completely different private keys and addresses</strong>. There is no relationship between them.
         </div><br>
         <strong>There is no "incorrect" passphrase</strong><br>
         Any string of characters you type, including nothing, produces a valid wallet with its own addresses. Your device never alerts you that you made a typo.<br><br>
