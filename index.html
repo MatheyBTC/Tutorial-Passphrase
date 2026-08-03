@@ -425,6 +425,36 @@ const SECTIONS = [
         <strong>Warning:</strong> this option should only be used by those who fully understand its implications. A typo and/or a forgotten passphrase can result in permanent and unrecoverable loss of funds.
         </div>`
       },
+      {
+        noImg: true,
+        es: 'La Passphrase Vacía - Siempre Presente por Defecto',
+        en: 'The Empty Passphrase - Always Present by Default',
+        des: `Por defecto, todas las billeteras BIP39 usan una Passphrase - pero vacía, sin nada. Esto implica que, aunque no la veas ni la actives, <strong>siempre forma parte del proceso de creación de tus claves.</strong><br><br>
+        El estándar BIP39 define la passphrase como un parámetro obligatorio de la función de derivación. Lo que cambia entre "sin passphrase" y "con passphrase" no es si se usa o no - es el valor que tiene:<br><br>
+        <div class="entr-math">
+        Seed + <code>""</code>             = tu billetera estándar (passphrase vacía)<br>
+        Seed + <code>"mipassphrase"</code>  = una billetera completamente distinta
+        </div>
+        Cuando configuras una passphrase, no estás "activando una función nueva" - estás cambiando ese valor vacío por el texto que eliges.<br><br>
+        <strong>¿Por qué importa entender esto?</strong><br><br>
+        ➜ Tu billetera sin passphrase no es la billetera "real" y la otra una copia protegida. Son dos derivaciones del mismo estándar, usando el mismo mecanismo, con valores distintos.<br><br>
+        ➜ Si pierdes la passphrase, no hay forma de "volver a la billetera base" desde esa derivación. Son claves completamente independientes.<br><br>
+        ➜ Un atacante que tenga tu seed y sepa que no usas passphrase, ya tiene todo. Un atacante que tenga tu seed pero no tu passphrase, no puede acceder a esa derivación.<br><br>
+        <div class="info">La passphrase vacía <code>""</code> y cualquier passphrase no vacía producen billeteras igual de válidas. El estándar no distingue cuál es "la real" - eso lo decides tú.</div>`,
+
+        den: `By default, all BIP39 wallets use a Passphrase - but empty, with nothing. This means that, even if you don't see it or activate it, <strong>it is always part of the key creation process.</strong><br><br>
+        The BIP39 standard defines the passphrase as a mandatory parameter of the derivation function. What changes between "no passphrase" and "with passphrase" is not whether it is used or not - it is the value it holds:<br><br>
+        <div class="entr-math">
+        Seed + <code>""</code>             = your standard wallet (empty passphrase)<br>
+        Seed + <code>"mypassphrase"</code>  = a completely different wallet
+        </div>
+        When you configure a passphrase, you are not "activating a new feature" - you are changing that empty value for the text you choose.<br><br>
+        <strong>Why does understanding this matter?</strong><br><br>
+        ➜ Your wallet without a passphrase is not the "real" wallet with the other being a protected copy. They are two derivations of the same standard, using the same mechanism, with different values.<br><br>
+        ➜ If you lose the passphrase, there is no way to "go back to the base wallet" from that derivation. They are completely independent keys.<br><br>
+        ➜ An attacker who has your seed and knows you don't use a passphrase already has everything. An attacker who has your seed but not your passphrase cannot access that derivation.<br><br>
+        <div class="info">The empty passphrase <code>""</code> and any non-empty passphrase produce equally valid wallets. The standard does not distinguish which one is "the real one" - that is for you to decide.</div>`
+      },
     ]
   },
 
