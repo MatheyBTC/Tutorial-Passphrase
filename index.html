@@ -267,7 +267,7 @@
   .entr-l3 { background: rgba(234,179,8,.1); border: 1px solid rgba(234,179,8,.28); }
   .entr-l4 { background: rgba(239,68,68,.1); border: 1px solid rgba(239,68,68,.28); }
   .entr-no { background: rgba(90,90,90,.1); border: 1px solid rgba(90,90,90,.22); }
-  .entr-badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 20px; margin-bottom: 7px; letter-spacing: .6px; text-transform: uppercase; }
+  .entr-badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 20px; margin-bottom: 7px; letter-spacing: .3px; }
   .entr-b1 { background: rgba(34,197,94,.18); color: #4ade80; }
   .entr-b2 { background: rgba(34,197,94,.11); color: #86efac; }
   .entr-b3 { background: rgba(234,179,8,.18); color: #fbbf24; }
@@ -625,31 +625,31 @@ const SECTIONS = [
         des: `Este ranking ordena los métodos de generación de semilla por un criterio concreto: <strong>¿la aleatoriedad es verificable o hay que confiar ciegamente en el dispositivo?</strong> No se trata de cuántos bits declara generar, sino de cuánto puedes corroborar tú mismo.
 
         <div class="entr-level entr-l1" style="margin-top:16px">
-          <div class="entr-badge entr-b1">Nivel 1 - Máxima verificabilidad</div>
-          <div class="entr-level-title">Tú generás, tú verificás</div>
+          <div class="entr-badge entr-b1">Nivel 1 - Máxima Verificabilidad</div>
+          <div class="entr-level-title">Tú generas, tú verificas</div>
           <div class="entr-item">➜ <strong>Dados de casino + verificación cruzada</strong> - la aleatoriedad es física y equiprobable. No dependes de ningún chip.</div>
-          <div class="entr-item">➜ <strong>SeedSigner | Krux</strong> - sin RNG propio. Solo dados o foto que tú aportás. No hay generador interno que pueda fallar.</div>
+          <div class="entr-item">➜ <strong>SeedSigner | Krux</strong> - sin RNG propio. Solo dados o foto que tú aportas. No hay generador interno que pueda fallar.</div>
           <div class="entr-item">➜ <strong>Moneda + Von Neumann</strong> - lento, pero matemáticamente blindado. La uniformidad es demostrable sin importar el sesgo.</div>
         </div>
 
         <div class="entr-level entr-l2">
-          <div class="entr-badge entr-b2">Nivel 2 - El equipo genera, pero puedes auditar</div>
-          <div class="entr-level-title">Aleatoriedad auditable</div>
+          <div class="entr-badge entr-b2">Nivel 2 - Un Equipo Genera (pero puedes auditar)</div>
+          <div class="entr-level-title">Aleatoriedad Auditable</div>
           <div class="entr-item">➜ <strong>Passport</strong> - fuente de ruido física open source + TRNG + secure element. Única con aleatoriedad física auditable en el circuito.</div>
           <div class="entr-item">➜ <strong>Jade</strong> - multi-sensor (temperatura, cámara, radio, CPU) acumulado estilo Bitcoin Core. Todo open source.</div>
           <div class="entr-item">➜ <strong>Trezor</strong> - TRNG + entropía del host del usuario, con verificación commit-reveal. Si una fuente falla, la otra sostiene el total.</div>
         </div>
 
         <div class="entr-level entr-l3">
-          <div class="entr-badge entr-b3">Nivel 3 - Buena aleatoriedad, caja cerrada</div>
-          <div class="entr-level-title">Confías en la certificación</div>
-          <div class="entr-item">➜ <strong>Ledger</strong> - TRNG certificado por entes externos, sólido técnicamente. Pero no inyectas tu propia entropía ni puedes auditar el proceso. Confías en el certificado, no en una prueba que podás correr tú.</div>
+          <div class="entr-badge entr-b3">Nivel 3 - Buena Aleatoriedad (pero caja cerrada)</div>
+          <div class="entr-level-title">Confías en la Certificación</div>
+          <div class="entr-item">➜ <strong>Ledger</strong> - TRNG certificado por entes externos, sólido técnicamente. Pero no inyectas tu propia entropía ni puedes auditar el proceso. Confías en el certificado, no en una prueba que puedas correr tú.</div>
         </div>
 
         <div class="entr-level entr-no">
-          <div class="entr-badge entr-bno">No usar</div>
-          <div class="entr-item">➜ <strong>Papeles o frascos con las 2048 palabras</strong> - el muestreo físico no es equiprobable. La entropía real es desconocida e incuantificable.</div>
-          <div class="entr-item">➜ <strong>Elegir palabras a mano</strong> - cero aleatoriedad. El cerebro humano es predecible y sesgado por definición.</div>
+          <div class="entr-badge entr-bno">No Usar</div>
+          <div class="entr-item">➜ <strong>Papeles y/o frascos con las 2048 palabras</strong> - el muestreo físico no es equiprobable. La entropía real es desconocida e incuantificable.</div>
+          <div class="entr-item">➜ <strong>Palabras a Mano</strong> - cero aleatoriedad. El cerebro humano es predecible y sesgado por definición.</div>
         </div>
 
         <div class="warn" style="margin-top:14px"><strong>Nota histórica:</strong> Coldcard tuvo un bug crítico de entropía en 2023. El generador interno usaba una fuente única sin mezcla de fuentes adicionales, lo que permitió reducir el espacio de búsqueda a ~2^40 bits. El bug fue corregido. Se desconocen públicamente los detalles técnicos de la implementación actual.</div>`,
@@ -657,31 +657,31 @@ const SECTIONS = [
         den: `This ranking orders seed generation methods by one concrete criterion: <strong>is the randomness verifiable, or do you have to blindly trust the device?</strong> It's not about how many bits it claims to generate, but how much you can verify yourself.
 
         <div class="entr-level entr-l1" style="margin-top:16px">
-          <div class="entr-badge entr-b1">Level 1 - Maximum verifiability</div>
-          <div class="entr-level-title">You generate, you verify</div>
+          <div class="entr-badge entr-b1">Level 1 - Maximum Verifiability</div>
+          <div class="entr-level-title">You Generate, You Verify</div>
           <div class="entr-item">➜ <strong>Casino dice + cross-verification</strong> - randomness is physical and equiprobable. You don't depend on any chip.</div>
           <div class="entr-item">➜ <strong>SeedSigner | Krux</strong> - no internal RNG. Only dice or photos you provide. No internal generator that can fail.</div>
           <div class="entr-item">➜ <strong>Coin + Von Neumann</strong> - slow, but mathematically shielded. Uniformity is provable regardless of bias.</div>
         </div>
 
         <div class="entr-level entr-l2">
-          <div class="entr-badge entr-b2">Level 2 - Device generates, but you can audit</div>
-          <div class="entr-level-title">Auditable randomness</div>
+          <div class="entr-badge entr-b2">Level 2 - A Device Generates (but you can audit)</div>
+          <div class="entr-level-title">Auditable Randomness</div>
           <div class="entr-item">➜ <strong>Passport</strong> - open source physical noise source + TRNG + secure element. The only one with auditable physical randomness in the circuit.</div>
           <div class="entr-item">➜ <strong>Jade</strong> - multi-sensor (temperature, camera, radio, CPU) accumulated Bitcoin Core-style. All open source.</div>
           <div class="entr-item">➜ <strong>Trezor</strong> - TRNG + user host entropy, with commit-reveal verification. If one source fails, the other sustains the total.</div>
         </div>
 
         <div class="entr-level entr-l3">
-          <div class="entr-badge entr-b3">Level 3 - Good randomness, closed box</div>
-          <div class="entr-level-title">You trust the certification</div>
+          <div class="entr-badge entr-b3">Level 3 - Good Randomness (but closed box)</div>
+          <div class="entr-level-title">You Trust the Certification</div>
           <div class="entr-item">➜ <strong>Ledger</strong> - TRNG certified by external bodies, technically solid. But you can't inject your own entropy or audit the process. You trust the certificate, not a proof you can run yourself.</div>
         </div>
 
         <div class="entr-level entr-no">
-          <div class="entr-badge entr-bno">Do not use</div>
-          <div class="entr-item">➜ <strong>Paper slips or jars with 2048 words</strong> - physical sampling is not equiprobable. Real entropy is unknown and unquantifiable.</div>
-          <div class="entr-item">➜ <strong>Choosing words by hand</strong> - zero randomness. The human brain is predictable and biased by definition.</div>
+          <div class="entr-badge entr-bno">Do Not Use</div>
+          <div class="entr-item">➜ <strong>Papers and/or jars with 2048 words</strong> - physical sampling is not equiprobable. Real entropy is unknown and unquantifiable.</div>
+          <div class="entr-item">➜ <strong>Words by Hand</strong> - zero randomness. The human brain is predictable and biased by definition.</div>
         </div>
 
         <div class="warn" style="margin-top:14px"><strong>Historical note:</strong> Coldcard had a critical entropy bug in 2023. The internal generator used a single source without mixing additional sources, which allowed reducing the search space to ~2^40 bits. The bug was fixed. The technical details of the current implementation are not publicly known.</div>`
@@ -786,7 +786,7 @@ const SECTIONS = [
         <strong>Resumen del ranking</strong>
 
         <table class="entr-table">
-          <thead><tr><th>Método</th><th>Qué lo justifica matemáticamente</th></tr></thead>
+          <thead><tr><th>Método</th><th>Qué lo Justifica Matemáticamente</th></tr></thead>
           <tbody>
             <tr><td>Dados + moneda/VN</td><td>H = log₂(n) demostrable + Von Neumann prueba uniformidad para todo p</td></tr>
             <tr><td>Passport | Jade | Trezor</td><td>H_total ≥ max(Hᵢ): robusto al fallo de una fuente</td></tr>
