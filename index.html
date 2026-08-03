@@ -620,81 +620,71 @@ const SECTIONS = [
     steps: [
       {
         noImg: true,
-        es: 'El Ranking - ¿Podés Verificar el Azar?',
-        en: 'The Ranking - Can You Verify the Randomness?',
-        des: `La pregunta que ordena este ranking no es "¿cuántos bits genera?" sino <strong>¿podés verificar que el azar fue real, o tenés que confiar ciegamente?</strong><br><br>
-        El bug de Coldcard (2023) no fue de bits. Fue de confianza ciega en un solo generador que nadie podía auditar. Cuando ese punto falló, falló todo.
+        es: 'El Ranking - Aleatoriedad Verificable',
+        en: 'The Ranking - Verifiable Randomness',
+        des: `Este ranking ordena los métodos de generación de semilla por un criterio concreto: <strong>¿la aleatoriedad es verificable o hay que confiar ciegamente en el dispositivo?</strong> No se trata de cuántos bits declara generar, sino de cuánto podés corroborar vos mismo.
 
         <div class="entr-level entr-l1" style="margin-top:16px">
-          <div class="entr-badge entr-b1">Nivel 1 — Máxima verificabilidad</div>
+          <div class="entr-badge entr-b1">Nivel 1 - Máxima verificabilidad</div>
           <div class="entr-level-title">Vos generás, vos verificás</div>
-          <div class="entr-item">➜ <strong>Dados de casino + verificación cruzada</strong> — el azar es físico y equiprobable. No dependés de ningún chip.</div>
-          <div class="entr-item">➜ <strong>SeedSigner | Krux</strong> — sin RNG propio. Solo dados o foto que vos aportás. No hay generador interno que pueda fallar.</div>
-          <div class="entr-item">➜ <strong>Moneda + Von Neumann</strong> — lento, pero matemáticamente blindado. La uniformidad es demostrable sin importar el sesgo.</div>
+          <div class="entr-item">➜ <strong>Dados de casino + verificación cruzada</strong> - la aleatoriedad es física y equiprobable. No dependés de ningún chip.</div>
+          <div class="entr-item">➜ <strong>SeedSigner | Krux</strong> - sin RNG propio. Solo dados o foto que vos aportás. No hay generador interno que pueda fallar.</div>
+          <div class="entr-item">➜ <strong>Moneda + Von Neumann</strong> - lento, pero matemáticamente blindado. La uniformidad es demostrable sin importar el sesgo.</div>
         </div>
 
         <div class="entr-level entr-l2">
-          <div class="entr-badge entr-b2">Nivel 2 — El equipo genera, pero podés auditar</div>
-          <div class="entr-level-title">Azar auditable</div>
-          <div class="entr-item">➜ <strong>Passport</strong> — fuente de ruido física open source + TRNG + secure element. Única con azar físico auditable en el circuito.</div>
-          <div class="entr-item">➜ <strong>Jade</strong> — multi-sensor (temperatura, cámara, radio, CPU) acumulado estilo Bitcoin Core. Todo open source.</div>
-          <div class="entr-item">➜ <strong>Trezor</strong> — TRNG + entropía del host del usuario, con verificación commit-reveal. El bug de Coldcard es imposible por diseño.</div>
+          <div class="entr-badge entr-b2">Nivel 2 - El equipo genera, pero podés auditar</div>
+          <div class="entr-level-title">Aleatoriedad auditable</div>
+          <div class="entr-item">➜ <strong>Passport</strong> - fuente de ruido física open source + TRNG + secure element. Única con aleatoriedad física auditable en el circuito.</div>
+          <div class="entr-item">➜ <strong>Jade</strong> - multi-sensor (temperatura, cámara, radio, CPU) acumulado estilo Bitcoin Core. Todo open source.</div>
+          <div class="entr-item">➜ <strong>Trezor</strong> - TRNG + entropía del host del usuario, con verificación commit-reveal. Si una fuente falla, la otra sostiene el total.</div>
         </div>
 
         <div class="entr-level entr-l3">
-          <div class="entr-badge entr-b3">Nivel 3 — Buen azar, caja cerrada</div>
+          <div class="entr-badge entr-b3">Nivel 3 - Buena aleatoriedad, caja cerrada</div>
           <div class="entr-level-title">Confiás en la certificación</div>
-          <div class="entr-item">➜ <strong>Ledger</strong> — TRNG certificado por entes externos, sólido técnicamente. Pero no inyectás tu propia entropía ni podés auditar el proceso. Confiás en el certificado, no en una prueba que podás correr vos.</div>
-        </div>
-
-        <div class="entr-level entr-l4">
-          <div class="entr-badge entr-b4">Nivel 4 — Un solo punto de falla, sin verificar</div>
-          <div class="entr-level-title">Diseño frágil</div>
-          <div class="entr-item">➜ <strong>Coldcard pre-fix</strong> — un solo RNG interno, sin mezcla de fuentes, sin posibilidad de auditar. Cuando ese punto falló, la min-entropía colapsó a ~40 bits. Post-fix mejoró, pero el modelo original era estructuralmente frágil.</div>
+          <div class="entr-item">➜ <strong>Ledger</strong> - TRNG certificado por entes externos, sólido técnicamente. Pero no inyectás tu propia entropía ni podés auditar el proceso. Confiás en el certificado, no en una prueba que podás correr vos.</div>
         </div>
 
         <div class="entr-level entr-no">
           <div class="entr-badge entr-bno">No usar</div>
-          <div class="entr-item">➜ <strong>Papeles o frascos con las 2048 palabras</strong> — el muestreo físico no es equiprobable. La entropía real es desconocida e incuantificable.</div>
-          <div class="entr-item">➜ <strong>Elegir palabras a mano</strong> — cero azar. El cerebro humano es predecible y sesgado por definición.</div>
-        </div>`,
+          <div class="entr-item">➜ <strong>Papeles o frascos con las 2048 palabras</strong> - el muestreo físico no es equiprobable. La entropía real es desconocida e incuantificable.</div>
+          <div class="entr-item">➜ <strong>Elegir palabras a mano</strong> - cero aleatoriedad. El cerebro humano es predecible y sesgado por definición.</div>
+        </div>
 
-        den: `The question that orders this ranking is not "how many bits does it generate?" but <strong>can you verify the randomness was real, or do you have to trust blindly?</strong><br><br>
-        The Coldcard bug (2023) wasn't about bits. It was about blind trust in a single generator no one could audit. When that point failed, everything failed.
+        <div class="warn" style="margin-top:14px"><strong>Nota histórica:</strong> Coldcard tuvo un bug crítico de entropía en 2023. El generador interno usaba una fuente única sin mezcla de fuentes adicionales, lo que permitió reducir el espacio de búsqueda a ~2^40 bits. El bug fue corregido. Se desconocen públicamente los detalles técnicos de la implementación actual.</div>`,
+
+        den: `This ranking orders seed generation methods by one concrete criterion: <strong>is the randomness verifiable, or do you have to blindly trust the device?</strong> It's not about how many bits it claims to generate, but how much you can verify yourself.
 
         <div class="entr-level entr-l1" style="margin-top:16px">
-          <div class="entr-badge entr-b1">Level 1 — Maximum verifiability</div>
+          <div class="entr-badge entr-b1">Level 1 - Maximum verifiability</div>
           <div class="entr-level-title">You generate, you verify</div>
-          <div class="entr-item">➜ <strong>Casino dice + cross-verification</strong> — randomness is physical and equiprobable. You don't depend on any chip.</div>
-          <div class="entr-item">➜ <strong>SeedSigner | Krux</strong> — no internal RNG. Only dice or photos you provide. No internal generator that can fail.</div>
-          <div class="entr-item">➜ <strong>Coin + Von Neumann</strong> — slow, but mathematically shielded. Uniformity is provable regardless of bias.</div>
+          <div class="entr-item">➜ <strong>Casino dice + cross-verification</strong> - randomness is physical and equiprobable. You don't depend on any chip.</div>
+          <div class="entr-item">➜ <strong>SeedSigner | Krux</strong> - no internal RNG. Only dice or photos you provide. No internal generator that can fail.</div>
+          <div class="entr-item">➜ <strong>Coin + Von Neumann</strong> - slow, but mathematically shielded. Uniformity is provable regardless of bias.</div>
         </div>
 
         <div class="entr-level entr-l2">
-          <div class="entr-badge entr-b2">Level 2 — Device generates, but you can audit</div>
+          <div class="entr-badge entr-b2">Level 2 - Device generates, but you can audit</div>
           <div class="entr-level-title">Auditable randomness</div>
-          <div class="entr-item">➜ <strong>Passport</strong> — open source physical noise source + TRNG + secure element. The only one with auditable physical randomness in the circuit.</div>
-          <div class="entr-item">➜ <strong>Jade</strong> — multi-sensor (temperature, camera, radio, CPU) accumulated Bitcoin Core-style. All open source.</div>
-          <div class="entr-item">➜ <strong>Trezor</strong> — TRNG + user host entropy, with commit-reveal verification. The Coldcard bug is impossible by design.</div>
+          <div class="entr-item">➜ <strong>Passport</strong> - open source physical noise source + TRNG + secure element. The only one with auditable physical randomness in the circuit.</div>
+          <div class="entr-item">➜ <strong>Jade</strong> - multi-sensor (temperature, camera, radio, CPU) accumulated Bitcoin Core-style. All open source.</div>
+          <div class="entr-item">➜ <strong>Trezor</strong> - TRNG + user host entropy, with commit-reveal verification. If one source fails, the other sustains the total.</div>
         </div>
 
         <div class="entr-level entr-l3">
-          <div class="entr-badge entr-b3">Level 3 — Good randomness, closed box</div>
+          <div class="entr-badge entr-b3">Level 3 - Good randomness, closed box</div>
           <div class="entr-level-title">You trust the certification</div>
-          <div class="entr-item">➜ <strong>Ledger</strong> — TRNG certified by external bodies, technically solid. But you can't inject your own entropy or audit the process. You trust the certificate, not a proof you can run yourself.</div>
-        </div>
-
-        <div class="entr-level entr-l4">
-          <div class="entr-badge entr-b4">Level 4 — Single point of failure, unverifiable</div>
-          <div class="entr-level-title">Fragile design</div>
-          <div class="entr-item">➜ <strong>Coldcard pre-fix</strong> — single internal RNG, no source mixing, no way to audit. When that point failed, min-entropy collapsed to ~40 bits. Post-fix improved it, but the original model was structurally fragile.</div>
+          <div class="entr-item">➜ <strong>Ledger</strong> - TRNG certified by external bodies, technically solid. But you can't inject your own entropy or audit the process. You trust the certificate, not a proof you can run yourself.</div>
         </div>
 
         <div class="entr-level entr-no">
           <div class="entr-badge entr-bno">Do not use</div>
-          <div class="entr-item">➜ <strong>Paper slips or jars with 2048 words</strong> — physical sampling is not equiprobable. Real entropy is unknown and unquantifiable.</div>
-          <div class="entr-item">➜ <strong>Choosing words by hand</strong> — zero randomness. The human brain is predictable and biased by definition.</div>
-        </div>`
+          <div class="entr-item">➜ <strong>Paper slips or jars with 2048 words</strong> - physical sampling is not equiprobable. Real entropy is unknown and unquantifiable.</div>
+          <div class="entr-item">➜ <strong>Choosing words by hand</strong> - zero randomness. The human brain is predictable and biased by definition.</div>
+        </div>
+
+        <div class="warn" style="margin-top:14px"><strong>Historical note:</strong> Coldcard had a critical entropy bug in 2023. The internal generator used a single source without mixing additional sources, which allowed reducing the search space to ~2^40 bits. The bug was fixed. The technical details of the current implementation are not publicly known.</div>`
       },
       {
         noImg: true,
@@ -748,7 +738,7 @@ const SECTIONS = [
         A coin biased 70/30 (not uncommon in physical coins) gives:<br>
         <div class="entr-math">H = −(0.7·log₂0.7 + 0.3·log₂0.3)<br>H = −(−0.360 − 0.521) = 0.881 bits</div>
         What "should" give 1 bit gives 0.881 bits. You lost ~12% entropy per flip. Over 128 required flips, that's a real loss of ~15 bits of security.<br><br>
-        With the 2048-word jar the problem is worse: you don't know the pᵢ values. You can't even calculate how much you lost. You operate with unknown H &lt; 11 bits — which is exactly why it's unacceptable.<br><br>
+        With the 2048-word jar the problem is worse: you don't know the pᵢ values. You can't even calculate how much you lost. You operate with unknown H &lt; 11 bits - which is exactly why it's unacceptable.<br><br>
         <strong>Why Von Neumann rescues the coin (but not the die)</strong><br><br>
         The Von Neumann extractor takes pairs of flips and discards matching ones:<br>
         <div class="entr-math">P(Heads, Tails) = p · (1−p)<br>P(Tails, Heads) = (1−p) · p</div>
@@ -764,25 +754,25 @@ const SECTIONS = [
         <div class="entr-math">H_total ≥ max(H₁, H₂, ..., Hₙ)</div>
         El resultado es <em>al menos</em> tan bueno como la mejor de las fuentes. Si una fuente está comprometida (H_i = 0), mientras otra tenga entropía plena, el total se sostiene.<br><br>
         <strong>Aplicado a cada dispositivo:</strong><br><br>
-        ➜ <strong>Trezor</strong> — combina TRNG interno con entropía que el usuario aporta desde su computadora. Si el TRNG fallara, la entropía del host la sostiene. Si el host fuera débil, el TRNG la sostiene.<br><br>
-        ➜ <strong>Jade</strong> — acumula temperatura + señal de cámara + ruido de radio + timing de CPU en un proceso estilo Bitcoin Core. Cada sensor es una fuente independiente.<br><br>
-        ➜ <strong>Passport</strong> — fuente de ruido física en el circuito + TRNG del secure element. Dos capas independientes.<br><br>
-        <strong>El contraste con Coldcard pre-fix:</strong><br><br>
-        Fuente única. Si esa única fuente colapsa, no hay <code>max()</code> que te salve:<br>
-        <div class="entr-math">H_total = H_única → colapsó a ~40 bits</div>
-        La matemática de la composición es literalmente lo que Coldcard no tenía.`,
+        ➜ <strong>Trezor</strong> - combina TRNG interno con entropía que el usuario aporta desde su computadora. Si el TRNG fallara, la entropía del host la sostiene. Si el host fuera débil, el TRNG la sostiene.<br><br>
+        ➜ <strong>Jade</strong> - acumula temperatura + señal de cámara + ruido de radio + timing de CPU en un proceso estilo Bitcoin Core. Cada sensor es una fuente independiente.<br><br>
+        ➜ <strong>Passport</strong> - fuente de ruido física en el circuito + TRNG del secure element. Dos capas independientes.<br><br>
+        <strong>El riesgo del diseño de fuente única:</strong><br><br>
+        Si un dispositivo usa un solo generador sin mezcla de fuentes adicionales, la cota deja de aplicar:<br>
+        <div class="entr-math">H_total = H_única → si falla, falla todo</div>
+        El multi-fuente no es un detalle técnico menor - es la diferencia entre un diseño que sobrevive al fallo de un componente y uno que no.`,
 
         den: `This justifies Level 2 (Passport, Jade, Trezor). When you mix multiple independent sources with a cryptographic hash function (SHA-256/512), the <strong>entropy composition lower bound</strong> applies:<br><br>
         <div class="entr-math">H_total ≥ max(H₁, H₂, ..., Hₙ)</div>
         The result is <em>at least</em> as good as the best source. If one source is compromised (H_i = 0), as long as another has full entropy, the total holds.<br><br>
         <strong>Applied to each device:</strong><br><br>
-        ➜ <strong>Trezor</strong> — combines internal TRNG with entropy the user provides from their computer. If the TRNG failed, the host entropy sustains it. If the host were weak, the TRNG sustains it.<br><br>
-        ➜ <strong>Jade</strong> — accumulates temperature + camera signal + radio noise + CPU timing in a Bitcoin Core-style process. Each sensor is an independent source.<br><br>
-        ➜ <strong>Passport</strong> — physical noise source on the circuit + secure element TRNG. Two independent layers.<br><br>
-        <strong>The contrast with Coldcard pre-fix:</strong><br><br>
-        Single source. If that single source collapses, there's no <code>max()</code> to save you:<br>
-        <div class="entr-math">H_total = H_single → collapsed to ~40 bits</div>
-        The math of composition is literally what Coldcard didn't have.`
+        ➜ <strong>Trezor</strong> - combines internal TRNG with entropy the user provides from their computer. If the TRNG failed, the host entropy sustains it. If the host were weak, the TRNG sustains it.<br><br>
+        ➜ <strong>Jade</strong> - accumulates temperature + camera signal + radio noise + CPU timing in a Bitcoin Core-style process. Each sensor is an independent source.<br><br>
+        ➜ <strong>Passport</strong> - physical noise source on the circuit + secure element TRNG. Two independent layers.<br><br>
+        <strong>The risk of single-source design:</strong><br><br>
+        If a device uses a single generator without mixing additional sources, the bound no longer applies:<br>
+        <div class="entr-math">H_total = H_single → if it fails, everything fails</div>
+        Multi-source is not a minor technical detail - it's the difference between a design that survives component failure and one that doesn't.`
       },
       {
         noImg: true,
@@ -791,8 +781,8 @@ const SECTIONS = [
         des: `La entropía de Shannon mide el <em>promedio</em>. Para seguridad criptográfica eso no alcanza. Lo que importa es la <strong>min-entropía</strong>, que mide el peor caso:<br><br>
         <div class="entr-math">H∞ = −log₂(max pᵢ)</div>
         Es la métrica correcta contra un atacante, porque él siempre prueba primero el resultado más probable. Y acá está el punto fino: <strong>H∞ ≤ H_Shannon siempre</strong>. Una fuente puede tener buena entropía promedio y pésima min-entropía si hay un resultado mucho más probable que el resto.<br><br>
-        <strong>El caso Coldcard:</strong><br><br>
-        El PRNG sembrado con chip ID + timers del sistema no solo tenía Shannon baja — tenía min-entropía catastrófica. Había estados de arranque mucho más probables que otros. Por eso el ataque fue enumerar ~2^40: no es que hubiera 2^40 estados equiprobables, es que la masa de probabilidad se concentraba en un espacio chico. La min-entropía captura eso. La entropía de Shannon lo suaviza y lo oculta.<br><br>
+        <strong>Por qué importa en la práctica:</strong><br><br>
+        Un generador sembrado con valores predecibles (IDs de chip, timers del sistema sin mezcla adicional) puede declarar alta entropía de Shannon y aun así tener min-entropía catastrófica. Los estados de arranque más frecuentes concentran la probabilidad en un espacio chico. La Shannon lo suaviza. La min-entropía lo expone. Un atacante que enumera los estados más probables primero lo explota directamente.<br><br>
         <strong>Resumen del ranking</strong>
 
         <table class="entr-table">
@@ -800,8 +790,8 @@ const SECTIONS = [
           <tbody>
             <tr><td>Dados + moneda/VN</td><td>H = log₂(n) demostrable + Von Neumann prueba uniformidad para todo p</td></tr>
             <tr><td>Passport | Jade | Trezor</td><td>H_total ≥ max(Hᵢ): robusto al fallo de una fuente</td></tr>
-            <tr><td>Ledger</td><td>H alta pero no verificable — confiás en la certificación, no en una prueba propia</td></tr>
-            <tr><td>Coldcard pre-fix</td><td>Fuente única → sin cota max(); min-entropía colapsada a ~40 bits</td></tr>
+            <tr><td>Ledger</td><td>H alta pero no verificable - confiás en la certificación, no en una prueba propia</td></tr>
+            <tr><td>Fuente única sin auditoría</td><td>Sin cota max(); min-entropía vulnerable si el generador es predecible</td></tr>
             <tr><td>Papel | frasco</td><td>H &lt; log₂(2048) por no-uniformidad, e incuantificable porque no conocés pᵢ</td></tr>
           </tbody>
         </table>
@@ -810,8 +800,8 @@ const SECTIONS = [
         den: `Shannon entropy measures the <em>average</em>. For cryptographic security that's not enough. What matters is <strong>min-entropy</strong>, which measures the worst case:<br><br>
         <div class="entr-math">H∞ = −log₂(max pᵢ)</div>
         It's the correct metric against an attacker, because they always try the most probable outcome first. And here's the fine point: <strong>H∞ ≤ H_Shannon always</strong>. A source can have good average entropy and terrible min-entropy if one outcome is much more probable than the rest.<br><br>
-        <strong>The Coldcard case:</strong><br><br>
-        The PRNG seeded with chip ID + system timers not only had low Shannon entropy — it had catastrophic min-entropy. There were startup states much more probable than others. That's why the attack was enumerating ~2^40: it's not that there were 2^40 equiprobable states, it's that the probability mass concentrated in a small space. Min-entropy captures that. Shannon entropy smooths it over and hides it.<br><br>
+        <strong>Why it matters in practice:</strong><br><br>
+        A generator seeded with predictable values (chip IDs, system timers without additional mixing) can claim high Shannon entropy and still have catastrophic min-entropy. The most frequent startup states concentrate probability in a small space. Shannon smooths it over. Min-entropy exposes it. An attacker who enumerates the most probable states first exploits it directly.<br><br>
         <strong>Ranking summary</strong>
 
         <table class="entr-table">
@@ -819,8 +809,8 @@ const SECTIONS = [
           <tbody>
             <tr><td>Dice + coin/VN</td><td>H = log₂(n) provable + Von Neumann proves uniformity for all p</td></tr>
             <tr><td>Passport | Jade | Trezor</td><td>H_total ≥ max(Hᵢ): robust to single source failure</td></tr>
-            <tr><td>Ledger</td><td>High H but not verifiable — you trust the certification, not your own proof</td></tr>
-            <tr><td>Coldcard pre-fix</td><td>Single source → no max() bound; min-entropy collapsed to ~40 bits</td></tr>
+            <tr><td>Ledger</td><td>High H but not verifiable - you trust the certification, not your own proof</td></tr>
+            <tr><td>Single source, no audit</td><td>No max() bound; min-entropy vulnerable if the generator is predictable</td></tr>
             <tr><td>Paper | jar</td><td>H &lt; log₂(2048) from non-uniformity, unquantifiable because you don't know pᵢ</td></tr>
           </tbody>
         </table>
