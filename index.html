@@ -253,8 +253,9 @@
   .home-card:hover { border-color: var(--accent-dim); background: #1a1a1a; }
   .home-card .hc-name { font-size: 14px; font-weight: 600; color: var(--text); }
   .home-card .hc-steps { font-size: 11px; color: var(--muted); }
-  .hc-logo { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
-  .hc-logo-ios { border-radius: 22%; }
+  .hc-logo-wrap { width: 28px; height: 28px; background: #fff; border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+  .hc-logo-wrap-ios { border-radius: 22%; }
+  .hc-logo { width: 24px; height: 24px; object-fit: contain; display: block; }
   .hc-logo-placeholder { width: 28px; height: 28px; flex-shrink: 0; }
   .home-card-pending { opacity: .45; cursor: default; }
   .home-card-pending:hover { border-color: var(--border); background: var(--surface); }
@@ -1019,7 +1020,7 @@ const SECTIONS = [
   // COLDCARD Mk4
   {
     id: 'hw-coldcard-mk4', group: 'hw', ready: true,
-    brand: 'Coinkite', logo: 'coldcard.svg',
+    brand: 'Coinkite', logo: 'coldcard.jpg',
     es: 'Coldcard Mk4', en: 'Coldcard Mk4',
     steps: [
       {
@@ -1121,7 +1122,7 @@ const SECTIONS = [
   // COLDCARD Mk5
   {
     id: 'hw-coldcard-mk5', group: 'hw', ready: true,
-    brand: 'Coinkite', logo: 'coldcard.svg',
+    brand: 'Coinkite', logo: 'coldcard.jpg',
     es: 'Coldcard Mk5', en: 'Coldcard Mk5',
     steps: [
       {
@@ -1843,7 +1844,7 @@ const SECTIONS = [
   // TREZOR SUITE - PC (aplica a todos los modelos Trezor)
   {
     id: 'hw-trezor-suite-pc', ready: true, group: 'hw',
-    brand: 'Trezor', logo: 'trezor.png',
+    brand: 'Trezor', logo: 'trezor-suite.webp',
     es: 'Trezor Suite (PC)', en: 'Trezor Suite (PC)',
     steps: [
       {
@@ -1885,7 +1886,7 @@ const SECTIONS = [
   // TREZOR SUITE - MOBILE (aplica a todos los modelos Trezor)
   {
     id: 'hw-trezor-suite-mob', ready: true, group: 'hw',
-    brand: 'Trezor', logo: 'trezor.png',
+    brand: 'Trezor', logo: 'trezor-suite.webp',
     es: 'Trezor Suite (Mobile)', en: 'Trezor Suite (Mobile)',
     steps: [
       {
@@ -2666,7 +2667,7 @@ const SECTIONS = [
   {
     id: 'mob-bull', ready: true, group: 'mobile',
     brand: 'Bull Bitcoin', logo: 'bullbitcoin.png',
-    es: 'Bull Bitcoin Wallet', en: 'Bull Bitcoin Wallet',
+    es: 'Bull Bitcoin', en: 'Bull Bitcoin',
     steps: [
       {
         f: 'mob-bull-01.png', imgW: 380,
@@ -3297,7 +3298,7 @@ function loadHome() {
     const cards = secs.map(s => {
       const name = LANG === 'en' ? s.en : s.es;
       const logoHtml = s.logo
-        ? `<img class="hc-logo${isMobile ? ' hc-logo-ios' : ''}" src="Prints/logos/${s.logo}" alt="">`
+        ? `<div class="hc-logo-wrap${isMobile ? ' hc-logo-wrap-ios' : ''}"><img class="hc-logo" src="Prints/logos/${s.logo}" alt=""></div>`
         : `<span class="hc-logo-placeholder"></span>`;
       return `<div class="home-card" onclick="loadSection('${s.id}')">
         ${logoHtml}
