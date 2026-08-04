@@ -44,8 +44,10 @@
   .sec-item {
     padding: 7px 16px 7px 14px; font-size: 15px;
     cursor: pointer; color: var(--muted); transition: background .1s;
-    border-left: 2px solid transparent; display: flex; align-items: baseline; gap: 5px;
+    border-left: 2px solid transparent; display: flex; align-items: center; gap: 8px;
   }
+  .nav-logo { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; border-radius: 3px; }
+  .nav-logo-bg { background: #fff; padding: 2px; box-sizing: border-box; border-radius: 3px; }
   .sec-item.ready { color: var(--text); }
   .sec-item:hover { background: #1e1208; color: var(--text); border-left-color: var(--accent-dim); }
   .sec-item.active { color: var(--accent); border-left-color: var(--accent); background: #1a0f00; }
@@ -1241,7 +1243,7 @@ const SECTIONS = [
   // COLDCARD Q
   {
     id: 'hw-coldcard-q', group: 'hw', ready: true,
-    brand: 'Coinkite', logo: 'coldcard.svg',
+    brand: 'Coinkite', logo: 'coldcard.jpg',
     es: 'Coldcard Q', en: 'Coldcard Q',
     steps: [
       {
@@ -2666,7 +2668,7 @@ const SECTIONS = [
   // BULL BITCOIN
   {
     id: 'mob-bull', ready: true, group: 'mobile',
-    brand: 'Bull Bitcoin', logo: 'bullbitcoin.png',
+    brand: 'Bull Bitcoin', logo: 'bullbitcoin.png', logoBg: true,
     es: 'Bull Bitcoin', en: 'Bull Bitcoin',
     steps: [
       {
@@ -3098,7 +3100,10 @@ function buildNav() {
       const item = document.createElement('div');
       item.className = 'sec-item' + (sec.ready ? ' ready' : '');
       item.dataset.sid = sec.id;
-      item.innerHTML = `<span>${t(sec.es, sec.en)}</span>`;
+      const navLogo = sec.logo
+        ? `<img class="nav-logo${sec.logoBg ? ' nav-logo-bg' : ''}" src="Prints/logos/${sec.logo}" alt="">`
+        : '';
+      item.innerHTML = `${navLogo}<span>${t(sec.es, sec.en)}</span>`;
       item.addEventListener('click', () => loadSection(sec.id));
       items.appendChild(item);
     });
