@@ -3348,11 +3348,54 @@ function buildNav() {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// URL ROUTING
+// ═══════════════════════════════════════════════════════════════
+const BASE_PATH = '/Tutorial-Passphrase';
+const SLUGS = {
+  'intro-06':          'Entropia',
+  'hw-jade':           'Jade',
+  'hw-jade-plus':      'Jade-Plus',
+  'hw-coldcard-mk4':   'Coldcard-Mk4',
+  'hw-coldcard-mk5':   'Coldcard-Mk5',
+  'hw-coldcard-q':     'Coldcard-Q',
+  'hw-bitbox':         'BitBox02',
+  'hw-bitbox-nova':    'BitBox02-Nova',
+  'hw-ledger-nanox':   'Ledger-Nano-X',
+  'hw-trezor-suite-pc':  'Trezor-Suite-PC',
+  'hw-trezor-suite-mob': 'Trezor-Suite-Mobile',
+  'hw-trezor-t':       'Trezor-T',
+  'hw-trezor-safe3':   'Trezor-Safe-3',
+  'hw-trezor-safe5':   'Trezor-Safe-5',
+  'hw-trezor-safe7':   'Trezor-Safe-7',
+  'hw-seedsigner':     'SeedSigner',
+  'hw-passport-core':  'Passport',
+  'mob-blue':          'BlueWallet',
+  'mob-bull':          'Bull-Bitcoin',
+};
+const SLUG_TO_ID = Object.fromEntries(
+  Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
+);
+
+function slugFromPath() {
+  const p = window.location.pathname.replace(BASE_PATH, '').replace(/^\//, '').replace(/\/$/, '');
+  return p || null;
+}
+
+window.addEventListener('popstate', (e) => {
+  if (e.state && e.state.sid) loadSection(e.state.sid, false);
+  else loadHome(false);
+});
+
+// ═══════════════════════════════════════════════════════════════
 // RENDER SECTION
 // ═══════════════════════════════════════════════════════════════
-function loadSection(sid) {
+function loadSection(sid, pushUrl) {
+  if (pushUrl === undefined) pushUrl = true;
   const sec = SECTIONS.find(s => s.id === sid);
   if (!sec) return;
+  if (pushUrl && SLUGS[sid]) {
+    history.pushState({ sid }, '', BASE_PATH + '/' + SLUGS[sid]);
+  }
   document.getElementById('content').classList.remove('home-active');
   document.querySelectorAll('.sec-item').forEach(el => el.classList.toggle('active', el.dataset.sid === sid));
 
@@ -3502,7 +3545,9 @@ document.getElementById('lightbox').addEventListener('click', e => {
 // ═══════════════════════════════════════════════════════════════
 // HOME / PORTADA
 // ═══════════════════════════════════════════════════════════════
-function loadHome() {
+function loadHome(pushUrl) {
+  if (pushUrl === undefined) pushUrl = true;
+  if (pushUrl) history.pushState({ home: true }, '', BASE_PATH + '/');
   // deactivate any selected section
   document.querySelectorAll('.sec-item').forEach(el => el.classList.remove('active'));
   // collapse all sidebar groups
@@ -3566,7 +3611,24 @@ function loadHome() {
 // INIT
 // ═══════════════════════════════════════════════════════════════
 buildNav();
-loadHome();
+
+// Check if arriving via 404 redirect (sessionStorage) or direct URL slug
+(function() {
+  // 404.html stores the slug in sessionStorage before redirecting
+  const ssSlug = sessionStorage.getItem('ss_redirect');
+  if (ssSlug) {
+    sessionStorage.removeItem('ss_redirect');
+    const sid = SLUG_TO_ID[ssSlug.toLowerCase()];
+    if (sid) { history.replaceState({ sid }, '', BASE_PATH + '/' + ssSlug); loadSection(sid, false); return; }
+  }
+  // Direct load with slug in path (e.g. navigating locally or after replaceState)
+  const slug = slugFromPath();
+  if (slug) {
+    const sid = SLUG_TO_ID[slug.toLowerCase()];
+    if (sid) { loadSection(sid, false); return; }
+  }
+  loadHome(false);
+}());
 </script>
 </body>
 </html>
