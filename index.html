@@ -197,6 +197,14 @@
     border-radius: 0 6px 6px 0; margin-top: 10px; font-size: 12px; color: #ccc;
   }
 
+  /* VERIFICACIÓN SIN FINGERPRINT */
+  .fp-nodev { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 14px 0; font-size: 13px; }
+  .fp-nodev-title { padding: 6px 14px; background: rgba(255,255,255,.04); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); border-bottom: 1px solid var(--border); }
+  .fp-nodev-row { padding: 7px 14px; border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: baseline; }
+  .fp-nodev-row:last-child { border-bottom: none; }
+  .fp-nodev-row code { font-size: 12px; padding: 1px 5px; border-radius: 3px; background: rgba(255,255,255,.08); }
+  .fp-nodev-row-label { font-weight: 600; flex-shrink: 0; }
+
   /* FINGERPRINT COMPARE */
   .fp-compare { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 14px 0; font-size: 13px; }
   .fp-row-std { padding: 8px 14px; opacity: 0.5; border-bottom: 1px solid var(--border); }
@@ -2220,10 +2228,20 @@ const SECTIONS = [
         en: 'Device - Model T Touch Keyboard',
         des: `Al abrir una billetera con passphrase, el Model T muestra el teclado táctil para ingresar la frase directamente en el dispositivo.<br><br>
         Ingresar la passphrase y confirmar con ✓. Suite abre la billetera derivada.<br><br>
-        <div class="warn">⚠️ Trezor no muestra fingerprint. Guarda la primera dirección de recepción para verificar en sesiones futuras.</div>`,
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">Trezor no muestra fingerprint — opciones de verificación</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
+        </div>`,
         den: `When opening a passphrase wallet, Model T shows the touch keyboard to enter the phrase directly on the device.<br><br>
         Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
-        <div class="warn">⚠️ Trezor doesn't show a fingerprint. Save the first receiving address to verify in future sessions.</div>`
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">Trezor doesn't show a fingerprint — verification options</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
+        </div>`
       },
     ]
   },
@@ -2269,10 +2287,20 @@ const SECTIONS = [
         f: 'hw-trezor-safe3-03.png', imgW: 280,
         es: 'Dispositivo - Wallet Cargada',
         en: 'Device - Wallet Loaded',
-        des: `Tras confirmar la passphrase, Suite carga la billetera derivada. Verificar con la primera dirección de recepción guardada previamente.<br><br>
-        <div class="warn">⚠️ Sin fingerprint. Guarda la primera dirección la primera vez para verificar en sesiones futuras.</div>`,
-        den: `After confirming the passphrase, Suite loads the derived wallet. Verify with the first receiving address saved previously.<br><br>
-        <div class="warn">⚠️ No fingerprint. Save the first address the first time to verify in future sessions.</div>`
+        des: `Tras confirmar la passphrase, Suite carga la billetera derivada.<br><br>
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">Trezor no muestra fingerprint — opciones de verificación</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
+        </div>`,
+        den: `After confirming the passphrase, Suite loads the derived wallet.<br><br>
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">Trezor doesn't show a fingerprint — verification options</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
+        </div>`
       },
     ]
   },
@@ -2309,10 +2337,20 @@ const SECTIONS = [
         en: 'Device - Touch Keyboard with Haptic Feedback',
         des: `El Safe 5 muestra el teclado táctil para ingresar la passphrase. El <strong>feedback háptico</strong> (vibración) confirma cada carácter tocado, ayudando a evitar errores.<br><br>
         Ingresar la passphrase y confirmar con ✓. Suite abre la billetera derivada.<br><br>
-        <div class="warn">⚠️ Sin fingerprint. Guarda la primera dirección de recepción para verificar en sesiones futuras.</div>`,
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">Trezor no muestra fingerprint — opciones de verificación</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
+        </div>`,
         den: `Safe 5 shows the touch keyboard to enter the passphrase. <strong>Haptic feedback</strong> (vibration) confirms each tapped character, helping avoid mistakes.<br><br>
         Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
-        <div class="warn">⚠️ No fingerprint. Save the first receiving address to verify in future sessions.</div>`
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">Trezor doesn't show a fingerprint — verification options</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
+        </div>`
       },
     ]
   },
@@ -2349,10 +2387,20 @@ const SECTIONS = [
         en: 'Device - Safe 7 Touch Keyboard',
         des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> en su pantalla táctil. Grupos de letras: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
         Tocar cada grupo para seleccionar el carácter, confirmar con ✓. La passphrase se ingresa completamente en el hardware.<br><br>
-        <div class="tip">Verifica la primera dirección de recepción con tu registro previo.</div>`,
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">Trezor no muestra fingerprint — opciones de verificación</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
+        </div>`,
         den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard on its touchscreen. Letter groups: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
         Tap each group to select the character, confirm with ✓. Passphrase is entered entirely on hardware.<br><br>
-        <div class="tip">Verify the first receiving address with your previous record.</div>`
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">Trezor doesn't show a fingerprint — verification options</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
+        </div>`
       },
     ]
   },
@@ -2486,10 +2534,20 @@ const SECTIONS = [
         en: 'Verify the Passphrase Before Confirming',
         des: `SeedSigner muestra la passphrase ingresada para revisión visual antes de confirmar.<br><br>
         <strong>Verificar cada carácter</strong> -mayúsculas, minúsculas, espacios, símbolos. Si hay un error, volver atrás y corregir.<br><br>
-        <div class="tip">Primera vez: después de confirmar, anotá la primera dirección de recepción que muestre tu software de billetera (Sparrow, Specter, etc.) -será tu fingerprint de verificación para sesiones futuras.</div>`,
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">SeedSigner no almacena — verificar en el coordinador</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🖥️ Master Fingerprint</span>aparece en Sparrow / Specter al importar el xpub · anotar</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub</span>exportar QR desde SeedSigner ➜ escanear en coordinador ➜ anotar xpub</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit) · visible en el coordinador</div>
+        </div>`,
         den: `SeedSigner shows the entered passphrase for visual review before confirming.<br><br>
         <strong>Verify every character</strong> -uppercase, lowercase, spaces, symbols. If there's an error, go back and correct.<br><br>
-        <div class="tip">First time: after confirming, note the first receiving address shown by your wallet software (Sparrow, Specter, etc.) -it will be your verification fingerprint for future sessions.</div>`
+        <div class="fp-nodev">
+          <div class="fp-nodev-title">SeedSigner doesn't store data — verify in the coordinator</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🖥️ Master Fingerprint</span>appears in Sparrow / Specter when importing the xpub · note it down</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub</span>export QR from SeedSigner ➜ scan in coordinator ➜ note the xpub</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit) · visible in the coordinator</div>
+        </div>`
       },
       {
         f: 'hw-seedsigner-13.png',
