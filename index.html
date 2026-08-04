@@ -2249,29 +2249,148 @@ const SECTIONS = [
 
   // SEEDSIGNER
   {
-    id: 'hw-seedsigner', group: 'pending',
-    brand: 'SeedSigner',
+    id: 'hw-seedsigner', ready: true, group: 'hw',
+    brand: 'SeedSigner', logo: 'SeedSigner.jpg',
     es: 'SeedSigner', en: 'SeedSigner',
     steps: [
       {
         f: 'hw-seedsigner-01.png',
-        es: 'Cargar la Semilla y Acceder a Passphrase',
-        en: 'Load Seed and Access Passphrase',
-        des: `SeedSigner es un dispositivo air-gapped que no almacena datos. Cada sesión se carga la semilla desde cero (escribiendo las palabras o escaneando un QR).<br><br>
-        Después de cargar la semilla, SeedSigner mostrará la opción de <strong>Add Passphrase</strong> antes de derivar la billetera.<br><br>
-        <div class="info">SeedSigner es open source y DIY -diseñado para máxima seguridad air-gapped.</div>`,
-        den: `SeedSigner is an air-gapped device that stores no data. Each session the seed is loaded from scratch (by typing the words or scanning a QR).<br><br>
-        After loading the seed, SeedSigner will show the option to <strong>Add Passphrase</strong> before deriving the wallet.<br><br>
-        <div class="info">SeedSigner is open source and DIY -designed for maximum air-gapped security.</div>`
+        es: 'Pantalla de Inicio ➜ Seeds',
+        en: 'Home Screen ➜ Seeds',
+        des: `SeedSigner es un dispositivo <strong>air-gapped</strong> que <strong>nunca almacena datos</strong>. Cada sesión la semilla se carga desde cero -escribiendo las palabras, escaneando un QR SeedQR, o creando una nueva semilla.<br><br>
+        Desde la pantalla de inicio, navegar con el joystick hasta <strong>"Seeds"</strong> y presionar para seleccionar.<br><br>
+        <div class="info">SeedSigner v0.8.7 · Open source · DIY · Basado en Raspberry Pi Zero · Sin almacenamiento persistente.</div>`,
+        den: `SeedSigner is an <strong>air-gapped</strong> device that <strong>never stores data</strong>. Each session the seed is loaded from scratch -by typing the words, scanning a SeedQR, or creating a new seed.<br><br>
+        From the home screen, navigate with the joystick to <strong>"Seeds"</strong> and press to select.<br><br>
+        <div class="info">SeedSigner v0.8.7 · Open source · DIY · Raspberry Pi Zero based · No persistent storage.</div>`
       },
       {
         f: 'hw-seedsigner-02.png',
-        es: 'Ingresar la Passphrase',
-        en: 'Enter the Passphrase',
-        des: `SeedSigner muestra un teclado en pantalla para ingresar la passphrase usando el joystick y los botones.<br><br>
-        Confirmar cuando la passphrase esté completa. SeedSigner derivará la billetera y mostrará las claves/addresses resultantes.`,
-        den: `SeedSigner shows an on-screen keyboard to enter the passphrase using the joystick and buttons.<br><br>
-        Confirm when the passphrase is complete. SeedSigner will derive the wallet and show the resulting keys/addresses.`
+        es: 'Seeds ➜ Load a Seed / Create a Seed',
+        en: 'Seeds ➜ Load a Seed / Create a Seed',
+        des: `El menú Seeds muestra las opciones disponibles:<br><br>
+        - <strong>Load a Seed</strong> → cargar semilla existente (ingresando las palabras manualmente o escaneando un SeedQR)<br>
+        - <strong>Create a Seed</strong> → generar una nueva semilla desde el propio dispositivo<br><br>
+        La opción de passphrase BIP39 aparece <strong>en ambos flujos</strong> al finalizar la carga. Este tutorial muestra el flujo "Create a Seed" para demostrar el proceso completo.`,
+        den: `The Seeds menu shows the available options:<br><br>
+        - <strong>Load a Seed</strong> → load existing seed (manually typing words or scanning a SeedQR)<br>
+        - <strong>Create a Seed</strong> → generate a new seed on the device<br><br>
+        The BIP39 passphrase option appears <strong>in both flows</strong> when finalizing the load. This tutorial shows the "Create a Seed" flow to demonstrate the full process.`
+      },
+      {
+        f: 'hw-seedsigner-03.png',
+        es: 'New Seed -Generar Entropía',
+        en: 'New Seed -Generate Entropy',
+        des: `Al seleccionar <strong>"Create a Seed"</strong>, SeedSigner captura entropía usando la cámara (fotografía de ruido ambiental o lanzamiento de dados).<br><br>
+        La pantalla muestra el proceso de generación. SeedSigner usa esta entropía para derivar la semilla BIP39.`,
+        den: `When selecting <strong>"Create a Seed"</strong>, SeedSigner captures entropy using the camera (ambient noise photo or dice rolls).<br><br>
+        The screen shows the generation process. SeedSigner uses this entropy to derive the BIP39 seed.`
+      },
+      {
+        f: 'hw-seedsigner-04.png',
+        es: 'Longitud de la Semilla -12 o 24 Palabras',
+        en: 'Seed Length -12 or 24 Words',
+        des: `Elegir la longitud de la semilla:<br><br>
+        - <strong>12 palabras</strong> → 128 bits de entropía<br>
+        - <strong>24 palabras</strong> → 256 bits de entropía<br><br>
+        Ambas son seguras. Las 24 palabras ofrecen el doble de entropía de la seed -sin cambiar la seguridad de la passphrase, que es independiente.`,
+        den: `Choose the seed length:<br><br>
+        - <strong>12 words</strong> → 128 bits of entropy<br>
+        - <strong>24 words</strong> → 256 bits of entropy<br><br>
+        Both are secure. 24 words offer double the seed entropy -without changing passphrase security, which is independent.`
+      },
+      {
+        f: 'hw-seedsigner-05.png',
+        es: 'Aviso -Anotar la Semilla Antes de Continuar',
+        en: 'Caution -Write Down Seed Before Continuing',
+        des: `SeedSigner muestra un aviso importante: <strong>anotar las palabras antes de continuar</strong>.<br><br>
+        <div class="warn">⚠️ SeedSigner no almacena la semilla. Si salís de esta pantalla sin anotarla, la perdés para siempre. Anotá cada palabra en orden en papel físico.</div>`,
+        den: `SeedSigner shows an important warning: <strong>write down the words before continuing</strong>.<br><br>
+        <div class="warn">⚠️ SeedSigner does not store the seed. If you leave this screen without writing it down, it is lost forever. Write each word in order on physical paper.</div>`
+      },
+      {
+        f: 'hw-seedsigner-06.png',
+        es: 'Palabras de la Semilla -Anotar en Orden',
+        en: 'Seed Words -Write Down in Order',
+        des: `SeedSigner muestra las palabras de la semilla en grupos (1-3, 4-6, etc.). <strong>Anotar todas en orden exacto</strong> antes de continuar.<br><br>
+        Navegar con el joystick para ver todos los grupos. Esta es la única vez que el dispositivo las mostrará en esta sesión.`,
+        den: `SeedSigner shows the seed words in groups (1-3, 4-6, etc.). <strong>Write all of them in exact order</strong> before continuing.<br><br>
+        Navigate with the joystick to see all groups. This is the only time the device will show them in this session.`
+      },
+      {
+        f: 'hw-seedsigner-07.png',
+        es: 'Verificar Backup -Confirmar que Anotaste las Palabras',
+        en: 'Verify Backup -Confirm You Wrote the Words',
+        des: `La pantalla <strong>"Verify Backup"</strong> pide confirmar que anotaste la semilla correctamente antes de proceder.<br><br>
+        SeedSigner realizará una verificación pidiendo que selecciones la palabra correcta para cada posición.`,
+        den: `The <strong>"Verify Backup"</strong> screen asks you to confirm you wrote down the seed correctly before proceeding.<br><br>
+        SeedSigner will run a verification by asking you to select the correct word for each position.`
+      },
+      {
+        f: 'hw-seedsigner-08.png',
+        es: 'Verificación -Seleccionar la Palabra Correcta',
+        en: 'Verification -Select the Correct Word',
+        des: `Para cada posición de la semilla, SeedSigner muestra varias opciones y pide seleccionar la palabra correcta usando el joystick.<br><br>
+        Este paso verifica que la copia de seguridad es correcta antes de proceder con la passphrase.`,
+        den: `For each seed position, SeedSigner shows several options and asks you to select the correct word using the joystick.<br><br>
+        This step verifies that the backup is correct before proceeding with the passphrase.`
+      },
+      {
+        f: 'hw-seedsigner-09.png',
+        es: 'Backup Verificado',
+        en: 'Backup Verified',
+        des: `Confirmación: el backup fue verificado correctamente. Todas las palabras en orden son correctas.<br><br>
+        A partir de este punto se accede a la pantalla de <strong>Finalize Seed</strong> donde aparece la opción de passphrase BIP39.`,
+        den: `Confirmation: the backup was verified correctly. All words in order are correct.<br><br>
+        From this point, the <strong>Finalize Seed</strong> screen is accessed where the BIP39 passphrase option appears.`
+      },
+      {
+        f: 'hw-seedsigner-10.png',
+        es: 'Finalize Seed ➜ BIP-39 Passphrase',
+        en: 'Finalize Seed ➜ BIP-39 Passphrase',
+        des: `Pantalla clave: <strong>"Finalize Seed"</strong> muestra dos opciones:<br><br>
+        - <strong>Done</strong> → finalizar sin passphrase (usa la semilla estándar, passphrase vacía)<br>
+        - <strong>BIP-39 Passphrase</strong> → agregar una passphrase a la semilla<br><br>
+        Seleccionar <strong>"BIP-39 Passphrase"</strong> para continuar con la configuración.<br><br>
+        <div class="info">Esta pantalla aparece igual al cargar una semilla existente (Load a Seed) o al crear una nueva (Create a Seed).</div>`,
+        den: `Key screen: <strong>"Finalize Seed"</strong> shows two options:<br><br>
+        - <strong>Done</strong> → finalize without passphrase (uses standard seed, empty passphrase)<br>
+        - <strong>BIP-39 Passphrase</strong> → add a passphrase to the seed<br><br>
+        Select <strong>"BIP-39 Passphrase"</strong> to continue with setup.<br><br>
+        <div class="info">This screen appears the same when loading an existing seed (Load a Seed) or creating a new one (Create a Seed).</div>`
+      },
+      {
+        f: 'hw-seedsigner-11.png',
+        es: 'Tipear la Passphrase -Teclado en Pantalla',
+        en: 'Type the Passphrase -On-Screen Keyboard',
+        des: `SeedSigner muestra un <strong>teclado en pantalla completo</strong>. Navegar con el joystick y presionar para seleccionar cada carácter.<br><br>
+        El teclado incluye minúsculas, mayúsculas, números y símbolos especiales -compatible con el estándar BIP39 NFKD completo.<br><br>
+        <div class="warn">⚠️ Verificar dos veces antes de confirmar. Un error de tipeo abre una billetera diferente sin aviso. No hay límite de intentos.</div>`,
+        den: `SeedSigner shows a <strong>full on-screen keyboard</strong>. Navigate with the joystick and press to select each character.<br><br>
+        The keyboard includes lowercase, uppercase, numbers and special symbols -fully compatible with the complete BIP39 NFKD standard.<br><br>
+        <div class="warn">⚠️ Double-check before confirming. A typo opens a different wallet without warning. There is no attempt limit.</div>`
+      },
+      {
+        f: 'hw-seedsigner-12.png',
+        es: 'Verificar la Passphrase Antes de Confirmar',
+        en: 'Verify the Passphrase Before Confirming',
+        des: `SeedSigner muestra la passphrase ingresada para revisión visual antes de confirmar.<br><br>
+        <strong>Verificar cada carácter</strong> -mayúsculas, minúsculas, espacios, símbolos. Si hay un error, volver atrás y corregir.<br><br>
+        <div class="tip">Primera vez: después de confirmar, anotá la primera dirección de recepción que muestre tu software de billetera (Sparrow, Specter, etc.) -será tu fingerprint de verificación para sesiones futuras.</div>`,
+        den: `SeedSigner shows the entered passphrase for visual review before confirming.<br><br>
+        <strong>Verify every character</strong> -uppercase, lowercase, spaces, symbols. If there's an error, go back and correct.<br><br>
+        <div class="tip">First time: after confirming, note the first receiving address shown by your wallet software (Sparrow, Specter, etc.) -it will be your verification fingerprint for future sessions.</div>`
+      },
+      {
+        f: 'hw-seedsigner-13.png',
+        es: 'Ready to Sign -Semilla + Passphrase Activa',
+        en: 'Ready to Sign -Seed + Passphrase Active',
+        des: `Confirmación final: <strong>"Ready to Sign"</strong>. La semilla con la passphrase aplicada está activa en memoria.<br><br>
+        SeedSigner está listo para firmar transacciones o exportar el xpub hacia tu software coordinador (Sparrow, Specter, BlueWallet).<br><br>
+        <div class="info">Al apagar o reiniciar SeedSigner, la semilla y la passphrase se borran de la memoria. Cada nueva sesión requiere cargar la semilla e ingresar la passphrase nuevamente -esto es por diseño.</div>`,
+        den: `Final confirmation: <strong>"Ready to Sign"</strong>. The seed with the passphrase applied is active in memory.<br><br>
+        SeedSigner is ready to sign transactions or export the xpub to your coordinator software (Sparrow, Specter, BlueWallet).<br><br>
+        <div class="info">When SeedSigner is powered off or restarted, the seed and passphrase are erased from memory. Each new session requires loading the seed and entering the passphrase again -this is by design.</div>`
       },
     ]
   },
