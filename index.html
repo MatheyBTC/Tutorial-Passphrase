@@ -249,10 +249,13 @@
   .home-stat .lbl { font-size: 14px; color: var(--muted); margin-top: 4px; }
   .home-group-title { font-size: 14px; font-weight: 700; color: var(--muted); margin: 14px 0 5px; }
   .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-bottom: 4px; }
-  .home-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; cursor: pointer; transition: border-color .15s, background .15s; display: flex; flex-direction: column; gap: 3px; }
+  .home-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; cursor: pointer; transition: border-color .15s, background .15s; display: flex; flex-direction: row; align-items: center; gap: 10px; }
   .home-card:hover { border-color: var(--accent-dim); background: #1a1a1a; }
   .home-card .hc-name { font-size: 14px; font-weight: 600; color: var(--text); }
   .home-card .hc-steps { font-size: 11px; color: var(--muted); }
+  .hc-logo { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
+  .hc-logo-ios { border-radius: 22%; }
+  .hc-logo-placeholder { width: 28px; height: 28px; flex-shrink: 0; }
   .home-card-pending { opacity: .45; cursor: default; }
   .home-card-pending:hover { border-color: var(--border); background: var(--surface); }
   #content.home-active { padding: 16px 23px; }
@@ -3119,14 +3122,19 @@ function loadHome() {
   };
 
   let groupsHtml = '';
-  ['intro','hw','desktop','mobile','browser'].forEach(gid => {
+  ['hw','desktop','mobile','browser'].forEach(gid => {
     const secs = readySecs.filter(s => s.group === gid);
     if (!secs.length) return;
     const meta = groupMeta[gid];
     const title = LANG === 'en' ? meta.labelEn : meta.label;
+    const isMobile = gid === 'mobile' || gid === 'browser' || gid === 'desktop';
     const cards = secs.map(s => {
       const name = LANG === 'en' ? s.en : s.es;
+      const logoHtml = s.logo
+        ? `<img class="hc-logo${isMobile ? ' hc-logo-ios' : ''}" src="Prints/logos/${s.logo}" alt="">`
+        : `<span class="hc-logo-placeholder"></span>`;
       return `<div class="home-card" onclick="loadSection('${s.id}')">
+        ${logoHtml}
         <span class="hc-name">${name}</span>
       </div>`;
     }).join('');
