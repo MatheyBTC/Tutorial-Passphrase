@@ -1484,46 +1484,154 @@ const SECTIONS = [
 
   // BITBOX02 NOVA
   {
-    id: 'hw-bitbox-nova', group: 'pending',
-    brand: 'Shift Crypto',
+    id: 'hw-bitbox-nova', ready: true, group: 'hw',
+    brand: 'Shift Crypto', logo: 'bitbox_4x4_black.png', logoBg: true,
     es: 'BitBox02 Nova', en: 'BitBox02 Nova',
     steps: [
       {
-        f: 'hw-bitbox-nova-01.png',
-        es: 'BitBoxApp ➜ Settings ➜ Expert Settings ➜ Passphrase',
-        en: 'BitBoxApp ➜ Settings ➜ Expert Settings ➜ Passphrase',
-        des: `BitBox02 Nova tiene el mismo proceso que el BitBox02 estándar -la passphrase se habilita desde la <strong>BitBoxApp</strong> y se ingresa <strong>únicamente en el dispositivo físico</strong>.<br><br>
-        Conectar la Nova ➜ <strong>Settings ➜ Manage device ➜ Expert settings ➜ Passphrase</strong>. Confirmar activación tocando ambos lados del dispositivo simultáneamente.<br><br>
-        <div class="info">BitBox02 Nova es la versión 2024+ con mejoras de hardware. La funcionalidad de passphrase es idéntica al modelo original.</div>`,
-        den: `BitBox02 Nova has the same process as the standard BitBox02 -passphrase is enabled from <strong>BitBoxApp</strong> and entered <strong>only on the physical device</strong>.<br><br>
-        Connect the Nova ➜ <strong>Settings ➜ Manage device ➜ Expert settings ➜ Passphrase</strong>. Confirm activation by touching both sides of the device simultaneously.<br><br>
-        <div class="info">BitBox02 Nova is the 2024+ version with hardware improvements. Passphrase functionality is identical to the original model.</div>`
+        f: 'hw-bitbox-01.png',
+        es: 'Abrir BitBoxApp ➜ Configuración',
+        en: 'Open BitBoxApp ➜ Settings',
+        des: `El proceso en BitBox02 Nova es <strong>idéntico al BitBox02 estándar</strong>. La passphrase se habilita desde la <strong>BitBoxApp</strong> -la única diferencia es el paso de ingreso en el dispositivo físico.<br><br>
+        Conectar la Nova ➜ abrir <strong>BitBoxApp</strong> ➜ hacer clic en <strong>"Configuración"</strong> (ícono de engranaje en la barra lateral izquierda).<br><br>
+        <div class="info">BitBox02 Nova es la versión con USB-C, disponible exclusivamente vía la app iOS/Android además de desktop. Hardware mejorado, misma funcionalidad de passphrase.</div>`,
+        den: `The process on BitBox02 Nova is <strong>identical to the standard BitBox02</strong>. Passphrase is enabled from the <strong>BitBoxApp</strong> -the only difference is the entry step on the physical device.<br><br>
+        Connect the Nova ➜ open <strong>BitBoxApp</strong> ➜ click <strong>"Settings"</strong> (gear icon in the left sidebar).<br><br>
+        <div class="info">BitBox02 Nova is the USB-C version, available exclusively via the iOS/Android app in addition to desktop. Improved hardware, same passphrase functionality.</div>`
       },
       {
-        f: 'hw-bitbox-nova-02.png',
-        es: 'Ingresar Passphrase Solo en el Dispositivo',
-        en: 'Enter Passphrase Only on Device',
-        des: `Al conectar la Nova con passphrase habilitada, la app pedirá la passphrase. La Nova muestra un teclado en su pantalla -ingresa la passphrase <strong>directamente en el dispositivo</strong>.<br><br>
-        Confirma tocando ambos lados. La passphrase nunca viaja a la computadora.<br><br>
-        <div class="tip">✅ Ventaja de seguridad: la passphrase se ingresa en el hardware seguro, aislada del software y la computadora host.</div>`,
-        den: `When connecting the Nova with passphrase enabled, the app will request the passphrase. Nova shows a keyboard on its screen -enter the passphrase <strong>directly on the device</strong>.<br><br>
-        Confirm by touching both sides. The passphrase never travels to the computer.<br><br>
-        <div class="tip">✅ Security advantage: the passphrase is entered in secure hardware, isolated from the software and host computer.</div>`
+        f: 'hw-bitbox-02.png',
+        es: 'Pestaña "Administrar dispositivo"',
+        en: '"Manage Device" Tab',
+        des: `Dentro de Configuración, hacer clic en la pestaña <strong>"Administrar dispositivo"</strong>.<br><br>
+        Esta pestaña muestra copias de seguridad, nombre del dispositivo y más abajo la sección <strong>Configuración avanzada</strong> donde vive la opción Passphrase.`,
+        den: `Inside Settings, click the <strong>"Manage device"</strong> tab.<br><br>
+        This tab shows backup options, device name and further down the <strong>Advanced settings</strong> section where the Passphrase option lives.`
       },
       {
-        f: 'hw-bitbox-nova-03.png',
-        es: 'Wallet Estándar vs Wallet con Passphrase',
-        en: 'Standard Wallet vs Passphrase Wallet',
-        des: `Con passphrase habilitada, en cada sesión elegís:<br><br>
-        <strong>Wallet estándar:</strong> dejar vacío el campo passphrase y confirmar en el dispositivo.<br>
-        <strong>Wallet con passphrase:</strong> ingresar la passphrase correcta en el dispositivo y confirmar.<br><br>
-        La BitBoxApp mostrará la billetera correspondiente a la elección.<br><br>
-        <div class="warn">⚠️ Un carácter incorrecto abre una billetera diferente (vacía). No hay mensaje de error -cualquier passphrase es "válida".</div>`,
-        den: `With passphrase enabled, each session you choose:<br><br>
-        <strong>Standard wallet:</strong> leave the passphrase field empty and confirm on the device.<br>
-        <strong>Passphrase wallet:</strong> enter the correct passphrase on the device and confirm.<br><br>
-        BitBoxApp will show the wallet corresponding to the choice.<br><br>
-        <div class="warn">⚠️ One wrong character opens a different (empty) wallet. There's no error message -any passphrase is "valid".</div>`
+        f: 'hw-bitbox-03.png',
+        es: 'Configuración Avanzada ➜ Passphrase (Desactivado)',
+        en: 'Advanced Settings ➜ Passphrase (Disabled)',
+        des: `En la sección <strong>Configuración avanzada</strong>, localizar la opción <strong>"Passphrase"</strong> -aparece con estado <strong>"Desactivado"</strong>.<br><br>
+        Encima se ve el <strong>Root fingerprint</strong> actual: es el identificador único de tu billetera sin passphrase. Guardalo antes de continuar.<br><br>
+        Hacer clic en "Passphrase" para iniciar el wizard de activación.`,
+        den: `In the <strong>Advanced settings</strong> section, locate the <strong>"Passphrase"</strong> option -it shows as <strong>"Disabled"</strong>.<br><br>
+        Above it you can see the current <strong>Root fingerprint</strong>: the unique identifier of your wallet without passphrase. Save it before continuing.<br><br>
+        Click "Passphrase" to start the activation wizard.`
+      },
+      {
+        f: 'hw-bitbox-04.png',
+        es: 'Wizard -Configurar Passphrase',
+        en: 'Wizard -Set Up Passphrase',
+        des: `La BitBoxApp abre la pantalla <strong>"Configurar passphrase"</strong>. Explica que una passphrase es una capa de seguridad por encima de la billetera.<br><br>
+        Hacer clic en <strong>"Aprende como funciona"</strong> para avanzar por las pantallas educativas del wizard.`,
+        den: `BitBoxApp opens the <strong>"Set up passphrase"</strong> screen. It explains that a passphrase is a security layer on top of the wallet.<br><br>
+        Click <strong>"Learn how it works"</strong> to go through the wizard's educational screens.`
+      },
+      {
+        f: 'hw-bitbox-05.png',
+        es: '¿Qué es una Passphrase?',
+        en: 'What is a Passphrase?',
+        des: `El wizard explica el concepto: una passphrase es un <strong>secreto opcional</strong> añadido a la semilla. Semilla + passphrase = nueva billetera completamente diferente.<br><br>
+        Puntos clave:<br>
+        - Cualquiera con acceso a la semilla tiene control total de esa billetera<br>
+        - La passphrase crea una nueva billetera derivada de semilla + passphrase<br>
+        - Es compatible con el estándar BIP39<br><br>
+        Hacer clic en <strong>"Porqué utilizar una passphrase"</strong> para continuar.`,
+        den: `The wizard explains the concept: a passphrase is an <strong>optional secret</strong> added to the seed. Seed + passphrase = a completely different new wallet.<br><br>
+        Key points:<br>
+        - Anyone with access to the seed has full control of that wallet<br>
+        - The passphrase creates a new wallet derived from seed + passphrase<br>
+        - It is compatible with the BIP39 standard<br><br>
+        Click <strong>"Why use a passphrase"</strong> to continue.`
+      },
+      {
+        f: 'hw-bitbox-06.png',
+        es: '¿Por Qué Utilizar una Passphrase?',
+        en: 'Why Use a Passphrase?',
+        des: `La app explica las ventajas de seguridad: si alguien encuentra tu copia de seguridad (microSD o palabras), <strong>aún necesitará la passphrase</strong> para acceder a los fondos.<br><br>
+        También permite crear <strong>múltiples billeteras ocultas</strong> en el mismo dispositivo -una por cada passphrase diferente.<br><br>
+        Hacer clic en <strong>"Consideraciones de la copia de seguridad"</strong> para continuar.`,
+        den: `The app explains the security advantages: if someone finds your backup (microSD or words), <strong>they'll still need the passphrase</strong> to access the funds.<br><br>
+        It also allows creating <strong>multiple hidden wallets</strong> on the same device -one per different passphrase.<br><br>
+        Click <strong>"Backup considerations"</strong> to continue.`
+      },
+      {
+        f: 'hw-bitbox-07.png',
+        es: 'Consideraciones de la Copia de Seguridad',
+        en: 'Backup Considerations',
+        des: `Pantalla crítica: para restaurar una billetera con passphrase necesitas <strong>tanto la copia de seguridad COMO la passphrase</strong>.<br><br>
+        <div class="warn">⚠️ Si olvidás o perdés tu passphrase, perderás el acceso a todos los fondos de esa billetera -sin excepción.</div><br>
+        Guarda la passphrase en un lugar <strong>distinto</strong> al de tu copia de seguridad.<br><br>
+        Hacer clic en <strong>"Cómo se ve"</strong> para continuar.`,
+        den: `Critical screen: to restore a passphrase wallet you need <strong>both the backup AND the passphrase</strong>.<br><br>
+        <div class="warn">⚠️ If you forget or lose your passphrase, you will lose access to all funds in that wallet -no exceptions.</div><br>
+        Store the passphrase in a <strong>different</strong> location from your backup.<br><br>
+        Click <strong>"How it looks"</strong> to continue.`
+      },
+      {
+        f: 'hw-bitbox-08.png',
+        es: 'Cómo Funciona -Última Pantalla Informativa',
+        en: 'How It Works -Last Info Screen',
+        des: `La app explica el comportamiento al conectar con passphrase habilitada:<br><br>
+        - Si te equivocás en un carácter, <strong>no serás notificado</strong> -abrirá una billetera diferente (también válida)<br>
+        - Al conectar, el BitBox pedirá la passphrase <strong>directamente en el dispositivo</strong><br>
+        - Tras ingresarla, la app mostrará lo que escribiste para confirmación visual<br><br>
+        Hacer clic en <strong>"Activar passphrase"</strong> para avanzar al resumen final.`,
+        den: `The app explains behavior when connecting with passphrase enabled:<br><br>
+        - If you make a typo, <strong>you won't be notified</strong> -it will open a different (also valid) wallet<br>
+        - When connecting, BitBox will request the passphrase <strong>directly on the device</strong><br>
+        - After entering it, the app will show what you typed for visual confirmation<br><br>
+        Click <strong>"Activate passphrase"</strong> to proceed to the final summary.`
+      },
+      {
+        f: 'hw-bitbox-09.png',
+        es: 'Resumen -Tildar Checkbox y Confirmar',
+        en: 'Summary -Check the Box and Confirm',
+        des: `Pantalla de resumen con los 4 puntos clave antes de activar. Tildar el checkbox <em>"Entiendo como funciona la passphrase y sus riesgos asociados"</em> para habilitar el botón. Luego hacer clic en <strong>"Activar passphrase"</strong>.`,
+        den: `Summary screen with the 4 key points before activating. Check the box <em>"I understand how the passphrase works and its associated risks"</em> to enable the button. Then click <strong>"Activate passphrase"</strong>.`
+      },
+      {
+        f: 'hw-bitbox-10.png',
+        es: 'Passphrase Activada -Reconectar el Dispositivo',
+        en: 'Passphrase Activated -Reconnect the Device',
+        des: `La app confirma: <strong>"Passphrase opcional activada satisfactoriamente"</strong>.<br><br>
+        A partir de ahora, cada vez que conectes la Nova se te pedirá ingresar una passphrase en el dispositivo físico.<br><br>
+        Hacer clic en <strong>"Por favor vuelva a conectar tu BitBox ahora mismo"</strong> o reconectar físicamente.`,
+        den: `The app confirms: <strong>"Optional passphrase successfully activated"</strong>.<br><br>
+        From now on, every time you connect the Nova you will be asked to enter a passphrase on the physical device.<br><br>
+        Click <strong>"Please reconnect your BitBox now"</strong> or physically reconnect.`
+      },
+      {
+        f: 'hw-bitbox-nova-11.png',
+        es: 'Ingresar Passphrase en la Nova -Teclado en Pantalla',
+        en: 'Enter Passphrase on Nova -On-Screen Keyboard',
+        des: `Aquí está la <strong>única diferencia visual</strong> respecto al BitBox02 estándar: la Nova muestra un <strong>teclado completo en pantalla</strong> (similar a iOS) en lugar del teclado de grupos de letras del modelo original.<br><br>
+        Ingresá tu passphrase directamente en el dispositivo -carácter por carácter. La passphrase <strong>nunca viaja a la computadora ni a la app</strong>.<br><br>
+        <div class="warn">⚠️ La passphrase se ingresa <strong>ÚNICAMENTE en el dispositivo físico</strong>. Esto protege contra keyloggers y malware en el host.</div>`,
+        den: `This is the <strong>only visual difference</strong> from the standard BitBox02: Nova shows a <strong>full on-screen keyboard</strong> (iOS-like) instead of the letter-group keyboard of the original model.<br><br>
+        Enter your passphrase directly on the device -character by character. The passphrase <strong>never travels to the computer or app</strong>.<br><br>
+        <div class="warn">⚠️ The passphrase is entered <strong>ONLY on the physical device</strong>. This protects against keyloggers and malware on the host.</div>`
+      },
+      {
+        f: 'hw-bitbox-12.png',
+        es: 'Verificar -Root Fingerprint Cambió',
+        en: 'Verify -Root Fingerprint Changed',
+        des: `Tras ingresar la passphrase en el dispositivo, la BitBoxApp regresa a <strong>Administrar dispositivo</strong>. Verificar que el <strong>Root fingerprint</strong> cambió respecto al valor original.<br><br>
+        La opción Passphrase ahora muestra <strong>"Activado"</strong>.<br><br>
+        <div class="tip">Guarda el nuevo Root fingerprint. Cada vez que conectes la Nova e ingreses la passphrase correcta deberías ver este mismo valor.</div>`,
+        den: `After entering the passphrase on the device, BitBoxApp returns to <strong>Manage device</strong>. Verify that the <strong>Root fingerprint</strong> changed from the original value.<br><br>
+        The Passphrase option now shows <strong>"Enabled"</strong>.<br><br>
+        <div class="tip">Save the new Root fingerprint. Every time you connect the Nova and enter the correct passphrase you should see this same value.</div>`
+      },
+      {
+        f: 'hw-bitbox-13.png',
+        es: 'Desactivar la Passphrase (Opcional)',
+        en: 'Disable the Passphrase (Optional)',
+        des: `Para desactivar, ir a <strong>Configuración ➜ Administrar dispositivo ➜ Passphrase</strong> y seleccionar <strong>"Desactivar"</strong>.<br><br>
+        <div class="info">Tus fondos en la billetera con passphrase <strong>no se pierden</strong> -siguen en la blockchain. Para acceder, volvé a activar la passphrase e ingresá la misma que usabas.</div>`,
+        den: `To disable, go to <strong>Settings ➜ Manage device ➜ Passphrase</strong> and select <strong>"Disable"</strong>.<br><br>
+        <div class="info">Your funds in the passphrase wallet are <strong>not lost</strong> -they remain on the blockchain. To access them, re-enable the passphrase and enter the same one you used.</div>`
       },
     ]
   },
