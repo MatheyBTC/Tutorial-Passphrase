@@ -2019,7 +2019,7 @@ const SECTIONS = [
 
   // TREZOR SUITE - PC (aplica a todos los modelos Trezor)
   {
-    id: 'hw-trezor-suite-pc', ready: true, group: 'hw',
+    id: 'hw-trezor-suite-pc', group: 'pending',
     brand: 'Trezor', logo: 'trezor-suite_4x4.webp',
     es: 'Trezor Suite (PC)', en: 'Trezor Suite (PC)',
     steps: [
@@ -2061,7 +2061,7 @@ const SECTIONS = [
 
   // TREZOR SUITE - MOBILE (aplica a todos los modelos Trezor)
   {
-    id: 'hw-trezor-suite-mob', ready: true, group: 'hw',
+    id: 'hw-trezor-suite-mob', group: 'pending',
     brand: 'Trezor', logo: 'trezor-suite_4x4.webp',
     es: 'Trezor Suite (Mobile)', en: 'Trezor Suite (Mobile)',
     steps: [
@@ -2186,12 +2186,23 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR MODEL T - pasos en el dispositivo
+  // TREZOR MODEL T
   {
     id: 'hw-trezor-t', ready: true, group: 'hw',
     brand: 'Trezor', logo: 'trezor_4x4.png',
     es: 'Trezor Model T', en: 'Trezor Model T',
     steps: [
+      {
+        f: 'hw-suite-pc-01.png',
+        es: 'Trezor Suite ➜ Configuración ➜ Activar Passphrase',
+        en: 'Trezor Suite ➜ Settings ➜ Enable Passphrase',
+        des: `Abrir <strong>Trezor Suite</strong> (desktop) con el Model T conectado. Ir a <strong>Configuración ➜ pestaña Dispositivo</strong>.<br><br>
+        En la sección <strong>Passphrase</strong>, activar el toggle <strong>"Usar billeteras con passphrase"</strong>. Suite pedirá confirmación en el dispositivo físico.<br><br>
+        <div class="info">También disponible desde la app móvil de Trezor Suite: ícono del dispositivo ➜ Ajustes del dispositivo ➜ Seguridad ➜ Billeteras con passphrase.</div>`,
+        den: `Open <strong>Trezor Suite</strong> (desktop) with Model T connected. Go to <strong>Settings ➜ Device tab</strong>.<br><br>
+        In the <strong>Passphrase</strong> section, enable the <strong>"Use passphrase wallets"</strong> toggle. Suite will ask for confirmation on the physical device.<br><br>
+        <div class="info">Also available from the Trezor Suite mobile app: device icon ➜ Device settings ➜ Security ➜ Passphrase wallets.</div>`
+      },
       {
         f: 'hw-trezor-t-01.png', imgW: 280,
         es: 'Dispositivo - Confirmar Activación',
@@ -2217,12 +2228,23 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR SAFE 3 - pasos en el dispositivo
+  // TREZOR SAFE 3
   {
     id: 'hw-trezor-safe3', ready: true, group: 'hw',
     brand: 'Trezor', logo: 'trezor_4x4.png',
     es: 'Trezor Safe 3', en: 'Trezor Safe 3',
     steps: [
+      {
+        f: 'hw-suite-pc-01.png',
+        es: 'Trezor Suite ➜ Configuración ➜ Activar Passphrase',
+        en: 'Trezor Suite ➜ Settings ➜ Enable Passphrase',
+        des: `Abrir <strong>Trezor Suite</strong> (desktop) con el Safe 3 conectado. Ir a <strong>Configuración ➜ pestaña Dispositivo</strong>.<br><br>
+        En la sección <strong>Passphrase</strong>, activar el toggle <strong>"Usar billeteras con passphrase"</strong>. Suite pedirá confirmación en el dispositivo físico.<br><br>
+        <div class="info">También disponible desde la app móvil de Trezor Suite: ícono del dispositivo ➜ Ajustes del dispositivo ➜ Seguridad ➜ Billeteras con passphrase.</div>`,
+        den: `Open <strong>Trezor Suite</strong> (desktop) with Safe 3 connected. Go to <strong>Settings ➜ Device tab</strong>.<br><br>
+        In the <strong>Passphrase</strong> section, enable the <strong>"Use passphrase wallets"</strong> toggle. Suite will ask for confirmation on the physical device.<br><br>
+        <div class="info">Also available from the Trezor Suite mobile app: device icon ➜ Device settings ➜ Security ➜ Passphrase wallets.</div>`
+      },
       {
         f: 'hw-trezor-safe3-01.png', imgW: 280,
         es: 'Dispositivo - Confirmar Activación (Botón Derecho)',
@@ -2255,12 +2277,23 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR SAFE 5 - pasos en el dispositivo
+  // TREZOR SAFE 5
   {
     id: 'hw-trezor-safe5', ready: true, group: 'hw',
     brand: 'Trezor', logo: 'trezor_4x4.png',
     es: 'Trezor Safe 5', en: 'Trezor Safe 5',
     steps: [
+      {
+        f: 'hw-suite-pc-01.png',
+        es: 'Trezor Suite ➜ Configuración ➜ Activar Passphrase',
+        en: 'Trezor Suite ➜ Settings ➜ Enable Passphrase',
+        des: `Abrir <strong>Trezor Suite</strong> (desktop) con el Safe 5 conectado. Ir a <strong>Configuración ➜ pestaña Dispositivo</strong>.<br><br>
+        En la sección <strong>Passphrase</strong>, activar el toggle <strong>"Usar billeteras con passphrase"</strong>. Suite pedirá confirmación en el dispositivo físico.<br><br>
+        <div class="info">También disponible desde la app móvil de Trezor Suite: ícono del dispositivo ➜ Ajustes del dispositivo ➜ Seguridad ➜ Billeteras con passphrase.</div>`,
+        den: `Open <strong>Trezor Suite</strong> (desktop) with Safe 5 connected. Go to <strong>Settings ➜ Device tab</strong>.<br><br>
+        In the <strong>Passphrase</strong> section, enable the <strong>"Use passphrase wallets"</strong> toggle. Suite will ask for confirmation on the physical device.<br><br>
+        <div class="info">Also available from the Trezor Suite mobile app: device icon ➜ Device settings ➜ Security ➜ Passphrase wallets.</div>`
+      },
       {
         f: 'hw-trezor-safe5-01.png', imgW: 280,
         es: 'Dispositivo - Confirmar Activación',
@@ -2284,12 +2317,23 @@ const SECTIONS = [
     ]
   },
 
-  // TREZOR SAFE 7 - pasos en el dispositivo
+  // TREZOR SAFE 7
   {
     id: 'hw-trezor-safe7', ready: true, group: 'hw',
     brand: 'Trezor', logo: 'trezor_4x4.png',
     es: 'Trezor Safe 7', en: 'Trezor Safe 7',
     steps: [
+      {
+        f: 'hw-suite-pc-01.png',
+        es: 'Trezor Suite ➜ Configuración ➜ Activar Passphrase',
+        en: 'Trezor Suite ➜ Settings ➜ Enable Passphrase',
+        des: `Abrir <strong>Trezor Suite</strong> (desktop) con el Safe 7 conectado. Ir a <strong>Configuración ➜ pestaña Dispositivo</strong>.<br><br>
+        En la sección <strong>Passphrase</strong>, activar el toggle <strong>"Usar billeteras con passphrase"</strong>. Suite pedirá confirmación en el dispositivo físico.<br><br>
+        <div class="info">También disponible desde la app móvil de Trezor Suite: ícono del dispositivo ➜ Ajustes del dispositivo ➜ Seguridad ➜ Billeteras con passphrase.</div>`,
+        den: `Open <strong>Trezor Suite</strong> (desktop) with Safe 7 connected. Go to <strong>Settings ➜ Device tab</strong>.<br><br>
+        In the <strong>Passphrase</strong> section, enable the <strong>"Use passphrase wallets"</strong> toggle. Suite will ask for confirmation on the physical device.<br><br>
+        <div class="info">Also available from the Trezor Suite mobile app: device icon ➜ Device settings ➜ Security ➜ Passphrase wallets.</div>`
+      },
       {
         f: 'hw-trezor-safe7-new-01.png', imgW: 280,
         es: 'Dispositivo - Confirmar Activación',
@@ -3455,8 +3499,6 @@ const SLUGS = {
   'hw-bitbox':         'BitBox02',
   'hw-bitbox-nova':    'BitBox02-Nova',
   'hw-ledger-nanox':   'Ledger-Nano-X',
-  'hw-trezor-suite-pc':  'Trezor-Suite-PC',
-  'hw-trezor-suite-mob': 'Trezor-Suite-Mobile',
   'hw-trezor-t':       'Trezor-T',
   'hw-trezor-safe3':   'Trezor-Safe-3',
   'hw-trezor-safe5':   'Trezor-Safe-5',
