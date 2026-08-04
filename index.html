@@ -253,9 +253,9 @@
   .home-card:hover { border-color: var(--accent-dim); background: #1a1a1a; }
   .home-card .hc-name { font-size: 14px; font-weight: 600; color: var(--text); }
   .home-card .hc-steps { font-size: 11px; color: var(--muted); }
-  .hc-logo-wrap { width: 28px; height: 28px; background: #fff; border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
-  .hc-logo-wrap-ios { border-radius: 22%; }
-  .hc-logo { width: 24px; height: 24px; object-fit: contain; display: block; }
+  .hc-logo { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
+  .hc-logo-ios { border-radius: 22%; }
+  .hc-logo-bg { background: #fff; border-radius: 4px; padding: 3px; box-sizing: border-box; }
   .hc-logo-placeholder { width: 28px; height: 28px; flex-shrink: 0; }
   .home-card-pending { opacity: .45; cursor: default; }
   .home-card-pending:hover { border-color: var(--border); background: var(--surface); }
@@ -1317,7 +1317,7 @@ const SECTIONS = [
   // BITBOX02
   {
     id: 'hw-bitbox', ready: true, group: 'hw',
-    brand: 'Shift Crypto', logo: 'bitbox.png',
+    brand: 'Shift Crypto', logo: 'bitbox.png', logoBg: true,
     es: 'BitBox02', en: 'BitBox02',
     steps: [
       {
@@ -1529,7 +1529,7 @@ const SECTIONS = [
   // LEDGER NANO X
   {
     id: 'hw-ledger-nanox', group: 'hw', ready: true,
-    brand: 'Ledger', logo: 'ledger.png',
+    brand: 'Ledger', logo: 'ledger.png', logoBg: true,
     es: 'Ledger Nano X', en: 'Ledger Nano X',
     steps: [
       {
@@ -3298,7 +3298,7 @@ function loadHome() {
     const cards = secs.map(s => {
       const name = LANG === 'en' ? s.en : s.es;
       const logoHtml = s.logo
-        ? `<div class="hc-logo-wrap${isMobile ? ' hc-logo-wrap-ios' : ''}"><img class="hc-logo" src="Prints/logos/${s.logo}" alt=""></div>`
+        ? `<img class="hc-logo${isMobile ? ' hc-logo-ios' : ''}${s.logoBg ? ' hc-logo-bg' : ''}" src="Prints/logos/${s.logo}" alt="">`
         : `<span class="hc-logo-placeholder"></span>`;
       return `<div class="home-card" onclick="loadSection('${s.id}')">
         ${logoHtml}
