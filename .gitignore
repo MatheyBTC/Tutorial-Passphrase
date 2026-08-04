@@ -6,6 +6,8 @@ desktop.ini
 
 # Carpetas de trabajo (fotos originales y procesadas intermedias)
 Prints/*/
+!Prints/logos/
+!Prints/logos/**
 
 # Claude Code (local dev)
 .claude/
