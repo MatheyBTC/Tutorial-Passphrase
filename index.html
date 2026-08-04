@@ -2971,6 +2971,87 @@ const SECTIONS = [
     ]
   },
 
+
+  // MUUN
+  {
+    id: 'mob-muun', group: 'pending',
+    brand: 'Muun',
+    es: 'Muun Wallet', en: 'Muun Wallet',
+    steps: [
+      {
+        noImg: true,
+        es: 'Muun -Lightning + On-chain, Sin Passphrase BIP39',
+        en: 'Muun -Lightning + On-chain, No BIP39 Passphrase',
+        des: `<strong>Muun es una wallet no custodial</strong> que unifica Lightning y on-chain con una arquitectura propia basada en submarine swaps.<br><br>
+        Muun no usa BIP39 estándar para su backup: en cambio genera un <strong>código de emergencia</strong> (Emergency Kit) combinado con un PDF de recuperación. No implementa passphrase BIP39 como derivación de wallet adicional.<br><br>
+        <div class="info">El modelo de seguridad de Muun es diferente al de otras wallets. Si tu prioridad es passphrase BIP39, Muun no es la herramienta adecuada.</div>`,
+        den: `<strong>Muun is a non-custodial wallet</strong> that unifies Lightning and on-chain with its own submarine swap-based architecture.<br><br>
+        Muun does not use standard BIP39 for backup: instead it generates an <strong>Emergency Kit</strong> combined with a recovery PDF. It does not implement BIP39 passphrase as an additional wallet derivation.<br><br>
+        <div class="info">Muun's security model is different from other wallets. If BIP39 passphrase is your priority, Muun is not the right tool.</div>`
+      },
+    ]
+  },
+
+  // ASHIGARU
+  {
+    id: 'mob-ashigaru', group: 'pending',
+    brand: 'Ashigaru',
+    es: 'Ashigaru Open Wallet', en: 'Ashigaru Open Wallet',
+    steps: [
+      {
+        noImg: true,
+        es: 'Ashigaru -Bitcoin-only, Privacy-focused',
+        en: 'Ashigaru -Bitcoin-only, Privacy-focused',
+        des: `<strong>Ashigaru Open Wallet es una wallet Bitcoin-only</strong> enfocada en privacidad, heredera espiritual de Samourai Wallet.<br><br>
+        Usa BIP39 estándar de 12 palabras y soporta passphrase BIP39 como wallet adicional oculta, similar al modelo de Samourai.<br><br>
+        <div class="tip">Ashigaru es un candidato real para tutorial completo de passphrase. Pendiente de capturas del proceso en el dispositivo.</div>`,
+        den: `<strong>Ashigaru Open Wallet is a Bitcoin-only wallet</strong> focused on privacy, spiritual successor to Samourai Wallet.<br><br>
+        It uses standard 12-word BIP39 and supports BIP39 passphrase as an additional hidden wallet, similar to Samourai's model.<br><br>
+        <div class="tip">Ashigaru is a real candidate for a full passphrase tutorial. Pending screenshots of the process on device.</div>`
+      },
+    ]
+  },
+
+  // BITKIT
+  {
+    id: 'mob-bitkit', group: 'pending',
+    brand: 'Bitkit',
+    es: 'Bitkit', en: 'Bitkit',
+    steps: [
+      {
+        noImg: true,
+        es: 'Bitkit -Lightning + On-chain, Nodo Slashtags',
+        en: 'Bitkit -Lightning + On-chain, Slashtags Node',
+        des: `<strong>Bitkit es una wallet Bitcoin + Lightning</strong> desarrollada por Synonym, con integración de identidad descentralizada via Slashtags.<br><br>
+        Bitkit usa BIP39 estándar para la seed on-chain. El soporte de passphrase BIP39 como wallet oculta adicional está pendiente de verificación en la versión actual.<br><br>
+        <div class="info">Pendiente: confirmar si Bitkit implementa passphrase BIP39 en su flujo de configuración actual.</div>`,
+        den: `<strong>Bitkit is a Bitcoin + Lightning wallet</strong> developed by Synonym, with decentralized identity integration via Slashtags.<br><br>
+        Bitkit uses standard BIP39 for the on-chain seed. BIP39 passphrase support as an additional hidden wallet is pending verification in the current version.<br><br>
+        <div class="info">Pending: confirm whether Bitkit implements BIP39 passphrase in its current setup flow.</div>`
+      },
+    ]
+  },
+
+  // ARKADE
+  {
+    id: 'mob-arkade', group: 'pending',
+    brand: 'Arkade',
+    es: 'Arkade Wallet', en: 'Arkade Wallet',
+    steps: [
+      {
+        noImg: true,
+        es: 'Arkade -Protocolo Ark, Segunda Capa Bitcoin',
+        en: 'Arkade -Ark Protocol, Bitcoin Second Layer',
+        des: `<strong>Arkade Wallet es la primera wallet mobile</strong> para el protocolo Ark, una segunda capa de Bitcoin que permite pagos off-chain sin abrir canales Lightning individuales.<br><br>
+        Ark usa un modelo de VTXO (Virtual UTXO) coordinado por un servidor ASP (Ark Service Provider). La gestión de claves y el soporte de passphrase BIP39 dependen de la implementación específica del cliente.<br><br>
+        <div class="info">Ark es un protocolo en etapa temprana. El soporte de passphrase BIP39 en Arkade Wallet está pendiente de verificación a medida que el protocolo madura.</div>`,
+        den: `<strong>Arkade Wallet is the first mobile wallet</strong> for the Ark protocol, a Bitcoin second layer that enables off-chain payments without opening individual Lightning channels.<br><br>
+        Ark uses a VTXO (Virtual UTXO) model coordinated by an ASP (Ark Service Provider) server. Key management and BIP39 passphrase support depend on the specific client implementation.<br><br>
+        <div class="info">Ark is an early-stage protocol. BIP39 passphrase support in Arkade Wallet is pending verification as the protocol matures.</div>`
+      },
+    ]
+  },
+
 ]; // END SECTIONS
 
 // ═══════════════════════════════════════════════════════════════
