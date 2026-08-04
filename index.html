@@ -2886,6 +2886,91 @@ const SECTIONS = [
     ]
   },
 
+
+  // BREEZ
+  {
+    id: 'mob-breez', group: 'pending',
+    brand: 'Breez',
+    es: 'Breez Wallet', en: 'Breez Wallet',
+    steps: [
+      {
+        noImg: true,
+        es: 'Breez -Lightning, Sin Passphrase BIP39 Tradicional',
+        en: 'Breez -Lightning, No Traditional BIP39 Passphrase',
+        des: `<strong>Breez es una wallet Lightning no custodial.</strong> Usa un nodo Lightning embebido (LND) y opera con canales de pago directos.<br><br>
+        Breez genera una seed BIP39 de 12 palabras, pero no implementa passphrase BIP39 sobre esa seed para derivar una wallet alternativa. La seed se usa para el nodo LND interno.<br><br>
+        <div class="info">Si necesitas passphrase + Lightning, la arquitectura recomendada es un hardware wallet con passphrase + Zeus o Blixt conectado a tu propio nodo.</div>`,
+        den: `<strong>Breez is a non-custodial Lightning wallet.</strong> It uses an embedded Lightning node (LND) and operates with direct payment channels.<br><br>
+        Breez generates a 12-word BIP39 seed, but does not implement BIP39 passphrase over that seed to derive an alternative wallet. The seed is used for the internal LND node.<br><br>
+        <div class="info">If you need passphrase + Lightning, the recommended architecture is a hardware wallet with passphrase + Zeus or Blixt connected to your own node.</div>`
+      },
+    ]
+  },
+
+  // ZEUS
+  {
+    id: 'mob-zeus', group: 'pending',
+    brand: 'Zeus',
+    es: 'Zeus Wallet', en: 'Zeus Wallet',
+    steps: [
+      {
+        noImg: true,
+        es: 'Zeus -Lightning + Nodo Propio',
+        en: 'Zeus -Lightning + Own Node',
+        des: `<strong>Zeus es una wallet Lightning que se conecta a tu propio nodo</strong> (LND, CLN, Eclair, LDK) o usa un nodo embebido (Zeus LN).<br><br>
+        En el modo nodo embebido, Zeus genera una seed BIP39. No implementa passphrase BIP39 estándar sobre esa seed.<br><br>
+        En el modo conectado a nodo externo, la gestión de claves depende completamente del nodo al que conectes (LND, CLN, etc.).<br><br>
+        <div class="info">Para máxima soberanía: hardware wallet con passphrase activa + Zeus conectado a tu propio nodo Lightning.</div>`,
+        den: `<strong>Zeus is a Lightning wallet that connects to your own node</strong> (LND, CLN, Eclair, LDK) or uses an embedded node (Zeus LN).<br><br>
+        In embedded node mode, Zeus generates a BIP39 seed. Standard BIP39 passphrase is not implemented over that seed.<br><br>
+        In external node mode, key management depends entirely on the node you connect to (LND, CLN, etc.).<br><br>
+        <div class="info">For maximum sovereignty: hardware wallet with active passphrase + Zeus connected to your own Lightning node.</div>`
+      },
+    ]
+  },
+
+  // BLIXT
+  {
+    id: 'mob-blixt', group: 'pending',
+    brand: 'Blixt',
+    es: 'Blixt Wallet', en: 'Blixt Wallet',
+    steps: [
+      {
+        noImg: true,
+        es: 'Blixt -Nodo LND Embebido en Mobile',
+        en: 'Blixt -Embedded LND Node on Mobile',
+        des: `<strong>Blixt es una wallet Lightning con nodo LND completo embebido</strong> en iOS y Android.<br><br>
+        Blixt genera una seed BIP39 de 24 palabras para el nodo LND embebido. No implementa passphrase BIP39 como derivación de wallet alternativa -la seed corresponde a la identidad del nodo LND.<br><br>
+        <div class="info">Blixt es una de las pocas opciones mobile con nodo LND completo. Para passphrase en Lightning, la arquitectura recomendada sigue siendo hardware wallet + nodo externo.</div>`,
+        den: `<strong>Blixt is a Lightning wallet with a full embedded LND node</strong> on iOS and Android.<br><br>
+        Blixt generates a 24-word BIP39 seed for the embedded LND node. BIP39 passphrase as an alternative wallet derivation is not implemented -the seed corresponds to the LND node identity.<br><br>
+        <div class="info">Blixt is one of the few mobile options with a full LND node. For passphrase in Lightning, the recommended architecture remains hardware wallet + external node.</div>`
+      },
+    ]
+  },
+
+  // ALBY
+  {
+    id: 'br-alby', group: 'pending',
+    brand: 'Alby',
+    es: 'Alby Hub', en: 'Alby Hub',
+    steps: [
+      {
+        noImg: true,
+        es: 'Alby -Lightning en el Navegador',
+        en: 'Alby -Lightning in the Browser',
+        des: `<strong>Alby es una extensión de navegador y hub Lightning</strong> para Chrome y Firefox, orientada a pagos Lightning en web (nostr, podcasting 2.0, sitios con LNURL).<br><br>
+        Alby Hub (self-hosted) conecta a tu propio nodo Lightning (LND, CLN, LDK). En ese caso, la gestión de claves y passphrase depende del nodo subyacente.<br><br>
+        La extensión Alby por sí sola no implementa passphrase BIP39 estándar.<br><br>
+        <div class="warn">⚠️ Las extensiones de navegador tienen mayor superficie de ataque. No es el entorno recomendado para fondos significativos.</div>`,
+        den: `<strong>Alby is a browser extension and Lightning hub</strong> for Chrome and Firefox, focused on Lightning payments on the web (nostr, podcasting 2.0, LNURL sites).<br><br>
+        Alby Hub (self-hosted) connects to your own Lightning node (LND, CLN, LDK). In that case, key management and passphrase depend on the underlying node.<br><br>
+        The Alby extension alone does not implement standard BIP39 passphrase.<br><br>
+        <div class="warn">⚠️ Browser extensions have a larger attack surface. Not the recommended environment for significant funds.</div>`
+      },
+    ]
+  },
+
 ]; // END SECTIONS
 
 // ═══════════════════════════════════════════════════════════════
