@@ -2822,12 +2822,12 @@ const SECTIONS = [
 
   // SPARROW
   {
-    id: 'sw-sparrow', group: 'pending',
-    brand: 'Sparrow',
+    id: 'sw-sparrow', ready: true, group: 'desktop',
+    brand: 'Sparrow', logo: 'sparrow.png',
     es: 'Sparrow Wallet', en: 'Sparrow Wallet',
     steps: [
       {
-        f: 'sw-sparrow-01.png',
+        f: 'sw-sparrow-01.png', noImg: true,
         es: 'Nueva Wallet ➜ Software Wallet ➜ Mnemonic Words',
         en: 'New Wallet ➜ Software Wallet ➜ Mnemonic Words',
         des: `En Sparrow, ir a <strong>File ➜ New Wallet</strong>. En el tipo de keystore seleccionar <strong>New or Imported Software Wallet</strong>.<br><br>
@@ -2838,7 +2838,7 @@ const SECTIONS = [
         <div class="tip">If you connect a hardware wallet to Sparrow, the passphrase is entered on the device (see the corresponding HW sections). This section covers Sparrow as a software hot wallet.</div>`
       },
       {
-        f: 'sw-sparrow-02.png',
+        f: 'sw-sparrow-02.png', noImg: true,
         es: 'Ingresar la Passphrase en el Campo BIP39',
         en: 'Enter Passphrase in BIP39 Field',
         des: `Después de ingresar las palabras, Sparrow muestra un campo <strong>"BIP39 Passphrase"</strong> (opcional). Ingresar la passphrase en ese campo.<br><br>
@@ -2847,7 +2847,7 @@ const SECTIONS = [
         <div class="warn">⚠️ In Sparrow (software wallet), the passphrase is typed on the computer. Make sure you're in a safe environment without malware or keyloggers.</div>`
       },
       {
-        f: 'sw-sparrow-03.png',
+        f: 'sw-sparrow-03.png', noImg: true,
         es: 'Verificar el Master Fingerprint',
         en: 'Verify Master Fingerprint',
         des: `Sparrow muestra el <strong>Master Fingerprint</strong> (primeros 4 bytes del xpub maestro).<br><br>
@@ -3711,6 +3711,7 @@ const SLUGS = {
   'mob-blue':          'BlueWallet',
   'mob-bull':          'Bull-Bitcoin',
   'mob-electrum':      'Electrum-Mobile',
+  'sw-sparrow':        'Sparrow',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
