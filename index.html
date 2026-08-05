@@ -868,6 +868,70 @@ const SECTIONS = [
         </table>
         <div class="info" style="margin-top:14px">The real security of a seed is its min-entropy. And min-entropy only reaches log₂(n) under two conditions: verifiable uniform distribution + independent source composition. The ranking is ordered exactly by how well each method meets those two conditions.</div>`
       },
+      {
+        f: 'intro-entr-dice-01.png',
+        es: 'Diceware - Cómo Generar tu Passphrase con Dados',
+        en: 'Diceware - How to Generate Your Passphrase with Dice',
+        des: `El método <strong>Diceware</strong> aplica la misma lógica de dados a la passphrase. En lugar de generar palabras para la semilla, generás palabras para la clave extra que protege tu billetera.<br><br>
+        <strong>El proceso es simple:</strong><br>
+        ➜ Tirás 5 dados a la vez<br>
+        ➜ Anotás los 5 números en orden (ej: 5-3-6-4-1)<br>
+        ➜ Repetís eso 6 veces<br>
+        ➜ Cada tirada de 5 dados te da un número de 5 dígitos<br>
+        ➜ Ese número tiene una palabra asignada en el diccionario Diceware<br>
+        ➜ 6 tiradas = 6 palabras = tu passphrase<br><br>
+        La imagen muestra las 6 tiradas: cada grupo numerado del 1 al 6 representa una tirada de 5 dados. El resultado final son 6 palabras completamente aleatorias y verificables.`,
+
+        den: `The <strong>Diceware</strong> method applies the same dice logic to the passphrase. Instead of generating words for the seed, you generate words for the extra key that protects your wallet.<br><br>
+        <strong>The process is simple:</strong><br>
+        ➜ Roll 5 dice at once<br>
+        ➜ Write down the 5 numbers in order (e.g. 5-3-6-4-1)<br>
+        ➜ Repeat that 6 times<br>
+        ➜ Each roll of 5 dice gives you a 5-digit number<br>
+        ➜ That number has a word assigned in the Diceware wordlist<br>
+        ➜ 6 rolls = 6 words = your passphrase<br><br>
+        The image shows the 6 rolls: each group numbered 1 to 6 represents one roll of 5 dice. The final result is 6 completely random and verifiable words.`
+      },
+      {
+        f: 'intro-entr-dice-02.png',
+        es: 'Diceware - Del Número al Diccionario',
+        en: 'Diceware - From Number to Dictionary',
+        des: `La imagen muestra el proceso completo paso a paso:<br><br>
+        ➜ Cada fila es una tirada de 5 dados<br>
+        ➜ Los números forman un código de 5 dígitos (ej: 53641)<br>
+        ➜ Ese código se busca en el diccionario Diceware y tiene una palabra asignada<br>
+        ➜ 6 filas = 6 palabras<br><br>
+        <strong>Ejemplo del resultado:</strong>
+        <div class="entr-math" style="font-size:0.95em;letter-spacing:0.02em">
+        53641 ➜ shaky<br>
+        44642 ➜ pork<br>
+        44614 ➜ polygon<br>
+        42514 ➜ oozy<br>
+        34661 ➜ jalapeno<br>
+        16116 ➜ clause
+        </div>
+        <strong>Passphrase resultante:</strong> <code>shaky pork polygon oozy jalapeno clause</code><br><br>
+        Cada palabra tiene 7776 posibilidades (6⁵). Con 6 palabras el espacio es 7776⁶ - equivalente a ~77 bits de entropía. Una fuerza bruta a 1 billón de intentos por segundo tardaría miles de millones de años.<br><br>
+        <div class="info">Diccionario Diceware en español: <a href="https://theworld.com/~reinhold/diceware_espanol.txt" target="_blank" rel="noopener">theworld.com/~reinhold/diceware_espanol.txt</a><br>Diccionario EFF (inglés, más moderno): <a href="https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt" target="_blank" rel="noopener">eff.org/files/2016/07/18/eff_large_wordlist.txt</a></div>`,
+
+        den: `The image shows the complete process step by step:<br><br>
+        ➜ Each row is one roll of 5 dice<br>
+        ➜ The numbers form a 5-digit code (e.g. 53641)<br>
+        ➜ That code is looked up in the Diceware wordlist and has an assigned word<br>
+        ➜ 6 rows = 6 words<br><br>
+        <strong>Example result:</strong>
+        <div class="entr-math" style="font-size:0.95em;letter-spacing:0.02em">
+        53641 ➜ shaky<br>
+        44642 ➜ pork<br>
+        44614 ➜ polygon<br>
+        42514 ➜ oozy<br>
+        34661 ➜ jalapeno<br>
+        16116 ➜ clause
+        </div>
+        <strong>Resulting passphrase:</strong> <code>shaky pork polygon oozy jalapeno clause</code><br><br>
+        Each word has 7776 possibilities (6⁵). With 6 words the space is 7776⁶ - equivalent to ~77 bits of entropy. A brute force at 1 trillion attempts per second would take billions of years.<br><br>
+        <div class="info">Spanish Diceware wordlist: <a href="https://theworld.com/~reinhold/diceware_espanol.txt" target="_blank" rel="noopener">theworld.com/~reinhold/diceware_espanol.txt</a><br>EFF wordlist (English, more modern): <a href="https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt" target="_blank" rel="noopener">eff.org/files/2016/07/18/eff_large_wordlist.txt</a></div>`
+      },
     ]
   },
 
