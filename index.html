@@ -2827,43 +2827,145 @@ const SECTIONS = [
     es: 'Sparrow Wallet', en: 'Sparrow Wallet',
     steps: [
       {
-        f: 'sw-sparrow-01.png', noImg: true,
-        es: 'Nueva Wallet ➜ Software Wallet ➜ Mnemonic Words',
-        en: 'New Wallet ➜ Software Wallet ➜ Mnemonic Words',
-        des: `En Sparrow, ir a <strong>File ➜ New Wallet</strong>. En el tipo de keystore seleccionar <strong>New or Imported Software Wallet</strong>.<br><br>
-        Elegir <strong>Mnemonic Words (BIP39)</strong> e ingresar tus 12/24 palabras.<br><br>
-        <div class="tip">Si conectás un hardware wallet a Sparrow, la passphrase se ingresa en el dispositivo (ver las secciones HW correspondientes). Esta sección cubre Sparrow como hot wallet de software.</div>`,
-        den: `In Sparrow, go to <strong>File ➜ New Wallet</strong>. For keystore type select <strong>New or Imported Software Wallet</strong>.<br><br>
-        Choose <strong>Mnemonic Words (BIP39)</strong> and enter your 12/24 words.<br><br>
-        <div class="tip">If you connect a hardware wallet to Sparrow, the passphrase is entered on the device (see the corresponding HW sections). This section covers Sparrow as a software hot wallet.</div>`
+        f: 'sw-sparrow-01.png',
+        es: 'File ➜ New Wallet',
+        en: 'File ➜ New Wallet',
+        des: `Abrir <strong>Sparrow Wallet</strong> y ir a <strong>File ➜ New Wallet</strong> (atajo: <code>Ctrl+N</code>).<br><br>
+        <div class="tip">Si conectás un hardware wallet a Sparrow, la passphrase se ingresa en el dispositivo. Esta sección cubre Sparrow como <strong>hot wallet de software</strong>.</div>`,
+        den: `Open <strong>Sparrow Wallet</strong> and go to <strong>File ➜ New Wallet</strong> (shortcut: <code>Ctrl+N</code>).<br><br>
+        <div class="tip">If you connect a hardware wallet to Sparrow, the passphrase is entered on the device. This section covers Sparrow as a <strong>software hot wallet</strong>.</div>`
       },
       {
-        f: 'sw-sparrow-02.png', noImg: true,
-        es: 'Ingresar la Passphrase en el Campo BIP39',
-        en: 'Enter Passphrase in BIP39 Field',
-        des: `Después de ingresar las palabras, Sparrow muestra un campo <strong>"BIP39 Passphrase"</strong> (opcional). Ingresar la passphrase en ese campo.<br><br>
-        <div class="warn">⚠️ En Sparrow (software wallet), la passphrase se escribe en la computadora. Asegurate de estar en un ambiente seguro sin malware o keyloggers.</div>`,
-        den: `After entering the words, Sparrow shows an optional <strong>"BIP39 Passphrase"</strong> field. Enter the passphrase in that field.<br><br>
-        <div class="warn">⚠️ In Sparrow (software wallet), the passphrase is typed on the computer. Make sure you're in a safe environment without malware or keyloggers.</div>`
+        f: 'sw-sparrow-02.png',
+        es: 'Nombre de la Wallet',
+        en: 'Wallet Name',
+        des: `Sparrow pide un nombre para el archivo de la wallet. Ingresar el nombre y hacer clic en <strong>Create Wallet</strong>.<br><br>
+        El nombre es solo local — no afecta la derivación ni la passphrase.`,
+        den: `Sparrow asks for a wallet file name. Enter the name and click <strong>Create Wallet</strong>.<br><br>
+        The name is local only — it doesn't affect derivation or the passphrase.`
       },
       {
-        f: 'sw-sparrow-03.png', noImg: true,
-        es: 'Verificar el Master Fingerprint',
-        en: 'Verify Master Fingerprint',
-        des: `Sparrow muestra el <strong>Master Fingerprint</strong> (primeros 4 bytes del xpub maestro).<br><br>
+        f: 'sw-sparrow-03.png',
+        es: 'Nombre Descriptivo ➜ Create Wallet',
+        en: 'Descriptive Name ➜ Create Wallet',
+        des: `Se puede nombrar la wallet de forma descriptiva, por ejemplo <em>"Wallet + Passphrase"</em>, para identificar fácilmente que tiene passphrase activa.<br><br>
+        Tocar <strong>Create Wallet</strong> para continuar.`,
+        den: `You can name the wallet descriptively, e.g. <em>"Wallet + Passphrase"</em>, to easily identify it has an active passphrase.<br><br>
+        Click <strong>Create Wallet</strong> to continue.`
+      },
+      {
+        f: 'sw-sparrow-04.png',
+        es: 'Keystore ➜ New or Imported Software Wallet',
+        en: 'Keystore ➜ New or Imported Software Wallet',
+        des: `Sparrow muestra la pantalla de configuración con cuatro opciones de keystore. Seleccionar <strong>"New or Imported Software Wallet"</strong>.<br><br>
+        Policy Type: <strong>Single Signature</strong> / Script Type: <strong>Native SegWit (P2WPKH)</strong> — dejar como está.`,
+        den: `Sparrow shows the settings screen with four keystore options. Select <strong>"New or Imported Software Wallet"</strong>.<br><br>
+        Policy Type: <strong>Single Signature</strong> / Script Type: <strong>Native SegWit (P2WPKH)</strong> — leave as is.`
+      },
+      {
+        f: 'sw-sparrow-05.png',
+        es: 'Mnemonic Words (BIP39) ➜ Cantidad de Palabras',
+        en: 'Mnemonic Words (BIP39) ➜ Word Count',
+        des: `Seleccionar <strong>Mnemonic Words (BIP39)</strong>. En el menú desplegable elegir la cantidad de palabras de tu seed: <strong>12 o 24</strong>.<br><br>
+        Sparrow también soporta 15, 18 y 21 palabras, pero 12 y 24 son los estándares más usados.`,
+        den: `Select <strong>Mnemonic Words (BIP39)</strong>. In the dropdown choose your seed word count: <strong>12 or 24</strong>.<br><br>
+        Sparrow also supports 15, 18, and 21 words, but 12 and 24 are the most common standards.`
+      },
+      {
+        f: 'sw-sparrow-06.png',
+        es: 'Ingresar la Seed ➜ Activar "Use Passphrase?"',
+        en: 'Enter Seed ➜ Enable "Use Passphrase?"',
+        des: `Ingresar las palabras de la seed una por una. Sparrow valida el checksum en tiempo real — aparece <strong>✅ Valid checksum</strong> cuando son correctas.<br><br>
+        Una vez ingresadas todas las palabras, activar el checkbox <strong>"Use passphrase?"</strong> antes de continuar.`,
+        den: `Enter the seed words one by one. Sparrow validates the checksum in real time — <strong>✅ Valid checksum</strong> appears when correct.<br><br>
+        Once all words are entered, enable the <strong>"Use passphrase?"</strong> checkbox before continuing.`
+      },
+      {
+        f: 'sw-sparrow-07.png',
+        es: 'Confirmación: "Add a Passphrase?"',
+        en: 'Confirmation: "Add a Passphrase?"',
+        des: `Sparrow muestra un aviso importante: <em>"A passphrase is not a password! Any variation entered in future loads a valid wallet, but with different addresses."</em><br><br>
+        Confirmar haciendo clic en <strong>Sí</strong> para continuar con la passphrase.`,
+        den: `Sparrow shows an important warning: <em>"A passphrase is not a password! Any variation entered in future loads a valid wallet, but with different addresses."</em><br><br>
+        Confirm by clicking <strong>Yes</strong> to continue with the passphrase.`
+      },
+      {
+        f: 'sw-sparrow-08.png',
+        es: 'Ingresar la Passphrase',
+        en: 'Enter the Passphrase',
+        des: `Sparrow muestra el campo <strong>Passphrase</strong> debajo de las palabras. Ingresar la passphrase exactamente como fue creada.<br><br>
+        El placeholder sugiere: <em>"5/6 words from diceware"</em> — la propia app recomienda usar palabras aleatorias sacadas con dados para garantizar entropía real.<br><br>
+        <div class="warn">⚠️ La passphrase se tipea en la computadora. Asegurate de estar en un entorno seguro sin malware ni keyloggers.</div>`,
+        den: `Sparrow shows the <strong>Passphrase</strong> field below the words. Enter the passphrase exactly as it was created.<br><br>
+        The placeholder suggests: <em>"5/6 words from diceware"</em> — the app itself recommends using randomly rolled words to ensure real entropy.<br><br>
+        <div class="warn">⚠️ The passphrase is typed on the computer. Make sure you're in a safe environment without malware or keyloggers.</div>`
+      },
+      {
+        f: 'sw-sparrow-09.png',
+        es: 'Ruta de Derivación ➜ Import Keystore',
+        en: 'Derivation Path ➜ Import Keystore',
+        des: `Sparrow muestra <strong>"Mnemonic Words (BIP39) — Ready to import"</strong> con la ruta de derivación <code>m/84'/0'/0'</code> (Native SegWit).<br><br>
+        Hacer clic en <strong>Import Keystore</strong> para que Sparrow derive la billetera con la seed + passphrase.`,
+        den: `Sparrow shows <strong>"Mnemonic Words (BIP39) — Ready to import"</strong> with derivation path <code>m/84'/0'/0'</code> (Native SegWit).<br><br>
+        Click <strong>Import Keystore</strong> to let Sparrow derive the wallet from seed + passphrase.`
+      },
+      {
+        f: 'sw-sparrow-10.png',
+        es: 'Confirmar Passphrase ➜ Anotar Fingerprint (Sin Passphrase)',
+        en: 'Confirm Passphrase ➜ Note Fingerprint (No Passphrase)',
+        des: `Sparrow pide re-ingresar la passphrase para confirmar. Con el campo vacío ya muestra el <strong>Master fingerprint</strong> de la seed <em>sin</em> passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[tu valor]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase → <code>ac13c7ab</code> — billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase → <code>[tu valor]</code> — billetera oculta <span class="fp-here">← vas a estar aquí</span></div>
         </div>
-        En sesiones futuras, al cargar la misma seed + passphrase, el fingerprint debe coincidir — confirma que todo fue ingresado correctamente.<br><br>
-        Hacer clic en <strong>Import Keystore</strong> para continuar y configurar la billetera.`,
-        den: `Sparrow shows the <strong>Master Fingerprint</strong> (first 4 bytes of the master xpub).<br><br>
+        Sparrow avisa: <em>"Note the master fingerprint before proceeding!"</em>`,
+        den: `Sparrow asks you to re-enter the passphrase to confirm. With the field empty it already shows the <strong>Master fingerprint</strong> of the seed <em>without</em> passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[your value]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase → <code>ac13c7ab</code> — base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase → <code>[your value]</code> — hidden wallet <span class="fp-here">← you'll be here</span></div>
         </div>
-        In future sessions, when loading the same seed + passphrase, the fingerprint should match — confirming everything was entered correctly.<br><br>
-        Click <strong>Import Keystore</strong> to continue and configure the wallet.`
+        Sparrow warns: <em>"Note the master fingerprint before proceeding!"</em>`
+      },
+      {
+        f: 'sw-sparrow-11.png',
+        es: 'Fingerprint con Passphrase — Anotar y Confirmar',
+        en: 'Fingerprint with Passphrase — Note and Confirm',
+        des: `Al ingresar la passphrase en el campo, el fingerprint cambia en tiempo real. <strong>Ese es el fingerprint de tu billetera con passphrase</strong> — anotarlo.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 Sin passphrase → <code>ac13c7ab</code> — billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase → <code>31954b76</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+        </div>
+        Hacer clic en <strong>Aceptar</strong> para importar el keystore.`,
+        den: `When you enter the passphrase in the field, the fingerprint changes in real time. <strong>That's the fingerprint for your passphrase wallet</strong> — write it down.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 No passphrase → <code>ac13c7ab</code> — base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase → <code>31954b76</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+        </div>
+        Click <strong>Accept</strong> to import the keystore.`
+      },
+      {
+        f: 'sw-sparrow-12.png',
+        es: 'Keystore Importado ➜ Verificar Fingerprint y xpub',
+        en: 'Keystore Imported ➜ Verify Fingerprint and xpub',
+        des: `Sparrow muestra el keystore importado con toda la información de verificación:<br><br>
+        • <strong>Master fingerprint:</strong> <code>31954b76</code><br>
+        • <strong>Derivation:</strong> <code>m/84'/0'/0'</code><br>
+        • <strong>xpub/zpub:</strong> clave pública maestra (anotar los últimos 6 dígitos)<br><br>
+        En sesiones futuras, al cargar la misma seed + passphrase, el fingerprint debe coincidir — confirma que todo fue ingresado correctamente.`,
+        den: `Sparrow shows the imported keystore with all verification information:<br><br>
+        • <strong>Master fingerprint:</strong> <code>31954b76</code><br>
+        • <strong>Derivation:</strong> <code>m/84'/0'/0'</code><br>
+        • <strong>xpub/zpub:</strong> master public key (note the last 6 digits)<br><br>
+        In future sessions, loading the same seed + passphrase should produce the same fingerprint — confirming everything was entered correctly.`
+      },
+      {
+        f: 'sw-sparrow-13.png',
+        es: 'Contraseña de la Wallet (Opcional)',
+        en: 'Wallet Password (Optional)',
+        des: `Sparrow ofrece proteger el archivo de la wallet con una contraseña local. <strong>No es la passphrase BIP39</strong> — son dos cosas distintas.<br><br>
+        Esta contraseña cifra el archivo <code>.wallet</code> en disco. Si dejás el campo vacío, el archivo queda sin cifrar. Hacer clic en <strong>Apply</strong> para finalizar.`,
+        den: `Sparrow offers to protect the wallet file with a local password. <strong>This is not the BIP39 passphrase</strong> — they are two different things.<br><br>
+        This password encrypts the <code>.wallet</code> file on disk. If you leave it empty, the file stays unencrypted. Click <strong>Apply</strong> to finish.`
       },
     ]
   },
