@@ -3214,27 +3214,31 @@ const SECTIONS = [
         es: 'Keystore ➜ I Already Have a Seed',
         en: 'Keystore ➜ I Already Have a Seed',
         des: `En el origen de claves, seleccionar <strong>"I already have a seed"</strong> para importar la semilla existente junto con la passphrase.<br><br>
-        Tocar <strong>Next</strong>.`,
+        <div class="info">Si todavía no tenés una seed, podés elegir <strong>"Create a new seed"</strong> — el resto del proceso es el mismo.</div>`,
         den: `In keystore origin, select <strong>"I already have a seed"</strong> to import your existing seed together with the passphrase.<br><br>
-        Tap <strong>Next</strong>.`
+        <div class="info">If you don't have a seed yet, you can choose <strong>"Create a new seed"</strong> — the rest of the process is the same.</div>`
       },
       {
         f: 'mob-electrum-04.png', imgW: 380,
         es: 'Tipo de Semilla ➜ Seleccionar BIP39',
         en: 'Seed Type ➜ Select BIP39',
-        des: `Electrum soporta varios formatos de semilla. Seleccionar <strong>"BIP39"</strong> para que sea compatible con el estándar usado en la mayoría de wallets y hardware wallets.<br><br>
-        <div class="info">Si tu semilla fue generada con Electrum nativo, usar "Electrum". Para semillas de cualquier otra wallet usar BIP39.</div>`,
-        den: `Electrum supports various seed formats. Select <strong>"BIP39"</strong> for compatibility with the standard used in most wallets and hardware wallets.<br><br>
-        <div class="info">If your seed was generated with native Electrum, use "Electrum". For seeds from any other wallet use BIP39.</div>`
+        des: `Seleccionar <strong>"BIP39"</strong> como tipo de semilla.<br><br>
+        Para usar passphrase BIP39 estándar — compatible con cualquier hardware wallet — la seed <strong>tiene que ser tipo BIP39</strong>, no la seed nativa de Electrum.<br><br>
+        <div class="info">Si tu seed fue generada con Electrum nativo (no BIP39), elegí "Electrum". Para seeds de cualquier otra wallet o hardware wallet: BIP39.</div>`,
+        den: `Select <strong>"BIP39"</strong> as the seed type.<br><br>
+        To use the standard BIP39 passphrase — compatible with any hardware wallet — the seed <strong>must be BIP39 type</strong>, not Electrum's native seed.<br><br>
+        <div class="info">If your seed was generated with native Electrum (non-BIP39), choose "Electrum". For seeds from any other wallet or hardware wallet: BIP39.</div>`
       },
       {
         f: 'mob-electrum-05.png', imgW: 380,
         es: 'Ingresar las Palabras de la Semilla',
         en: 'Enter Your Seed Words',
-        des: `Ingresar las 12 o 24 palabras de la semilla en el campo de texto. Electrum valida cada palabra contra el diccionario BIP39 mientras tipeas.<br><br>
-        La passphrase se ingresa en el paso siguiente — en esta pantalla solo van las palabras.`,
-        den: `Enter the 12 or 24 seed words in the text field. Electrum validates each word against the BIP39 dictionary as you type.<br><br>
-        The passphrase is entered in the next step — only the words go here.`
+        des: `Ingresar las 12 o 24 palabras de la semilla. Electrum valida cada palabra contra el diccionario BIP39 mientras tipeas.<br><br>
+        Electrum avisa que las seeds BIP39 pueden importarse para acceder a fondos de otras wallets — es el comportamiento esperado.<br><br>
+        <div class="tip">La passphrase se ingresa en el paso siguiente — en esta pantalla solo van las palabras.</div>`,
+        den: `Enter the 12 or 24 seed words. Electrum validates each word against the BIP39 dictionary as you type.<br><br>
+        Electrum warns that BIP39 seeds can be imported to access funds from other wallets — that's the expected behavior.<br><br>
+        <div class="tip">The passphrase is entered in the next step — only the words go here.</div>`
       },
       {
         f: 'mob-electrum-06.png', imgW: 380,
@@ -3252,12 +3256,14 @@ const SECTIONS = [
         es: 'Ingresar la Passphrase (Custom Words)',
         en: 'Enter the Passphrase (Custom Words)',
         des: `En el campo <strong>"Custom words"</strong> ingresar la passphrase exactamente como fue creada — respetando mayúsculas, minúsculas, espacios y caracteres especiales.<br><br>
+        <div class="tip">💡 La propia pantalla lo sugiere: lo ideal son 5 o 6 palabras sacadas con dados de una lista diceware. Eso garantiza aleatoriedad real, no palabras que uno elegiría naturalmente.</div>
         <div class="fp-compare">
           <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
           <div class="fp-row-pp">🔐 Con passphrase → <code>[E5F6A7B8]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         <div class="warn">⚠️ Un carácter incorrecto deriva una billetera diferente sin ningún aviso.</div>`,
         den: `In the <strong>"Custom words"</strong> field enter the passphrase exactly as it was created — respecting uppercase, lowercase, spaces and special characters.<br><br>
+        <div class="tip">💡 The screen itself suggests it: ideally 5 or 6 words rolled from a diceware list. That guarantees true randomness, not words you'd naturally choose.</div>
         <div class="fp-compare">
           <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
           <div class="fp-row-pp">🔐 With passphrase → <code>[E5F6A7B8]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
@@ -3266,21 +3272,23 @@ const SECTIONS = [
       },
       {
         f: 'mob-electrum-08.png', imgW: 380,
-        es: 'Detectar Cuentas Existentes',
-        en: 'Detect Existing Accounts',
-        des: `Electrum escanea la blockchain para detectar cuentas con historial de transacciones asociadas a esa seed + passphrase.<br><br>
-        Si la billetera tiene fondos previos, los detectará automáticamente. Para una billetera nueva, continuar sin seleccionar nada.`,
-        den: `Electrum scans the blockchain to detect accounts with transaction history associated with that seed + passphrase.<br><br>
-        If the wallet has previous funds, they'll be detected automatically. For a new wallet, continue without selecting anything.`
+        es: 'Tipo de Dirección y Detectar Cuentas',
+        en: 'Address Type and Detect Accounts',
+        des: `Electrum usa <strong>Native SegWit (p2wpkh)</strong> por defecto — ruta <code>m/84'/0'/0'</code>. Es el estándar actual y el más compatible con hardware wallets. Si no sabés qué es, dejarlo como está.<br><br>
+        Luego escanea la blockchain para detectar cuentas con historial asociadas a esa seed + passphrase. Para una billetera nueva, continuar sin seleccionar nada.`,
+        den: `Electrum uses <strong>Native SegWit (p2wpkh)</strong> by default — path <code>m/84'/0'/0'</code>. It's the current standard and most compatible with hardware wallets. If you don't know what this is, leave it as is.<br><br>
+        It then scans the blockchain to detect accounts with history associated with that seed + passphrase. For a new wallet, continue without selecting anything.`
       },
       {
         f: 'mob-electrum-09.png', imgW: 380,
-        es: 'Contraseña de la App (Opcional)',
-        en: 'App Password (Optional)',
-        des: `Electrum ofrece cifrar el archivo de la wallet con una contraseña local. Esta contraseña protege el acceso a la app — <strong>es diferente a la passphrase BIP39</strong>.<br><br>
-        <div class="info">La contraseña de la app es opcional y solo cifra el almacenamiento local. La passphrase BIP39 ya fue aplicada en la derivación de la billetera.</div>`,
-        den: `Electrum offers to encrypt the wallet file with a local password. This password protects app access — <strong>it's different from the BIP39 passphrase</strong>.<br><br>
-        <div class="info">The app password is optional and only encrypts local storage. The BIP39 passphrase was already applied in wallet derivation.</div>`
+        es: 'Contraseña de Acceso a la App',
+        en: 'App Access Password',
+        des: `Electrum pide una contraseña para proteger el acceso local a la app. <strong>No es la passphrase BIP39</strong> — son dos cosas distintas.<br><br>
+        Esta clave solo cifra el archivo de la wallet en este dispositivo. La passphrase ya fue aplicada en la derivación y no se vuelve a pedir acá.<br><br>
+        Electrum muestra el nivel de seguridad de la contraseña. Tocar <strong>Finish</strong> para completar.`,
+        den: `Electrum asks for a password to protect local app access. <strong>This is not the BIP39 passphrase</strong> — they are two different things.<br><br>
+        This password only encrypts the wallet file on this device. The passphrase was already applied during derivation and is not entered here.<br><br>
+        Electrum shows the password strength. Tap <strong>Finish</strong> to complete.`
       },
       {
         f: 'mob-electrum-10.png', imgW: 380,
@@ -3304,18 +3312,20 @@ const SECTIONS = [
         f: 'mob-electrum-12.png', imgW: 380,
         es: 'Wallet Details — Billetera con Passphrase',
         en: 'Wallet Details — Passphrase Wallet',
-        des: `Esta es la pantalla <strong>Wallet Details</strong> de la billetera con passphrase. El fingerprint y el zpub son distintos a los de la billetera base — confirma que la passphrase fue aplicada.<br><br>
+        des: `Esta es la pantalla <strong>Wallet Details</strong> de la billetera con passphrase. El fingerprint y el zpub son completamente distintos a los de la billetera base — esa es la prueba de que la misma seed con passphrase crea una wallet diferente.<br><br>
         <div class="fp-compare">
           <div class="fp-row-std">🔓 Sin passphrase → <code>ac13c7ab</code> — billetera base</div>
           <div class="fp-row-pp">🔐 Con passphrase → <code>fb40479c</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
-        <div class="warn">⚠️ Guardar este fingerprint junto al respaldo de la passphrase para verificar en el futuro.</div>`,
-        den: `This is the <strong>Wallet Details</strong> screen for the passphrase wallet. The fingerprint and zpub differ from the base wallet — confirming the passphrase was applied.<br><br>
+        <div class="warn">⚠️ Guardar este fingerprint junto al respaldo de la passphrase para verificar en el futuro.</div>
+        <div class="info">En Electrum Mobile la passphrase se define al crear la wallet — no se puede agregar después. Si tu wallet no la tiene, creá una nueva con <strong>"Extend seed with custom words"</strong> activado. No hace falta reinstalar la app.</div>`,
+        den: `This is the <strong>Wallet Details</strong> screen for the passphrase wallet. The fingerprint and zpub are completely different from the base wallet — that's the proof that the same seed with a passphrase creates a different wallet.<br><br>
         <div class="fp-compare">
           <div class="fp-row-std">🔓 No passphrase → <code>ac13c7ab</code> — base wallet</div>
           <div class="fp-row-pp">🔐 With passphrase → <code>fb40479c</code> — hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
-        <div class="warn">⚠️ Save this fingerprint alongside your passphrase backup to verify in the future.</div>`
+        <div class="warn">⚠️ Save this fingerprint alongside your passphrase backup to verify in the future.</div>
+        <div class="info">In Electrum Mobile the passphrase is set when creating the wallet — it can't be added later. If your wallet doesn't have one, create a new wallet with <strong>"Extend seed with custom words"</strong> enabled. No need to reinstall the app.</div>`
       },
     ]
   },
