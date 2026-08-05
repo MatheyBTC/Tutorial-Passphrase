@@ -3287,19 +3287,35 @@ const SECTIONS = [
         es: 'Billetera Lista con Passphrase Activa',
         en: 'Wallet Ready with Active Passphrase',
         des: `Electrum carga la billetera derivada de seed + passphrase. La pantalla principal muestra el balance y las direcciones de la billetera oculta.<br><br>
-        <div class="fp-nodev">
-          <div class="fp-nodev-title">Electrum no muestra fingerprint — opciones de verificación</div>
-          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Menú ➜ Wallet ➜ Information · anotar Master Public Key</div>
-          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
-          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit) o <code>m/44'/0'/0'</code> (Legacy)</div>
-        </div>`,
+        Para verificar que la passphrase derivó correctamente, ir a <strong>Menú ➜ Wallet ➜ Wallet Details</strong>. Electrum muestra el <strong>BIP32 fingerprint</strong> y el <strong>Master Public Key (zpub)</strong> de esa billetera.`,
         den: `Electrum loads the wallet derived from seed + passphrase. The main screen shows the balance and addresses of the hidden wallet.<br><br>
-        <div class="fp-nodev">
-          <div class="fp-nodev-title">Electrum doesn't show a fingerprint — verification options</div>
-          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Menu ➜ Wallet ➜ Information · note the Master Public Key</div>
-          <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
-          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit) or <code>m/44'/0'/0'</code> (Legacy)</div>
-        </div>`
+        To verify the passphrase derived correctly, go to <strong>Menu ➜ Wallet ➜ Wallet Details</strong>. Electrum shows the <strong>BIP32 fingerprint</strong> and <strong>Master Public Key (zpub)</strong> for that wallet.`
+      },
+      {
+        f: 'mob-electrum-11.png', imgW: 380,
+        es: 'Wallet Details — Billetera Base (Sin Passphrase)',
+        en: 'Wallet Details — Base Wallet (No Passphrase)',
+        des: `Esta es la pantalla <strong>Wallet Details</strong> de la billetera base (sin passphrase). Anotar el <strong>BIP32 fingerprint</strong> y los últimos caracteres del <strong>Master Public Key</strong> como referencia.<br><br>
+        <div class="info">💡 La billetera base y la billetera con passphrase tienen fingerprints y zpubs <strong>completamente diferentes</strong>. Eso confirma que la derivación fue correcta.</div>`,
+        den: `This is the <strong>Wallet Details</strong> screen for the base wallet (no passphrase). Note the <strong>BIP32 fingerprint</strong> and last characters of the <strong>Master Public Key</strong> as reference.<br><br>
+        <div class="info">💡 The base wallet and passphrase wallet have <strong>completely different</strong> fingerprints and zpubs. That confirms the derivation was correct.</div>`
+      },
+      {
+        f: 'mob-electrum-12.png', imgW: 380,
+        es: 'Wallet Details — Billetera con Passphrase',
+        en: 'Wallet Details — Passphrase Wallet',
+        des: `Esta es la pantalla <strong>Wallet Details</strong> de la billetera con passphrase. El fingerprint y el zpub son distintos a los de la billetera base — confirma que la passphrase fue aplicada.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 Sin passphrase → <code>ac13c7ab</code> — billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase → <code>fb40479c</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+        </div>
+        <div class="warn">⚠️ Guardar este fingerprint junto al respaldo de la passphrase para verificar en el futuro.</div>`,
+        den: `This is the <strong>Wallet Details</strong> screen for the passphrase wallet. The fingerprint and zpub differ from the base wallet — confirming the passphrase was applied.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 No passphrase → <code>ac13c7ab</code> — base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase → <code>fb40479c</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+        </div>
+        <div class="warn">⚠️ Save this fingerprint alongside your passphrase backup to verify in the future.</div>`
       },
     ]
   },
