@@ -180,7 +180,7 @@
     font-family: 'Cascadia Code','Consolas',monospace; color: var(--accent);
   }
 
-  /* TIPS / WARNINGS */
+  /* TIPS/WARNINGS */
   .tip {
     background: rgba(247,147,26,.08); border: 1px solid rgba(247,147,26,.3);
     border-left: 3px solid var(--accent); padding: 10px 14px;
@@ -213,7 +213,7 @@
   .fp-row-pp code { background: rgba(74,144,226,0.18); }
   .fp-here { color: #64b4ff; font-size: 11px; margin-left: 6px; }
 
-  /* INTRO / HERO */
+  /* INTRO/HERO */
   .hero {
     background: linear-gradient(135deg, #1a0f00 0%, #1a1a1a 100%);
     border: 1px solid var(--accent-dim); border-radius: 12px;
@@ -255,7 +255,7 @@
   .block-title { font-size: 16px; font-weight: 700; color: var(--text); }
   .block-count { font-size: 11px; color: var(--muted); margin-left: auto; }
 
-  /* HOME / PORTADA */
+  /* HOME/PORTADA */
   .home-hero { text-align: center; padding: 20px 0 8px; }
   .home-hero h1 { font-size: 28px; font-weight: 800; color: var(--text); margin: 0 0 8px; }
   .home-hero p { font-size: 15px; color: var(--muted); max-width: 560px; margin: 0 auto 14px; line-height: 1.6; }
@@ -529,14 +529,14 @@ const SECTIONS = [
         <strong>Números</strong><br>
         ➜ <code>0 1 2 3 4 5 6 7 8 9</code><br><br>
         <strong>Símbolos y caracteres especiales</strong><br>
-        ➜ <code>! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ \` { | } ~ §</code><br><br>
+        ➜ <code>! " # $ % & ' ( ) * + , - ./: ; < = > ? @ [ \\ ] ^ _ \` { | } ~ §</code><br><br>
         <strong>Espacio</strong><br>
         ➜ Un carácter de espacio en blanco (␣) es válido y forma parte de la passphrase<br><br>
         <strong>Longitud máxima</strong><br>
         ➜ El estándar BIP39 permite hasta <strong>127 caracteres</strong>. Algunos dispositivos aplican sus propios límites:<br>
         &nbsp;&nbsp;&nbsp;- Trezor: hasta 50 caracteres<br>
         &nbsp;&nbsp;&nbsp;- Ledger: hasta 100 caracteres<br>
-        &nbsp;&nbsp;&nbsp;- Jade / BitBox02: hasta 127 caracteres<br><br>
+        &nbsp;&nbsp;&nbsp;- Jade/BitBox02: hasta 127 caracteres<br><br>
         <div class="warn">
         <strong>Importante:</strong> mayúsculas y minúsculas son caracteres distintos. Los espacios al inicio, al final o en el medio también cuentan y forman parte de la passphrase.
         </div>`,
@@ -547,14 +547,14 @@ const SECTIONS = [
         <strong>Numbers</strong><br>
         ➜ <code>0 1 2 3 4 5 6 7 8 9</code><br><br>
         <strong>Symbols and special characters</strong><br>
-        ➜ <code>! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ \` { | } ~ §</code><br><br>
+        ➜ <code>! " # $ % & ' ( ) * + , - ./: ; < = > ? @ [ \\ ] ^ _ \` { | } ~ §</code><br><br>
         <strong>Space</strong><br>
         ➜ A whitespace character (␣) is valid and is part of the passphrase<br><br>
         <strong>Maximum length</strong><br>
         ➜ The BIP39 standard allows up to <strong>127 characters</strong>. Some devices apply their own limits:<br>
         &nbsp;&nbsp;&nbsp;- Trezor: up to 50 characters<br>
         &nbsp;&nbsp;&nbsp;- Ledger: up to 100 characters<br>
-        &nbsp;&nbsp;&nbsp;- Jade / BitBox02: up to 127 characters<br><br>
+        &nbsp;&nbsp;&nbsp;- Jade/BitBox02: up to 127 characters<br><br>
         <div class="warn">
         <strong>Important:</strong> uppercase and lowercase are different characters. Spaces at the beginning, end or middle also count and are part of the passphrase.
         </div>`
@@ -749,10 +749,10 @@ const SECTIONS = [
         Esto es lo que le da rigor al ranking: un método genera su entropía teórica <em>únicamente</em> si su distribución es uniforme. Cualquier sesgo baja H por debajo de log₂(n).<br><br>
         <strong>Aplicado a cada fuente:</strong>
         <div class="entr-math">
-        Moneda justa        → H = log₂(2)    = 1 bit exacto<br>
-        Dado d6 justo       → H = log₂(6)    = 2,585 bits<br>
-        Palabra BIP39       → H = log₂(2048) = 11 bits exactos<br>
-        Papel de frasco     → H &lt; 11 bits, cuánto menos = incuantificable
+        Moneda justa        ➜ H = log₂(2)    = 1 bit exacto<br>
+        Dado d6 justo       ➜ H = log₂(6)    = 2,585 bits<br>
+        Palabra BIP39       ➜ H = log₂(2048) = 11 bits exactos<br>
+        Papel de frasco     ➜ H &lt; 11 bits, cuánto menos = incuantificable
         </div>
         El último caso es el problema del frasco: no conoces las pᵢ reales. No puedes calcular cuánta entropía tienes. Y si no puedes calcularla, no puedes garantizarla.`,
 
@@ -763,10 +763,10 @@ const SECTIONS = [
         This is what gives the ranking its rigor: a method delivers its theoretical entropy <em>only</em> if its distribution is uniform. Any bias drops H below log₂(n).<br><br>
         <strong>Applied to each source:</strong>
         <div class="entr-math">
-        Fair coin           → H = log₂(2)    = 1 bit exact<br>
-        Fair d6             → H = log₂(6)    = 2.585 bits<br>
-        BIP39 word          → H = log₂(2048) = 11 bits exact<br>
-        Paper slip from jar → H &lt; 11 bits, how much less = unquantifiable
+        Fair coin           ➜ H = log₂(2)    = 1 bit exact<br>
+        Fair d6             ➜ H = log₂(6)    = 2.585 bits<br>
+        BIP39 word          ➜ H = log₂(2048) = 11 bits exact<br>
+        Paper slip from jar ➜ H &lt; 11 bits, how much less = unquantifiable
         </div>
         The last case is the jar problem: you don't know the real pᵢ values. You can't calculate how much entropy you have. And if you can't calculate it, you can't guarantee it.`
       },
@@ -811,7 +811,7 @@ const SECTIONS = [
         ➜ <strong>Passport</strong> - fuente de ruido física en el circuito + TRNG del secure element. Dos capas independientes.<br><br>
         <strong>El riesgo del diseño de fuente única:</strong><br><br>
         Si un dispositivo usa un solo generador sin mezcla de fuentes adicionales, la cota deja de aplicar:<br>
-        <div class="entr-math">H_total = H_única → si falla, falla todo</div>
+        <div class="entr-math">H_total = H_única ➜ si falla, falla todo</div>
         El multi-fuente no es un detalle técnico menor - es la diferencia entre un diseño que sobrevive al fallo de un componente y uno que no.`,
 
         den: `This justifies Level 2 (Passport, Jade, Trezor). When you mix multiple independent sources with a cryptographic hash function (SHA-256/512), the <strong>entropy composition lower bound</strong> applies:<br><br>
@@ -823,7 +823,7 @@ const SECTIONS = [
         ➜ <strong>Passport</strong> - physical noise source on the circuit + secure element TRNG. Two independent layers.<br><br>
         <strong>The risk of single-source design:</strong><br><br>
         If a device uses a single generator without mixing additional sources, the bound no longer applies:<br>
-        <div class="entr-math">H_total = H_single → if it fails, everything fails</div>
+        <div class="entr-math">H_total = H_single ➜ if it fails, everything fails</div>
         Multi-source is not a minor technical detail - it's the difference between a design that survives component failure and one that doesn't.`
       },
       {
@@ -948,18 +948,18 @@ const SECTIONS = [
         f: 'hw-jade-06.png',
         es: 'Passphrase Activa -Pantalla de Inicio con Fingerprint',
         en: 'Passphrase Active -Home Screen with Fingerprint',
-        des: `Tras aplicar la passphrase, Jade regresa a la pantalla de inicio en estado <strong>Ready / initialized</strong>.<br><br>
-        En la esquina superior izquierda verás el <strong>fingerprint de la wallet activa</strong> (ej. <code>808B18</code>). Este código es único para cada combinación seed + passphrase — diferente al de la billetera sin passphrase.<br><br>
+        des: `Tras aplicar la passphrase, Jade regresa a la pantalla de inicio en estado <strong>Ready/initialized</strong>.<br><br>
+        En la esquina superior izquierda verás el <strong>fingerprint de la wallet activa</strong> (ej. <code>808B18</code>). Este código es único para cada combinación seed + passphrase - diferente al de la billetera sin passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[808B18]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[808B18]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         <div class="tip">Anota este fingerprint y guardalo de forma segura. Cada sesión que ingreses la passphrase correcta verás el mismo código -si difiere, hubo un error de tipeo.</div>`,
-        den: `After applying the passphrase, Jade returns to the home screen in <strong>Ready / initialized</strong> state.<br><br>
-        In the top-left corner you'll see the <strong>active wallet fingerprint</strong> (e.g. <code>808B18</code>). This code is unique to each seed + passphrase combination — different from the wallet without passphrase.<br><br>
+        den: `After applying the passphrase, Jade returns to the home screen in <strong>Ready/initialized</strong> state.<br><br>
+        In the top-left corner you'll see the <strong>active wallet fingerprint</strong> (e.g. <code>808B18</code>). This code is unique to each seed + passphrase combination - different from the wallet without passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[808B18]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[808B18]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         <div class="tip">Write down this fingerprint and store it safely. Every session you enter the correct passphrase you'll see the same code -if it differs, there was a typo.</div>`
       },
@@ -1031,18 +1031,18 @@ const SECTIONS = [
         f: 'hw-jade-plus-06.png',
         es: 'Fingerprint -Verificar la Wallet Activa',
         en: 'Fingerprint -Verify the Active Wallet',
-        des: `Al aplicar la passphrase, Jade Plus regresa a la pantalla de inicio. El <strong>fingerprint en la esquina inferior derecha cambia</strong> — ese nuevo código identifica únicamente la combinación seed + passphrase.<br><br>
+        des: `Al aplicar la passphrase, Jade Plus regresa a la pantalla de inicio. El <strong>fingerprint en la esquina inferior derecha cambia</strong> - ese nuevo código identifica únicamente la combinación seed + passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[8D688EA0]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[8D688EA0]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         <strong>Primera vez:</strong> anota este fingerprint en papel y guardalo separado de tu seed y passphrase.<br>
         <strong>Sesiones siguientes:</strong> si el fingerprint coincide ➜ passphrase ingresada correctamente.<br><br>
         <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase. No operés hasta verificar.</div>`,
-        den: `When the passphrase is applied, Jade Plus returns to the home screen. The <strong>fingerprint in the lower right corner changes</strong> — that new code uniquely identifies the seed + passphrase combination.<br><br>
+        den: `When the passphrase is applied, Jade Plus returns to the home screen. The <strong>fingerprint in the lower right corner changes</strong> - that new code uniquely identifies the seed + passphrase combination.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[8D688EA0]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[8D688EA0]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         <strong>First time:</strong> write down this fingerprint on paper and store it separate from your seed and passphrase.<br>
         <strong>Subsequent sessions:</strong> if the fingerprint matches ➜ passphrase entered correctly.<br><br>
@@ -1115,11 +1115,11 @@ const SECTIONS = [
         en: 'Type the Passphrase',
         des: `El dispositivo muestra la fuerza y el largo de la passphrase ingresada hasta el momento.<br><br>
         Ej. de la foto: <strong>strength: maximum plausible | passphrase length: 14</strong>.<br><br>
-        Al terminar, confirmar con <strong>OK / ✓</strong>.<br><br>
+        Al terminar, confirmar con <strong>OK/✓</strong>.<br><br>
         <div class="tip">La passphrase aparece oculta en pantalla. Tomá tu tiempo para ingresar cada carácter correctamente.</div>`,
         den: `The device shows the strength and length of the passphrase entered so far.<br><br>
         E.g. from the photo: <strong>strength: maximum plausible | passphrase length: 14</strong>.<br><br>
-        When done, confirm with <strong>OK / ✓</strong>.<br><br>
+        When done, confirm with <strong>OK/✓</strong>.<br><br>
         <div class="tip">The passphrase is hidden on screen. Take your time to enter each character correctly.</div>`
       },
       {
@@ -1128,8 +1128,8 @@ const SECTIONS = [
         en: 'Apply -Confirm the New Wallet Fingerprint',
         des: `La Mk4 muestra el <strong>master key fingerprint</strong> de la billetera creada al sumar la passphrase a la seed maestra.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[140ABEF0]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[140ABEF0]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         - Primera vez: anotar el fingerprint en papel, guardarlo separado de la seed<br>
         - Sesiones siguientes: si el fingerprint coincide ➜ passphrase ingresada correctamente<br><br>
@@ -1137,8 +1137,8 @@ const SECTIONS = [
         <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase | cancelar antes de cualquier transacción.</div>`,
         den: `Mk4 shows the <strong>master key fingerprint</strong> of the wallet created by adding the passphrase to the master seed.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[140ABEF0]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[140ABEF0]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         - First time: write down the fingerprint on paper, store it separate from the seed<br>
         - Future sessions: if fingerprint matches ➜ passphrase entered correctly<br><br>
@@ -1151,17 +1151,17 @@ const SECTIONS = [
         en: 'Done -New Fingerprint Active',
         des: `La Coldcard Mk4 confirma que la wallet con passphrase está activa mostrando el <strong>nuevo fingerprint</strong>.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[140ABEF0]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[140ABEF0]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
-        Al apagar y volver a encender, la Mk4 regresa a la billetera base — la passphrase debe ingresarse nuevamente en cada sesión.<br><br>
+        Al apagar y volver a encender, la Mk4 regresa a la billetera base - la passphrase debe ingresarse nuevamente en cada sesión.<br><br>
         <div class="info">Opción MicroSD cifrado (avanzado): puedes guardar la passphrase en MicroSD con AES-256. En sesiones futuras ➜ <strong>Passphrase ➜ Restore Saved</strong> ➜ verificar primera letra + longitud ➜ confirmar fingerprint.</div>`,
         den: `Coldcard Mk4 confirms the passphrase wallet is active by showing the <strong>new fingerprint</strong>.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[140ABEF0]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[140ABEF0]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
-        When powered off and back on, Mk4 returns to the base wallet — the passphrase must be entered again each session.<br><br>
+        When powered off and back on, Mk4 returns to the base wallet - the passphrase must be entered again each session.<br><br>
         <div class="info">Encrypted MicroSD option (advanced): you can store the passphrase on MicroSD with AES-256. In future sessions ➜ <strong>Passphrase ➜ Restore Saved</strong> ➜ verify first letter + length ➜ confirm fingerprint.</div>`
       },
     ]
@@ -1239,11 +1239,11 @@ const SECTIONS = [
         en: 'Type the Passphrase',
         des: `Se elige entre <strong>letters | numbers | symbols + space</strong>.<br><br>
         Ej. de la foto: <strong>8x33</strong>.<br><br>
-        Al terminar, confirmar con <strong>OK / ✓</strong>.<br><br>
+        Al terminar, confirmar con <strong>OK/✓</strong>.<br><br>
         <div class="tip">La passphrase aparece oculta en pantalla. Tomá tu tiempo para ingresar cada carácter correctamente.</div>`,
         den: `Choose between <strong>letters | numbers | symbols + space</strong>.<br><br>
         E.g. from the photo: <strong>8x33</strong>.<br><br>
-        When done, confirm with <strong>OK / ✓</strong>.<br><br>
+        When done, confirm with <strong>OK/✓</strong>.<br><br>
         <div class="tip">The passphrase is hidden on screen. Take your time to enter each character correctly.</div>`
       },
       {
@@ -1252,16 +1252,16 @@ const SECTIONS = [
         en: 'Apply -Confirm the New Wallet Fingerprint',
         des: `La Mk5 muestra el <strong>master key fingerprint</strong> de la billetera creada al sumar la passphrase a la seed maestra.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[F653F165]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[F653F165]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         - Primera vez: anotar el fingerprint en papel, guardarlo separado de la seed<br>
         - Sesiones siguientes: si el fingerprint coincide ➜ passphrase ingresada correctamente<br><br>
         <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase | cancelar antes de continuar.</div>`,
         den: `Mk5 shows the <strong>master key fingerprint</strong> of the wallet created by adding the passphrase to the master seed.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[F653F165]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[F653F165]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         - First time: write down the fingerprint on paper, store it separate from the seed<br>
         - Future sessions: if fingerprint matches ➜ passphrase entered correctly<br><br>
@@ -1331,12 +1331,12 @@ const SECTIONS = [
         des: `Escribes la passphrase <strong>directamente con el teclado QWERTY físico</strong> -igual que en una computadora.<br><br>
         Verificar el fingerprint de la sesión actual.<br>
         Ej. de la foto: <strong>[BR034270]</strong> - cadena única para esta billetera.<br><br>
-        Confirmar con <strong>Enter / OK</strong> al terminar.<br><br>
+        Confirmar con <strong>Enter/OK</strong> al terminar.<br><br>
         <div class="tip">La Q es ideal para passphrases largas (20+ caracteres) o con símbolos especiales | en Mk4/Mk5 el mismo proceso toma mucho más tiempo.</div>`,
         den: `Type the passphrase <strong>directly with the physical QWERTY keyboard</strong> -just like on a computer.<br><br>
         Verify the current session fingerprint.<br>
         E.g. from the photo: <strong>[BR034270]</strong> - unique string for this wallet.<br><br>
-        Confirm with <strong>Enter / OK</strong> when done.<br><br>
+        Confirm with <strong>Enter/OK</strong> when done.<br><br>
         <div class="tip">The Q is ideal for long passphrases (20+ characters) or ones with special symbols | on Mk4/Mk5 the same process takes much longer.</div>`
       },
       {
@@ -1345,16 +1345,16 @@ const SECTIONS = [
         en: 'Confirm the New Wallet Fingerprint',
         des: `La Q muestra el <strong>master key fingerprint</strong> de la billetera creada al sumar la passphrase a la seed maestra.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[E2F33247]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[E2F33247]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         - Primera vez: anotar en papel, guardar separado de la seed<br>
         - Sesiones siguientes: verificar que coincide antes de operar<br><br>
         <div class="warn">⚠️ Fingerprint diferente al esperado = typo en la passphrase | cancelar antes de cualquier transacción.</div>`,
         den: `The Q shows the <strong>master key fingerprint</strong> of the wallet created by adding the passphrase to the master seed.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[E2F33247]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[E2F33247]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         - First time: write on paper, store separate from the seed<br>
         - Future sessions: verify it matches before operating<br><br>
@@ -1509,10 +1509,10 @@ const SECTIONS = [
         es: 'Ingresar Passphrase -Solo en el Dispositivo Físico',
         en: 'Enter Passphrase -Only on the Physical Device',
         des: `Al reconectar, el <strong>dispositivo físico</strong> muestra el teclado <strong>"Optional passphrase"</strong> en su pantalla OLED.<br><br>
-        Navegá por los grupos de letras (abcd / efgh / ijklm / nopq / rstuv / wxyz / ABC ▼) con los controles táctiles del dispositivo y escribe tu passphrase carácter por carácter.<br><br>
+        Navegá por los grupos de letras (abcd/efgh/ijklm/nopq/rstuv/wxyz/ABC ▼) con los controles táctiles del dispositivo y escribe tu passphrase carácter por carácter.<br><br>
         <div class="warn">⚠️ La passphrase se ingresa <strong>ÚNICAMENTE en el dispositivo físico</strong> -nunca en la computadora ni en la BitBoxApp. Esto protege contra keyloggers y malware.</div>`,
         den: `When reconnecting, the <strong>physical device</strong> shows the <strong>"Optional passphrase"</strong> keyboard on its OLED screen.<br><br>
-        Navigate through letter groups (abcd / efgh / ijklm / nopq / rstuv / wxyz / ABC ▼) with the device's touch controls and type your passphrase character by character.<br><br>
+        Navigate through letter groups (abcd/efgh/ijklm/nopq/rstuv/wxyz/ABC ▼) with the device's touch controls and type your passphrase character by character.<br><br>
         <div class="warn">⚠️ The passphrase is entered <strong>ONLY on the physical device</strong> -never on the computer or in BitBoxApp. This protects against keyloggers and malware.</div>`
       },
       {
@@ -1521,15 +1521,15 @@ const SECTIONS = [
         en: 'Verify -Root Fingerprint Changed',
         des: `Tras ingresar la passphrase en el dispositivo, la BitBoxApp regresa a <strong>Administrar dispositivo</strong>. Verificar que el <strong>Root fingerprint cambió</strong> respecto al valor original.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[630e4904]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[nuevo valor]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[630e4904]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[nuevo valor]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         La opción Passphrase ahora muestra <strong>"Activado"</strong>.<br><br>
         <div class="tip">Guarda el nuevo Root fingerprint en un lugar seguro. Cada sesión que ingreses la passphrase correcta deberías ver ese mismo valor -si difiere, hubo un error de tipeo.</div>`,
         den: `After entering the passphrase on the device, BitBoxApp returns to <strong>Manage device</strong>. Verify that the <strong>Root fingerprint changed</strong> from the original value.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[630e4904]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[new value]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[630e4904]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[new value]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         The Passphrase option now shows <strong>"Enabled"</strong>.<br><br>
         <div class="tip">Save the new Root fingerprint in a safe place. Every session you enter the correct passphrase you should see this same value -if it differs, there was a typo.</div>`
@@ -1685,15 +1685,15 @@ const SECTIONS = [
         en: 'Verify -Root Fingerprint Changed',
         des: `Tras ingresar la passphrase en el dispositivo, la BitBoxApp regresa a <strong>Administrar dispositivo</strong>. Verificar que el <strong>Root fingerprint cambió</strong> respecto al valor original.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[valor original]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[nuevo valor]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[valor original]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[nuevo valor]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         La opción Passphrase ahora muestra <strong>"Activado"</strong>.<br><br>
         <div class="tip">Guarda el nuevo Root fingerprint. Cada sesión que ingreses la passphrase correcta deberías ver ese mismo valor.</div>`,
         den: `After entering the passphrase on the device, BitBoxApp returns to <strong>Manage device</strong>. Verify that the <strong>Root fingerprint changed</strong> from the original value.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[original value]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[new value]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[original value]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[new value]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         The Passphrase option now shows <strong>"Enabled"</strong>.<br><br>
         <div class="tip">Save the new Root fingerprint. Every session you enter the correct passphrase you should see this same value.</div>`
@@ -2166,10 +2166,10 @@ const SECTIONS = [
         f: 'hw-suite-mob-10.png', imgW: 380,
         es: 'Dispositivo - Teclado "Ingresa Passphrase"',
         en: 'Device - "Enter Passphrase" Keyboard',
-        des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> con grupos de letras: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> con grupos de letras: abc/def/ghi/jkl/mno/pq/rst/uvw/xyz/*#.<br><br>
         Tocar cada grupo para seleccionar el carácter, navegar entre letras del grupo, y confirmar con <strong>✓</strong> al terminar.<br><br>
         <div class="warn">⚠️ La passphrase es case-sensitive. Un carácter incorrecto abre una billetera diferente sin aviso.</div>`,
-        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard with letter groups: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard with letter groups: abc/def/ghi/jkl/mno/pq/rst/uvw/xyz/*#.<br><br>
         Tap each group to select the character, navigate between letters in the group, and confirm with <strong>✓</strong> when done.<br><br>
         <div class="warn">⚠️ The passphrase is case-sensitive. One wrong character opens a different wallet without warning.</div>`
       },
@@ -2229,7 +2229,7 @@ const SECTIONS = [
         des: `Al abrir una billetera con passphrase, el Model T muestra el teclado táctil para ingresar la frase directamente en el dispositivo.<br><br>
         Ingresar la passphrase y confirmar con ✓. Suite abre la billetera derivada.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">Trezor no muestra fingerprint — opciones de verificación</div>
+          <div class="fp-nodev-title">Trezor no muestra fingerprint - opciones de verificación</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
@@ -2237,7 +2237,7 @@ const SECTIONS = [
         den: `When opening a passphrase wallet, Model T shows the touch keyboard to enter the phrase directly on the device.<br><br>
         Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">Trezor doesn't show a fingerprint — verification options</div>
+          <div class="fp-nodev-title">Trezor doesn't show a fingerprint - verification options</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
@@ -2289,14 +2289,14 @@ const SECTIONS = [
         en: 'Device - Wallet Loaded',
         des: `Tras confirmar la passphrase, Suite carga la billetera derivada.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">Trezor no muestra fingerprint — opciones de verificación</div>
+          <div class="fp-nodev-title">Trezor no muestra fingerprint - opciones de verificación</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
         </div>`,
         den: `After confirming the passphrase, Suite loads the derived wallet.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">Trezor doesn't show a fingerprint — verification options</div>
+          <div class="fp-nodev-title">Trezor doesn't show a fingerprint - verification options</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
@@ -2338,7 +2338,7 @@ const SECTIONS = [
         des: `El Safe 5 muestra el teclado táctil para ingresar la passphrase. El <strong>feedback háptico</strong> (vibración) confirma cada carácter tocado, ayudando a evitar errores.<br><br>
         Ingresar la passphrase y confirmar con ✓. Suite abre la billetera derivada.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">Trezor no muestra fingerprint — opciones de verificación</div>
+          <div class="fp-nodev-title">Trezor no muestra fingerprint - opciones de verificación</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
@@ -2346,7 +2346,7 @@ const SECTIONS = [
         den: `Safe 5 shows the touch keyboard to enter the passphrase. <strong>Haptic feedback</strong> (vibration) confirms each tapped character, helping avoid mistakes.<br><br>
         Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">Trezor doesn't show a fingerprint — verification options</div>
+          <div class="fp-nodev-title">Trezor doesn't show a fingerprint - verification options</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
@@ -2385,18 +2385,18 @@ const SECTIONS = [
         f: 'hw-trezor-safe7-new-02.png', imgW: 280,
         es: 'Dispositivo - Teclado Táctil del Safe 7',
         en: 'Device - Safe 7 Touch Keyboard',
-        des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> en su pantalla táctil. Grupos de letras: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> en su pantalla táctil. Grupos de letras: abc/def/ghi/jkl/mno/pq/rst/uvw/xyz/*#.<br><br>
         Tocar cada grupo para seleccionar el carácter, confirmar con ✓. La passphrase se ingresa completamente en el hardware.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">Trezor no muestra fingerprint — opciones de verificación</div>
+          <div class="fp-nodev-title">Trezor no muestra fingerprint - opciones de verificación</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
         </div>`,
-        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard on its touchscreen. Letter groups: abc / def / ghi / jkl / mno / pq / rst / uvw / xyz / *#.<br><br>
+        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard on its touchscreen. Letter groups: abc/def/ghi/jkl/mno/pq/rst/uvw/xyz/*#.<br><br>
         Tap each group to select the character, confirm with ✓. Passphrase is entered entirely on hardware.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">Trezor doesn't show a fingerprint — verification options</div>
+          <div class="fp-nodev-title">Trezor doesn't show a fingerprint - verification options</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
@@ -2424,15 +2424,15 @@ const SECTIONS = [
       },
       {
         f: 'hw-seedsigner-02.png',
-        es: 'Seeds ➜ Load a Seed / Create a Seed',
-        en: 'Seeds ➜ Load a Seed / Create a Seed',
+        es: 'Seeds ➜ Load a Seed/Create a Seed',
+        en: 'Seeds ➜ Load a Seed/Create a Seed',
         des: `El menú Seeds muestra las opciones disponibles:<br><br>
-        - <strong>Load a Seed</strong> → cargar semilla existente (ingresando las palabras manualmente o escaneando un SeedQR)<br>
-        - <strong>Create a Seed</strong> → generar una nueva semilla desde el propio dispositivo<br><br>
+        - <strong>Load a Seed</strong> ➜ cargar semilla existente (ingresando las palabras manualmente o escaneando un SeedQR)<br>
+        - <strong>Create a Seed</strong> ➜ generar una nueva semilla desde el propio dispositivo<br><br>
         La opción de passphrase BIP39 aparece <strong>en ambos flujos</strong> al finalizar la carga. Este tutorial muestra el flujo "Create a Seed" para demostrar el proceso completo.`,
         den: `The Seeds menu shows the available options:<br><br>
-        - <strong>Load a Seed</strong> → load existing seed (manually typing words or scanning a SeedQR)<br>
-        - <strong>Create a Seed</strong> → generate a new seed on the device<br><br>
+        - <strong>Load a Seed</strong> ➜ load existing seed (manually typing words or scanning a SeedQR)<br>
+        - <strong>Create a Seed</strong> ➜ generate a new seed on the device<br><br>
         The BIP39 passphrase option appears <strong>in both flows</strong> when finalizing the load. This tutorial shows the "Create a Seed" flow to demonstrate the full process.`
       },
       {
@@ -2449,12 +2449,12 @@ const SECTIONS = [
         es: 'Longitud de la Semilla -12 o 24 Palabras',
         en: 'Seed Length -12 or 24 Words',
         des: `Elegir la longitud de la semilla:<br><br>
-        - <strong>12 palabras</strong> → 128 bits de entropía<br>
-        - <strong>24 palabras</strong> → 256 bits de entropía<br><br>
+        - <strong>12 palabras</strong> ➜ 128 bits de entropía<br>
+        - <strong>24 palabras</strong> ➜ 256 bits de entropía<br><br>
         Ambas son seguras. Las 24 palabras ofrecen el doble de entropía de la seed -sin cambiar la seguridad de la passphrase, que es independiente.`,
         den: `Choose the seed length:<br><br>
-        - <strong>12 words</strong> → 128 bits of entropy<br>
-        - <strong>24 words</strong> → 256 bits of entropy<br><br>
+        - <strong>12 words</strong> ➜ 128 bits of entropy<br>
+        - <strong>24 words</strong> ➜ 256 bits of entropy<br><br>
         Both are secure. 24 words offer double the seed entropy -without changing passphrase security, which is independent.`
       },
       {
@@ -2507,13 +2507,13 @@ const SECTIONS = [
         es: 'Finalize Seed ➜ BIP-39 Passphrase',
         en: 'Finalize Seed ➜ BIP-39 Passphrase',
         des: `Pantalla clave: <strong>"Finalize Seed"</strong> muestra dos opciones:<br><br>
-        - <strong>Done</strong> → finalizar sin passphrase (usa la semilla estándar, passphrase vacía)<br>
-        - <strong>BIP-39 Passphrase</strong> → agregar una passphrase a la semilla<br><br>
+        - <strong>Done</strong> ➜ finalizar sin passphrase (usa la semilla estándar, passphrase vacía)<br>
+        - <strong>BIP-39 Passphrase</strong> ➜ agregar una passphrase a la semilla<br><br>
         Seleccionar <strong>"BIP-39 Passphrase"</strong> para continuar con la configuración.<br><br>
         <div class="info">Esta pantalla aparece igual al cargar una semilla existente (Load a Seed) o al crear una nueva (Create a Seed).</div>`,
         den: `Key screen: <strong>"Finalize Seed"</strong> shows two options:<br><br>
-        - <strong>Done</strong> → finalize without passphrase (uses standard seed, empty passphrase)<br>
-        - <strong>BIP-39 Passphrase</strong> → add a passphrase to the seed<br><br>
+        - <strong>Done</strong> ➜ finalize without passphrase (uses standard seed, empty passphrase)<br>
+        - <strong>BIP-39 Passphrase</strong> ➜ add a passphrase to the seed<br><br>
         Select <strong>"BIP-39 Passphrase"</strong> to continue with setup.<br><br>
         <div class="info">This screen appears the same when loading an existing seed (Load a Seed) or creating a new one (Create a Seed).</div>`
       },
@@ -2535,16 +2535,16 @@ const SECTIONS = [
         des: `SeedSigner muestra la passphrase ingresada para revisión visual antes de confirmar.<br><br>
         <strong>Verificar cada carácter</strong> -mayúsculas, minúsculas, espacios, símbolos. Si hay un error, volver atrás y corregir.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">SeedSigner no almacena — verificar en el coordinador</div>
-          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🖥️ Master Fingerprint</span>aparece en Sparrow / Specter al importar el xpub · anotar</div>
+          <div class="fp-nodev-title">SeedSigner no almacena - verificar en el coordinador</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🖥️ Master Fingerprint</span>aparece en Sparrow/Specter al importar el xpub · anotar</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub</span>exportar QR desde SeedSigner ➜ escanear en coordinador ➜ anotar xpub</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit) · visible en el coordinador</div>
         </div>`,
         den: `SeedSigner shows the entered passphrase for visual review before confirming.<br><br>
         <strong>Verify every character</strong> -uppercase, lowercase, spaces, symbols. If there's an error, go back and correct.<br><br>
         <div class="fp-nodev">
-          <div class="fp-nodev-title">SeedSigner doesn't store data — verify in the coordinator</div>
-          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🖥️ Master Fingerprint</span>appears in Sparrow / Specter when importing the xpub · note it down</div>
+          <div class="fp-nodev-title">SeedSigner doesn't store data - verify in the coordinator</div>
+          <div class="fp-nodev-row"><span class="fp-nodev-row-label">🖥️ Master Fingerprint</span>appears in Sparrow/Specter when importing the xpub · note it down</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub</span>export QR from SeedSigner ➜ scan in coordinator ➜ note the xpub</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit) · visible in the coordinator</div>
         </div>`
@@ -2629,18 +2629,18 @@ const SECTIONS = [
         f: 'hw-passport-07.png', imgW: 340,
         es: 'Verificar el Master Fingerprint',
         en: 'Verify the Master Fingerprint',
-        des: `Passport muestra el <strong>Master Fingerprint</strong> de la billetera iniciada — corresponde a la combinación seed + passphrase.<br><br>
+        des: `Passport muestra el <strong>Master Fingerprint</strong> de la billetera iniciada - corresponde a la combinación seed + passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[715498ES]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[715498ES]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         - Primera vez: anotar en papel, guardar separado de la seed<br>
         - Sesiones futuras: verificar que coincide antes de operar<br><br>
         <div class="warn">⚠️ La passphrase no persiste entre sesiones. Cada vez: PIN del dispositivo + passphrase.</div>`,
-        den: `Passport shows the <strong>Master Fingerprint</strong> of the wallet opened — corresponds to the seed + passphrase combination.<br><br>
+        den: `Passport shows the <strong>Master Fingerprint</strong> of the wallet opened - corresponds to the seed + passphrase combination.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[715498ES]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[715498ES]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         - First time: write on paper, store separate from the seed<br>
         - Future sessions: verify it matches before operating<br><br>
@@ -2840,9 +2840,9 @@ const SECTIONS = [
         es: 'Nombre de la Wallet',
         en: 'Wallet Name',
         des: `Sparrow pide un nombre para el archivo de la wallet. Ingresar el nombre y hacer clic en <strong>Create Wallet</strong>.<br><br>
-        El nombre es solo local — no afecta la derivación ni la passphrase.`,
+        El nombre es solo local - no afecta la derivación ni la passphrase.`,
         den: `Sparrow asks for a wallet file name. Enter the name and click <strong>Create Wallet</strong>.<br><br>
-        The name is local only — it doesn't affect derivation or the passphrase.`
+        The name is local only - it doesn't affect derivation or the passphrase.`
       },
       {
         f: 'sw-sparrow-03.png',
@@ -2858,9 +2858,9 @@ const SECTIONS = [
         es: 'Keystore ➜ New or Imported Software Wallet',
         en: 'Keystore ➜ New or Imported Software Wallet',
         des: `Sparrow muestra la pantalla de configuración con cuatro opciones de keystore. Seleccionar <strong>"New or Imported Software Wallet"</strong>.<br><br>
-        Policy Type: <strong>Single Signature</strong> / Script Type: <strong>Native SegWit (P2WPKH)</strong> — dejar como está.`,
+        Policy Type: <strong>Single Signature</strong>/Script Type: <strong>Native SegWit (P2WPKH)</strong> - dejar como está.`,
         den: `Sparrow shows the settings screen with four keystore options. Select <strong>"New or Imported Software Wallet"</strong>.<br><br>
-        Policy Type: <strong>Single Signature</strong> / Script Type: <strong>Native SegWit (P2WPKH)</strong> — leave as is.`
+        Policy Type: <strong>Single Signature</strong>/Script Type: <strong>Native SegWit (P2WPKH)</strong> - leave as is.`
       },
       {
         f: 'sw-sparrow-05.png',
@@ -2875,9 +2875,9 @@ const SECTIONS = [
         f: 'sw-sparrow-06.png',
         es: 'Ingresar la Seed ➜ Activar "Use Passphrase?"',
         en: 'Enter Seed ➜ Enable "Use Passphrase?"',
-        des: `Ingresar las palabras de la seed una por una. Sparrow valida el checksum en tiempo real — aparece <strong>✅ Valid checksum</strong> cuando son correctas.<br><br>
+        des: `Ingresar las palabras de la seed una por una. Sparrow valida el checksum en tiempo real - aparece <strong>✅ Valid checksum</strong> cuando son correctas.<br><br>
         Una vez ingresadas todas las palabras, activar el checkbox <strong>"Use passphrase?"</strong> antes de continuar.`,
-        den: `Enter the seed words one by one. Sparrow validates the checksum in real time — <strong>✅ Valid checksum</strong> appears when correct.<br><br>
+        den: `Enter the seed words one by one. Sparrow validates the checksum in real time - <strong>✅ Valid checksum</strong> appears when correct.<br><br>
         Once all words are entered, enable the <strong>"Use passphrase?"</strong> checkbox before continuing.`
       },
       {
@@ -2894,19 +2894,19 @@ const SECTIONS = [
         es: 'Ingresar la Passphrase',
         en: 'Enter the Passphrase',
         des: `Sparrow muestra el campo <strong>Passphrase</strong> debajo de las palabras. Ingresar la passphrase exactamente como fue creada.<br><br>
-        El placeholder sugiere: <em>"5/6 words from diceware"</em> — la propia app recomienda usar palabras aleatorias sacadas con dados para garantizar entropía real.<br><br>
+        El placeholder sugiere: <em>"5/6 words from diceware"</em> - la propia app recomienda usar palabras aleatorias sacadas con dados para garantizar entropía real.<br><br>
         <div class="warn">⚠️ La passphrase se tipea en la computadora. Asegurate de estar en un entorno seguro sin malware ni keyloggers.</div>`,
         den: `Sparrow shows the <strong>Passphrase</strong> field below the words. Enter the passphrase exactly as it was created.<br><br>
-        The placeholder suggests: <em>"5/6 words from diceware"</em> — the app itself recommends using randomly rolled words to ensure real entropy.<br><br>
+        The placeholder suggests: <em>"5/6 words from diceware"</em> - the app itself recommends using randomly rolled words to ensure real entropy.<br><br>
         <div class="warn">⚠️ The passphrase is typed on the computer. Make sure you're in a safe environment without malware or keyloggers.</div>`
       },
       {
         f: 'sw-sparrow-09.png',
         es: 'Ruta de Derivación ➜ Import Keystore',
         en: 'Derivation Path ➜ Import Keystore',
-        des: `Sparrow muestra <strong>"Mnemonic Words (BIP39) — Ready to import"</strong> con la ruta de derivación <code>m/84'/0'/0'</code> (Native SegWit).<br><br>
+        des: `Sparrow muestra <strong>"Mnemonic Words (BIP39) - Ready to import"</strong> con la ruta de derivación <code>m/84'/0'/0'</code> (Native SegWit).<br><br>
         Hacer clic en <strong>Import Keystore</strong> para que Sparrow derive la billetera con la seed + passphrase.`,
-        den: `Sparrow shows <strong>"Mnemonic Words (BIP39) — Ready to import"</strong> with derivation path <code>m/84'/0'/0'</code> (Native SegWit).<br><br>
+        den: `Sparrow shows <strong>"Mnemonic Words (BIP39) - Ready to import"</strong> with derivation path <code>m/84'/0'/0'</code> (Native SegWit).<br><br>
         Click <strong>Import Keystore</strong> to let Sparrow derive the wallet from seed + passphrase.`
       },
       {
@@ -2915,31 +2915,31 @@ const SECTIONS = [
         en: 'Confirm Passphrase ➜ Note Fingerprint (No Passphrase)',
         des: `Sparrow pide re-ingresar la passphrase para confirmar. Con el campo vacío ya muestra el <strong>Master fingerprint</strong> de la seed <em>sin</em> passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>ac13c7ab</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[tu valor]</code> — billetera oculta <span class="fp-here">← vas a estar aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>ac13c7ab</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[tu valor]</code> - billetera oculta <span class="fp-here">← vas a estar aquí</span></div>
         </div>
         Sparrow avisa: <em>"Note the master fingerprint before proceeding!"</em>`,
         den: `Sparrow asks you to re-enter the passphrase to confirm. With the field empty it already shows the <strong>Master fingerprint</strong> of the seed <em>without</em> passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>ac13c7ab</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[your value]</code> — hidden wallet <span class="fp-here">← you'll be here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>ac13c7ab</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[your value]</code> - hidden wallet <span class="fp-here">← you'll be here</span></div>
         </div>
         Sparrow warns: <em>"Note the master fingerprint before proceeding!"</em>`
       },
       {
         f: 'sw-sparrow-11.png',
-        es: 'Fingerprint con Passphrase — Anotar y Confirmar',
-        en: 'Fingerprint with Passphrase — Note and Confirm',
-        des: `Al ingresar la passphrase en el campo, el fingerprint cambia en tiempo real. <strong>Ese es el fingerprint de tu billetera con passphrase</strong> — anotarlo.<br><br>
+        es: 'Fingerprint con Passphrase - Anotar y Confirmar',
+        en: 'Fingerprint with Passphrase - Note and Confirm',
+        des: `Al ingresar la passphrase en el campo, el fingerprint cambia en tiempo real. <strong>Ese es el fingerprint de tu billetera con passphrase</strong> - anotarlo.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>ac13c7ab</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>31954b76</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>ac13c7ab</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>31954b76</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         Hacer clic en <strong>Aceptar</strong> para importar el keystore.`,
-        den: `When you enter the passphrase in the field, the fingerprint changes in real time. <strong>That's the fingerprint for your passphrase wallet</strong> — write it down.<br><br>
+        den: `When you enter the passphrase in the field, the fingerprint changes in real time. <strong>That's the fingerprint for your passphrase wallet</strong> - write it down.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>ac13c7ab</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>31954b76</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>ac13c7ab</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>31954b76</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         Click <strong>Accept</strong> to import the keystore.`
       },
@@ -2951,20 +2951,20 @@ const SECTIONS = [
         • <strong>Master fingerprint:</strong> <code>31954b76</code><br>
         • <strong>Derivation:</strong> <code>m/84'/0'/0'</code><br>
         • <strong>xpub/zpub:</strong> clave pública maestra (anotar los últimos 6 dígitos)<br><br>
-        En sesiones futuras, al cargar la misma seed + passphrase, el fingerprint debe coincidir — confirma que todo fue ingresado correctamente.`,
+        En sesiones futuras, al cargar la misma seed + passphrase, el fingerprint debe coincidir - confirma que todo fue ingresado correctamente.`,
         den: `Sparrow shows the imported keystore with all verification information:<br><br>
         • <strong>Master fingerprint:</strong> <code>31954b76</code><br>
         • <strong>Derivation:</strong> <code>m/84'/0'/0'</code><br>
         • <strong>xpub/zpub:</strong> master public key (note the last 6 digits)<br><br>
-        In future sessions, loading the same seed + passphrase should produce the same fingerprint — confirming everything was entered correctly.`
+        In future sessions, loading the same seed + passphrase should produce the same fingerprint - confirming everything was entered correctly.`
       },
       {
         f: 'sw-sparrow-13.png',
         es: 'Contraseña de la Wallet (Opcional)',
         en: 'Wallet Password (Optional)',
-        des: `Sparrow ofrece proteger el archivo de la wallet con una contraseña local. <strong>No es la passphrase BIP39</strong> — son dos cosas distintas.<br><br>
+        des: `Sparrow ofrece proteger el archivo de la wallet con una contraseña local. <strong>No es la passphrase BIP39</strong> - son dos cosas distintas.<br><br>
         Esta contraseña cifra el archivo <code>.wallet</code> en disco. Si dejás el campo vacío, el archivo queda sin cifrar. Hacer clic en <strong>Apply</strong> para finalizar.`,
-        den: `Sparrow offers to protect the wallet file with a local password. <strong>This is not the BIP39 passphrase</strong> — they are two different things.<br><br>
+        den: `Sparrow offers to protect the wallet file with a local password. <strong>This is not the BIP39 passphrase</strong> - they are two different things.<br><br>
         This password encrypts the <code>.wallet</code> file on disk. If you leave it empty, the file stays unencrypted. Click <strong>Apply</strong> to finish.`
       },
     ]
@@ -3235,9 +3235,9 @@ const SECTIONS = [
         f: 'mob-bull-06.png', imgW: 380,
         es: 'Tipo de Dirección - Mantener SegWit (por Defecto)',
         en: 'Address Type - Keep SegWit (Default)',
-        des: `La app pregunta el tipo de dirección. Dejar seleccionado <strong>SegWit (Native SegWit / BIP84)</strong> que es el estándar moderno de Bitcoin.<br><br>
+        des: `La app pregunta el tipo de dirección. Dejar seleccionado <strong>SegWit (Native SegWit/BIP84)</strong> que es el estándar moderno de Bitcoin.<br><br>
         <div class="tip">SegWit genera direcciones que empiezan con <strong>bc1</strong> - comisiones más bajas y estándar más seguro. Solo cambiar si sabes que tu wallet original usaba otro tipo.</div>`,
-        den: `The app asks for the address type. Keep <strong>SegWit (Native SegWit / BIP84)</strong> selected - it's the modern Bitcoin standard.<br><br>
+        den: `The app asks for the address type. Keep <strong>SegWit (Native SegWit/BIP84)</strong> selected - it's the modern Bitcoin standard.<br><br>
         <div class="tip">SegWit generates addresses starting with <strong>bc1</strong> - lower fees and more secure standard. Only change if you know your original wallet used a different type.</div>`
       },
       {
@@ -3261,17 +3261,17 @@ const SECTIONS = [
         es: 'Wallet Details - Verificar la Billetera',
         en: 'Wallet Details - Verify the Wallet',
         des: `La pantalla de <strong>Wallet Details</strong> muestra la información de la billetera derivada.<br><br>
-        Verificar el campo <strong>Wallet Fingerprint</strong> — ese valor identifica de forma única la billetera derivada de esa seed + passphrase.<br><br>
+        Verificar el campo <strong>Wallet Fingerprint</strong> - ese valor identifica de forma única la billetera derivada de esa seed + passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[e19c9e86]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[e19c9e86]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         <div class="tip">Anotar este fingerprint. Si en el futuro reimportás la wallet y el fingerprint coincide, confirmás que ingresaste la passphrase exacta.</div>`,
         den: `The <strong>Wallet Details</strong> screen shows information about the derived wallet.<br><br>
-        Verify the <strong>Wallet Fingerprint</strong> field — that value uniquely identifies the wallet derived from that seed + passphrase.<br><br>
+        Verify the <strong>Wallet Fingerprint</strong> field - that value uniquely identifies the wallet derived from that seed + passphrase.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[e19c9e86]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[e19c9e86]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         <div class="tip">Write down this fingerprint. If you re-import the wallet in the future and the fingerprint matches, you confirm you entered the exact passphrase.</div>`
       },
@@ -3316,19 +3316,19 @@ const SECTIONS = [
         es: 'Keystore ➜ I Already Have a Seed',
         en: 'Keystore ➜ I Already Have a Seed',
         des: `En el origen de claves, seleccionar <strong>"I already have a seed"</strong> para importar la semilla existente junto con la passphrase.<br><br>
-        <div class="info">Si todavía no tenés una seed, podés elegir <strong>"Create a new seed"</strong> — el resto del proceso es el mismo.</div>`,
+        <div class="info">Si todavía no tenés una seed, podés elegir <strong>"Create a new seed"</strong> - el resto del proceso es el mismo.</div>`,
         den: `In keystore origin, select <strong>"I already have a seed"</strong> to import your existing seed together with the passphrase.<br><br>
-        <div class="info">If you don't have a seed yet, you can choose <strong>"Create a new seed"</strong> — the rest of the process is the same.</div>`
+        <div class="info">If you don't have a seed yet, you can choose <strong>"Create a new seed"</strong> - the rest of the process is the same.</div>`
       },
       {
         f: 'mob-electrum-04.png', imgW: 380,
         es: 'Tipo de Semilla ➜ Seleccionar BIP39',
         en: 'Seed Type ➜ Select BIP39',
         des: `Seleccionar <strong>"BIP39"</strong> como tipo de semilla.<br><br>
-        Para usar passphrase BIP39 estándar — compatible con cualquier hardware wallet — la seed <strong>tiene que ser tipo BIP39</strong>, no la seed nativa de Electrum.<br><br>
+        Para usar passphrase BIP39 estándar - compatible con cualquier hardware wallet - la seed <strong>tiene que ser tipo BIP39</strong>, no la seed nativa de Electrum.<br><br>
         <div class="info">Si tu seed fue generada con Electrum nativo (no BIP39), elegí "Electrum". Para seeds de cualquier otra wallet o hardware wallet: BIP39.</div>`,
         den: `Select <strong>"BIP39"</strong> as the seed type.<br><br>
-        To use the standard BIP39 passphrase — compatible with any hardware wallet — the seed <strong>must be BIP39 type</strong>, not Electrum's native seed.<br><br>
+        To use the standard BIP39 passphrase - compatible with any hardware wallet - the seed <strong>must be BIP39 type</strong>, not Electrum's native seed.<br><br>
         <div class="info">If your seed was generated with native Electrum (non-BIP39), choose "Electrum". For seeds from any other wallet or hardware wallet: BIP39.</div>`
       },
       {
@@ -3336,39 +3336,39 @@ const SECTIONS = [
         es: 'Ingresar las Palabras de la Semilla',
         en: 'Enter Your Seed Words',
         des: `Ingresar las 12 o 24 palabras de la semilla. Electrum valida cada palabra contra el diccionario BIP39 mientras tipeas.<br><br>
-        Electrum avisa que las seeds BIP39 pueden importarse para acceder a fondos de otras wallets — es el comportamiento esperado.<br><br>
-        <div class="tip">La passphrase se ingresa en el paso siguiente — en esta pantalla solo van las palabras.</div>`,
+        Electrum avisa que las seeds BIP39 pueden importarse para acceder a fondos de otras wallets - es el comportamiento esperado.<br><br>
+        <div class="tip">La passphrase se ingresa en el paso siguiente - en esta pantalla solo van las palabras.</div>`,
         den: `Enter the 12 or 24 seed words. Electrum validates each word against the BIP39 dictionary as you type.<br><br>
-        Electrum warns that BIP39 seeds can be imported to access funds from other wallets — that's the expected behavior.<br><br>
-        <div class="tip">The passphrase is entered in the next step — only the words go here.</div>`
+        Electrum warns that BIP39 seeds can be imported to access funds from other wallets - that's the expected behavior.<br><br>
+        <div class="tip">The passphrase is entered in the next step - only the words go here.</div>`
       },
       {
         f: 'mob-electrum-06.png', imgW: 380,
         es: 'Opciones ➜ Extend Seed with Custom Words',
         en: 'Options ➜ Extend Seed with Custom Words',
         des: `Antes de continuar, activar la opción <strong>"Extend this seed with custom words"</strong>.<br><br>
-        Electrum llama a la passphrase BIP39 <em>"custom words"</em> — es exactamente el mismo estándar, solo diferente nombre.<br><br>
-        <div class="tip">Si no activás esta opción, la billetera se abrirá SIN passphrase — diferente dirección, diferente billetera.</div>`,
+        Electrum llama a la passphrase BIP39 <em>"custom words"</em> - es exactamente el mismo estándar, solo diferente nombre.<br><br>
+        <div class="tip">Si no activás esta opción, la billetera se abrirá SIN passphrase - diferente dirección, diferente billetera.</div>`,
         den: `Before continuing, enable the option <strong>"Extend this seed with custom words"</strong>.<br><br>
-        Electrum calls the BIP39 passphrase <em>"custom words"</em> — it's exactly the same standard, just a different name.<br><br>
-        <div class="tip">If you don't enable this option, the wallet will open WITHOUT passphrase — different address, different wallet.</div>`
+        Electrum calls the BIP39 passphrase <em>"custom words"</em> - it's exactly the same standard, just a different name.<br><br>
+        <div class="tip">If you don't enable this option, the wallet will open WITHOUT passphrase - different address, different wallet.</div>`
       },
       {
         f: 'mob-electrum-07.png', imgW: 380,
         es: 'Ingresar la Passphrase (Custom Words)',
         en: 'Enter the Passphrase (Custom Words)',
-        des: `En el campo <strong>"Custom words"</strong> ingresar la passphrase exactamente como fue creada — respetando mayúsculas, minúsculas, espacios y caracteres especiales.<br><br>
+        des: `En el campo <strong>"Custom words"</strong> ingresar la passphrase exactamente como fue creada - respetando mayúsculas, minúsculas, espacios y caracteres especiales.<br><br>
         <div class="tip">💡 La propia pantalla lo sugiere: lo ideal son 5 o 6 palabras sacadas con dados de una lista diceware. Eso garantiza aleatoriedad real, no palabras que uno elegiría naturalmente.</div>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[E5F6A7B8]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[E5F6A7B8]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         <div class="warn">⚠️ Un carácter incorrecto deriva una billetera diferente sin ningún aviso.</div>`,
-        den: `In the <strong>"Custom words"</strong> field enter the passphrase exactly as it was created — respecting uppercase, lowercase, spaces and special characters.<br><br>
+        den: `In the <strong>"Custom words"</strong> field enter the passphrase exactly as it was created - respecting uppercase, lowercase, spaces and special characters.<br><br>
         <div class="tip">💡 The screen itself suggests it: ideally 5 or 6 words rolled from a diceware list. That guarantees true randomness, not words you'd naturally choose.</div>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[E5F6A7B8]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[E5F6A7B8]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         <div class="warn">⚠️ One wrong character derives a different wallet with no warning.</div>`
       },
@@ -3376,19 +3376,19 @@ const SECTIONS = [
         f: 'mob-electrum-08.png', imgW: 380,
         es: 'Tipo de Dirección y Detectar Cuentas',
         en: 'Address Type and Detect Accounts',
-        des: `Electrum usa <strong>Native SegWit (p2wpkh)</strong> por defecto — ruta <code>m/84'/0'/0'</code>. Es el estándar actual y el más compatible con hardware wallets. Si no sabés qué es, dejarlo como está.<br><br>
+        des: `Electrum usa <strong>Native SegWit (p2wpkh)</strong> por defecto - ruta <code>m/84'/0'/0'</code>. Es el estándar actual y el más compatible con hardware wallets. Si no sabés qué es, dejarlo como está.<br><br>
         Luego escanea la blockchain para detectar cuentas con historial asociadas a esa seed + passphrase. Para una billetera nueva, continuar sin seleccionar nada.`,
-        den: `Electrum uses <strong>Native SegWit (p2wpkh)</strong> by default — path <code>m/84'/0'/0'</code>. It's the current standard and most compatible with hardware wallets. If you don't know what this is, leave it as is.<br><br>
+        den: `Electrum uses <strong>Native SegWit (p2wpkh)</strong> by default - path <code>m/84'/0'/0'</code>. It's the current standard and most compatible with hardware wallets. If you don't know what this is, leave it as is.<br><br>
         It then scans the blockchain to detect accounts with history associated with that seed + passphrase. For a new wallet, continue without selecting anything.`
       },
       {
         f: 'mob-electrum-09.png', imgW: 380,
         es: 'Contraseña de Acceso a la App',
         en: 'App Access Password',
-        des: `Electrum pide una contraseña para proteger el acceso local a la app. <strong>No es la passphrase BIP39</strong> — son dos cosas distintas.<br><br>
+        des: `Electrum pide una contraseña para proteger el acceso local a la app. <strong>No es la passphrase BIP39</strong> - son dos cosas distintas.<br><br>
         Esta clave solo cifra el archivo de la wallet en este dispositivo. La passphrase ya fue aplicada en la derivación y no se vuelve a pedir acá.<br><br>
         Electrum muestra el nivel de seguridad de la contraseña. Tocar <strong>Finish</strong> para completar.`,
-        den: `Electrum asks for a password to protect local app access. <strong>This is not the BIP39 passphrase</strong> — they are two different things.<br><br>
+        den: `Electrum asks for a password to protect local app access. <strong>This is not the BIP39 passphrase</strong> - they are two different things.<br><br>
         This password only encrypts the wallet file on this device. The passphrase was already applied during derivation and is not entered here.<br><br>
         Electrum shows the password strength. Tap <strong>Finish</strong> to complete.`
       },
@@ -3403,8 +3403,8 @@ const SECTIONS = [
       },
       {
         f: 'mob-electrum-11.png', imgW: 380,
-        es: 'Wallet Details — Billetera Base (Sin Passphrase)',
-        en: 'Wallet Details — Base Wallet (No Passphrase)',
+        es: 'Wallet Details - Billetera Base (Sin Passphrase)',
+        en: 'Wallet Details - Base Wallet (No Passphrase)',
         des: `Esta es la pantalla <strong>Wallet Details</strong> de la billetera base (sin passphrase). Anotar el <strong>BIP32 fingerprint</strong> y los últimos caracteres del <strong>Master Public Key</strong> como referencia.<br><br>
         <div class="info">💡 La billetera base y la billetera con passphrase tienen fingerprints y zpubs <strong>completamente diferentes</strong>. Eso confirma que la derivación fue correcta.</div>`,
         den: `This is the <strong>Wallet Details</strong> screen for the base wallet (no passphrase). Note the <strong>BIP32 fingerprint</strong> and last characters of the <strong>Master Public Key</strong> as reference.<br><br>
@@ -3412,22 +3412,22 @@ const SECTIONS = [
       },
       {
         f: 'mob-electrum-12.png', imgW: 380,
-        es: 'Wallet Details — Billetera con Passphrase',
-        en: 'Wallet Details — Passphrase Wallet',
-        des: `Esta es la pantalla <strong>Wallet Details</strong> de la billetera con passphrase. El fingerprint y el zpub son completamente distintos a los de la billetera base — esa es la prueba de que la misma seed con passphrase crea una wallet diferente.<br><br>
+        es: 'Wallet Details - Billetera con Passphrase',
+        en: 'Wallet Details - Passphrase Wallet',
+        des: `Esta es la pantalla <strong>Wallet Details</strong> de la billetera con passphrase. El fingerprint y el zpub son completamente distintos a los de la billetera base - esa es la prueba de que la misma seed con passphrase crea una wallet diferente.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>ac13c7ab</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>fb40479c</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>ac13c7ab</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>fb40479c</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         <div class="warn">⚠️ Guardar este fingerprint junto al respaldo de la passphrase para verificar en el futuro.</div>
-        <div class="info">En Electrum Mobile la passphrase se define al crear la wallet — no se puede agregar después. Si tu wallet no la tiene, creá una nueva con <strong>"Extend seed with custom words"</strong> activado. No hace falta reinstalar la app.</div>`,
-        den: `This is the <strong>Wallet Details</strong> screen for the passphrase wallet. The fingerprint and zpub are completely different from the base wallet — that's the proof that the same seed with a passphrase creates a different wallet.<br><br>
+        <div class="info">En Electrum Mobile la passphrase se define al crear la wallet - no se puede agregar después. Si tu wallet no la tiene, creá una nueva con <strong>"Extend seed with custom words"</strong> activado. No hace falta reinstalar la app.</div>`,
+        den: `This is the <strong>Wallet Details</strong> screen for the passphrase wallet. The fingerprint and zpub are completely different from the base wallet - that's the proof that the same seed with a passphrase creates a different wallet.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>ac13c7ab</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>fb40479c</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>ac13c7ab</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>fb40479c</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         <div class="warn">⚠️ Save this fingerprint alongside your passphrase backup to verify in the future.</div>
-        <div class="info">In Electrum Mobile the passphrase is set when creating the wallet — it can't be added later. If your wallet doesn't have one, create a new wallet with <strong>"Extend seed with custom words"</strong> enabled. No need to reinstall the app.</div>`
+        <div class="info">In Electrum Mobile the passphrase is set when creating the wallet - it can't be added later. If your wallet doesn't have one, create a new wallet with <strong>"Extend seed with custom words"</strong> enabled. No need to reinstall the app.</div>`
       },
     ]
   },
@@ -3453,17 +3453,17 @@ const SECTIONS = [
         f: 'mob-nunchuk-02.png',
         es: 'Verificar con el Wallet Fingerprint',
         en: 'Verify with Wallet Fingerprint',
-        des: `Al agregar la passphrase, el <strong>fingerprint de la wallet actualiza</strong> en la pantalla — ese cambio confirma que estás en una billetera distinta.<br><br>
+        des: `Al agregar la passphrase, el <strong>fingerprint de la wallet actualiza</strong> en la pantalla - ese cambio confirma que estás en una billetera distinta.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase → <code>[A1B2C3D4]</code> — billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase → <code>[nuevo valor]</code> — billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[nuevo valor]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         La billetera derivada de seed + passphrase aparecerá como un key separado en tu configuración de Nunchuk.<br><br>
         <div class="tip">Para recovery: al restaurar en Nunchuk, seleccionar <strong>Mnemonic Words (BIP39)</strong> ➜ ingresar seed ➜ ingresar passphrase. Ambos datos son necesarios para recuperar la billetera.</div>`,
-        den: `When adding the passphrase, the <strong>wallet fingerprint updates</strong> on screen — that change confirms you're in a different wallet.<br><br>
+        den: `When adding the passphrase, the <strong>wallet fingerprint updates</strong> on screen - that change confirms you're in a different wallet.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase → <code>[A1B2C3D4]</code> — base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase → <code>[new value]</code> — hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[new value]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         The wallet derived from seed + passphrase will appear as a separate key in your Nunchuk configuration.<br><br>
         <div class="tip">For recovery: when restoring in Nunchuk, select <strong>Mnemonic Words (BIP39)</strong> ➜ enter seed ➜ enter passphrase. Both pieces of data are needed to recover the wallet.</div>`
@@ -3887,7 +3887,7 @@ function loadSection(sid, pushUrl) {
 function updateProgress(sid) {
   const ids = SECTIONS.map(s => s.id);
   const idx = ids.indexOf(sid);
-  const pct = ids.length > 1 ? Math.round((idx / (ids.length - 1)) * 100) : 100;
+  const pct = ids.length > 1 ? Math.round((idx/(ids.length - 1)) * 100) : 100;
   document.getElementById('progress-fill').style.width = pct + '%';
 }
 
@@ -3986,7 +3986,7 @@ document.getElementById('lightbox').addEventListener('click', e => {
 });
 
 // ═══════════════════════════════════════════════════════════════
-// HOME / PORTADA
+// HOME/PORTADA
 // ═══════════════════════════════════════════════════════════════
 function loadHome(pushUrl) {
   if (pushUrl === undefined) pushUrl = true;
