@@ -165,6 +165,7 @@
   .step-title { font-size: 14px; font-weight: 600; color: var(--text); }
   .step-body { padding: 14px 16px; display: flex; gap: 16px; align-items: flex-start; }
   .step-body.no-img { display: block; }
+  .step-body.col-layout { flex-direction: column; }
   .step-img-wrap { flex-shrink: 0; max-width: 100%; }
   .step-img-wrap img {
     border-radius: 6px; border: 1px solid var(--border);
@@ -869,7 +870,7 @@ const SECTIONS = [
         <div class="info" style="margin-top:14px">The real security of a seed is its min-entropy. And min-entropy only reaches log₂(n) under two conditions: verifiable uniform distribution + independent source composition. The ranking is ordered exactly by how well each method meets those two conditions.</div>`
       },
       {
-        f: 'intro-entr-dice-01.png',
+        f: 'intro-entr-dice-01.png', colLayout: true,
         es: 'Diceware - Cómo Generar tu Passphrase con Dados',
         en: 'Diceware - How to Generate Your Passphrase with Dice',
         des: `El método <strong>Diceware</strong> aplica la misma lógica de dados a la passphrase. En lugar de generar palabras para la semilla, generás palabras para la clave extra que protege tu billetera.<br><br>
@@ -893,7 +894,7 @@ const SECTIONS = [
         The image shows the 6 rolls: each group numbered 1 to 6 represents one roll of 5 dice. The final result is 6 completely random and verifiable words.`
       },
       {
-        f: 'intro-entr-dice-02.png',
+        f: 'intro-entr-dice-02.png', colLayout: true,
         es: 'Diceware - Del Número al Diccionario',
         en: 'Diceware - From Number to Dictionary',
         des: `La imagen muestra el proceso completo paso a paso:<br><br>
@@ -3933,7 +3934,7 @@ function loadSection(sid, pushUrl) {
         <span class="step-badge">${String(i+1).padStart(2,'0')}</span>
         <span class="step-title">${title}</span>
       </div>
-      <div class="step-body${step.noImg?' no-img':''}">
+      <div class="step-body${step.noImg?' no-img':''}${step.colLayout?' col-layout':''}">
         ${imgHtml}
         <div class="step-text">${desc}</div>
       </div>
