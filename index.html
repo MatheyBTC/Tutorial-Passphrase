@@ -1010,23 +1010,42 @@ const SECTIONS = [
         <div class="tip">First time using your passphrase: write down a receiving address on paper to verify in future sessions -Jade doesn't store a fingerprint like Coldcard.</div>`
       },
       {
-        f: 'hw-jade-06.png',
-        es: 'Passphrase Activa -Pantalla de Inicio con Fingerprint',
-        en: 'Passphrase Active -Home Screen with Fingerprint',
-        des: `Tras aplicar la passphrase, Jade regresa a la pantalla de inicio en estado <strong>Ready/initialized</strong>.<br><br>
-        En la esquina superior izquierda verás el <strong>fingerprint de la wallet activa</strong> (ej. <code>808B18</code>). Este código es único para cada combinación seed + passphrase - diferente al de la billetera sin passphrase.<br><br>
+        f: 'hw-jade-06a.png',
+        es: 'Fingerprint -Sin Passphrase (billetera base)',
+        en: 'Fingerprint -No Passphrase (base wallet)',
+        des: `Al iniciar sesión en Jade sin passphrase, la pantalla muestra el <strong>fingerprint de la billetera base</strong> en el recuadro naranja inferior derecho.<br><br>
+        Este código identifica de forma única tu semilla sin ninguna clave extra. Guardalo como referencia para comparar después.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[808B18]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>22EA48E3</code> - billetera base <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ otro código - billetera oculta</div>
         </div>
-        <div class="tip">Anota este fingerprint y guardalo de forma segura. Cada sesión que ingreses la passphrase correcta verás el mismo código -si difiere, hubo un error de tipeo.</div>`,
-        den: `After applying the passphrase, Jade returns to the home screen in <strong>Ready/initialized</strong> state.<br><br>
-        In the top-left corner you'll see the <strong>active wallet fingerprint</strong> (e.g. <code>808B18</code>). This code is unique to each seed + passphrase combination - different from the wallet without passphrase.<br><br>
+        <div class="tip">El fingerprint solo aparece en la pantalla de inicio de sesión (Session). No se muestra en ninguna otra pantalla.</div>`,
+        den: `When starting a session on Jade without passphrase, the screen shows the <strong>base wallet fingerprint</strong> in the orange box at the bottom right.<br><br>
+        This code uniquely identifies your seed with no extra key. Save it as a reference to compare later.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[808B18]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>22EA48E3</code> - base wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ different code - hidden wallet</div>
         </div>
-        <div class="tip">Write down this fingerprint and store it safely. Every session you enter the correct passphrase you'll see the same code -if it differs, there was a typo.</div>`
+        <div class="tip">The fingerprint only appears on the Session start screen. It is not shown anywhere else.</div>`
+      },
+      {
+        f: 'hw-jade-06b.png',
+        es: 'Fingerprint -Con Passphrase (billetera oculta)',
+        en: 'Fingerprint -With Passphrase (hidden wallet)',
+        des: `Al iniciar sesión ingresando tu passphrase, el fingerprint cambia. El recuadro naranja ahora muestra el código de la <strong>billetera oculta</strong>: distinto al de la billetera base.<br><br>
+        Ese cambio confirma que la passphrase fue aplicada correctamente y estás operando en la billetera protegida.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>22EA48E3</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>7CAAF2CB</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
+        </div>
+        <div class="tip">Si al ingresar la passphrase ves el mismo fingerprint que sin ella, hubo un error de tipeo. Volvé a intentarlo con cuidado.</div>`,
+        den: `When starting a session by entering your passphrase, the fingerprint changes. The orange box now shows the <strong>hidden wallet</strong> code: different from the base wallet.<br><br>
+        That change confirms the passphrase was applied correctly and you're operating in the protected wallet.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>22EA48E3</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>7CAAF2CB</code> - hidden wallet <span class="fp-here">← you're here</span></div>
+        </div>
+        <div class="tip">If after entering the passphrase you see the same fingerprint as without it, there was a typo. Try again carefully.</div>`
       },
     ]
   },
