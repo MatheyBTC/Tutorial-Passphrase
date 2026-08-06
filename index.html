@@ -3074,6 +3074,148 @@ const SECTIONS = [
     ]
   },
 
+  // WASABI WALLET
+  {
+    id: 'sw-wasabi', ready: true, group: 'desktop',
+    logo: 'wasabi-wallet_4x4.png', logoBg: true,
+    es: 'Wasabi Wallet', en: 'Wasabi Wallet',
+    steps: [
+      {
+        f: 'sw-wasabi-01.png',
+        es: 'Bienvenida - Get Started',
+        en: 'Welcome - Get Started',
+        des: `Wasabi Wallet es una billetera de escritorio enfocada en <strong>privacidad</strong>. Open source, no custodial, con soporte nativo de CoinJoin y passphrase BIP39.<br><br>
+        Al abrir la app por primera vez, aparece la pantalla de bienvenida. Hacer clic en <strong>Get Started</strong> para comenzar.`,
+        den: `Wasabi Wallet is a desktop wallet focused on <strong>privacy</strong>. Open source, non-custodial, with native CoinJoin and BIP39 passphrase support.<br><br>
+        When opening the app for the first time, the welcome screen appears. Click <strong>Get Started</strong> to begin.`
+      },
+      {
+        f: 'sw-wasabi-02a.png',
+        es: 'Add Wallet - Crear Wallet Nueva',
+        en: 'Add Wallet - Create New Wallet',
+        des: `La pantalla <strong>Add Wallet</strong> ofrece cuatro opciones:<br><br>
+        - <strong>Create a new wallet</strong> - generás una semilla nueva con passphrase<br>
+        - Connect to hardware wallet - vincular un HW wallet<br>
+        - Import a wallet - importar desde archivo<br>
+        - <strong>Recover a wallet</strong> - restaurar con semilla existente<br><br>
+        Si estás configurando una wallet nueva: seleccioná <strong>Create a new wallet</strong>.<br>
+        Si ya tenés una semilla: ir al paso siguiente para ver el flujo de recuperación.`,
+        den: `The <strong>Add Wallet</strong> screen offers four options:<br><br>
+        - <strong>Create a new wallet</strong> - generate a new seed with passphrase<br>
+        - Connect to hardware wallet - link a hardware wallet<br>
+        - Import a wallet - import from file<br>
+        - <strong>Recover a wallet</strong> - restore with existing seed<br><br>
+        If setting up a new wallet: select <strong>Create a new wallet</strong>.<br>
+        If you already have a seed: see the next step for the recovery flow.`
+      },
+      {
+        f: 'sw-wasabi-02b.png',
+        es: 'Add Wallet - Recuperar Wallet Existente',
+        en: 'Add Wallet - Recover Existing Wallet',
+        des: `Si ya tenés una semilla con passphrase configurada en otro dispositivo, seleccioná <strong>Recover a wallet</strong>.<br><br>
+        Este flujo te lleva directamente al ingreso de tus palabras de recuperación (sin pasar por la pantalla de backup type ni de confirmación de palabras).<br><br>
+        <div class="info">El flujo de recuperación se une al flujo de creación en el paso <strong>Add Passphrase</strong> - desde ahí en adelante el proceso es idéntico.</div>`,
+        den: `If you already have a seed with passphrase configured on another device, select <strong>Recover a wallet</strong>.<br><br>
+        This flow takes you directly to entering your recovery words (skipping the backup type and word confirmation screens).<br><br>
+        <div class="info">The recovery flow rejoins the creation flow at the <strong>Add Passphrase</strong> step - from there on the process is identical.</div>`
+      },
+      {
+        f: 'sw-wasabi-03.png',
+        es: 'Wallet Name - Nombrar la Wallet',
+        en: 'Wallet Name - Name Your Wallet',
+        des: `Ingresá un nombre para identificar esta wallet dentro de Wasabi. El nombre es solo local - no afecta la semilla ni la passphrase.<br><br>
+        <div class="tip">Usá un nombre que te recuerde que esta wallet tiene passphrase, por ejemplo <strong>Wallet + Passphrase</strong> como muestra la imagen. Facilita distinguirla si tenés varias wallets cargadas.</div>`,
+        den: `Enter a name to identify this wallet inside Wasabi. The name is local only - it does not affect the seed or passphrase.<br><br>
+        <div class="tip">Use a name that reminds you this wallet has a passphrase, for example <strong>Wallet + Passphrase</strong> as shown in the image. Makes it easy to distinguish if you have multiple wallets loaded.</div>`
+      },
+      {
+        f: 'sw-wasabi-04.png',
+        es: 'Wallet Backup Type - Seleccionar BIP39',
+        en: 'Wallet Backup Type - Select BIP39',
+        des: `Wasabi ofrece dos tipos de backup:<br><br>
+        - <strong>Multi-share backup (SLIP39)</strong> - divide la semilla en partes, necesitás varias para recuperar<br>
+        - <strong>Single mnemonic phrase (BIP39)</strong> - una sola frase de 12/24 palabras, compatible con todos los wallets estándar<br><br>
+        Seleccioná <strong>Single mnemonic phrase (BIP39)</strong> y hacer clic en Continue.`,
+        den: `Wasabi offers two backup types:<br><br>
+        - <strong>Multi-share backup (SLIP39)</strong> - splits the seed into parts, you need several to recover<br>
+        - <strong>Single mnemonic phrase (BIP39)</strong> - a single 12/24-word phrase, compatible with all standard wallets<br><br>
+        Select <strong>Single mnemonic phrase (BIP39)</strong> and click Continue.`
+      },
+      {
+        f: 'sw-wasabi-05a.png',
+        es: 'Recovery Words - Anotar las Palabras (Wallet Nueva)',
+        en: 'Recovery Words - Write Down Your Words (New Wallet)',
+        des: `Wasabi muestra las <strong>12 palabras de recuperación</strong> generadas. Anotarlas en papel en el orden exacto y guardarlas en un lugar seguro.<br><br>
+        <div class="warn">⚠️ "You will not be able to see these words again once the wallet is created." - Wasabi no las vuelve a mostrar. Si las perdés sin haberlas anotado, perdés acceso a los fondos.</div>
+        Una vez anotadas, hacer clic en Continue para pasar a la confirmación.`,
+        den: `Wasabi shows the generated <strong>12 recovery words</strong>. Write them down on paper in the exact order and store them in a safe place.<br><br>
+        <div class="warn">⚠️ "You will not be able to see these words again once the wallet is created." - Wasabi will not show them again. If you lose them without having written them down, you lose access to your funds.</div>
+        Once written down, click Continue to proceed to confirmation.`
+      },
+      {
+        f: 'sw-wasabi-05b.png',
+        es: 'Recovery Words - Ingresar Palabras Existentes (Recuperar Wallet)',
+        en: 'Recovery Words - Enter Existing Words (Recover Wallet)',
+        des: `Si venís del flujo <strong>Recover a wallet</strong>, esta pantalla te pide ingresar tus palabras de recuperación existentes como chips individuales.<br><br>
+        Escribís cada palabra y la confirmás - van apareciendo como etiquetas numeradas. Al completar las 12 palabras, el tilde verde de la derecha indica que la secuencia es válida.<br><br>
+        También aparece el enlace <strong>Advanced Recovery Options</strong> para wallets con cantidad de palabras distinta o derivación no estándar.`,
+        den: `If you came from the <strong>Recover a wallet</strong> flow, this screen asks you to enter your existing recovery words as individual chips.<br><br>
+        Type each word and confirm it - they appear as numbered tags. Once all 12 words are entered, the green checkmark on the right indicates the sequence is valid.<br><br>
+        The <strong>Advanced Recovery Options</strong> link also appears for wallets with a different word count or non-standard derivation.`
+      },
+      {
+        f: 'sw-wasabi-06.png',
+        es: 'Confirm Recovery Words - Verificar el Orden',
+        en: 'Confirm Recovery Words - Verify the Order',
+        des: `Wasabi pide confirmar que anotaste las palabras correctamente. Muestra las 12 palabras desordenadas en la parte superior y te pide hacer clic en cada una en el <strong>orden correcto</strong>.<br><br>
+        La pantalla indica qué posición confirmar: <em>"Click the recovery word #9"</em>. Ir seleccionando una por una hasta completar las 12.<br><br>
+        <div class="tip">Este paso aplica solo al flujo de creación - al recuperar una wallet este paso no existe.</div>`,
+        den: `Wasabi asks you to confirm you wrote down the words correctly. It shows the 12 words scrambled at the top and asks you to click each one in the <strong>correct order</strong>.<br><br>
+        The screen tells you which position to confirm: <em>"Click the recovery word #9"</em>. Select them one by one until all 12 are complete.<br><br>
+        <div class="tip">This step applies only to the creation flow - when recovering a wallet this step does not exist.</div>`
+      },
+      {
+        f: 'sw-wasabi-07a.png',
+        es: 'Add Passphrase - Ingresar la Passphrase',
+        en: 'Add Passphrase - Enter the Passphrase',
+        des: `Tras confirmar las palabras aparece el diálogo <strong>Add Passphrase</strong>. Wasabi advierte claramente:<br><br>
+        <em>"Store your passphrase safely, it cannot be reset if lost. It's needed to open and to recover your wallet. It's a recovery words extension for more security."</em><br><br>
+        Dos campos: <strong>Type a passphrase</strong> y <strong>Confirm the passphrase</strong>. Ingresá la passphrase en ambos campos. Si los dos coinciden, aparece un tilde verde en cada campo.`,
+        den: `After confirming the words the <strong>Add Passphrase</strong> dialog appears. Wasabi warns clearly:<br><br>
+        <em>"Store your passphrase safely, it cannot be reset if lost. It's needed to open and to recover your wallet. It's a recovery words extension for more security."</em><br><br>
+        Two fields: <strong>Type a passphrase</strong> and <strong>Confirm the passphrase</strong>. Enter the passphrase in both fields. When both match, a green checkmark appears on each field.`
+      },
+      {
+        f: 'sw-wasabi-07b.png',
+        es: 'Add Passphrase - Confirmada y Lista',
+        en: 'Add Passphrase - Confirmed and Ready',
+        des: `La imagen muestra los dos campos con passphrase ingresada y confirmada correctamente (tilde verde en ambos). El campo superior muestra el texto visible, el inferior enmascarado.<br><br>
+        Hacer clic en <strong>Continue</strong> para finalizar la configuración.<br><br>
+        <div class="warn">⚠️ Wasabi no tiene fingerprint de verificación como Jade o Coldcard. Anotá una dirección de recepción generada con esta configuración para verificar en sesiones futuras que ingresaste la passphrase correcta.</div>`,
+        den: `The image shows both fields with the passphrase entered and confirmed correctly (green checkmark on both). The top field shows visible text, the bottom is masked.<br><br>
+        Click <strong>Continue</strong> to finish setup.<br><br>
+        <div class="warn">⚠️ Wasabi has no verification fingerprint like Jade or Coldcard. Write down a receiving address generated with this setup to verify in future sessions that you entered the correct passphrase.</div>`
+      },
+      {
+        f: 'sw-wasabi-08.png',
+        es: 'Wallet Lista - Dashboard Principal',
+        en: 'Wallet Ready - Main Dashboard',
+        des: `La wallet con passphrase está activa. El dashboard muestra:<br><br>
+        - <strong>Balance</strong> (oculto con ## en la imagen)<br>
+        - <strong>Privacy Progress</strong> - estado de privacidad de los UTXOs<br>
+        - <strong>Exchange Rate</strong> - precio actual de BTC<br><br>
+        En el panel lateral izquierdo se ven las wallets cargadas. Para cargar esta wallet en sesiones futuras: hacer clic en su nombre ➜ ingresar la passphrase cuando Wasabi la solicite.<br><br>
+        <div class="tip">Wasabi pide la passphrase cada vez que cargás la wallet - no la guarda en disco. Esto es el comportamiento correcto y esperado.</div>`,
+        den: `The wallet with passphrase is active. The dashboard shows:<br><br>
+        - <strong>Balance</strong> (hidden with ## in the image)<br>
+        - <strong>Privacy Progress</strong> - privacy status of UTXOs<br>
+        - <strong>Exchange Rate</strong> - current BTC price<br><br>
+        The left sidebar shows loaded wallets. To load this wallet in future sessions: click its name ➜ enter the passphrase when Wasabi asks for it.<br><br>
+        <div class="tip">Wasabi asks for the passphrase every time you load the wallet - it does not store it on disk. This is the correct and expected behavior.</div>`
+      },
+    ]
+  },
+
   // BLOCKSTREAM GREEN DESKTOP
   {
     id: 'sw-green', group: 'pending',
@@ -3918,6 +4060,7 @@ const SLUGS = {
   'mob-bull':          'Bull-Bitcoin',
   'mob-electrum':      'Electrum-Mobile',
   'sw-sparrow':        'Sparrow',
+  'sw-wasabi':         'Wasabi',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
