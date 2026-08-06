@@ -3943,6 +3943,18 @@ function loadSection(sid, pushUrl) {
 
   content.innerHTML = html;
   content.scrollTop = 0;
+
+  // Auto col-layout: si el texto es más alto que la imagen, poner texto abajo
+  requestAnimationFrame(() => {
+    content.querySelectorAll('.step-body:not(.no-img):not(.col-layout)').forEach(body => {
+      const img = body.querySelector('.step-img-wrap');
+      const txt = body.querySelector('.step-text');
+      if (img && txt && txt.offsetHeight > img.offsetHeight + 20) {
+        body.classList.add('col-layout');
+      }
+    });
+  });
+
   updateProgress(sid);
 }
 
