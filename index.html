@@ -3439,36 +3439,147 @@ The code in brackets <strong>cd64370b</strong> is the <strong>fingerprint</stron
 
   // ELECTRUM
   {
-    id: 'sw-electrum', group: 'pending',
-    brand: 'Electrum',
+    id: 'sw-electrum', ready: true, group: 'desktop',
+    logo: 'electrum_4x4.png',
     es: 'Electrum Wallet', en: 'Electrum Wallet',
     steps: [
       {
         f: 'sw-electrum-01.png',
-        es: 'Crear Nueva Wallet con Semilla Existente',
-        en: 'Create New Wallet with Existing Seed',
-        des: `En Electrum, ir a <strong>File ➜ New/Restore ➜ Standard wallet ➜ I already have a seed</strong>.<br><br>
-        Ingresar las 12/24 palabras de la semilla.`,
-        den: `In Electrum, go to <strong>File ➜ New/Restore ➜ Standard wallet ➜ I already have a seed</strong>.<br><br>
-        Enter your 12/24 seed words.`
+        es: 'Nombre de la Cartera',
+        en: 'Wallet Name',
+        des: `Electrum es una de las billeteras Bitcoin de escritorio más antiguas y probadas. Open source, liviana, con soporte completo de passphrase BIP39.<br><br>
+Al abrir Electrum por primera vez (o desde <strong>Archivo ➜ Nueva/Restaurar</strong>), aparece el asistente de creación. Escribir un nombre para la cartera en el campo <strong>Cartera</strong> y hacer clic en <strong>Siguiente</strong>.<br><br>
+<div class="tip">Usá un nombre que recuerde que lleva passphrase, como <em>wallet + Passphrase</em>.</div>`,
+        den: `Electrum is one of the oldest and most proven Bitcoin desktop wallets. Open source, lightweight, with full BIP39 passphrase support.<br><br>
+When opening Electrum for the first time (or from <strong>File ➜ New/Restore</strong>), the creation wizard appears. Type a name for the wallet in the <strong>Wallet</strong> field and click <strong>Next</strong>.<br><br>
+<div class="tip">Use a name that reminds you it has a passphrase, like <em>wallet + Passphrase</em>.</div>`
       },
       {
         f: 'sw-electrum-02.png',
-        es: 'Opciones de la Semilla ➜ Extend with Custom Words',
-        en: 'Seed Options ➜ Extend with Custom Words',
-        des: `En la pantalla de ingreso de semilla, hacer clic en <strong>Options</strong> (esquina inferior derecha o botón visible). Marcar <strong>"Extend this seed with custom words"</strong>.<br><br>
-        El campo de passphrase aparecerá en la siguiente pantalla.`,
-        den: `On the seed entry screen, click <strong>Options</strong> (lower right corner or visible button). Check <strong>"Extend this seed with custom words"</strong>.<br><br>
-        The passphrase field will appear on the next screen.`
+        es: 'Tipo de Cartera - Cartera Estándar',
+        en: 'Wallet Type - Standard Wallet',
+        des: `Electrum pregunta qué tipo de cartera crear. Las opciones son:<br><br>
+- <strong>Cartera estándar</strong> - cartera BIP39/BIP32 estándar, compatible con todos los wallets<br>
+- Cartera con autenticación de dos factores - usa TrustedCoin como segundo factor<br>
+- Cartera multifirma - requiere múltiples claves para firmar<br>
+- Importar dirección de Bitcoin o llaves privadas<br><br>
+Seleccionar <strong>Cartera estándar</strong> y hacer clic en <strong>Siguiente</strong>.`,
+        den: `Electrum asks what type of wallet to create. The options are:<br><br>
+- <strong>Standard wallet</strong> - standard BIP39/BIP32 wallet, compatible with all wallets<br>
+- Two-factor authentication wallet - uses TrustedCoin as second factor<br>
+- Multi-signature wallet - requires multiple keys to sign<br>
+- Import Bitcoin address or private keys<br><br>
+Select <strong>Standard wallet</strong> and click <strong>Next</strong>.`
       },
       {
         f: 'sw-electrum-03.png',
-        es: 'Ingresar la Passphrase (Custom Words)',
-        en: 'Enter the Passphrase (Custom Words)',
-        des: `Ingresar la passphrase en el campo <strong>"Custom words"</strong>. Electrum la llamará "custom words" -es lo mismo que la passphrase BIP39.<br><br>
-        Continuar con el proceso normal de creación de wallet. La billetera resultante usará seed + passphrase como derivación.`,
-        den: `Enter the passphrase in the <strong>"Custom words"</strong> field. Electrum calls it "custom words" -it's the same as the BIP39 passphrase.<br><br>
-        Continue with the normal wallet creation process. The resulting wallet will use seed + passphrase as derivation.`
+        es: 'Almacén de Claves - Ya Tengo una Semilla',
+        en: 'Keystore - I Already Have a Seed',
+        des: `Electrum pregunta si querés crear una semilla nueva o usar una existente:<br><br>
+- Crear nueva semilla - genera una semilla nueva en formato Electrum (no BIP39)<br>
+- <strong>Ya tengo una semilla</strong> - importar semilla existente de 12/24 palabras BIP39<br>
+- Utilizar una llave maestra - importar xpub/xprv<br>
+- Utilizar un dispositivo de hardware - vincular hardware wallet<br><br>
+Para usar una semilla BIP39 con passphrase, seleccionar <strong>Ya tengo una semilla</strong>.`,
+        den: `Electrum asks whether to create a new seed or use an existing one:<br><br>
+- Create new seed - generates a new seed in Electrum format (not BIP39)<br>
+- <strong>I already have a seed</strong> - import existing 12/24-word BIP39 seed<br>
+- Use a master key - import xpub/xprv<br>
+- Use a hardware device - link hardware wallet<br><br>
+To use a BIP39 seed with passphrase, select <strong>I already have a seed</strong>.`
+      },
+      {
+        f: 'sw-electrum-04.png',
+        es: 'Introducir Semilla - Advertencia BIP39',
+        en: 'Enter Seed - BIP39 Warning',
+        des: `Ingresar las palabras de la semilla en el campo. Electrum muestra una <strong>advertencia importante</strong>:<br><br>
+<em>"Las semillas BIP39 se pueden importar en Electrum, de forma que los usuarios pueden acceder a fondos bloqueados en otras billeteras. Sin embargo, no generamos semillas BIP39 porque no cumplen con nuestro estándar de seguridad."</em><br><br>
+Esto es normal - Electrum prefiere su propio formato de semilla pero soporta BIP39 sin problemas. Hacer clic en <strong>Opciones</strong> para configurar el tipo de semilla y activar la passphrase.`,
+        den: `Enter the seed words in the field. Electrum shows an <strong>important warning</strong>:<br><br>
+<em>"BIP39 seeds can be imported into Electrum so users can access funds locked in other wallets. However, we do not generate BIP39 seeds because they do not meet our security standard."</em><br><br>
+This is normal - Electrum prefers its own seed format but supports BIP39 without issues. Click <strong>Options</strong> to configure the seed type and enable the passphrase.`
+      },
+      {
+        f: 'sw-electrum-05.png',
+        es: 'Opciones de Semilla - BIP39 + Extender con Passphrase',
+        en: 'Seed Options - BIP39 + Extend with Passphrase',
+        des: `El diálogo <strong>Opciones de semilla</strong> tiene dos configuraciones clave (resaltadas en naranja en la imagen):<br><br>
+1. <strong>Extender esta semilla con palabras personalizadas</strong> - marcar esta casilla para habilitar el campo de passphrase en el paso siguiente<br>
+2. <strong>Tipo de semilla: Semilla BIP39</strong> - seleccionar esta opción para que Electrum interprete la semilla en formato estándar BIP39<br><br>
+Marcar ambas opciones y hacer clic en <strong>Aceptar</strong>.`,
+        den: `The <strong>Seed Options</strong> dialog has two key settings (highlighted in orange in the image):<br><br>
+1. <strong>Extend this seed with custom words</strong> - check this box to enable the passphrase field in the next step<br>
+2. <strong>Seed type: BIP39 Seed</strong> - select this option so Electrum interprets the seed in standard BIP39 format<br><br>
+Check both options and click <strong>Accept</strong>.`
+      },
+      {
+        f: 'sw-electrum-06.png',
+        es: 'Extensión de Semilla - Ingresar la Passphrase',
+        en: 'Seed Extension - Enter the Passphrase',
+        des: `Aparece la pantalla <strong>Extensión de semilla</strong>. Electrum la llama "extensión" o "palabras personalizadas" - es exactamente la passphrase BIP39.<br><br>
+La pantalla aclara: <em>"Tenga en cuenta que esta NO es su contraseña de cifrado."</em><br><br>
+Ingresar la passphrase en el campo y hacer clic en <strong>Siguiente</strong>.<br><br>
+<div class="warn">⚠️ La extensión de semilla debe guardarse junto con la semilla - Electrum lo indica expresamente.</div>`,
+        den: `The <strong>Seed Extension</strong> screen appears. Electrum calls it "extension" or "custom words" - it is exactly the BIP39 passphrase.<br><br>
+The screen clarifies: <em>"Note that this is NOT your encryption password."</em><br><br>
+Enter the passphrase in the field and click <strong>Next</strong>.<br><br>
+<div class="warn">⚠️ The seed extension must be stored alongside the seed - Electrum states this explicitly.</div>`
+      },
+      {
+        f: 'sw-electrum-07.png',
+        es: 'Tipo de Script y Ruta de Derivación',
+        en: 'Script Type and Derivation Path',
+        des: `Electrum muestra las opciones de tipo de dirección (resaltadas en la imagen):<br><br>
+- legacy (p2pkh) - direcciones que empiezan con 1<br>
+- p2sh-segwit (p2wpkh-p2sh) - direcciones que empiezan con 3<br>
+- <strong>native segwit (p2wpkh)</strong> - direcciones que empiezan con bc1, el estándar actual<br><br>
+Seleccionar <strong>native segwit (p2wpkh)</strong>. La ruta de derivación queda en <strong>m/84h/0h/0h</strong> automáticamente.<br><br>
+<div class="tip">Si restaurás una semilla que ya tenía fondos en otra wallet, usar "Detectar cuentas existentes" para encontrar el tipo correcto.</div>`,
+        den: `Electrum shows address type options (highlighted in the image):<br><br>
+- legacy (p2pkh) - addresses starting with 1<br>
+- p2sh-segwit (p2wpkh-p2sh) - addresses starting with 3<br>
+- <strong>native segwit (p2wpkh)</strong> - addresses starting with bc1, the current standard<br><br>
+Select <strong>native segwit (p2wpkh)</strong>. The derivation path is automatically set to <strong>m/84h/0h/0h</strong>.<br><br>
+<div class="tip">If restoring a seed that already had funds in another wallet, use "Detect existing accounts" to find the correct type.</div>`
+      },
+      {
+        f: 'sw-electrum-08.png',
+        es: 'Contraseña de la Cartera - Cifrado Local',
+        en: 'Wallet Password - Local Encryption',
+        des: `Electrum pide una <strong>contraseña para cifrar el archivo de cartera</strong> en el disco. Es independiente de la passphrase BIP39.<br><br>
+- <strong>Contraseña</strong> + <strong>Confirmar contraseña</strong>: ingresar la misma contraseña en ambos campos<br>
+- <strong>Seguridad de la Contraseña</strong>: Electrum muestra la fortaleza en tiempo real<br><br>
+Dejar vacío si no se desea cifrado local. Hacer clic en <strong>Finish</strong> para completar la configuración.`,
+        den: `Electrum asks for a <strong>password to encrypt the wallet file</strong> on disk. It is independent of the BIP39 passphrase.<br><br>
+- <strong>Password</strong> + <strong>Confirm password</strong>: enter the same password in both fields<br>
+- <strong>Password strength</strong>: Electrum shows strength in real time<br><br>
+Leave empty if no local encryption is desired. Click <strong>Finish</strong> to complete the setup.`
+      },
+      {
+        f: 'sw-electrum-09.png',
+        es: 'Cartera Lista - Verificar Información',
+        en: 'Wallet Ready - Check Information',
+        des: `La cartera con passphrase está activa. La barra de título muestra el nombre: <em>Electrum 4.8.0 - wallet + passprhase [standard]</em>.<br><br>
+Para verificar el fingerprint de la wallet (y confirmar que la passphrase ingresada es correcta), ir a:<br><br>
+<strong>Cartera ➜ Información</strong> (resaltado en naranja en la imagen)`,
+        den: `The wallet with passphrase is active. The title bar shows the name: <em>Electrum 4.8.0 - wallet + passprhase [standard]</em>.<br><br>
+To verify the wallet fingerprint (and confirm the passphrase entered is correct), go to:<br><br>
+<strong>Wallet ➜ Information</strong> (highlighted in orange in the image)`
+      },
+      {
+        f: 'sw-electrum-10.png',
+        es: 'Fingerprint de Verificación',
+        en: 'Verification Fingerprint',
+        des: `La pantalla de <strong>Almacén de claves</strong> muestra los datos de la wallet:<br><br>
+- <strong>Llave Pública Maestra</strong>: zpub completa (Native Segwit)<br>
+- <strong>Ruta de derivación</strong>: m/84h/0h/0h<br>
+- <strong>BIP32 root fingerprint</strong>: <code>89a2d78c</code> (resaltado en naranja)<br><br>
+Anotar el fingerprint junto al backup de la semilla y la passphrase. En cada sesión futura, si el fingerprint coincide con este valor, la passphrase ingresada es correcta.`,
+        den: `The <strong>Keystore</strong> screen shows the wallet data:<br><br>
+- <strong>Master Public Key</strong>: full zpub (Native Segwit)<br>
+- <strong>Derivation path</strong>: m/84h/0h/0h<br>
+- <strong>BIP32 root fingerprint</strong>: <code>89a2d78c</code> (highlighted in orange)<br><br>
+Write down the fingerprint alongside the seed and passphrase backup. In each future session, if the fingerprint matches this value, the passphrase entered is correct.`
       },
     ]
   },
@@ -4210,6 +4321,7 @@ const SLUGS = {
   'sw-sparrow':        'Sparrow',
   'sw-wasabi':         'Wasabi',
   'sw-ashigaru':       'Ashigaru',
+  'sw-electrum':       'Electrum',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
