@@ -3216,6 +3216,154 @@ const SECTIONS = [
     ]
   },
 
+  // ASHIGARU
+  {
+    id: 'sw-ashigaru', ready: true, group: 'desktop',
+    logo: 'ashigaru.png', logoBg: true,
+    es: 'Ashigaru', en: 'Ashigaru',
+    steps: [
+      {
+        f: 'sw-ashigaru-01.png',
+        es: 'Menú Principal - Wallets',
+        en: 'Main Menu - Wallets',
+        des: `Ashigaru es una billetera de escritorio <strong>open source</strong> y no custodial, heredera espiritual de Samourai Wallet. Corre como aplicación de terminal y tiene integración nativa con <strong>Whirlpool</strong> para CoinJoin.<br><br>
+Al abrir la app aparece el menú principal. Seleccionar <strong>Wallets</strong> con las teclas de navegación y confirmar con Enter.`,
+        den: `Ashigaru is an <strong>open source</strong>, non-custodial desktop wallet, spiritual successor to Samourai Wallet. It runs as a terminal app with native <strong>Whirlpool</strong> CoinJoin integration.<br><br>
+When opening the app the main menu appears. Select <strong>Wallets</strong> using navigation keys and confirm with Enter.`
+      },
+      {
+        f: 'sw-ashigaru-02.png',
+        es: 'Wallets - Crear o Restaurar',
+        en: 'Wallets - Create or Restore',
+        des: `El submenú <strong>Wallets</strong> ofrece tres opciones:<br><br>
+- <strong>Open Wallet...</strong> - abrir una wallet ya creada<br>
+- <strong>Create / restore wallet...</strong> - crear nueva o restaurar con semilla existente<br>
+- Delete Wallet... - eliminar una wallet del dispositivo<br><br>
+Seleccionar <strong>Create / restore wallet...</strong>.`,
+        den: `The <strong>Wallets</strong> submenu offers three options:<br><br>
+- <strong>Open Wallet...</strong> - open an already created wallet<br>
+- <strong>Create / restore wallet...</strong> - create new or restore with existing seed<br>
+- Delete Wallet... - remove a wallet from the device<br><br>
+Select <strong>Create / restore wallet...</strong>.`
+      },
+      {
+        f: 'sw-ashigaru-03.png',
+        es: 'Nombre de la Wallet',
+        en: 'Wallet Name',
+        des: `Aparece el cuadro <strong>Create Wallet</strong> pidiendo un nombre. El nombre es solo local - no afecta la semilla ni la passphrase.<br><br>
+Escribir el nombre deseado en el campo (por defecto muestra "Wallet") y confirmar con <strong>OK</strong>.<br><br>
+<div class="tip">Usá un nombre que te recuerde que esta wallet usa passphrase, por ejemplo <strong>BTC-Passphrase</strong>.</div>`,
+        den: `The <strong>Create Wallet</strong> dialog appears asking for a name. The name is local only - it does not affect the seed or passphrase.<br><br>
+Type the desired name in the field (defaults to "Wallet") and confirm with <strong>OK</strong>.<br><br>
+<div class="tip">Use a name that reminds you this wallet uses a passphrase, for example <strong>BTC-Passphrase</strong>.</div>`
+      },
+      {
+        f: 'sw-ashigaru-04.png',
+        es: 'Tipo de Wallet - Hot Wallet',
+        en: 'Wallet Type - Hot Wallet',
+        des: `Ashigaru ofrece dos tipos:<br><br>
+- <strong>Hot Wallet</strong> - la clave privada vive en el dispositivo, operación completa<br>
+- <strong>Watch Only</strong> - solo monitorea la wallet sin acceso a claves privadas (para usar con hardware wallet)<br><br>
+Para configurar una wallet con passphrase BIP39 en Ashigaru, seleccionar <strong>Hot Wallet</strong>.`,
+        den: `Ashigaru offers two types:<br><br>
+- <strong>Hot Wallet</strong> - private key lives on the device, full operation<br>
+- <strong>Watch Only</strong> - only monitors the wallet without access to private keys (for use with hardware wallet)<br><br>
+To configure a BIP39 passphrase wallet in Ashigaru, select <strong>Hot Wallet</strong>.`
+      },
+      {
+        f: 'sw-ashigaru-05.png',
+        es: 'Configuración BIP39 - Generar Nueva Wallet',
+        en: 'BIP39 Configuration - Generate New Wallet',
+        des: `La pantalla <strong>Create BIP39 Wallet</strong> muestra los tres campos de configuración:<br><br>
+- <strong>Script type</strong>: Native Segwit (P2WPKH) - el estándar actual<br>
+- <strong>Seed words</strong>: vacío hasta generar o ingresar<br>
+- <strong>BIP39 Passphrase</strong>: se ingresa en este campo<br><br>
+Para crear una wallet nueva, hacer clic en <strong>Generate New Wallet</strong>.`,
+        den: `The <strong>Create BIP39 Wallet</strong> screen shows three configuration fields:<br><br>
+- <strong>Script type</strong>: Native Segwit (P2WPKH) - the current standard<br>
+- <strong>Seed words</strong>: empty until generated or entered<br>
+- <strong>BIP39 Passphrase</strong>: entered in this field<br><br>
+To create a new wallet, click <strong>Generate New Wallet</strong>.`
+      },
+      {
+        f: 'sw-ashigaru-06.png',
+        es: 'Cantidad de Palabras - 12 o 24',
+        en: 'Number of Words - 12 or 24',
+        des: `Aparece el diálogo <strong>Generate Seed Words</strong> con el campo <strong>Number of words</strong>. El desplegable permite elegir entre 12 y 24 palabras.<br><br>
+Ambas longitudes tienen seguridad más que suficiente. La mayoría de los hardware wallets genera 12 palabras por defecto.<br><br>
+Seleccionar la cantidad deseada y confirmar con <strong>Ok</strong>.`,
+        den: `The <strong>Generate Seed Words</strong> dialog appears with the <strong>Number of words</strong> field. The dropdown lets you choose between 12 and 24 words.<br><br>
+Both lengths provide more than sufficient security. Most hardware wallets generate 12 words by default.<br><br>
+Select the desired count and confirm with <strong>Ok</strong>.`
+      },
+      {
+        f: 'sw-ashigaru-07.png',
+        es: 'Semilla Generada - Anotar las Palabras',
+        en: 'Seed Generated - Write Down the Words',
+        des: `Las palabras de recuperación aparecen en el campo <strong>Seed words</strong>. En el ejemplo: <em>rug glory hamster label lift stock asthma tag verify order bridge toe</em>.<br><br>
+<div class="warn">⚠️ Anotar las palabras en papel en el orden exacto antes de continuar. Ashigaru no vuelve a mostrarlas una vez cerrada la sesión.</div>
+El campo <strong>BIP39 Passphrase</strong> sigue vacío - se ingresa en el paso siguiente.`,
+        den: `The recovery words appear in the <strong>Seed words</strong> field. In the example: <em>rug glory hamster label lift stock asthma tag verify order bridge toe</em>.<br><br>
+<div class="warn">⚠️ Write down the words on paper in the exact order before continuing. Ashigaru will not show them again once the session is closed.</div>
+The <strong>BIP39 Passphrase</strong> field is still empty - it is entered in the next step.`
+      },
+      {
+        f: 'sw-ashigaru-08.png',
+        es: 'Ingresar la BIP39 Passphrase',
+        en: 'Enter the BIP39 Passphrase',
+        des: `Con las palabras anotadas, pasar al campo <strong>BIP39 Passphrase</strong> e ingresar la passphrase.<br><br>
+La imagen muestra el campo con <em>"5/6 words form EFF list"</em> como ejemplo - en este campo va tu passphrase generada con Diceware o el método de tu preferencia.<br><br>
+Una vez ingresada la passphrase, hacer clic en <strong>Next</strong> para continuar.`,
+        den: `With the words written down, move to the <strong>BIP39 Passphrase</strong> field and enter the passphrase.<br><br>
+The image shows the field with <em>"5/6 words form EFF list"</em> as an example - this field takes your passphrase generated with Diceware or your preferred method.<br><br>
+Once the passphrase is entered, click <strong>Next</strong> to continue.`
+      },
+      {
+        f: 'sw-ashigaru-09.png',
+        es: 'Wallet Password - Contraseña Local (Opcional)',
+        en: 'Wallet Password - Local Password (Optional)',
+        des: `Ashigaru ofrece agregar una <strong>contraseña de wallet</strong>: encripta el archivo de wallet en el disco del dispositivo. Es independiente de la passphrase BIP39.<br><br>
+- Si la dejás vacía: el archivo de wallet no tiene encriptación adicional<br>
+- Si la configurás: se pide cada vez que abrís la wallet en este dispositivo<br><br>
+<div class="tip">Esta contraseña protege el archivo local. La passphrase BIP39 protege los fondos a nivel de protocolo. Son dos capas distintas.</div>`,
+        den: `Ashigaru offers adding a <strong>wallet password</strong>: it encrypts the wallet file on the device's disk. It is independent of the BIP39 passphrase.<br><br>
+- If left empty: the wallet file has no additional encryption<br>
+- If set: it is requested every time you open the wallet on this device<br><br>
+<div class="tip">This password protects the local file. The BIP39 passphrase protects funds at the protocol level. These are two distinct layers.</div>`
+      },
+      {
+        f: 'sw-ashigaru-10.png',
+        es: 'Wallet Activa - Funciones Disponibles',
+        en: 'Wallet Active - Available Functions',
+        des: `La wallet está activa. El menú muestra las funciones de Ashigaru/Whirlpool:<br><br>
+- <strong>Deposit</strong> - recibir y gestionar fondos<br>
+- <strong>Premix</strong> - UTXOs en proceso de entrar a Whirlpool<br>
+- <strong>Postmix</strong> - UTXOs ya mezclados en Whirlpool<br>
+- <strong>Badbank</strong> - cambio tóxico separado automáticamente<br><br>
+Seleccionar <strong>Deposit</strong> para ver la dirección de depósito y el descriptor de la wallet.`,
+        den: `The wallet is active. The menu shows Ashigaru/Whirlpool functions:<br><br>
+- <strong>Deposit</strong> - receive and manage funds<br>
+- <strong>Premix</strong> - UTXOs in process of entering Whirlpool<br>
+- <strong>Postmix</strong> - UTXOs already mixed via Whirlpool<br>
+- <strong>Badbank</strong> - toxic change automatically separated<br><br>
+Select <strong>Deposit</strong> to see the deposit address and wallet descriptor.`
+      },
+      {
+        f: 'sw-ashigaru-11.png',
+        es: 'Descriptor y Fingerprint de Verificación',
+        en: 'Descriptor and Verification Fingerprint',
+        des: `La pantalla <strong>Wallet - Deposit Settings</strong> muestra el <strong>Output Descriptor</strong> completo de la wallet:<br><br>
+<code>wpkh([cd64370b/84h/0h/0h]xpub...)</code><br><br>
+El código entre corchetes <strong>cd64370b</strong> es el <strong>fingerprint</strong> de esta wallet con passphrase. Anotarlo junto a tu backup para verificar en sesiones futuras que ingresaste la passphrase correcta.<br><br>
+<div class="tip">Si el fingerprint al abrir la wallet coincide con el anotado, la passphrase es correcta. Si difiere, hay un error de tipeo.</div>`,
+        den: `The <strong>Wallet - Deposit Settings</strong> screen shows the complete wallet <strong>Output Descriptor</strong>:<br><br>
+<code>wpkh([cd64370b/84h/0h/0h]xpub...)</code><br><br>
+The code in brackets <strong>cd64370b</strong> is the <strong>fingerprint</strong> of this wallet with passphrase. Write it alongside your backup to verify in future sessions that you entered the correct passphrase.<br><br>
+<div class="tip">If the fingerprint when opening the wallet matches the one written down, the passphrase is correct. If it differs, there is a typo error.</div>`
+      },
+    ]
+  },
+
   // BLOCKSTREAM GREEN DESKTOP
   {
     id: 'sw-green', group: 'pending',
@@ -4061,6 +4209,7 @@ const SLUGS = {
   'mob-electrum':      'Electrum-Mobile',
   'sw-sparrow':        'Sparrow',
   'sw-wasabi':         'Wasabi',
+  'sw-ashigaru':       'Ashigaru',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
