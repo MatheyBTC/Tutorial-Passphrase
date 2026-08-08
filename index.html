@@ -51,6 +51,7 @@
   .sec-item.ready { color: var(--text); }
   .sec-item:hover { background: #1e1208; color: var(--text); border-left-color: var(--accent-dim); }
   .sec-item.active { color: var(--accent); border-left-color: var(--accent); background: #1a0f00; }
+  .nav-new { margin-left: auto; font-size: 9px; font-weight: 700; letter-spacing: .5px; background: var(--accent); color: #000; border-radius: 3px; padding: 1px 5px; line-height: 1.6; flex-shrink: 0; }
   .sec-item .step-num { font-size: 12px; color: var(--accent); font-family: monospace; min-width: 20px; }
 
   /* Brand blocks (3rd level) */
@@ -3076,7 +3077,7 @@ const SECTIONS = [
 
   // WASABI WALLET
   {
-    id: 'sw-wasabi', ready: true, group: 'desktop',
+    id: 'sw-wasabi', ready: true, isNew: true, group: 'desktop',
     logo: 'wasabi-wallet_4x4.svg',
     es: 'Wasabi Wallet', en: 'Wasabi Wallet',
     steps: [
@@ -3218,7 +3219,7 @@ const SECTIONS = [
 
   // ASHIGARU
   {
-    id: 'sw-ashigaru', ready: true, group: 'desktop',
+    id: 'sw-ashigaru', ready: true, isNew: true, group: 'desktop',
     logo: 'ashigaru.png', logoBg: true,
     es: 'Ashigaru', en: 'Ashigaru',
     steps: [
@@ -3439,7 +3440,7 @@ The code in brackets <strong>cd64370b</strong> is the <strong>fingerprint</stron
 
   // ELECTRUM
   {
-    id: 'sw-electrum', ready: true, group: 'desktop',
+    id: 'sw-electrum', ready: true, isNew: true, group: 'desktop',
     logo: 'electrum_4x4.png',
     es: 'Electrum Wallet', en: 'Electrum Wallet',
     steps: [
@@ -4056,9 +4057,6 @@ const GROUPS = [
   { id: 'browser',
     label: `<span style="color:#ef5350">Hot</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Browser]</span>`,
     labelEn: `<span style="color:#ef5350">Hot</span><span style="color:var(--text)">-Wallets</span> <span style="color:#555">[Browser]</span>` },
-  { id: 'pending',
-    label: `<span style="color:#ffd600">Pendientes</span>`,
-    labelEn: `<span style="color:#ffd600">Pending</span>` },
 ];
 
 function buildNav() {
@@ -4083,7 +4081,8 @@ function buildNav() {
       const navLogo = sec.logo
         ? `<img class="nav-logo${sec.logoBg ? ' nav-logo-bg' : ''}" src="Prints/logos/${sec.logo}" alt="">`
         : '';
-      item.innerHTML = `${navLogo}<span>${t(sec.es, sec.en)}</span>`;
+      const newBadge = sec.isNew ? `<span class="nav-new">NEW</span>` : '';
+      item.innerHTML = `${navLogo}<span>${t(sec.es, sec.en)}</span>${newBadge}`;
       item.addEventListener('click', () => loadSection(sec.id));
       items.appendChild(item);
     });
