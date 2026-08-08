@@ -3941,39 +3941,163 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
 
   // NUNCHUK
   {
-    id: 'mob-nunchuk', group: 'pending',
+    id: 'mob-nunchuk', group: 'mobile', ready: true, isNew: true,
     brand: 'Nunchuk',
     es: 'Nunchuk', en: 'Nunchuk',
     steps: [
       {
-        f: 'mob-nunchuk-01.png',
-        es: 'Añadir Software Key ➜ Set Passphrase',
-        en: 'Add Software Key ➜ Set Passphrase',
-        des: `En Nunchuk, al añadir una <strong>software key</strong> (clave de software), aparece el botón <strong>"[Set passphrase]"</strong>.<br><br>
-        Tocarlo e ingresar tu passphrase. Si no necesitas passphrase, seleccionar <strong>"[I don't need a passphrase]"</strong> para omitirla.<br><br>
-        <div class="info">Nunchuk es una wallet Bitcoin-only enfocada en multisig. Es popular entre usuarios avanzados que quieren multisig en mobile con hardware wallets conectados via NFC o QR.</div>`,
-        den: `In Nunchuk, when adding a <strong>software key</strong>, the <strong>"[Set passphrase]"</strong> button appears.<br><br>
-        Tap it and enter your passphrase. If you don't need a passphrase, select <strong>"[I don't need a passphrase]"</strong> to skip it.<br><br>
-        <div class="info">Nunchuk is a Bitcoin-only wallet focused on multisig. It's popular among advanced users who want mobile multisig with hardware wallets connected via NFC or QR.</div>`
+        f: 'mob-nunchuk-01.jpeg', imgW: 380,
+        es: 'Abrir Nunchuk ➜ Continuar como invitado',
+        en: 'Open Nunchuk ➜ Continue as guest',
+        des: `Abrir la app Nunchuk. Se puede registrar con email o continuar directamente como invitado tocando <strong>"Continue as guest"</strong>.<br><br>
+        <div class="info">Nunchuk es una wallet Bitcoin-only con soporte nativo para multisig, hardware wallets por NFC/QR y passphrase BIP39. Funciona sin cuenta si se usa como invitado.</div>`,
+        den: `Open the Nunchuk app. You can sign up with email or continue directly as a guest by tapping <strong>"Continue as guest"</strong>.<br><br>
+        <div class="info">Nunchuk is a Bitcoin-only wallet with native support for multisig, NFC/QR hardware wallets, and BIP39 passphrase. It works without an account in guest mode.</div>`
       },
       {
-        f: 'mob-nunchuk-02.png',
-        es: 'Verificar con el Wallet Fingerprint',
-        en: 'Verify with Wallet Fingerprint',
-        des: `Al agregar la passphrase, el <strong>fingerprint de la wallet actualiza</strong> en la pantalla - ese cambio confirma que estás en una billetera distinta.<br><br>
+        f: 'mob-nunchuk-02.jpeg', imgW: 380,
+        es: 'Pantalla Home ➜ Tocar "Add key"',
+        en: 'Home screen ➜ Tap "Add key"',
+        des: `La pantalla principal explica el flujo: primero agregar una clave, luego crear la wallet. Tocar el botón <strong>"Add key"</strong> para comenzar.<br><br>
+        <div class="info">En Nunchuk la "key" (clave) y la "wallet" son dos objetos separados. Primero se crea la clave con la passphrase, y después se crea la wallet usando esa clave.</div>`,
+        den: `The home screen explains the flow: first add a key, then create the wallet. Tap the <strong>"Add key"</strong> button to begin.<br><br>
+        <div class="info">In Nunchuk, the "key" and "wallet" are two separate objects. First you create the key with the passphrase, then you create the wallet using that key.</div>`
+      },
+      {
+        f: 'mob-nunchuk-03.jpeg', imgW: 380,
+        es: 'Sección Keys ➜ Tocar "Add key"',
+        en: 'Keys section ➜ Tap "Add key"',
+        des: `Nunchuk lleva a la pestaña <strong>Keys</strong>. Tocar el botón <strong>"Add key"</strong> para agregar la primera clave.<br><br>`,
+        den: `Nunchuk navigates to the <strong>Keys</strong> tab. Tap the <strong>"Add key"</strong> button to add the first key.<br><br>`
+      },
+      {
+        f: 'mob-nunchuk-04.jpeg', imgW: 380,
+        es: 'Create software key ➜ Seleccionar "Recover existing key"',
+        en: 'Create software key ➜ Select "Recover existing key"',
+        des: `Aparecen tres opciones. Seleccionar <strong>"Recover existing key"</strong> para importar la seed phrase ya existente. Luego tocar <strong>"Continue"</strong>.<br><br>
+        <div class="info">Si la wallet es nueva, usar "Create and back up key now". Para importar una seed ya existente, siempre usar "Recover existing key".</div>`,
+        den: `Three options appear. Select <strong>"Recover existing key"</strong> to import an existing seed phrase. Then tap <strong>"Continue"</strong>.<br><br>
+        <div class="info">For a new wallet, use "Create and back up key now". To import an existing seed, always use "Recover existing key".</div>`
+      },
+      {
+        f: 'mob-nunchuk-05.jpeg', imgW: 380,
+        es: 'Recover key via seed ➜ Ingresar seed phrase',
+        en: 'Recover key via seed ➜ Enter seed phrase',
+        des: `Ingresar todas las palabras de la seed phrase en el campo de texto. La app muestra sugerencias de palabras del diccionario BIP39 mientras se tipea.<br><br>
+        Cuando la seed esté completa, tocar <strong>"Continue"</strong>.<br><br>
+        <div class="warn">⚠️ Ingresar la seed solo en dispositivos de confianza. Nunca en redes públicas o dispositivos de otra persona.</div>`,
+        den: `Enter all the words of the seed phrase in the text field. The app shows BIP39 word suggestions as you type.<br><br>
+        When the seed is complete, tap <strong>"Continue"</strong>.<br><br>
+        <div class="warn">⚠️ Enter the seed only on trusted devices. Never on public networks or someone else's device.</div>`
+      },
+      {
+        f: 'mob-nunchuk-06.jpeg', imgW: 380,
+        es: 'Name your key ➜ Poner nombre descriptivo',
+        en: 'Name your key ➜ Set a descriptive name',
+        des: `Asignar un nombre a la clave. En este ejemplo se usó <strong>"Wallet + Passphrase"</strong> para identificar que esta clave incluye passphrase.<br><br>
+        Tocar <strong>"Continue"</strong> para pasar al paso de la passphrase.`,
+        den: `Assign a name to the key. In this example, <strong>"Wallet + Passphrase"</strong> was used to identify that this key includes a passphrase.<br><br>
+        Tap <strong>"Continue"</strong> to proceed to the passphrase step.`
+      },
+      {
+        f: 'mob-nunchuk-07.jpeg', imgW: 380,
+        es: 'Set passphrase ➜ Ingresar y confirmar passphrase',
+        en: 'Set passphrase ➜ Enter and confirm passphrase',
+        des: `Pantalla <strong>"Set passphrase"</strong>. La app describe la passphrase como "la palabra 25 de tu seed phrase".<br><br>
+        Ingresar la passphrase en el primer campo y confirmarla en el segundo. Tocar <strong>"Set passphrase"</strong> para aplicarla.<br><br>
+        <div class="warn">⚠️ Guardar la passphrase junto al respaldo de la seed. Sin ella, la billetera no se puede recuperar.</div>
+        <div class="info">Si no querés passphrase, tocar "I don't need a passphrase" para omitirla.</div>`,
+        den: `<strong>"Set passphrase"</strong> screen. The app describes the passphrase as "the 25th word of your seed phrase".<br><br>
+        Enter the passphrase in the first field and confirm it in the second. Tap <strong>"Set passphrase"</strong> to apply.<br><br>
+        <div class="warn">⚠️ Save the passphrase along with your seed backup. Without it, the wallet cannot be recovered.</div>
+        <div class="info">If you don't want a passphrase, tap "I don't need a passphrase" to skip it.</div>`
+      },
+      {
+        f: 'mob-nunchuk-08.jpeg', imgW: 380,
+        es: 'Key Info ➜ Verificar el fingerprint (XFP)',
+        en: 'Key Info ➜ Verify the fingerprint (XFP)',
+        des: `La pantalla <strong>Key Info</strong> confirma que la passphrase fue aplicada correctamente. Aparece el mensaje <strong>"Passphrase has been set"</strong>.<br><br>
+        El campo <strong>Key spec</strong> muestra el fingerprint de la clave derivada con passphrase: <code>4650653d</code>. Guardar este valor como referencia para verificar en el futuro.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[nuevo valor]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
-        </div>
-        La billetera derivada de seed + passphrase aparecerá como un key separado en tu configuración de Nunchuk.<br><br>
-        <div class="tip">Para recovery: al restaurar en Nunchuk, seleccionar <strong>Mnemonic Words (BIP39)</strong> ➜ ingresar seed ➜ ingresar passphrase. Ambos datos son necesarios para recuperar la billetera.</div>`,
-        den: `When adding the passphrase, the <strong>wallet fingerprint updates</strong> on screen - that change confirms you're in a different wallet.<br><br>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>4650653d</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
+        </div>`,
+        den: `The <strong>Key Info</strong> screen confirms the passphrase was applied correctly. The message <strong>"Passphrase has been set"</strong> appears.<br><br>
+        The <strong>Key spec</strong> field shows the fingerprint of the key derived with passphrase: <code>4650653d</code>. Save this value as a reference for future verification.<br><br>
         <div class="fp-compare">
-          <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[new value]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>4650653d</code> - hidden wallet <span class="fp-here">← you're here</span></div>
+        </div>`
+      },
+      {
+        f: 'mob-nunchuk-09.jpeg', imgW: 380,
+        es: 'Create wallet ➜ Seleccionar "Custom wallet"',
+        en: 'Create wallet ➜ Select "Custom wallet"',
+        des: `Con la clave lista, crear la wallet. Tocar <strong>"Create wallet"</strong> y elegir <strong>"Custom wallet"</strong> para configurar un setup single-sig o multisig con claves ya existentes.<br><br>
+        <div class="info">Custom wallet requiere tener al menos una clave ya creada. Es la opción correcta para usar la clave con passphrase que se acaba de agregar.</div>`,
+        den: `With the key ready, create the wallet. Tap <strong>"Create wallet"</strong> and choose <strong>"Custom wallet"</strong> to configure a single-sig or multisig setup with existing keys.<br><br>
+        <div class="info">Custom wallet requires having at least one key already created. It's the right option for using the passphrase key just added.</div>`
+      },
+      {
+        f: 'mob-nunchuk-10.jpeg', imgW: 380,
+        es: 'Nombre de la wallet',
+        en: 'Wallet name',
+        des: `Asignar un nombre a la wallet. Se puede usar el mismo nombre que la clave para facilitar la identificación.<br><br>
+        Tocar <strong>"Continue"</strong> para pasar a la configuración de tipo de dirección.`,
+        den: `Assign a name to the wallet. You can use the same name as the key to make identification easier.<br><br>
+        Tap <strong>"Continue"</strong> to proceed to the address type configuration.`
+      },
+      {
+        f: 'mob-nunchuk-11.jpeg', imgW: 380,
+        es: 'Config ➜ Address type: Native segwit',
+        en: 'Config ➜ Address type: Native segwit',
+        des: `Pantalla <strong>Config</strong>: elegir el tipo de dirección. Dejar la opción por defecto <strong>"Native segwit"</strong> (bc1q...), que es la más compatible y eficiente en fees.<br><br>
+        Tocar <strong>"Continue"</strong>.<br><br>
+        <div class="info">Native segwit corresponde al path de derivación m/84h/0h/0h. Es la opción estándar recomendada para la mayoría de usuarios.</div>`,
+        den: `<strong>Config</strong> screen: choose the address type. Keep the default <strong>"Native segwit"</strong> (bc1q...), which is the most compatible and fee-efficient.<br><br>
+        Tap <strong>"Continue"</strong>.<br><br>
+        <div class="info">Native segwit uses the derivation path m/84h/0h/0h. It's the recommended standard option for most users.</div>`
+      },
+      {
+        f: 'mob-nunchuk-12.jpeg', imgW: 380,
+        es: 'Configure wallet ➜ Asignar la clave con passphrase',
+        en: 'Configure wallet ➜ Assign the passphrase key',
+        des: `Pantalla <strong>Configure wallet</strong>. Aparece la clave "Wallet + Passphrase" con su XFP: <code>4650653D</code>. Marcar el checkbox de esa clave para asignarla a la wallet.<br><br>
+        Tocar <strong>"Continue"</strong> para revisar la configuración final.`,
+        den: `<strong>Configure wallet</strong> screen. The "Wallet + Passphrase" key appears with its XFP: <code>4650653D</code>. Check the checkbox for that key to assign it to the wallet.<br><br>
+        Tap <strong>"Continue"</strong> to review the final configuration.`
+      },
+      {
+        f: 'mob-nunchuk-13.jpeg', imgW: 380,
+        es: 'Review wallet ➜ Verificar XFP y path de derivación',
+        en: 'Review wallet ➜ Verify XFP and derivation path',
+        des: `Pantalla <strong>Review wallet</strong>: confirmar que los datos son correctos antes de crear la wallet.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-pp">🔐 XFP: <code>4650653D</code> - con passphrase</div>
+          <div class="fp-row-pp">📍 BIP32 path: <code>m/84h/0h/0h</code> - Native segwit</div>
         </div>
-        The wallet derived from seed + passphrase will appear as a separate key in your Nunchuk configuration.<br><br>
-        <div class="tip">For recovery: when restoring in Nunchuk, select <strong>Mnemonic Words (BIP39)</strong> ➜ enter seed ➜ enter passphrase. Both pieces of data are needed to recover the wallet.</div>`
+        Si todo es correcto, tocar <strong>"Create wallet"</strong>.`,
+        den: `<strong>Review wallet</strong> screen: confirm the details are correct before creating the wallet.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-pp">🔐 XFP: <code>4650653D</code> - with passphrase</div>
+          <div class="fp-row-pp">📍 BIP32 path: <code>m/84h/0h/0h</code> - Native segwit</div>
+        </div>
+        If everything is correct, tap <strong>"Create wallet"</strong>.`
+      },
+      {
+        f: 'mob-nunchuk-14.jpeg', imgW: 380,
+        es: 'Wallet lista ➜ Primera dirección de recepción',
+        en: 'Wallet ready ➜ First receiving address',
+        des: `La wallet con passphrase está creada. Nunchuk muestra automáticamente la primera dirección de recepción con su QR.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-pp">🔐 XFP: <code>4650653D</code> - billetera oculta activa</div>
+        </div>
+        <div class="tip">💡 Para recovery: abrir Nunchuk ➜ Keys ➜ Add key ➜ Recover existing key ➜ ingresar seed ➜ ingresar passphrase. Luego crear la wallet con esa clave.</div>
+        <div class="warn">⚠️ Guardar seed phrase + passphrase en lugares seguros y separados. Ambas son necesarias para recuperar esta billetera.</div>`,
+        den: `The passphrase wallet is created. Nunchuk automatically shows the first receiving address with its QR code.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-pp">🔐 XFP: <code>4650653D</code> - active hidden wallet</div>
+        </div>
+        <div class="tip">💡 For recovery: open Nunchuk ➜ Keys ➜ Add key ➜ Recover existing key ➜ enter seed ➜ enter passphrase. Then create the wallet using that key.</div>
+        <div class="warn">⚠️ Store seed phrase + passphrase in safe, separate locations. Both are required to recover this wallet.</div>`
       },
     ]
   },
@@ -4126,6 +4250,7 @@ const SLUGS = {
   'sw-wasabi':         'Wasabi',
   'sw-ashigaru':       'Ashigaru',
   'sw-electrum':       'Electrum',
+  'mob-nunchuk':       'Nunchuk',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
