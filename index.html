@@ -268,6 +268,7 @@
   .home-stat .num-yellow { color: #eab308; }
   .home-stat .lbl { font-size: 14px; color: var(--muted); margin-top: 4px; }
   .home-group-title { font-size: 14px; font-weight: 700; color: var(--muted); margin: 14px 0 5px; }
+  .hgt-count { color: var(--accent); font-size: 13px; font-weight: 700; margin-left: 4px; }
   .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-bottom: 4px; }
   .home-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; cursor: pointer; transition: border-color .15s, background .15s; display: flex; flex-direction: row; align-items: center; gap: 10px; }
   .home-card:hover { border-color: var(--accent-dim); background: #1a1a1a; }
@@ -4348,7 +4349,7 @@ function loadHome(pushUrl) {
         <span class="hc-name">${name}</span>
       </div>`;
     }).join('');
-    groupsHtml += `<div class="home-group-title">${title}</div><div class="home-grid">${cards}</div>`;
+    groupsHtml += `<div class="home-group-title">${title} <span class="hgt-count">${secs.length}</span></div><div class="home-grid">${cards}</div>`;
   });
 
   const heroTitle = LANG === 'en' ? '🔐 BIP39 Passphrase Tutorials' : '🔐 Tutoriales de Passphrase BIP39';
@@ -4365,7 +4366,6 @@ function loadHome(pushUrl) {
       <h1>${heroTitle}</h1>
       <div class="home-stats">
         <div class="home-stat"><div class="num num-orange">${readySecs.filter(s => !s.id.includes('trezor-suite')).length}</div><div class="lbl">${statWallets}</div></div>
-        <div class="home-stat"><div class="num num-yellow">${pendingSecs.length}</div><div class="lbl">${statPending}</div></div>
       </div>
     </div>
     ${groupsHtml}
