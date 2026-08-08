@@ -131,7 +131,7 @@
   #progress-fill { height: 100%; background: var(--accent); transition: width .3s; }
 
   /* CONTENT */
-  #content { flex: 1; overflow-y: auto; padding: 28px 32px; max-width: 860px; }
+  #content { flex: 1; overflow-y: auto; padding: 28px 32px; }
 
   h2.sec-title {
     font-size: 20px; font-weight: 700; color: var(--text);
@@ -164,9 +164,13 @@
     white-space: nowrap; flex-shrink: 0;
   }
   .step-title { font-size: 14px; font-weight: 600; color: var(--text); }
-  .step-body { padding: 14px 16px; display: flex; gap: 16px; align-items: flex-start; }
+  .step-body { padding: 14px 16px; display: flex; gap: 20px; align-items: flex-start; }
   .step-body.no-img { display: block; }
+  /* col-layout: imagen apaisada → texto abajo */
   .step-body.col-layout { flex-direction: column; }
+  .step-body.col-layout .step-img-wrap { max-width: 100% !important; }
+  .step-body.col-layout .step-img-wrap img { width: 100%; max-height: 520px; object-fit: contain; object-position: left; }
+  /* row-layout: imagen vertical (mobile) → texto a la derecha */
   .step-img-wrap { flex-shrink: 0; max-width: 100%; }
   .step-img-wrap img {
     border-radius: 6px; border: 1px solid var(--border);
@@ -4317,15 +4321,22 @@ function loadSection(sid, pushUrl) {
   content.innerHTML = html;
   content.scrollTop = 0;
 
-  // Auto col-layout: si el texto es más alto que la imagen, poner texto abajo
-  requestAnimationFrame(() => {
-    content.querySelectorAll('.step-body:not(.no-img):not(.col-layout)').forEach(body => {
-      const img = body.querySelector('.step-img-wrap');
-      const txt = body.querySelector('.step-text');
-      if (img && txt && txt.offsetHeight > img.offsetHeight + 20) {
-        body.classList.add('col-layout');
+  // Auto col-layout: imagen apaisada (landscape) → texto abajo; vertical (portrait) → texto a la derecha
+  content.querySelectorAll('.step-body:not(.no-img)').forEach(body => {
+    const img = body.querySelector('.step-img-wrap img');
+    if (!img) return;
+    const applyLayout = () => {
+      if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+        if (img.naturalWidth > img.naturalHeight) {
+          body.classList.add('col-layout');
+        }
       }
-    });
+    };
+    if (img.complete && img.naturalWidth > 0) {
+      applyLayout();
+    } else {
+      img.addEventListener('load', applyLayout, { once: true });
+    }
   });
 
   updateProgress(sid);
