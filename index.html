@@ -4107,6 +4107,80 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
     ]
   },
 
+  // CAKE WALLET
+  {
+    id: 'mob-cake', group: 'mobile', ready: true, isNew: true,
+    brand: 'Cake Wallet',
+    es: 'Cake Wallet', en: 'Cake Wallet',
+    logo: 'Cake.jpg', logoBg: true,
+    steps: [
+      {
+        f: 'mob-cake-01.png', imgW: 380,
+        es: 'Carteras ➜ Restaurar monedero',
+        en: 'Wallets ➜ Restore wallet',
+        des: `En la pantalla principal de Cake Wallet tocar <strong>"Restaurar monedero"</strong> para importar una seed phrase existente con passphrase.<br><br>
+        <div class="info">Cake Wallet es una wallet mobile Bitcoin-only (también soporta Monero). Soporta passphrase BIP39 al importar una seed existente. La app está disponible para iOS y Android.</div>`,
+        den: `On the Cake Wallet main screen, tap <strong>"Restore wallet"</strong> to import an existing seed phrase with a passphrase.<br><br>
+        <div class="info">Cake Wallet is a Bitcoin-only mobile wallet (also supports Monero). It supports BIP39 passphrase when importing an existing seed. Available for iOS and Android.</div>`
+      },
+      {
+        f: 'mob-cake-02.png', imgW: 380,
+        es: 'Restaurar billetera ➜ Seed o claves',
+        en: 'Restore wallet ➜ Seed or keys',
+        des: `Seleccionar <strong>"Seed o claves"</strong> para restaurar desde una frase semilla BIP39.<br><br>
+        <div class="info">Las otras opciones (App Cupcake, Monedero hardware, Código QR) son para otros métodos de importación que no aplican en este caso.</div>`,
+        den: `Select <strong>"Seed or keys"</strong> to restore from a BIP39 seed phrase.<br><br>
+        <div class="info">The other options (Cupcake App, Hardware wallet, QR Code) are for other import methods that don't apply in this case.</div>`
+      },
+      {
+        f: 'mob-cake-03.png', imgW: 380,
+        es: 'Activar "Esta billetera tiene una frase de contraseña"',
+        en: 'Enable "This wallet has a passphrase"',
+        des: `En la pantalla <strong>"Restaurar desde la frase semilla"</strong>:<br><br>
+        1. Completar el nombre de la billetera<br>
+        2. Ingresar la seed phrase en el campo<br>
+        3. Marcar el checkbox <strong>"Esta billetera tiene una frase de contraseña"</strong><br><br>
+        Al marcar el checkbox se habilita el botón <strong>"Añadir frase de contraseña"</strong> en la parte inferior.`,
+        den: `On the <strong>"Restore from seed phrase"</strong> screen:<br><br>
+        1. Fill in the wallet name<br>
+        2. Enter the seed phrase in the field<br>
+        3. Check the <strong>"This wallet has a passphrase"</strong> checkbox<br><br>
+        Checking the box enables the <strong>"Add passphrase"</strong> button at the bottom.`
+      },
+      {
+        f: 'mob-cake-04.png', imgW: 380,
+        es: 'Completar nombre y seed phrase ➜ "Añadir frase de contraseña"',
+        en: 'Fill name and seed phrase ➜ "Add passphrase"',
+        des: `Con los campos completados y el checkbox activado, el botón <strong>"Añadir frase de contraseña"</strong> queda habilitado. Tocarlo para ingresar la passphrase.<br><br>
+        <div class="warn">⚠️ No tocar "Restaurar" todavía — primero añadir la passphrase, de lo contrario se importará la billetera base sin ella.</div>`,
+        den: `With the fields filled and the checkbox enabled, the <strong>"Add passphrase"</strong> button becomes active. Tap it to enter the passphrase.<br><br>
+        <div class="warn">⚠️ Don't tap "Restore" yet — add the passphrase first, otherwise the base wallet will be imported without it.</div>`
+      },
+      {
+        f: 'mob-cake-05.png', imgW: 380,
+        es: 'Añadir frase de contraseña ➜ Ingresar y confirmar',
+        en: 'Add passphrase ➜ Enter and confirm',
+        des: `El modal <strong>"Añadir frase de contraseña"</strong> muestra una advertencia importante: solo ingresar passphrase si ya la usaste antes. Una passphrase incorrecta no da error — simplemente abre una billetera diferente sin fondos.<br><br>
+        Ingresar la passphrase en el primer campo y confirmarla en el segundo. Luego tocar <strong>"Restaurar"</strong>.<br><br>
+        <div class="warn">⚠️ Cake Wallet llama "frase de contraseña" a lo que BIP39 define como passphrase — es la misma cosa.</div>`,
+        den: `The <strong>"Add passphrase"</strong> modal shows an important warning: only enter a passphrase if you've used one before. An incorrect passphrase doesn't throw an error — it simply opens a different wallet with no funds.<br><br>
+        Enter the passphrase in the first field and confirm it in the second. Then tap <strong>"Restore"</strong>.<br><br>
+        <div class="warn">⚠️ Cake Wallet calls it "passphrase" — same as the BIP39 passphrase standard.</div>`
+      },
+      {
+        f: 'mob-cake-06.png', imgW: 380,
+        es: 'Wallet lista con passphrase activa',
+        en: 'Wallet ready with active passphrase',
+        des: `La billetera con passphrase está importada y lista. El saldo muestra 0 BTC (billetera de ejemplo vacía).<br><br>
+        <div class="tip">💡 Para recovery: abrir Cake Wallet ➜ Carteras ➜ Restaurar monedero ➜ Seed o claves ➜ ingresar seed ➜ marcar checkbox passphrase ➜ "Añadir frase de contraseña" ➜ ingresar passphrase ➜ Restaurar.</div>
+        <div class="warn">⚠️ Guardar seed phrase y passphrase en lugares seguros y separados. Ambas son necesarias para recuperar esta billetera.</div>`,
+        den: `The passphrase wallet is imported and ready. The balance shows 0 BTC (empty example wallet).<br><br>
+        <div class="tip">💡 For recovery: open Cake Wallet ➜ Wallets ➜ Restore wallet ➜ Seed or keys ➜ enter seed ➜ check passphrase checkbox ➜ "Add passphrase" ➜ enter passphrase ➜ Restore.</div>
+        <div class="warn">⚠️ Store seed phrase and passphrase in safe, separate locations. Both are needed to recover this wallet.</div>`
+      },
+    ]
+  },
+
   // TREZOR ONE
   {
     id: 'hw-trezor-one', group: 'pending',
@@ -4256,6 +4330,7 @@ const SLUGS = {
   'sw-ashigaru':       'Ashigaru',
   'sw-electrum':       'Electrum',
   'mob-nunchuk':       'Nunchuk',
+  'mob-cake':          'Cake-Wallet',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
