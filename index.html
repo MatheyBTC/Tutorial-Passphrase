@@ -2761,19 +2761,95 @@ const SECTIONS = [
 
   // PASSPORT PRIME
   {
-    id: 'hw-passport-prime', group: 'pending',
-    brand: 'Foundation',
+    id: 'hw-passport-prime', group: 'hw', ready: true, isNew: true,
+    brand: 'Foundation', logo: 'foundation.svg', logoBg: true,
     es: 'Passport Prime', en: 'Passport Prime',
     steps: [
       {
-        es: 'Pantalla Táctil + Prime Apps - Misma Ruta de Menú',
-        en: 'Touchscreen + Prime Apps - Same Menu Path',
-        des: `El <strong>Passport Prime</strong> es el modelo premium de Foundation. Tiene <strong>pantalla táctil a color</strong> y corre <strong>KeyOS</strong> (microkernel en Rust con apps sandboxeadas).<br><br>
-        La ruta de passphrase es la misma: <strong>MORE ➜ Settings ➜ Advanced ➜ Passphrase</strong>, pero la navegación es táctil - más fluida.<br><br>
-        <div class="info">Prime incluye <strong>Prime Apps</strong>: Bitcoin Wallet, Files, 2FA, Security Keys, Vault y QuantumLink. Para passphrase: teclado QWERTY en pantalla táctil.</div>`,
-        den: `The <strong>Passport Prime</strong> is Foundation's premium model. Has a <strong>color touchscreen</strong> and runs <strong>KeyOS</strong> (Rust microkernel with sandboxed apps).<br><br>
-        The passphrase path is the same: <strong>MORE ➜ Settings ➜ Advanced ➜ Passphrase</strong>, but navigation is touchscreen - smoother.<br><br>
-        <div class="info">Prime includes <strong>Prime Apps</strong>: Bitcoin Wallet, Files, 2FA, Security Keys, Vault and QuantumLink. For passphrase: QWERTY keyboard on touchscreen.</div>`
+        f: 'hw-passport-prime-01.png', imgW: 360,
+        es: 'Pantalla de inicio - Prime Apps',
+        en: 'Home Screen - Prime Apps',
+        des: `El <strong>Passport Prime</strong> es el modelo premium de Foundation con <strong>pantalla táctil a color</strong> y sistema <strong>KeyOS</strong> (microkernel en Rust con apps sandboxeadas).<br><br>
+        La pantalla de inicio muestra los tiles de las apps instaladas: QR, Bitcoin, Settings, 2FA, Keys, Vault, Files, y un gráfico de precio de Bitcoin en tiempo real.<br><br>
+        <div class="info">El dispositivo se maneja por toque. En la esquina inferior izquierda está el botón de menú del sistema; en la esquina inferior derecha, el escáner QR universal.</div>`,
+        den: `The <strong>Passport Prime</strong> is Foundation's premium model with a <strong>color touchscreen</strong> and <strong>KeyOS</strong> system (Rust microkernel with sandboxed apps).<br><br>
+        The home screen shows tiles for installed apps: QR, Bitcoin, Settings, 2FA, Keys, Vault, Files, and a live Bitcoin price chart.<br><br>
+        <div class="info">The device is touch-operated. Bottom-left has the system menu button; bottom-right has the universal QR scanner.</div>`
+      },
+      {
+        f: 'hw-passport-prime-02.png', imgW: 360,
+        es: 'Cuentas - Cuenta principal "Passport Prime"',
+        en: 'Accounts - Main "Passport Prime" Account',
+        des: `Desde la app Bitcoin, ir a <strong>Cuentas</strong>. La cuenta por defecto se llama <strong>"Passport Prime"</strong> y aparece listada sin passphrase.<br><br>
+        Para agregar una cuenta con passphrase, tocar el menú de tres puntos <strong>(…)</strong> a la derecha del nombre de la cuenta.`,
+        den: `From the Bitcoin app, go to <strong>Accounts</strong>. The default account is named <strong>"Passport Prime"</strong> and appears without passphrase.<br><br>
+        To add a passphrase account, tap the three-dot menu <strong>(…)</strong> to the right of the account name.`
+      },
+      {
+        f: 'hw-passport-prime-03.png', imgW: 360,
+        es: 'Menú (…) ➜ Apply Passphrase',
+        en: 'Menu (…) ➜ Apply Passphrase',
+        des: `Al tocar el ícono <strong>(…)</strong> aparece un menú con las opciones: Settings, View Archive, Import Multisig, <strong>Apply Passphrase</strong>, Create Account.<br><br>
+        Seleccionar <strong>Apply Passphrase</strong> para iniciar el proceso.`,
+        den: `Tapping the <strong>(…)</strong> icon shows a menu with options: Settings, View Archive, Import Multisig, <strong>Apply Passphrase</strong>, Create Account.<br><br>
+        Select <strong>Apply Passphrase</strong> to begin the process.`
+      },
+      {
+        f: 'hw-passport-prime-04.png', imgW: 360,
+        es: 'Aviso - "Using a Passphrase"',
+        en: 'Warning - "Using a Passphrase"',
+        des: `El dispositivo muestra un aviso explicando qué es la passphrase BIP39 y sus implicaciones.<br><br>
+        Leer con atención. Opcionalmente marcar <strong>"Don't show again"</strong> para no ver este aviso en el futuro.<br><br>
+        <div class="warning">La passphrase crea una billetera completamente distinta. Si la olvidás, <strong>no hay recuperación posible</strong>. Guardala en un lugar seguro.</div>`,
+        den: `The device shows a warning explaining what a BIP39 passphrase is and its implications.<br><br>
+        Read carefully. Optionally check <strong>"Don't show again"</strong> to skip this warning in the future.<br><br>
+        <div class="warning">The passphrase creates a completely different wallet. If you forget it, <strong>there is no recovery</strong>. Store it somewhere safe.</div>`
+      },
+      {
+        f: 'hw-passport-prime-05.png', imgW: 360,
+        es: 'Pantalla "Enter Passphrase"',
+        en: '"Enter Passphrase" Screen',
+        des: `Se muestra el campo para ingresar la passphrase con un teclado QWERTY táctil. Tocar el campo para activar el teclado.<br><br>
+        La passphrase puede ser cualquier combinación de letras, números y símbolos. Es <strong>case-sensitive</strong> (distingue mayúsculas/minúsculas).`,
+        den: `The passphrase entry field appears with a touchscreen QWERTY keyboard. Tap the field to activate the keyboard.<br><br>
+        The passphrase can be any combination of letters, numbers, and symbols. It is <strong>case-sensitive</strong>.`
+      },
+      {
+        f: 'hw-passport-prime-06.png', imgW: 360,
+        es: 'Teclado QWERTY - Ingresar la Passphrase',
+        en: 'QWERTY Keyboard - Enter the Passphrase',
+        des: `El teclado táctil permite ingresar cualquier caracter. El campo muestra el texto mientras escribís (o puede ocultarlo).<br><br>
+        Una vez ingresada la passphrase completa, tocar <strong>Apply</strong> para continuar.<br><br>
+        <div class="info">Tip: podés usar palabras del listado EFF (12/24 palabras de cualquier idioma) como passphrase para mayor entropía y facilidad de recordar.</div>`,
+        den: `The touchscreen keyboard allows entering any character. The field shows the text as you type (or can hide it).<br><br>
+        Once the full passphrase is entered, tap <strong>Apply</strong> to continue.<br><br>
+        <div class="info">Tip: you can use words from the EFF word list (12/24 words in any language) as a passphrase for higher entropy and easier recall.</div>`
+      },
+      {
+        f: 'hw-passport-prime-07.png', imgW: 360,
+        es: 'Verificar Huella Digital y Asignar Nombre',
+        en: 'Verify Fingerprint and Assign Name',
+        des: `El dispositivo muestra la pantalla de confirmación con:<br><br>
+        - <strong>Fingerprint (XFP):</strong> el identificador único de esta billetera con passphrase<br>
+        - <strong>Label:</strong> nombre para identificar la cuenta (por defecto "Passphrase 1")<br>
+        - Aviso de que la passphrase se borra al apagar el dispositivo<br><br>
+        <fp-compare xfp="D1DF1B76"></fp-compare>
+        Verificar que el XFP coincida con tu billetera de software. Tocar <strong>Confirm</strong>.`,
+        den: `The device shows the confirmation screen with:<br><br>
+        - <strong>Fingerprint (XFP):</strong> unique identifier for this passphrase wallet<br>
+        - <strong>Label:</strong> name to identify the account (default "Passphrase 1")<br>
+        - Warning that passphrase is erased when device turns off<br><br>
+        <fp-compare xfp="D1DF1B76"></fp-compare>
+        Verify the XFP matches your software wallet. Tap <strong>Confirm</strong>.`
+      },
+      {
+        f: 'hw-passport-prime-08.png', imgW: 360,
+        es: 'Cuenta con Passphrase Activa',
+        en: 'Passphrase Account Active',
+        des: `La cuenta <strong>"Passphrase 1"</strong> aparece en la lista de cuentas. Podés alternar entre la cuenta sin passphrase ("Passport Prime") y la cuenta con passphrase usando el toggle.<br><br>
+        <div class="warning"><strong>Importante:</strong> la passphrase se borra automáticamente al apagar el Passport Prime. Cada vez que enciendas el dispositivo y quieras acceder a esta billetera, deberás ingresar la passphrase nuevamente desde Cuentas ➜ (…) ➜ Apply Passphrase.</div>`,
+        den: `The <strong>"Passphrase 1"</strong> account appears in the accounts list. You can switch between the no-passphrase account ("Passport Prime") and the passphrase account using the toggle.<br><br>
+        <div class="warning"><strong>Important:</strong> the passphrase is automatically erased when Passport Prime turns off. Every time you power on the device and want to access this wallet, you must re-enter the passphrase from Accounts ➜ (…) ➜ Apply Passphrase.</div>`
       },
     ]
   },
@@ -4331,6 +4407,7 @@ const SLUGS = {
   'sw-electrum':       'Electrum',
   'mob-nunchuk':       'Nunchuk',
   'mob-cake':          'Cake-Wallet',
+  'hw-passport-prime': 'Passport-Prime',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
