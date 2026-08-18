@@ -4421,6 +4421,73 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
   },
 
 
+  // SAFEPAL APP (MOBILE)
+  {
+    id: 'mob-safepal', group: 'mobile', ready: true, isNew: true,
+    brand: 'SafePal', logo: 'SafePal.png',
+    es: 'SafePal App', en: 'SafePal App',
+    steps: [
+      {
+        f: 'mob-safepal-01.png', imgW: 380,
+        es: 'Pantalla inicial ➜ Añadir Monedero Existente',
+        en: 'Home Screen ➜ Add Existing Wallet',
+        des: `Al abrir la app SafePal por primera vez aparecen tres opciones. Seleccionar <strong>Añadir Monedero Existente</strong> para importar tu seed phrase junto con la passphrase BIP39.<br><br>
+        <div class="info">La passphrase se ingresa <strong>durante el proceso de importación</strong>, no como configuración separada. Por eso es necesario empezar por esta opción.</div>`,
+        den: `When opening the SafePal app for the first time, three options appear. Select <strong>Add Existing Wallet</strong> to import your seed phrase together with the BIP39 passphrase.<br><br>
+        <div class="info">The passphrase is entered <strong>during the import process</strong>, not as a separate setting. That's why you need to start with this option.</div>`
+      },
+      {
+        f: 'mob-safepal-02.png', imgW: 380,
+        es: 'Crear contraseña de 6 dígitos',
+        en: 'Create 6-Digit Password',
+        des: `La app solicita crear una <strong>contraseña de 6 dígitos</strong> para proteger el acceso a la aplicación.<br><br>
+        <div class="warning"><strong>Esta contraseña NO es la Passphrase BIP39.</strong> Es solo el PIN de acceso a la app SafePal. Son dos cosas completamente distintas.</div>`,
+        den: `The app asks you to create a <strong>6-digit password</strong> to protect access to the application.<br><br>
+        <div class="warning"><strong>This password is NOT the BIP39 Passphrase.</strong> It is only the SafePal app access PIN. They are two completely different things.</div>`
+      },
+      {
+        f: 'mob-safepal-03.png', imgW: 380,
+        es: 'Ingresar Seed Phrase ➜ Configuración avanzada',
+        en: 'Enter Seed Phrase ➜ Advanced Settings',
+        des: `Ingresar las <strong>12 o 24 palabras</strong> de la seed phrase. Una vez completadas, la app pregunta cómo continuar.<br><br>
+        Seleccionar <strong>Configuración avanzada</strong> — NO tocar "Importar ahora", ya que esa opción importa sin passphrase y derivaría la wallet incorrecta.`,
+        den: `Enter your <strong>12 or 24 words</strong> of the seed phrase. Once completed, the app asks how to proceed.<br><br>
+        Select <strong>Advanced Settings</strong> — do NOT tap "Import now", as that option imports without passphrase and would derive the wrong wallet.`
+      },
+      {
+        f: 'mob-safepal-04.png', imgW: 380,
+        es: 'Configuración avanzada ➜ Introducir Passphrase',
+        en: 'Advanced Settings ➜ Enter Passphrase',
+        des: `La pantalla de <strong>Configuración avanzada</strong> muestra el campo <strong>Passphrase</strong> con el aviso: <em>"Establecer una passphrase solamente si entiende completamente su función."</em><br><br>
+        Tocar el campo <strong>"Introducir passphrase"</strong> para activar el teclado e ingresar la passphrase. También se muestra la opción de Ruta de Derivación (no modificar a menos que sepas lo que hacés).<br><br>
+        Cuando termines, tocar <strong>Siguiente</strong>.`,
+        den: `The <strong>Advanced Settings</strong> screen shows the <strong>Passphrase</strong> field with the notice: <em>"Only set a passphrase if you fully understand its function."</em><br><br>
+        Tap the <strong>"Enter passphrase"</strong> field to activate the keyboard and enter the passphrase. There is also a Derivation Path option (do not modify unless you know what you're doing).<br><br>
+        When done, tap <strong>Next</strong>.`
+      },
+      {
+        f: 'mob-safepal-05.png', imgW: 380,
+        es: 'Escribir la Passphrase exactamente',
+        en: 'Type the Passphrase Exactly',
+        des: `Ingresar la passphrase <strong>exactamente como fue definida</strong>, respetando mayúsculas, minúsculas, espacios y símbolos. El ícono del ojo permite mostrar/ocultar el texto.<br><br>
+        En el ejemplo se utilizan palabras de la lista EFF como passphrase.<br><br>
+        <div class="warning"><strong>Una passphrase diferente, incluso por un solo carácter, deriva una wallet completamente distinta.</strong> Verificar cuidadosamente antes de continuar.</div>`,
+        den: `Enter the passphrase <strong>exactly as it was defined</strong>, respecting uppercase, lowercase, spaces and symbols. The eye icon lets you show/hide the text.<br><br>
+        The example uses EFF word list words as the passphrase.<br><br>
+        <div class="warning"><strong>A different passphrase — even by a single character — derives a completely different wallet.</strong> Double-check carefully before continuing.</div>`
+      },
+      {
+        f: 'mob-safepal-06.png', imgW: 380,
+        es: 'Wallet lista - Seed Phrase + Passphrase',
+        en: 'Wallet Ready - Seed Phrase + Passphrase',
+        des: `SafePal abre directamente la wallet derivada de la combinación <strong>Seed Phrase + Passphrase</strong>. La wallet está lista para usar.<br><br>
+        <div class="info">Cada vez que quieras acceder a esta wallet en la app, deberás importar nuevamente con la passphrase correcta, o usar la opción de cambio de wallet si SafePal la tiene guardada en sesión.</div>`,
+        den: `SafePal opens the wallet derived from the <strong>Seed Phrase + Passphrase</strong> combination directly. The wallet is ready to use.<br><br>
+        <div class="info">Each time you want to access this wallet in the app, you will need to import again with the correct passphrase, or use the wallet switch option if SafePal has it saved in session.</div>`
+      },
+    ]
+  },
+
   // ARKADE (placeholder - Ark protocol early stage)
   {
     id: 'mob-arkade', group: 'pending',
@@ -4534,6 +4601,7 @@ const SLUGS = {
   'mob-cake':          'Cake-Wallet',
   'hw-passport-prime': 'Passport-Prime',
   'hw-safepal':        'SafePal-S1',
+  'mob-safepal':       'SafePal-App',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
