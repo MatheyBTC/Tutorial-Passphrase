@@ -2781,9 +2781,9 @@ const SECTIONS = [
         es: 'Cuentas - Cuenta principal "Passport Prime"',
         en: 'Accounts - Main "Passport Prime" Account',
         des: `Desde la app Bitcoin, ir a <strong>Cuentas</strong>. La cuenta por defecto se llama <strong>"Passport Prime"</strong> y aparece listada sin passphrase.<br><br>
-        Para agregar una cuenta con passphrase, tocar el menú de tres puntos <strong>(…)</strong> a la derecha del nombre de la cuenta.`,
+        Para agregar una cuenta con passphrase, tocar el menú de tres puntos <strong>(…)</strong> ubicado <strong>a la derecha del nombre de la cuenta</strong> en la lista.`,
         den: `From the Bitcoin app, go to <strong>Accounts</strong>. The default account is named <strong>"Passport Prime"</strong> and appears without passphrase.<br><br>
-        To add a passphrase account, tap the three-dot menu <strong>(…)</strong> to the right of the account name.`
+        To add a passphrase account, tap the three-dot menu <strong>(…)</strong> located <strong>to the right of the account name</strong> in the list.`
       },
       {
         f: 'hw-passport-prime-03.png', imgW: 360,
@@ -2799,31 +2799,33 @@ const SECTIONS = [
         es: 'Aviso - "Using a Passphrase"',
         en: 'Warning - "Using a Passphrase"',
         des: `El dispositivo muestra un aviso explicando qué es la passphrase BIP39 y sus implicaciones.<br><br>
-        Leer con atención. Opcionalmente marcar <strong>"Don't show again"</strong> para no ver este aviso en el futuro.<br><br>
-        <div class="warning">La passphrase crea una billetera completamente distinta. Si la olvidás, <strong>no hay recuperación posible</strong>. Guardala en un lugar seguro.</div>`,
+        Leer con atención. Opcionalmente marcar <strong>"Don't show again"</strong> para no ver este aviso en el futuro. Presionar <strong>Confirm</strong> para continuar.<br><br>
+        <div class="warning">La passphrase crea una billetera completamente distinta. Para volver a acceder a ella debés ingresar <strong>exactamente los mismos caracteres</strong>. Si la olvidás, no hay recuperación posible.<br><br>
+        <strong>Passport Prime borra la passphrase al apagarse.</strong> Cada vez que enciendas el dispositivo deberás ingresarla nuevamente para acceder a esa wallet.</div>`,
         den: `The device shows a warning explaining what a BIP39 passphrase is and its implications.<br><br>
-        Read carefully. Optionally check <strong>"Don't show again"</strong> to skip this warning in the future.<br><br>
-        <div class="warning">The passphrase creates a completely different wallet. If you forget it, <strong>there is no recovery</strong>. Store it somewhere safe.</div>`
+        Read carefully. Optionally check <strong>"Don't show again"</strong> to skip this warning in the future. Press <strong>Confirm</strong> to continue.<br><br>
+        <div class="warning">The passphrase creates a completely different wallet. To access it again you must enter <strong>exactly the same characters</strong>. If you forget it, there is no recovery.<br><br>
+        <strong>Passport Prime erases the passphrase when powered off.</strong> Every time you turn on the device you must re-enter it to access that wallet.</div>`
       },
       {
         f: 'hw-passport-prime-05.png', imgW: 360,
-        es: 'Pantalla "Enter Passphrase"',
-        en: '"Enter Passphrase" Screen',
-        des: `Se muestra el campo para ingresar la passphrase con un teclado QWERTY táctil. Tocar el campo para activar el teclado.<br><br>
-        La passphrase puede ser cualquier combinación de letras, números y símbolos. Es <strong>case-sensitive</strong> (distingue mayúsculas/minúsculas).`,
-        den: `The passphrase entry field appears with a touchscreen QWERTY keyboard. Tap the field to activate the keyboard.<br><br>
-        The passphrase can be any combination of letters, numbers, and symbols. It is <strong>case-sensitive</strong>.`
+        es: 'Ingresar la Passphrase y presionar Apply',
+        en: 'Enter the Passphrase and tap Apply',
+        des: `Se muestra el campo para ingresar la passphrase. Tocar el campo para activar el teclado QWERTY táctil.<br><br>
+        Introducir cuidadosamente la passphrase y verificar lo escrito antes de continuar. La passphrase es <strong>case-sensitive</strong> (distingue mayúsculas/minúsculas).<br><br>
+        Una vez ingresada, tocar <strong>Apply</strong>.`,
+        den: `The passphrase entry field appears. Tap the field to activate the touchscreen QWERTY keyboard.<br><br>
+        Carefully enter the passphrase and verify what you typed before continuing. The passphrase is <strong>case-sensitive</strong>.<br><br>
+        Once entered, tap <strong>Apply</strong>.`
       },
       {
         f: 'hw-passport-prime-06.png', imgW: 360,
-        es: 'Teclado QWERTY - Ingresar la Passphrase',
-        en: 'QWERTY Keyboard - Enter the Passphrase',
-        des: `El teclado táctil permite ingresar cualquier caracter. El campo muestra el texto mientras escribís (o puede ocultarlo).<br><br>
-        Una vez ingresada la passphrase completa, tocar <strong>Apply</strong> para continuar.<br><br>
-        <div class="info">Tip: podés usar palabras del listado EFF (12/24 palabras de cualquier idioma) como passphrase para mayor entropía y facilidad de recordar.</div>`,
-        den: `The touchscreen keyboard allows entering any character. The field shows the text as you type (or can hide it).<br><br>
-        Once the full passphrase is entered, tap <strong>Apply</strong> to continue.<br><br>
-        <div class="info">Tip: you can use words from the EFF word list (12/24 words in any language) as a passphrase for higher entropy and easier recall.</div>`
+        es: 'Ejemplo: Passphrase con palabras de la lista EFF',
+        en: 'Example: Passphrase Using EFF Word List',
+        des: `En el ejemplo se muestra una passphrase formada por <strong>5 o 6 palabras de la lista EFF</strong>. Este es un buen método: palabras aleatorias del listado EFF ofrecen alta entropía y son más fáciles de recordar o anotar que una cadena de caracteres aleatoria.<br><br>
+        <div class="info"><strong>Una passphrase diferente, incluso por un solo carácter, deriva una wallet completamente distinta.</strong> Verificar siempre el Fingerprint (XFP) para confirmar que ingresaste la correcta.</div>`,
+        den: `The example shows a passphrase made of <strong>5 or 6 words from the EFF word list</strong>. This is a strong method: random EFF words provide high entropy and are easier to remember or write down than a random character string.<br><br>
+        <div class="info"><strong>A different passphrase — even by a single character — derives a completely different wallet.</strong> Always verify the Fingerprint (XFP) to confirm you entered the right one.</div>`
       },
       {
         f: 'hw-passport-prime-07.png', imgW: 360,
