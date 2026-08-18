@@ -2856,6 +2856,129 @@ const SECTIONS = [
     ]
   },
 
+  // SAFEPAL S1
+  {
+    id: 'hw-safepal', group: 'hw', ready: true, isNew: true,
+    brand: 'SafePal', logo: 'SafePal.png',
+    es: 'SafePal S1', en: 'SafePal S1',
+    steps: [
+      {
+        f: 'hw-safepal-01.png', imgW: 420,
+        es: 'Pantalla principal ➜ Configuraciones',
+        en: 'Home Screen ➜ Settings',
+        des: `El <strong>SafePal S1</strong> es una hardware wallet air-gapped que se opera con un <strong>D-pad físico</strong> (sin conexión USB, Bluetooth ni WiFi). La comunicación con la app se realiza exclusivamente por <strong>códigos QR</strong>.<br><br>
+        Desde la pantalla principal, navegar con el D-pad hasta seleccionar <strong>Configuraciones</strong> y presionar OK.`,
+        den: `The <strong>SafePal S1</strong> is an air-gapped hardware wallet operated with a <strong>physical D-pad</strong> (no USB, Bluetooth or WiFi). Communication with the app is done exclusively via <strong>QR codes</strong>.<br><br>
+        From the home screen, navigate with the D-pad to select <strong>Settings</strong> and press OK.`
+      },
+      {
+        f: 'hw-safepal-02.png', imgW: 420,
+        es: 'Menú de Seguridad ➜ Passphrase',
+        en: 'Security Menu ➜ Passphrase',
+        des: `Dentro de Configuraciones, el menú de seguridad muestra las opciones: <strong>Passphrase</strong>, Seed Verification, Hora de dormir, APAGADO, Cambiar PIN.<br><br>
+        Seleccionar <strong>Passphrase</strong> (primera opción, resaltada en azul) y presionar OK.`,
+        den: `Inside Settings, the security menu shows: <strong>Passphrase</strong>, Seed Verification, Sleep Time, Power Off, Change PIN.<br><br>
+        Select <strong>Passphrase</strong> (first option, highlighted in blue) and press OK.`
+      },
+      {
+        f: 'hw-safepal-03.png', imgW: 420,
+        es: 'Passphrase ➜ Set Passphrase',
+        en: 'Passphrase ➜ Set Passphrase',
+        des: `El dispositivo muestra la descripción: <em>"Puede crear y cambiar entre diferentes monederos a través de Passphrase."</em><br><br>
+        Seleccionar <strong>Set Passphrase</strong> para crear una nueva wallet con passphrase. La opción <em>What's Passphrase</em> muestra información educativa.`,
+        den: `The device shows: <em>"You can create and switch between different wallets via Passphrase."</em><br><br>
+        Select <strong>Set Passphrase</strong> to create a new passphrase wallet. The <em>What's Passphrase</em> option shows educational information.`
+      },
+      {
+        f: 'hw-safepal-04.png', imgW: 420,
+        es: '¿Necesita usar una frase de Passphrase? ➜ Yes',
+        en: 'Do You Need to Use a Passphrase? ➜ Yes',
+        des: `El dispositivo pregunta: <strong>"¿Usted necesita usar una frase de Passphrase?"</strong><br><br>
+        Seleccionar <strong>Yes</strong> para continuar con la creación de la wallet con passphrase.<br><br>
+        <div class="warning">La passphrase crea una wallet Bitcoin completamente diferente. Para acceder a ella siempre deberás ingresar <strong>exactamente los mismos caracteres</strong>. Si la perdés, perdés el acceso a los fondos.</div>`,
+        den: `The device asks: <strong>"Do you need to use a Passphrase?"</strong><br><br>
+        Select <strong>Yes</strong> to continue creating the passphrase wallet.<br><br>
+        <div class="warning">The passphrase creates a completely different Bitcoin wallet. To access it you must always enter <strong>exactly the same characters</strong>. If you lose it, you lose access to the funds.</div>`
+      },
+      {
+        f: 'hw-safepal-05.png', imgW: 420,
+        es: 'Ingresar PIN del dispositivo',
+        en: 'Enter Device PIN',
+        des: `SafePal solicita el <strong>PIN del dispositivo</strong> para autorizar la operación. Ingresar el PIN usando el D-pad para navegar por el teclado numérico y OK para confirmar cada dígito.<br><br>
+        <div class="info">El PIN protege el acceso físico al dispositivo. No confundir con la passphrase BIP39.</div>`,
+        den: `SafePal requests the <strong>device PIN</strong> to authorize the operation. Enter the PIN using the D-pad to navigate the numeric keypad and OK to confirm each digit.<br><br>
+        <div class="info">The PIN protects physical access to the device. Do not confuse it with the BIP39 passphrase.</div>`
+      },
+      {
+        f: 'hw-safepal-06.png', imgW: 420,
+        es: 'Ingresar la Passphrase',
+        en: 'Enter the Passphrase',
+        des: `El dispositivo muestra el campo <strong>"Introduzca la frase de"</strong> con teclado QWERTY en pantalla. Usar el D-pad para navegar entre las teclas y OK para seleccionar cada caracter.<br><br>
+        La passphrase puede tener hasta <strong>60 caracteres</strong> e incluir letras, números y símbolos. Es <strong>case-sensitive</strong>.<br><br>
+        Cuando termines, seleccionar <strong>Done</strong>.`,
+        den: `The device shows the <strong>"Enter passphrase"</strong> field with an on-screen QWERTY keyboard. Use the D-pad to navigate between keys and OK to select each character.<br><br>
+        The passphrase can be up to <strong>60 characters</strong> and include letters, numbers, and symbols. It is <strong>case-sensitive</strong>.<br><br>
+        When done, select <strong>Done</strong>.`
+      },
+      {
+        f: 'hw-safepal-07.png', imgW: 420,
+        es: 'Ejemplo: Passphrase con palabras de la lista EFF',
+        en: 'Example: Passphrase Using EFF Word List',
+        des: `En el ejemplo se ingresaron <strong>5/6 palabras de la lista EFF</strong> como passphrase. Este es un método robusto: palabras aleatorias del listado EFF ofrecen alta entropía y son más fáciles de anotar y recordar que una cadena de caracteres aleatoria.<br><br>
+        <div class="info"><strong>Una passphrase diferente, incluso por un solo carácter, deriva una wallet completamente distinta.</strong> Revisá cuidadosamente lo escrito antes de tocar Done.</div>`,
+        den: `The example shows <strong>5/6 words from the EFF word list</strong> entered as a passphrase. This is a robust method: random EFF words provide high entropy and are easier to write down and remember than random character strings.<br><br>
+        <div class="info"><strong>A different passphrase — even by a single character — derives a completely different wallet.</strong> Review carefully what you typed before tapping Done.</div>`
+      },
+      {
+        f: 'hw-safepal-08.png', imgW: 420,
+        es: 'Confirmar la Passphrase - Ingresarla de nuevo',
+        en: 'Confirm Passphrase - Enter Again',
+        des: `SafePal pide ingresar la passphrase <strong>por segunda vez</strong> para verificar que fue escrita correctamente. La pantalla dice <strong>"Entrar de nuevo"</strong>.<br><br>
+        Repetir exactamente la misma passphrase y seleccionar <strong>Done</strong>. Si ambas coinciden, el dispositivo crea el monedero.`,
+        den: `SafePal asks to enter the passphrase <strong>a second time</strong> to verify it was typed correctly. The screen says <strong>"Enter again"</strong>.<br><br>
+        Repeat the exact same passphrase and select <strong>Done</strong>. If both match, the device creates the wallet.`
+      },
+      {
+        f: 'hw-safepal-09.png', imgW: 420,
+        es: '¡Se creó el monedero! ➜ Asignar nombre',
+        en: 'Wallet Created! ➜ Assign Name',
+        des: `El dispositivo confirma con un ✅ verde: <strong>"¡Se creó el monedero!"</strong> y solicita asignar un nombre a la nueva wallet con passphrase.<br><br>
+        Presionar <strong>OK</strong> para pasar a la pantalla de nombre.`,
+        den: `The device confirms with a green ✅: <strong>"Wallet created!"</strong> and asks to assign a name to the new passphrase wallet.<br><br>
+        Press <strong>OK</strong> to go to the naming screen.`
+      },
+      {
+        f: 'hw-safepal-10.png', imgW: 420,
+        es: 'Asignar nombre a la wallet',
+        en: 'Assign Wallet Name',
+        des: `Ingresar el nombre para identificar esta wallet en el dispositivo. En el ejemplo: <strong>"Passphrase"</strong>.<br><br>
+        Usar el teclado QWERTY con el D-pad para escribir el nombre. Cuando termines, seleccionar <strong>Done</strong>.`,
+        den: `Enter a name to identify this wallet on the device. Example: <strong>"Passphrase"</strong>.<br><br>
+        Use the D-pad QWERTY keyboard to type the name. When done, select <strong>Done</strong>.`
+      },
+      {
+        f: 'hw-safepal-11.png', imgW: 420,
+        es: 'Confirmar el nombre de la wallet',
+        en: 'Confirm Wallet Name',
+        des: `El dispositivo pregunta: <strong>"¿Confirma uso de 'Passphrase' como nombre de cartera?"</strong><br><br>
+        Seleccionar <strong>Confirmar</strong> para finalizar. Con <em>Regresar</em> podés modificar el nombre.`,
+        den: `The device asks: <strong>"Confirm use of 'Passphrase' as wallet name?"</strong><br><br>
+        Select <strong>Confirm</strong> to finish. With <em>Go back</em> you can change the name.`
+      },
+      {
+        f: 'hw-safepal-12.png', imgW: 420,
+        es: 'Wallet Passphrase activa ➜ Emparejar con la App',
+        en: 'Passphrase Wallet Active ➜ Pair with App',
+        des: `El dispositivo confirma: <strong>"Ha cambiado a billetera 'Passphrase'. Usted puede usarla después de emparejarla con la Aplicación."</strong><br><br>
+        La wallet con passphrase está creada en el dispositivo. Para usarla es necesario <strong>emparejarla con la app SafePal</strong> mediante el proceso de escaneo QR.<br><br>
+        <div class="info">Cada passphrase crea su propia wallet con su propio conjunto de direcciones. Podés tener múltiples wallets con passphrase en el mismo dispositivo S1.</div>`,
+        den: `The device confirms: <strong>"You have switched to wallet 'Passphrase'. You can use it after pairing it with the App."</strong><br><br>
+        The passphrase wallet is created on the device. To use it you need to <strong>pair it with the SafePal app</strong> via the QR scanning process.<br><br>
+        <div class="info">Each passphrase creates its own wallet with its own set of addresses. You can have multiple passphrase wallets on the same S1 device.</div>`
+      },
+    ]
+  },
+
   // KEYSTONE 3
   {
     id: 'hw-keystone3', group: 'pending',
@@ -4410,6 +4533,7 @@ const SLUGS = {
   'mob-nunchuk':       'Nunchuk',
   'mob-cake':          'Cake-Wallet',
   'hw-passport-prime': 'Passport-Prime',
+  'hw-safepal':        'SafePal-S1',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
