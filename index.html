@@ -4384,38 +4384,148 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
 
   // TREZOR ONE
   {
-    id: 'hw-trezor-one', group: 'pending',
-    brand: 'Trezor',
+    id: 'hw-trezor-one', group: 'hw', ready: true, isNew: true,
+    brand: 'Trezor', logo: 'trezor_4x4.png',
     es: 'Trezor One', en: 'Trezor One',
     steps: [
       {
-        f: 'hw-trezor-one-01.png',
-        es: 'Trezor Suite ➜ Configuración ➜ Dispositivo ➜ Passphrase',
-        en: 'Trezor Suite ➜ Settings ➜ Device ➜ Passphrase',
-        des: `Conectar la Trezor One y abrir <strong>Trezor Suite</strong> (desktop). Ir a <strong>Configuración ➜ Dispositivo</strong> y activar el toggle <strong>"Usar billeteras con passphrase"</strong>.<br><br>
-        La confirmación se hace presionando el <strong>botón derecho físico</strong> del dispositivo (no tiene pantalla táctil).`,
-        den: `Connect the Trezor One and open <strong>Trezor Suite</strong> (desktop). Go to <strong>Settings ➜ Device</strong> and enable the <strong>"Use passphrase wallets"</strong> toggle.<br><br>
-        Confirm by pressing the <strong>right physical button</strong> on the device (no touchscreen).`
+        f: 'hw-trezor-one-01.png', imgW: 560,
+        es: 'Trezor Suite ➜ Configuración ➜ Dispositivo ➜ Passphrase (activar)',
+        en: 'Trezor Suite ➜ Settings ➜ Device ➜ Passphrase (enable)',
+        des: `Conectar la Trezor One y abrir <strong>Trezor Suite</strong> (desktop). Ir a <strong>Configuración ➜ Dispositivo</strong> y localizar la sección <strong>Passphrase</strong>.<br><br>
+        Activar el toggle <strong>"Usar billeteras con passphrase"</strong>. Esto se hace una sola vez para habilitar la función en el dispositivo.<br><br>
+        <div class="info">La Trezor One tiene <strong>dos botones físicos</strong> (sin pantalla táctil). El botón izquierdo = Cancel, botón derecho = Confirm.</div>`,
+        den: `Connect the Trezor One and open <strong>Trezor Suite</strong> (desktop). Go to <strong>Settings ➜ Device</strong> and find the <strong>Passphrase</strong> section.<br><br>
+        Enable the <strong>"Use passphrase wallets"</strong> toggle. This is done once to enable the feature on the device.<br><br>
+        <div class="info">Trezor One has <strong>two physical buttons</strong> (no touchscreen). Left button = Cancel, right button = Confirm.</div>`
       },
       {
-        f: 'hw-trezor-one-02.png',
-        es: 'Ingresar Passphrase en el PC (teclado randomizado)',
-        en: 'Enter Passphrase on PC (randomized keyboard)',
-        des: `A diferencia de los modelos Safe/Model T, la Trezor One muestra un <strong>teclado randomizado en Suite</strong> para ingresar la passphrase. Hacer clic en cada carácter desde la pantalla del PC.<br><br>
-        <div class="warn">⚠️ La passphrase viaja cifrada al dispositivo, pero el ingreso es en pantalla. Evitá hacerlo en computadoras no confiables.</div>`,
-        den: `Unlike Safe/Model T, Trezor One shows a <strong>randomized keyboard in Suite</strong> to enter the passphrase. Click each character on the PC screen.<br><br>
-        <div class="warn">⚠️ The passphrase travels encrypted to the device, but entry is on screen. Avoid doing this on untrusted computers.</div>`
+        f: 'hw-trezor-one-02.png', imgW: 320,
+        es: 'Trezor One confirma: ¿Habilitar protección por passphrase?',
+        en: 'Trezor One confirms: Enable passphrase protection?',
+        des: `El dispositivo muestra: <strong>"Do you really want to enable passphrase protection?"</strong><br><br>
+        Presionar el <strong>botón derecho (Confirm)</strong> en el dispositivo para confirmar. A partir de este momento la función de passphrase está activa.`,
+        den: `The device shows: <strong>"Do you really want to enable passphrase protection?"</strong><br><br>
+        Press the <strong>right button (Confirm)</strong> on the device. From this point, the passphrase feature is active.`
       },
       {
-        f: 'hw-trezor-one-03.png',
-        es: 'Confirmar en el Dispositivo (2 botones)',
-        en: 'Confirm on Device (2 buttons)',
-        des: `La Trezor One pide confirmación final con sus <strong>dos botones físicos</strong>. El botón izquierdo cancela, el derecho confirma.<br><br>
-        Suite abre la billetera derivada con la passphrase aplicada.<br><br>
-        <div class="tip">Primera vez: anota la primera dirección de recepción para verificar en sesiones futuras.</div>`,
-        den: `Trezor One asks for final confirmation with its <strong>two physical buttons</strong>. Left button cancels, right button confirms.<br><br>
-        Suite opens the derived wallet with the passphrase applied.<br><br>
-        <div class="tip">First time: write down the first receiving address to verify in future sessions.</div>`
+        f: 'hw-trezor-one-03.png', imgW: 420,
+        es: 'Selector de wallets ➜ + Billetera con passphrase',
+        en: 'Wallet Selector ➜ + Passphrase wallet',
+        des: `Trezor Suite ahora muestra el selector de wallets con la opción <strong>"+ Billetera con passphrase"</strong> disponible junto a la Billetera estándar.<br><br>
+        Hacer clic en <strong>"+ Billetera con passphrase"</strong> para crear o acceder a una wallet con passphrase.`,
+        den: `Trezor Suite now shows the wallet selector with the <strong>"+ Passphrase wallet"</strong> option available alongside the Standard wallet.<br><br>
+        Click <strong>"+ Passphrase wallet"</strong> to create or access a passphrase wallet.`
+      },
+      {
+        f: 'hw-trezor-one-04.png', imgW: 420,
+        es: 'Nueva passphrase o Abrir usada previamente',
+        en: 'New Passphrase or Open Previously Used',
+        des: `Trezor Suite muestra dos opciones:<br><br>
+        - <strong>+ Nueva passphrase</strong>: para crear una wallet nueva con passphrase<br>
+        - <strong>Abrir usado previamente</strong> (ALT+P): para acceder a una passphrase que ya usaste antes<br><br>
+        Seleccionar <strong>+ Nueva passphrase</strong> para continuar.`,
+        den: `Trezor Suite shows two options:<br><br>
+        - <strong>+ New passphrase</strong>: to create a new passphrase wallet<br>
+        - <strong>Open previously used</strong> (ALT+P): to access a passphrase you used before<br><br>
+        Select <strong>+ New passphrase</strong> to continue.`
+      },
+      {
+        f: 'hw-trezor-one-05.png', imgW: 420,
+        es: 'Prácticas recomendadas - Leer antes de continuar',
+        en: 'Best Practices - Read Before Continuing',
+        des: `Trezor Suite muestra las prácticas recomendadas para usar una passphrase:<br><br>
+        - Escribirla en papel, nunca guardarla digitalmente (sin nube, USB ni teléfono)<br>
+        - Guardarla en lugar seguro, separada del Trezor y la seed phrase<br>
+        - No compartirla con nadie, ni con el Soporte de Trezor<br><br>
+        <div class="warning"><strong>Nadie puede recuperar tu passphrase ni tu copia de seguridad, ni siquiera el Soporte de Trezor.</strong></div>
+        Hacer clic en <strong>Entendido</strong> para continuar.`,
+        den: `Trezor Suite shows best practices for using a passphrase:<br><br>
+        - Write it on paper, never store it digitally (no cloud, USB or phone)<br>
+        - Store it in a safe place, separate from your Trezor and seed phrase<br>
+        - Never share it with anyone, not even Trezor Support<br><br>
+        <div class="warning"><strong>Nobody can recover your passphrase or wallet backup, not even Trezor Support.</strong></div>
+        Click <strong>Got it</strong> to continue.`
+      },
+      {
+        f: 'hw-trezor-one-06.png', imgW: 320,
+        es: 'Trezor One pide ingresar la passphrase en el teclado del PC',
+        en: 'Trezor One asks to enter passphrase on the PC keyboard',
+        des: `El dispositivo muestra: <strong>"Please enter your Passphrase using the computer's keyboard."</strong><br><br>
+        A diferencia de los modelos Safe 3/5/7 y Model T (que tienen pantalla táctil), la <strong>Trezor One ingresa la passphrase desde el teclado del PC en Trezor Suite</strong>.<br><br>
+        <div class="info">La passphrase se envía encriptada al dispositivo. Usá siempre una computadora de confianza.</div>`,
+        den: `The device shows: <strong>"Please enter your Passphrase using the computer's keyboard."</strong><br><br>
+        Unlike Safe 3/5/7 and Model T (which have touchscreens), <strong>Trezor One enters the passphrase from the PC keyboard in Trezor Suite</strong>.<br><br>
+        <div class="info">The passphrase is sent encrypted to the device. Always use a trusted computer.</div>`
+      },
+      {
+        f: 'hw-trezor-one-07.png', imgW: 420,
+        es: 'Trezor Suite ➜ Crea tu passphrase',
+        en: 'Trezor Suite ➜ Create your passphrase',
+        des: `Trezor Suite muestra el campo <strong>"Crea tu passphrase"</strong>. Ingresar la passphrase con el teclado del PC.<br><br>
+        Trezor recomienda usar <strong>ABC, abc, 123, espacios y caracteres especiales</strong>. La passphrase puede tener hasta <strong>50 caracteres ASCII</strong> y es <strong>case-sensitive</strong>.<br><br>
+        La barra verde indica fortaleza. Una vez ingresada, hacer clic en <strong>Confirm</strong>.`,
+        den: `Trezor Suite shows the <strong>"Create your passphrase"</strong> field. Enter the passphrase using the PC keyboard.<br><br>
+        Trezor recommends using <strong>ABC, abc, 123, spaces and special characters</strong>. The passphrase can be up to <strong>50 ASCII characters</strong> and is <strong>case-sensitive</strong>.<br><br>
+        The green bar indicates strength. Once entered, click <strong>Confirm</strong>.`
+      },
+      {
+        f: 'hw-trezor-one-08.png', imgW: 320,
+        es: 'Trezor One muestra la passphrase ➜ Confirmar',
+        en: 'Trezor One shows the passphrase ➜ Confirm',
+        des: `El dispositivo Trezor One muestra la passphrase ingresada en su pequeña pantalla y pregunta: <strong>"Use this passphrase?"</strong><br><br>
+        Verificar que sea correcta y presionar el <strong>botón derecho (Confirm)</strong> en el dispositivo.`,
+        den: `The Trezor One device shows the entered passphrase on its small screen and asks: <strong>"Use this passphrase?"</strong><br><br>
+        Verify it is correct and press the <strong>right button (Confirm)</strong> on the device.`
+      },
+      {
+        f: 'hw-trezor-one-09.png', imgW: 320,
+        es: 'Trezor One ➜ Access hidden wallet',
+        en: 'Trezor One ➜ Access hidden wallet',
+        des: `El dispositivo pregunta: <strong>"Access hidden wallet? Next screen will show the passphrase!"</strong><br><br>
+        Presionar el <strong>botón derecho (Confirm)</strong> para continuar. El dispositivo mostrará la passphrase una vez más para verificación final.`,
+        den: `The device asks: <strong>"Access hidden wallet? Next screen will show the passphrase!"</strong><br><br>
+        Press the <strong>right button (Confirm)</strong> to continue. The device will show the passphrase one more time for final verification.`
+      },
+      {
+        f: 'hw-trezor-one-10.png', imgW: 420,
+        es: 'Trezor Suite ➜ Confirmar passphrase (segunda vez)',
+        en: 'Trezor Suite ➜ Confirm passphrase (second time)',
+        des: `Trezor Suite pide ingresar la passphrase <strong>por segunda vez</strong> para confirmar que no hubo error de tipeo.<br><br>
+        Ingresar exactamente la misma passphrase. El aviso <strong>"Mayúsculas activadas"</strong> aparece si el CapsLock está activo — verificar antes de escribir.<br><br>
+        Hacer clic en <strong>Confirm</strong>.`,
+        den: `Trezor Suite asks to enter the passphrase <strong>a second time</strong> to confirm there was no typo.<br><br>
+        Enter exactly the same passphrase. The <strong>"Caps lock is on"</strong> warning appears if CapsLock is active — check before typing.<br><br>
+        Click <strong>Confirm</strong>.`
+      },
+      {
+        f: 'hw-trezor-one-11.png', imgW: 320,
+        es: 'Trezor One confirma la passphrase por última vez',
+        en: 'Trezor One confirms passphrase one last time',
+        des: `El dispositivo muestra la passphrase nuevamente y pregunta: <strong>"Use this passphrase?"</strong><br><br>
+        Presionar el <strong>botón derecho (Confirm)</strong> para abrir la wallet con passphrase.`,
+        den: `The device shows the passphrase again and asks: <strong>"Use this passphrase?"</strong><br><br>
+        Press the <strong>right button (Confirm)</strong> to open the passphrase wallet.`
+      },
+      {
+        f: 'hw-trezor-one-12.png', imgW: 420,
+        es: 'Wallet con passphrase activa - Billetera con passphrase #1',
+        en: 'Passphrase Wallet Active - Passphrase wallet #1',
+        des: `Trezor Suite muestra el selector de wallets con la <strong>"Billetera con passphrase #1"</strong> activa (borde verde). Podés alternar entre la Billetera estándar y la wallet con passphrase.<br><br>
+        Cada passphrase crea su propia wallet con sus propias direcciones. Podés tener múltiples wallets con passphrase en el mismo dispositivo.<br><br>
+        <div class="warning"><strong>El Trezor One no guarda la passphrase.</strong> Cada vez que quieras acceder a esta wallet, deberás ingresarla nuevamente desde Trezor Suite ➜ menú de wallets ➜ + Billetera con passphrase.</div>`,
+        den: `Trezor Suite shows the wallet selector with <strong>"Passphrase wallet #1"</strong> active (green border). You can switch between the Standard wallet and the passphrase wallet.<br><br>
+        Each passphrase creates its own wallet with its own addresses. You can have multiple passphrase wallets on the same device.<br><br>
+        <div class="warning"><strong>Trezor One does not store the passphrase.</strong> Every time you want to access this wallet, you must enter it again from Trezor Suite ➜ wallet menu ➜ + Passphrase wallet.</div>`
+      },
+      {
+        f: 'hw-trezor-one-13.png', imgW: 320,
+        es: 'Nota: Deshabilitar la función passphrase',
+        en: 'Note: Disabling the Passphrase Feature',
+        des: `Si en algún momento desactivás la función desde Configuración ➜ Dispositivo, el Trezor One pregunta: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
+        <div class="warning"><strong>Deshabilitar la función NO elimina las wallets con passphrase existentes.</strong> Los fondos siguen accesibles si volvés a habilitarla e ingresás la misma passphrase. Pero si perdés la passphrase antes de deshabilitar, esos fondos serán inaccesibles.</div>`,
+        den: `If you ever disable the feature from Settings ➜ Device, Trezor One asks: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
+        <div class="warning"><strong>Disabling the feature does NOT delete existing passphrase wallets.</strong> Funds remain accessible if you re-enable it and enter the same passphrase. But if you lose the passphrase before disabling, those funds will be inaccessible.</div>`
       },
     ]
   },
@@ -4585,6 +4695,7 @@ const SLUGS = {
   'hw-bitbox':         'BitBox02',
   'hw-bitbox-nova':    'BitBox02-Nova',
   'hw-ledger-nanox':   'Ledger-Nano-X',
+  'hw-trezor-one':     'Trezor-One',
   'hw-trezor-t':       'Trezor-T',
   'hw-trezor-safe3':   'Trezor-Safe-3',
   'hw-trezor-safe5':   'Trezor-Safe-5',
