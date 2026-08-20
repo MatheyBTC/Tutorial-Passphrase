@@ -4097,6 +4097,91 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
     ]
   },
 
+  // UNSTOPPABLE WALLET
+  {
+    id: 'mob-unstoppable', ready: true, isNew: true, group: 'mobile',
+    brand: 'Unstoppable', logo: 'Unstoppable.jpg',
+    es: 'Unstoppable Wallet', en: 'Unstoppable Wallet',
+    steps: [
+      {
+        f: 'mob-unstoppable-01.png', imgW: 360,
+        es: 'Monedero ➜ Wallet existente',
+        en: 'Wallet ➜ Existing Wallet',
+        des: `Abrir <strong>Unstoppable Wallet</strong>. En la pantalla <strong>"Monedero"</strong>, tocar <strong>"Wallet existente"</strong> para importar una billetera ya creada.<br><br>
+Esta opción permite restaurar cualquier wallet BIP39 existente junto con su passphrase.`,
+        den: `Open <strong>Unstoppable Wallet</strong>. On the <strong>"Wallet"</strong> screen, tap <strong>"Existing Wallet"</strong> to import an already-created wallet.<br><br>
+This option restores any existing BIP39 wallet with its passphrase.`
+      },
+      {
+        f: 'mob-unstoppable-02.png', imgW: 360,
+        es: 'Aceptar los Términos de Seguridad',
+        en: 'Accept the Security Terms',
+        des: `Leer y aceptar los <strong>Términos de seguridad</strong>. Tocar <strong>"Siguiente"</strong> para continuar.<br><br>
+Unstoppable muestra advertencias sobre la responsabilidad del usuario sobre sus claves privadas.`,
+        den: `Read and accept the <strong>Security Terms</strong>. Tap <strong>"Next"</strong> to continue.<br><br>
+Unstoppable shows warnings about user responsibility over private keys.`
+      },
+      {
+        f: 'mob-unstoppable-03.png', imgW: 360,
+        es: 'Restaurar desde ➜ Frase de Recuperación',
+        en: 'Restore from ➜ Recovery Phrase',
+        des: `En la pantalla <strong>"Restaurar desde"</strong>, seleccionar <strong>"de Frase de Recuperación"</strong>.<br><br>
+Esta opción permite ingresar las palabras de la semilla junto con una passphrase opcional.`,
+        den: `On the <strong>"Restore from"</strong> screen, select <strong>"Recovery Phrase"</strong>.<br><br>
+This option lets you enter the seed words along with an optional passphrase.`
+      },
+      {
+        f: 'mob-unstoppable-04.png', imgW: 360,
+        es: 'Nombre del Wallet + Activar Opciones Avanzadas',
+        en: 'Wallet Name + Enable Advanced Options',
+        des: `Ingresar un <strong>nombre para el wallet</strong> (ej: "Wallet + Passphrase"). Más abajo se ve el área de la frase de recuperación y el toggle <strong>"Opciones Avanzadas"</strong>.<br><br>
+Activar el toggle <strong>"Opciones Avanzadas"</strong> para que aparezca el campo de passphrase.`,
+        den: `Enter a <strong>wallet name</strong> (e.g. "Wallet + Passphrase"). Below is the recovery phrase area and the <strong>"Advanced Options"</strong> toggle.<br><br>
+Enable the <strong>"Advanced Options"</strong> toggle to reveal the passphrase field.`
+      },
+      {
+        f: 'mob-unstoppable-05.png', imgW: 360,
+        es: 'Completar Semilla + Ingresar Passphrase',
+        en: 'Complete Seed + Enter Passphrase',
+        des: `Con las <strong>Opciones Avanzadas</strong> activadas, aparece el campo de passphrase. Ingresar las <strong>12 o 24 palabras</strong> de la semilla y luego la <strong>passphrase</strong> exactamente como fue creada.<br><br>
+<div class="tip">El tutorial muestra una passphrase de ejemplo con palabras del listado EFF. Usa la tuya propia - cualquier texto sirve como passphrase.</div>
+<div class="warn">⚠️ Un carácter diferente genera una wallet completamente distinta sin advertencia.</div>`,
+        den: `With <strong>Advanced Options</strong> enabled, the passphrase field appears. Enter the <strong>12 or 24 seed words</strong>, then the <strong>passphrase</strong> exactly as it was created.<br><br>
+<div class="tip">The tutorial shows a sample passphrase using EFF wordlist words. Use your own - any text works as a passphrase.</div>
+<div class="warn">⚠️ One wrong character derives a completely different wallet with no warning.</div>`
+      },
+      {
+        f: 'mob-unstoppable-06.png', imgW: 360,
+        es: 'Elegir Blockchain ➜ Activar Bitcoin',
+        en: 'Choose Blockchain ➜ Enable Bitcoin',
+        des: `La app muestra la lista de blockchains disponibles. Activar el toggle de <strong>Bitcoin</strong>.<br><br>
+Bitcoin soporta múltiples estándares de dirección: BIP84, BIP49, BIP44 y BIP86. El siguiente paso permite elegir el formato correcto.`,
+        den: `The app shows the list of available blockchains. Enable the <strong>Bitcoin</strong> toggle.<br><br>
+Bitcoin supports multiple address standards: BIP84, BIP49, BIP44 and BIP86. The next step allows choosing the correct format.`
+      },
+      {
+        f: 'mob-unstoppable-07.png', imgW: 360,
+        es: 'Seleccionar Formato de Dirección ➜ Native SegWit',
+        en: 'Select Address Format ➜ Native SegWit',
+        des: `Al activar Bitcoin aparece el selector de formato de dirección. Seleccionar <strong>Native SegWit (bc1/84)</strong>.<br><br>
+<div class="tip">Native SegWit (BIP84) es el estándar moderno: menores comisiones y mayor compatibilidad. Solo cambiar si sabés que tu wallet original usó un formato distinto.</div>
+Tocar <strong>"Listo"</strong> para confirmar.`,
+        den: `After enabling Bitcoin, the address format selector appears. Select <strong>Native SegWit (bc1/84)</strong>.<br><br>
+<div class="tip">Native SegWit (BIP84) is the modern standard: lower fees and greater compatibility. Only change if you know your original wallet used a different format.</div>
+Tap <strong>"Done"</strong> to confirm.`
+      },
+      {
+        f: 'mob-unstoppable-08.png', imgW: 360,
+        es: 'Wallet Lista con Passphrase Activa',
+        en: 'Wallet Ready with Active Passphrase',
+        des: `La wallet queda restaurada con el nombre asignado (<strong>"Wallet + Passphrase"</strong>) y muestra el balance de BTC en BIP84.<br><br>
+Desde aquí podés recibir, enviar o verificar la dirección para confirmar que es la wallet correcta.`,
+        den: `The wallet is restored with the assigned name (<strong>"Wallet + Passphrase"</strong>) and shows the BTC balance in BIP84.<br><br>
+From here you can receive, send, or verify the address to confirm it is the correct wallet.`
+      },
+    ]
+  },
+
   // ELECTRUM MOBILE
   {
     id: 'mob-electrum', group: 'pending',
@@ -4750,6 +4835,7 @@ const SLUGS = {
   'hw-passport-core':  'Passport',
   'mob-blue':          'BlueWallet',
   'mob-bull':          'Bull-Bitcoin',
+  'mob-unstoppable':   'Unstoppable-Wallet',
   'sw-sparrow':        'Sparrow',
   'sw-wasabi':         'Wasabi',
   'desk-rabby':        'Rabby-Wallet',
