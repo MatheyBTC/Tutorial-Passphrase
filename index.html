@@ -4182,6 +4182,73 @@ From here you can receive, send, or verify the address to confirm it is the corr
     ]
   },
 
+  // COINOMI
+  {
+    id: 'mob-coinomi', ready: true, isNew: true, group: 'mobile',
+    brand: 'Coinomi', logo: 'Coinomi.png', logoBg: true,
+    es: 'Coinomi', en: 'Coinomi',
+    steps: [
+      {
+        f: 'mob-coinomi-01.png', imgW: 360,
+        es: 'I already have a wallet',
+        en: 'I already have a wallet',
+        des: `Abrir <strong>Coinomi</strong>. En la pantalla de bienvenida, tocar <strong>"I already have a wallet"</strong> para importar una billetera existente.<br><br>
+<div class="info">Coinomi es una wallet multi-moneda que soporta BIP39 passphrase en la restauración de la semilla.</div>`,
+        den: `Open <strong>Coinomi</strong>. On the welcome screen, tap <strong>"I already have a wallet"</strong> to import an existing wallet.<br><br>
+<div class="info">Coinomi is a multi-coin wallet that supports BIP39 passphrase when restoring a seed.</div>`
+      },
+      {
+        f: 'mob-coinomi-02.png', imgW: 360,
+        es: 'Restaurar Wallet ➜ Ingresar Semilla + Advanced Settings',
+        en: 'Restore Wallet ➜ Enter Seed + Advanced Settings',
+        des: `La pantalla <strong>"Restaurar wallet"</strong> muestra una grilla para ingresar las 12 o 24 palabras de la semilla.<br><br>
+Ingresar cada palabra en su casilla. Al terminar, tocar <strong>"Advanced Settings"</strong> para expandir las opciones avanzadas donde se encuentra el campo de passphrase.`,
+        den: `The <strong>"Restore wallet"</strong> screen shows a grid to enter the 12 or 24 seed words.<br><br>
+Enter each word in its field. When done, tap <strong>"Advanced Settings"</strong> to expand the advanced options where the passphrase field is located.`
+      },
+      {
+        f: 'mob-coinomi-03.png', imgW: 360,
+        es: 'Semilla Completa ➜ Continue with 12 words',
+        en: 'Seed Complete ➜ Continue with 12 words',
+        des: `Con las 12 palabras ingresadas, Coinomi muestra <strong>"Bien hecho, puedes continuar"</strong> y habilita el botón <strong>"Continue with 12 words"</strong>.<br><br>
+<div class="tip">Si tu semilla tiene 24 palabras, el botón mostrará "Continue with 24 words". Verificá que todas las palabras sean correctas antes de continuar.</div>`,
+        den: `With the 12 words entered, Coinomi shows <strong>"Well done, you can continue"</strong> and enables the <strong>"Continue with 12 words"</strong> button.<br><br>
+<div class="tip">If your seed has 24 words, the button shows "Continue with 24 words". Verify all words are correct before continuing.</div>`
+      },
+      {
+        f: 'mob-coinomi-04.png', imgW: 360,
+        es: 'Advanced Settings ➜ Campo BIP39 Passphrase',
+        en: 'Advanced Settings ➜ BIP39 Passphrase Field',
+        des: `Al expandir <strong>Advanced Settings</strong>, aparece el campo <strong>"BIP39 Passphrase"</strong>. Ingresar la passphrase exactamente como fue creada.<br><br>
+Coinomi advierte: <em>"This will be required along with your Recovery phrase every time you restore on a different device."</em><br><br>
+<div class="warn">⚠️ Respetá mayúsculas, minúsculas, espacios y caracteres especiales. Un carácter diferente genera una wallet completamente distinta.</div>`,
+        den: `Expanding <strong>Advanced Settings</strong> reveals the <strong>"BIP39 Passphrase"</strong> field. Enter the passphrase exactly as it was created.<br><br>
+Coinomi warns: <em>"This will be required along with your Recovery phrase every time you restore on a different device."</em><br><br>
+<div class="warn">⚠️ Respect uppercase, lowercase, spaces and special characters. One wrong character derives a completely different wallet.</div>`
+      },
+      {
+        f: 'mob-coinomi-05.png', imgW: 360,
+        es: 'Seguridad de la Wallet ➜ Biometric Authentication',
+        en: 'Wallet Security ➜ Biometric Authentication',
+        des: `Coinomi pide elegir el método de seguridad para el acceso diario. Seleccionar <strong>Biometric authentication</strong> (huella digital o Face ID) para mayor comodidad.<br><br>
+Tocar <strong>"Continue"</strong> para finalizar la configuración.<br><br>
+<div class="info">Este método de seguridad protege el acceso a la app, no está relacionado con la passphrase BIP39.</div>`,
+        den: `Coinomi asks to choose the security method for daily access. Select <strong>Biometric authentication</strong> (fingerprint or Face ID) for convenience.<br><br>
+Tap <strong>"Continue"</strong> to finish the setup.<br><br>
+<div class="info">This security method protects app access and is not related to the BIP39 passphrase.</div>`
+      },
+      {
+        f: 'mob-coinomi-06.png', imgW: 360,
+        es: 'Wallet Lista con Passphrase Activa',
+        en: 'Wallet Ready with Active Passphrase',
+        des: `La wallet queda restaurada y lista para usar. El dashboard muestra <strong>Bitcoin</strong> como activo principal con el balance correspondiente.<br><br>
+La wallet derivada de tu semilla + passphrase está activa. Podés verificar la dirección de recepción para confirmar que es la wallet correcta.`,
+        den: `The wallet is restored and ready to use. The dashboard shows <strong>Bitcoin</strong> as the main asset with the corresponding balance.<br><br>
+The wallet derived from your seed + passphrase is active. You can check the receiving address to confirm it is the correct wallet.`
+      },
+    ]
+  },
+
   // ELECTRUM MOBILE
   {
     id: 'mob-electrum', group: 'pending',
@@ -4836,6 +4903,7 @@ const SLUGS = {
   'mob-blue':          'BlueWallet',
   'mob-bull':          'Bull-Bitcoin',
   'mob-unstoppable':   'Unstoppable-Wallet',
+  'mob-coinomi':       'Coinomi',
   'sw-sparrow':        'Sparrow',
   'sw-wasabi':         'Wasabi',
   'desk-rabby':        'Rabby-Wallet',
