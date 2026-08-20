@@ -3791,6 +3791,104 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
     ]
   },
 
+  // RABBY WALLET (CHROME)
+  {
+    id: 'desk-rabby', ready: true, isNew: true, group: 'desktop',
+    brand: 'Rabby', logo: 'Rabby.png', logoBg: true,
+    es: 'Rabby Wallet', en: 'Rabby Wallet',
+    steps: [
+      {
+        f: 'desk-rabby-01.png', imgW: 520,
+        es: 'Instalar Rabby Wallet desde Chrome Web Store',
+        en: 'Install Rabby Wallet from Chrome Web Store',
+        des: `Buscar <strong>Rabby Wallet</strong> en la Chrome Web Store y presionar <strong>"Agregar a Chrome"</strong>.<br><br>
+        En el popup de confirmación presionar <strong>"Agregar extensión"</strong>. La extensión quedará disponible en la barra de Chrome.`,
+        den: `Search for <strong>Rabby Wallet</strong> in the Chrome Web Store and click <strong>"Add to Chrome"</strong>.<br><br>
+        In the confirmation popup click <strong>"Add extension"</strong>. The extension will be available in the Chrome toolbar.`
+      },
+      {
+        f: 'desk-rabby-02.png', imgW: 360,
+        es: 'Bienvenido ➜ Ya tengo una dirección',
+        en: 'Welcome ➜ I already have an address',
+        des: `Al abrir Rabby por primera vez aparece la pantalla de bienvenida.<br><br>
+        Seleccionar <strong>"Ya tengo una dirección"</strong> para importar una wallet existente con seed phrase y passphrase.`,
+        den: `When opening Rabby for the first time the welcome screen appears.<br><br>
+        Select <strong>"I already have an address"</strong> to import an existing wallet with seed phrase and passphrase.`
+      },
+      {
+        f: 'desk-rabby-03.png', imgW: 360,
+        es: 'Seleccionar método ➜ Frase de recuperación o clave privada',
+        en: 'Select method ➜ Recovery phrase or private key',
+        des: `En "Seleccionar método de importación" elegir <strong>"Frase de recuperación o clave privada"</strong>.<br><br>
+        <div class="info">Rabby también permite importar desde wallet de hardware. En este tutorial se usa la frase de recuperación con passphrase.</div>`,
+        den: `In "Select import method" choose <strong>"Recovery phrase or private key"</strong>.<br><br>
+        <div class="info">Rabby also allows importing from hardware wallets. This tutorial uses the recovery phrase with passphrase.</div>`
+      },
+      {
+        f: 'desk-rabby-04.png', imgW: 360,
+        es: 'Seleccionar cantidad de palabras ➜ abrir el menú desplegable',
+        en: 'Select word count ➜ open the dropdown',
+        des: `En la pantalla "Frase de recuperación o clave privada", hacer clic en el menú desplegable <strong>"12 palabras"</strong> para cambiar la cantidad de palabras y activar la opción con passphrase.`,
+        den: `On the "Recovery phrase or private key" screen, click the <strong>"12 words"</strong> dropdown to change the word count and enable the passphrase option.`
+      },
+      {
+        f: 'desk-rabby-05.png', imgW: 360,
+        es: 'Elegir la opción con passphrase',
+        en: 'Choose the passphrase option',
+        des: `El menú muestra opciones de 12/15/18/21/24 palabras y sus versiones <strong>"con passphrase"</strong>.<br><br>
+        Seleccionar la opción que corresponda a la seed phrase, por ejemplo <strong>"Mi frase de recuperación tiene 12 palabras con passphrase"</strong>.<br><br>
+        <div class="info">Rabby también soporta SLIP39 con y sin passphrase.</div>`,
+        den: `The menu shows options for 12/15/18/21/24 words and their <strong>"with passphrase"</strong> versions.<br><br>
+        Select the option matching your seed phrase, e.g. <strong>"My recovery phrase has 12 words with passphrase"</strong>.<br><br>
+        <div class="info">Rabby also supports SLIP39 with and without passphrase.</div>`
+      },
+      {
+        f: 'desk-rabby-06.png', imgW: 360,
+        es: 'Ingresar la seed phrase y la passphrase',
+        en: 'Enter the seed phrase and passphrase',
+        des: `Ingresar las <strong>12 palabras de la seed phrase</strong> en los campos numerados.<br><br>
+        En el campo inferior ingresar la <strong>passphrase</strong>. Revisar cuidadosamente cada carácter — es case-sensitive.<br><br>
+        Presionar <strong>"Siguiente"</strong> para continuar.<br><br>
+        <div class="warning">La passphrase es diferente a la contraseña de la app. Es parte de la clave criptográfica y no se puede recuperar.</div>`,
+        den: `Enter the <strong>12 seed phrase words</strong> in the numbered fields.<br><br>
+        In the lower field enter the <strong>passphrase</strong>. Check every character carefully — it is case-sensitive.<br><br>
+        Click <strong>"Next"</strong> to continue.<br><br>
+        <div class="warning">The passphrase is different from the app password. It is part of the cryptographic key and cannot be recovered.</div>`
+      },
+      {
+        f: 'desk-rabby-07.png', imgW: 360,
+        es: 'Establecer contraseña de la app',
+        en: 'Set the app password',
+        des: `Crear una <strong>contraseña</strong> para desbloquear Rabby en este navegador. Se usa para cifrar los datos locales de la extensión.<br><br>
+        Confirmar la contraseña y presionar <strong>"Confirmar"</strong>.<br><br>
+        <div class="info">Esta contraseña protege el acceso a la extensión en este equipo. Es diferente a la passphrase BIP39.</div>`,
+        den: `Create a <strong>password</strong> to unlock Rabby in this browser. It is used to encrypt the extension's local data.<br><br>
+        Confirm the password and click <strong>"Confirm"</strong>.<br><br>
+        <div class="info">This password protects access to the extension on this device. It is different from the BIP39 passphrase.</div>`
+      },
+      {
+        f: 'desk-rabby-08.png', imgW: 360,
+        es: 'Dirección importada ➜ nombrar la wallet',
+        en: 'Address imported ➜ name the wallet',
+        des: `La dirección fue importada correctamente. Rabby muestra la dirección derivada con la seed + passphrase.<br><br>
+        Escribir un nombre descriptivo (por ejemplo <strong>"Rabby + Passphrase"</strong>) para identificar esta wallet.<br><br>
+        Presionar <strong>"Abrir wallet"</strong> para acceder al dashboard.`,
+        den: `The address was imported successfully. Rabby shows the address derived from the seed + passphrase.<br><br>
+        Type a descriptive name (e.g. <strong>"Rabby + Passphrase"</strong>) to identify this wallet.<br><br>
+        Click <strong>"Open wallet"</strong> to access the dashboard.`
+      },
+      {
+        f: 'desk-rabby-09.png', imgW: 360,
+        es: 'Wallet con passphrase lista',
+        en: 'Passphrase wallet ready',
+        des: `Rabby abre la wallet derivada con la passphrase. El nombre elegido aparece en la barra superior junto con la dirección.<br><br>
+        <div class="warning"><strong>Cada vez que uses Rabby en un navegador nuevo o reinstales la extensión, deberás importar nuevamente la seed phrase junto con la passphrase exacta.</strong> Una passphrase diferente deriva otra dirección completamente distinta.</div>`,
+        den: `Rabby opens the wallet derived with the passphrase. The chosen name appears in the top bar alongside the address.<br><br>
+        <div class="warning"><strong>Every time you use Rabby in a new browser or reinstall the extension, you must import the seed phrase together with the exact passphrase.</strong> A different passphrase derives a completely different address.</div>`
+      },
+    ]
+  },
+
   // ─────────────────────────────────────────────────────────────
   // BLOQUE 3 -HOT WALLETS MOBILE
   // ─────────────────────────────────────────────────────────────
@@ -4654,6 +4752,7 @@ const SLUGS = {
   'mob-bull':          'Bull-Bitcoin',
   'sw-sparrow':        'Sparrow',
   'sw-wasabi':         'Wasabi',
+  'desk-rabby':        'Rabby-Wallet',
   'sw-ashigaru':       'Ashigaru',
   'sw-electrum':       'Electrum',
   'mob-nunchuk':       'Nunchuk',
