@@ -3022,47 +3022,55 @@ const SECTIONS = [
       },
       {
         f: 'mob-green-05.png', imgW: 370,
-        es: 'Tocá "My Wallet" (arriba a la derecha)',
-        en: 'Tap "My Wallet" (top right)',
-        des: `En la pantalla de inicio, tocá el botón <strong>My Wallet</strong> en la esquina superior derecha para acceder a tu billetera.`,
-        den: `On the home screen, tap the <strong>My Wallet</strong> button in the top right corner to access your wallet.`
+        es: 'Ya estás dentro de la billetera',
+        en: 'You are now inside the wallet',
+        des: `La billetera se abrió. Para agregar una passphrase, necesitás cerrar sesión y volver a entrar usando la opción especial.<br><br>
+        Andá a <strong>Configuración</strong> (ícono de engranaje abajo).`,
+        den: `The wallet is open. To add a passphrase, you need to log out and log back in using the special option.<br><br>
+        Go to <strong>Settings</strong> (gear icon at the bottom).`
       },
       {
         f: 'mob-green-06.png', imgW: 370,
-        es: 'En Configuración, tocá "Cerrar sesión"',
-        en: 'In Settings, tap "Log out"',
-        des: `Andá a <strong>Configuración</strong> (ícono de engranaje abajo) y tocá <strong>Cerrar sesión</strong>. Esto te lleva de vuelta a la lista de wallets para agregar la passphrase.`,
-        den: `Go to <strong>Settings</strong> (gear icon at the bottom) and tap <strong>Log out</strong>. This takes you back to the wallet list to add the passphrase.`
+        es: 'Tocá "Cerrar sesión"',
+        en: 'Tap "Log out"',
+        des: `En <strong>Configuración</strong>, tocá <strong>Cerrar sesión</strong>. Esto te devuelve a la lista de wallets, donde podés iniciar sesión con la opción de passphrase BIP39.`,
+        den: `In <strong>Settings</strong>, tap <strong>Log out</strong>. This returns you to the wallet list, where you can log in using the BIP39 passphrase option.`
       },
       {
         f: 'mob-green-07.png', imgW: 370,
-        es: 'Tocá tu wallet para volver a entrar',
-        en: 'Tap your wallet to log back in',
-        des: `Tocá <strong>My Wallet</strong> en la lista. Al iniciar sesión de nuevo, Green te preguntará si querés usar una <strong>passphrase BIP39</strong>.`,
-        den: `Tap <strong>My Wallet</strong> in the list. When logging back in, Green will ask if you want to use a <strong>BIP39 passphrase</strong>.`
+        es: 'Tocá tu wallet - luego los tres puntos (⋯)',
+        en: 'Tap your wallet - then the three dots (⋯)',
+        des: `Tocá <strong>My Wallet</strong> en la lista. Cuando aparezca la pantalla de PIN, <strong>no ingreses el PIN todavía</strong>.<br><br>
+        Tocá los <strong>tres puntos (⋯)</strong> en la esquina superior derecha para ver más opciones.`,
+        den: `Tap <strong>My Wallet</strong> in the list. When the PIN screen appears, <strong>do not enter your PIN yet</strong>.<br><br>
+        Tap the <strong>three dots (⋯)</strong> in the top right corner to see more options.`
       },
       {
         f: 'mob-green-08.png', imgW: 370,
-        es: 'Ingresá tu passphrase y tocá OK',
-        en: 'Enter your passphrase and tap OK',
-        des: `En la pantalla <strong>Login with BIP39 Passphrase</strong>, ingresá tu passphrase en el campo correspondiente y tocá <strong>OK</strong>.<br><br>
-        Activá <strong>Preguntar siempre</strong> si querés que te la pida cada vez que iniciás sesión.`,
-        den: `On the <strong>Login with BIP39 Passphrase</strong> screen, enter your passphrase in the field and tap <strong>OK</strong>.<br><br>
-        Enable <strong>Ask always</strong> if you want it to prompt you every time you log in.`
+        es: 'Seleccioná "Login with BIP39 Passphrase" e ingresá tu passphrase',
+        en: 'Select "Login with BIP39 Passphrase" and enter your passphrase',
+        des: `En el menú de opciones tocá <strong>Login with BIP39 Passphrase</strong>. Ingresá tu passphrase en el campo y tocá <strong>OK</strong>.<br><br>
+        Podés activar <strong>Preguntar siempre</strong> para que la solicite en cada inicio de sesión. Luego ingresá tu PIN para abrir la wallet.`,
+        den: `In the options menu tap <strong>Login with BIP39 Passphrase</strong>. Enter your passphrase in the field and tap <strong>OK</strong>.<br><br>
+        You can enable <strong>Always Ask</strong> to prompt for it on every login. Then enter your PIN to open the wallet.`
       },
       {
         f: 'mob-green-09.png', imgW: 370,
-        es: 'Billetera protegida por passphrase activa',
-        en: 'Passphrase-protected wallet is active',
-        des: `La billetera muestra el banner <strong>"Protegido por contraseña"</strong>. Esta es una billetera completamente nueva, derivada de tu semilla + passphrase.`,
-        den: `The wallet shows the <strong>"Password protected"</strong> banner. This is a completely new wallet, derived from your seed + passphrase.`
+        es: 'Nueva billetera protegida por passphrase',
+        en: 'New passphrase-protected wallet',
+        des: `La billetera muestra el banner <strong>"Protegido por contraseña"</strong>. Es una billetera completamente nueva derivada de tu semilla + passphrase.<br><br>
+        <strong>Importante:</strong> necesitás tanto la semilla original como la passphrase para acceder a estos fondos en el futuro.`,
+        den: `The wallet shows the <strong>"Password protected"</strong> banner. It's a completely new wallet derived from your seed + passphrase.<br><br>
+        <strong>Important:</strong> you need both the original seed and the passphrase to access these funds in the future.`
       },
       {
         f: 'mob-green-10.png', imgW: 370,
-        es: 'Ambas billeteras visibles en la lista',
-        en: 'Both wallets visible in the list',
-        des: `En <strong>My Wallets</strong> ves dos entradas: <strong>Mobile Wallet</strong> (sin passphrase) y <strong>BIP39 #1</strong> (con passphrase). Podés alternar entre ellas en cualquier momento.`,
-        den: `In <strong>My Wallets</strong> you see two entries: <strong>Mobile Wallet</strong> (no passphrase) and <strong>BIP39 #1</strong> (with passphrase). You can switch between them at any time.`
+        es: 'Ambas billeteras en la lista',
+        en: 'Both wallets in the list',
+        des: `En <strong>My Wallets</strong> aparecen dos entradas: <strong>Mobile Wallet</strong> (sin passphrase) y <strong>BIP39 #1</strong> (con passphrase).<br><br>
+        La wallet con passphrase es efímera: desaparece de la lista al cerrar sesión. Para volver a ella, repetí los pasos 7 y 8 con la misma passphrase.`,
+        den: `In <strong>My Wallets</strong> two entries appear: <strong>Mobile Wallet</strong> (no passphrase) and <strong>BIP39 #1</strong> (with passphrase).<br><br>
+        The passphrase wallet is ephemeral: it disappears from the list on logout. To return to it, repeat steps 7 and 8 with the same passphrase.`
       },
     ]
   },
