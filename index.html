@@ -2987,27 +2987,82 @@ const SECTIONS = [
 
   // BLOCKSTREAM GREEN
   {
-    id: 'mob-green', group: 'pending',
-    brand: 'Blockstream',
-    es: 'Blockstream Green (Mobile)', en: 'Blockstream Green (Mobile)',
+    id: 'mob-green', ready: true, group: 'mobile', addedOn: '2026-08-21',
+    site: 'blockstream.com/green', github: 'https://github.com/Blockstream',
+    brand: 'Blockstream Green', logo: 'blockstream.png', logoBg: true,
+    es: 'Blockstream Green', en: 'Blockstream Green',
     steps: [
       {
-        f: 'mob-green-01.png',
-        es: 'Restaurar Billetera con Semilla',
-        en: 'Restore Wallet with Seed',
-        des: `En Blockstream Green, seleccionar <strong>Restore wallet</strong> e ingresar las 12/24 palabras.<br><br>
-        Green soporta passphrase en modo <strong>singlesig</strong> (BIP49/BIP84). Las wallets multisig de Green usan un sistema diferente.`,
-        den: `In Blockstream Green, select <strong>Restore wallet</strong> and enter the 12/24 words.<br><br>
-        Green supports passphrase in <strong>singlesig</strong> mode (BIP49/BIP84). Green's multisig wallets use a different system.`
+        f: 'mob-green-01.png', imgW: 370,
+        es: 'Abrí Green y tocá "Get Started"',
+        en: 'Open Green and tap "Get Started"',
+        des: `Abrí la app <strong>Blockstream Green</strong> y tocá <strong>Get Started</strong> para comenzar.`,
+        den: `Open the <strong>Blockstream Green</strong> app and tap <strong>Get Started</strong> to begin.`
       },
       {
-        f: 'mob-green-02.png',
-        es: 'Campo de Passphrase en la Restauración',
-        en: 'Passphrase Field on Restore',
-        des: `Durante la restauración, Green muestra un campo <strong>"BIP39 Passphrase"</strong> (opcional). Ingresa tu passphrase.<br><br>
-        Completar el proceso de restauración. La billetera se derivará usando seed + passphrase.`,
-        den: `During restoration, Green shows an optional <strong>"BIP39 Passphrase"</strong> field. Enter your passphrase.<br><br>
-        Complete the restoration process. The wallet will be derived using seed + passphrase.`
+        f: 'mob-green-02.png', imgW: 370,
+        es: 'Tocá "Restore from backup"',
+        en: 'Tap "Restore from backup"',
+        des: `Seleccioná <strong>Restore from backup</strong> para restaurar una billetera existente con tu frase semilla.`,
+        den: `Select <strong>Restore from backup</strong> to restore an existing wallet using your seed phrase.`
+      },
+      {
+        f: 'mob-green-03.png', imgW: 370,
+        es: 'Ingresá tu frase de recuperación',
+        en: 'Enter your recovery phrase',
+        des: `Elegí <strong>12</strong> o <strong>24</strong> palabras según tu semilla. Ingresá todas las palabras y tocá <strong>Continuar</strong>.`,
+        den: `Choose <strong>12</strong> or <strong>24</strong> words depending on your seed. Enter all words and tap <strong>Continue</strong>.`
+      },
+      {
+        f: 'mob-green-04.png', imgW: 370,
+        es: 'Tu billetera aparece en la lista',
+        en: 'Your wallet appears in the list',
+        des: `La billetera se restauró exitosamente. Aparece como <strong>My Wallet - Mobile Wallet</strong>. Esta es la billetera sin passphrase.`,
+        den: `The wallet was successfully restored. It appears as <strong>My Wallet - Mobile Wallet</strong>. This is the wallet without passphrase.`
+      },
+      {
+        f: 'mob-green-05.png', imgW: 370,
+        es: 'Tocá "My Wallet" (arriba a la derecha)',
+        en: 'Tap "My Wallet" (top right)',
+        des: `En la pantalla de inicio, tocá el botón <strong>My Wallet</strong> en la esquina superior derecha para acceder a tu billetera.`,
+        den: `On the home screen, tap the <strong>My Wallet</strong> button in the top right corner to access your wallet.`
+      },
+      {
+        f: 'mob-green-06.png', imgW: 370,
+        es: 'En Configuración, tocá "Cerrar sesión"',
+        en: 'In Settings, tap "Log out"',
+        des: `Andá a <strong>Configuración</strong> (ícono de engranaje abajo) y tocá <strong>Cerrar sesión</strong>. Esto te lleva de vuelta a la lista de wallets para agregar la passphrase.`,
+        den: `Go to <strong>Settings</strong> (gear icon at the bottom) and tap <strong>Log out</strong>. This takes you back to the wallet list to add the passphrase.`
+      },
+      {
+        f: 'mob-green-07.png', imgW: 370,
+        es: 'Tocá tu wallet para volver a entrar',
+        en: 'Tap your wallet to log back in',
+        des: `Tocá <strong>My Wallet</strong> en la lista. Al iniciar sesión de nuevo, Green te preguntará si querés usar una <strong>passphrase BIP39</strong>.`,
+        den: `Tap <strong>My Wallet</strong> in the list. When logging back in, Green will ask if you want to use a <strong>BIP39 passphrase</strong>.`
+      },
+      {
+        f: 'mob-green-08.png', imgW: 370,
+        es: 'Ingresá tu passphrase y tocá OK',
+        en: 'Enter your passphrase and tap OK',
+        des: `En la pantalla <strong>Login with BIP39 Passphrase</strong>, ingresá tu passphrase en el campo correspondiente y tocá <strong>OK</strong>.<br><br>
+        Activá <strong>Preguntar siempre</strong> si querés que te la pida cada vez que iniciás sesión.`,
+        den: `On the <strong>Login with BIP39 Passphrase</strong> screen, enter your passphrase in the field and tap <strong>OK</strong>.<br><br>
+        Enable <strong>Ask always</strong> if you want it to prompt you every time you log in.`
+      },
+      {
+        f: 'mob-green-09.png', imgW: 370,
+        es: 'Billetera protegida por passphrase activa',
+        en: 'Passphrase-protected wallet is active',
+        des: `La billetera muestra el banner <strong>"Protegido por contraseña"</strong>. Esta es una billetera completamente nueva, derivada de tu semilla + passphrase.`,
+        den: `The wallet shows the <strong>"Password protected"</strong> banner. This is a completely new wallet, derived from your seed + passphrase.`
+      },
+      {
+        f: 'mob-green-10.png', imgW: 370,
+        es: 'Ambas billeteras visibles en la lista',
+        en: 'Both wallets visible in the list',
+        des: `En <strong>My Wallets</strong> ves dos entradas: <strong>Mobile Wallet</strong> (sin passphrase) y <strong>BIP39 #1</strong> (con passphrase). Podés alternar entre ellas en cualquier momento.`,
+        den: `In <strong>My Wallets</strong> you see two entries: <strong>Mobile Wallet</strong> (no passphrase) and <strong>BIP39 #1</strong> (with passphrase). You can switch between them at any time.`
       },
     ]
   },
@@ -5075,6 +5130,7 @@ const SLUGS = {
   'hw-passport-prime': 'Passport-Prime',
   'hw-safepal':        'SafePal-S1',
   'mob-safepal':       'SafePal-App',
+  'mob-green':         'Blockstream-Green',
 };
 const SLUG_TO_ID = Object.fromEntries(
   Object.entries(SLUGS).map(([k, v]) => [v.toLowerCase(), k])
