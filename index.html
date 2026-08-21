@@ -1820,6 +1820,129 @@ const SECTIONS = [
     ]
   },
 
+  // KRUX WALLET
+  {
+    id: 'hw-krux', ready: true, group: 'hw', addedOn: '2026-08-20',
+    brand: 'Krux', logo: 'Kruk.png',
+    es: 'Krux', en: 'Krux',
+    steps: [
+      {
+        f: 'hw-krux-01.png', imgW: 340,
+        es: 'Menú Principal ➜ Load Mnemonic',
+        en: 'Main Menu ➜ Load Mnemonic',
+        des: `En el menú principal del Krux, seleccionar <strong>Load Mnemonic</strong> para cargar tu seed existente.`,
+        den: `From the Krux main menu, select <strong>Load Mnemonic</strong> to load your existing seed.`
+      },
+      {
+        f: 'hw-krux-02.png', imgW: 340,
+        es: 'Seleccionar: Via Manual Input',
+        en: 'Select: Via Manual Input',
+        des: `Elegir <strong>Via Manual Input</strong> para ingresar las palabras de la seed de forma manual.`,
+        den: `Choose <strong>Via Manual Input</strong> to enter your seed words manually.`
+      },
+      {
+        f: 'hw-krux-03.png', imgW: 340,
+        es: 'Seleccionar: Words',
+        en: 'Select: Words',
+        des: `Elegir el formato <strong>Words</strong> para ingresar las palabras BIP39 de la seed.`,
+        den: `Choose the <strong>Words</strong> format to enter your BIP39 seed words.`
+      },
+      {
+        f: 'hw-krux-04.png', imgW: 340,
+        es: 'Confirmar el Ingreso de Palabras',
+        en: 'Confirm Word Entry',
+        des: `Krux informa que vas a ingresar cada palabra del mnemónico BIP39.<br><br>
+        Seleccionar <strong>Yes</strong> para continuar.`,
+        den: `Krux informs you that you'll enter each word of your BIP39 mnemonic.<br><br>
+        Select <strong>Yes</strong> to continue.`
+      },
+      {
+        f: 'hw-krux-05.png', imgW: 340,
+        es: 'Revisar el Mnemónico ➜ Go',
+        en: 'Review the Mnemonic ➜ Go',
+        des: `Krux muestra el listado completo de las 12 o 24 palabras ingresadas.<br><br>
+        Verificar que todas sean correctas y seleccionar <strong>Go</strong>.`,
+        den: `Krux shows the full list of the 12 or 24 entered words.<br><br>
+        Verify they are all correct and select <strong>Go</strong>.`
+      },
+      {
+        f: 'hw-krux-06.png', imgW: 340,
+        es: 'Wallet Cargada ➜ Passphrase',
+        en: 'Wallet Loaded ➜ Passphrase',
+        des: `La wallet se carga sin passphrase. El fingerprint mostrado arriba corresponde a la seed sola.<br><br>
+        Seleccionar <strong>Passphrase</strong> para agregar la capa de seguridad extra.`,
+        den: `The wallet loads without passphrase. The fingerprint shown at the top corresponds to the seed alone.<br><br>
+        Select <strong>Passphrase</strong> to add the extra security layer.`
+      },
+      {
+        f: 'hw-krux-07.png', imgW: 340,
+        es: 'Seleccionar: Type BIP39 Passphrase',
+        en: 'Select: Type BIP39 Passphrase',
+        des: `Elegir <strong>Type BIP39 Passphrase</strong> para ingresar la passphrase manualmente desde el teclado en pantalla.`,
+        den: `Choose <strong>Type BIP39 Passphrase</strong> to enter the passphrase manually using the on-screen keyboard.`
+      },
+      {
+        f: 'hw-krux-08.png', imgW: 340,
+        es: 'Tipear la Passphrase',
+        en: 'Type the Passphrase',
+        des: `Ingresar la passphrase usando el teclado en pantalla. Distingue mayúsculas, minúsculas y símbolos.<br><br>
+        Seleccionar <strong>Go</strong> al terminar.`,
+        den: `Enter the passphrase using the on-screen keyboard. It is case-sensitive and supports symbols.<br><br>
+        Select <strong>Go</strong> when done.`
+      },
+      {
+        f: 'hw-krux-09.png', imgW: 340,
+        es: 'Completar la Passphrase',
+        en: 'Complete the Passphrase',
+        des: `Krux muestra el avance del ingreso. Continuar tipeando hasta completar la passphrase.<br><br>
+        <div class="tip">La passphrase puede ser cualquier texto: palabras, frases, combinaciones de caracteres.</div>`,
+        den: `Krux shows the input progress. Continue typing until the passphrase is complete.<br><br>
+        <div class="tip">The passphrase can be any text: words, phrases, combinations of characters.</div>`
+      },
+      {
+        f: 'hw-krux-10.png', imgW: 340,
+        es: 'Confirmar la Passphrase',
+        en: 'Confirm the Passphrase',
+        des: `Krux muestra la passphrase completa y solicita confirmación.<br><br>
+        Verificar que sea correcta y seleccionar <strong>Yes</strong>.
+        <div class="warn">⚠️ Un solo carácter distinto genera una billetera completamente diferente.</div>`,
+        den: `Krux shows the complete passphrase and asks for confirmation.<br><br>
+        Verify it is correct and select <strong>Yes</strong>.
+        <div class="warn">⚠️ A single different character generates a completely different wallet.</div>`
+      },
+      {
+        f: 'hw-krux-11.png', imgW: 340,
+        es: 'Seleccionar: Load Wallet',
+        en: 'Select: Load Wallet',
+        des: `Después de confirmar la passphrase, Krux regresa al menú del dispositivo.<br><br>
+        Seleccionar <strong>Load Wallet</strong> para cargar la billetera con la passphrase activa.`,
+        den: `After confirming the passphrase, Krux returns to the device menu.<br><br>
+        Select <strong>Load Wallet</strong> to load the wallet with the passphrase active.`
+      },
+      {
+        f: 'hw-krux-12.png', imgW: 340,
+        es: 'Verificar el Fingerprint',
+        en: 'Verify the Fingerprint',
+        des: `La wallet queda activa con la passphrase aplicada. El <strong>fingerprint cambia</strong> respecto al de la seed sola - ese nuevo código identifica de forma única la combinación seed + passphrase.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[1365cd35]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[4650658d]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
+        </div>
+        - Primera vez: anotar este fingerprint en papel, guardarlo separado de la seed y la passphrase<br>
+        - Sesiones futuras: verificar que coincide antes de operar<br><br>
+        <div class="warn">⚠️ La passphrase no se guarda en el dispositivo. Cada vez que enciendas el Krux debés ingresar la seed y la passphrase nuevamente.</div>`,
+        den: `The wallet is now active with the passphrase applied. The <strong>fingerprint changes</strong> compared to the seed alone - that new code uniquely identifies the seed + passphrase combination.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[1365cd35]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[4650658d]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
+        </div>
+        - First time: write down this fingerprint on paper, store it separate from your seed and passphrase<br>
+        - Subsequent sessions: verify it matches before operating<br><br>
+        <div class="warn">⚠️ The passphrase is not saved on the device. Every time you turn on Krux you must enter the seed and passphrase again.</div>`
+      },
+    ]
+  },
+
   // LEDGER NANO X
   {
     id: 'hw-ledger-nanox', group: 'hw', ready: true,
@@ -4901,6 +5024,7 @@ const SLUGS = {
   'hw-trezor-safe3':   'Trezor-Safe-3',
   'hw-trezor-safe5':   'Trezor-Safe-5',
   'hw-trezor-safe7':   'Trezor-Safe-7',
+  'hw-krux':           'Krux',
   'hw-seedsigner':     'SeedSigner',
   'hw-passport-core':  'Passport',
   'mob-blue':          'BlueWallet',
