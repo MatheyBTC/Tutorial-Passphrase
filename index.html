@@ -276,6 +276,9 @@
   .home-stat .num-yellow { color: #eab308; }
   .home-stat .lbl { font-size: 14px; color: var(--muted); margin-top: 4px; }
   .home-group-title { font-size: 14px; font-weight: 700; color: var(--muted); margin: 14px 0 5px; }
+  .home-filter-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: #fff; font-size: 13px; font-weight: 600; padding: 4px 10px 4px 12px; border-radius: 20px; margin-bottom: 10px; cursor: default; }
+  .home-filter-chip button { background: none; border: none; color: #fff; font-size: 16px; line-height: 1; cursor: pointer; padding: 0; margin-left: 2px; opacity: .85; }
+  .home-filter-chip button:hover { opacity: 1; }
   .hgt-count { color: var(--accent); font-size: 13px; font-weight: 700; margin-left: 4px; }
   .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-bottom: 4px; }
   .home-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; cursor: pointer; transition: border-color .15s, background .15s; display: flex; flex-direction: row; align-items: center; gap: 10px; }
@@ -5299,7 +5302,7 @@ searchInput.addEventListener('input', () => {
   if (!hits.length) { searchResults.classList.remove('open'); return; }
   searchResults.innerHTML = hits.map(h => {
     if (h.isSec) {
-      return `<div class="sr-item" data-sid="${h.sid}">
+      return `<div class="sr-item" data-sid="${h.sid}" data-is-sec="1" data-brand="${h.brand || ''}">
         <span class="sr-num">→</span>
         <span class="sr-label">${h.sLabel}</span>
         <span class="sr-sec">${h.brand ? h.brand.charAt(0).toUpperCase()+h.brand.slice(1) : ''}</span>
@@ -5317,9 +5320,16 @@ searchInput.addEventListener('input', () => {
   }).join('');
   searchResults.querySelectorAll('.sr-item').forEach(el => {
     el.addEventListener('click', () => {
-      loadSection(el.dataset.sid);
-      searchInput.value = '';
       searchResults.classList.remove('open');
+      const wrap = document.getElementById('home-groups-wrap');
+      if (el.dataset.isSec === '1' && wrap) {
+        // filtrar el grid por la marca
+        const q = (el.dataset.brand || searchInput.value.trim()).toLowerCase();
+        filterHome(q);
+      } else {
+        loadSection(el.dataset.sid);
+        searchInput.value = '';
+      }
     });
   });
   searchResults.classList.add('open');
@@ -5327,6 +5337,47 @@ searchInput.addEventListener('input', () => {
 document.addEventListener('click', e => {
   if (!searchInput.contains(e.target) && !searchResults.contains(e.target))
     searchResults.classList.remove('open');
+});
+
+// --- Grid filter ---
+let activeFilter = '';
+
+function filterHome(q) {
+  activeFilter = q;
+  const wrap = document.getElementById('home-groups-wrap');
+  const bar  = document.getElementById('home-filter-bar');
+  if (!wrap) return;
+  if (!q) {
+    wrap.querySelectorAll('.home-card').forEach(c => c.style.display = '');
+    wrap.querySelectorAll('.home-group').forEach(g => g.style.display = '');
+    bar.innerHTML = '';
+    return;
+  }
+  wrap.querySelectorAll('.home-card').forEach(card => {
+    const brand = card.dataset.brand || '';
+    const name  = card.dataset.name  || '';
+    card.style.display = (brand.includes(q) || name.includes(q)) ? '' : 'none';
+  });
+  wrap.querySelectorAll('.home-group').forEach(group => {
+    const visible = group.querySelectorAll('.home-card:not([style*="none"])').length;
+    group.style.display = visible ? '' : 'none';
+  });
+  const label = LANG === 'en' ? 'Showing' : 'Mostrando';
+  bar.innerHTML = `<div class="home-filter-chip">${label}: ${q} <button onclick="clearFilter()" title="Limpiar">×</button></div>`;
+}
+
+function clearFilter() {
+  searchInput.value = '';
+  filterHome('');
+}
+
+searchInput.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  const q = searchInput.value.trim().toLowerCase();
+  searchResults.classList.remove('open');
+  const wrap = document.getElementById('home-groups-wrap');
+  if (wrap && q.length >= 2) { filterHome(q); }
+  else if (wrap && !q) { clearFilter(); }
 });
 
 // ═══════════════════════════════════════════════════════════════
@@ -5404,15 +5455,16 @@ function loadHome(pushUrl) {
     const isMobile = gid === 'mobile' || gid === 'browser' || gid === 'desktop';
     const cards = secs.map(s => {
       const name = LANG === 'en' ? s.en : s.es;
+      const brand = (s.brand || '').toLowerCase();
       const logoHtml = s.logo
         ? `<img class="hc-logo${isMobile ? ' hc-logo-ios' : ''}${s.logoBg ? ' hc-logo-bg' : ''}" src="Prints/logos/${s.logo}" alt="">`
         : `<span class="hc-logo-placeholder"></span>`;
-      return `<div class="home-card" onclick="loadSection('${s.id}')">
+      return `<div class="home-card" data-brand="${brand}" data-name="${name.toLowerCase()}" onclick="loadSection('${s.id}')">
         ${logoHtml}
         <span class="hc-name">${name}</span>
       </div>`;
     }).join('');
-    groupsHtml += `<div class="home-group-title">${title} <span class="hgt-count">${secs.length}</span></div><div class="home-grid">${cards}</div>`;
+    groupsHtml += `<div class="home-group"><div class="home-group-title">${title} <span class="hgt-count">${secs.length}</span></div><div class="home-grid">${cards}</div></div>`;
   });
 
   const heroTitle = LANG === 'en' ? '🔐 BIP39 Passphrase Tutorials' : '🔐 Tutoriales de Passphrase BIP39';
@@ -5428,7 +5480,8 @@ function loadHome(pushUrl) {
     <div class="home-hero">
       <h1>${heroTitle}</h1>
     </div>
-    ${groupsHtml}
+    <div id="home-filter-bar"></div>
+    <div id="home-groups-wrap">${groupsHtml}</div>
     <div class="home-footer">${footerText}</div>
   `;
 }
