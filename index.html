@@ -5258,10 +5258,12 @@ function updateProgress(sid) {
 function buildSearchIndex() {
   const idx = [];
   SECTIONS.forEach(sec => {
+    const brand = (sec.brand || '').toLowerCase();
+    const sLabel = t(sec.es, sec.en);
     sec.steps.forEach((step, i) => {
       const label = t(step.es, step.en);
       const body  = (t(step.des || '', step.den || '')).replace(/<[^>]+>/g, ' ');
-      idx.push({ sid: sec.id, sLabel: t(sec.es, sec.en), num: i+1, label, body });
+      idx.push({ sid: sec.id, sLabel, brand, num: i+1, label, body });
     });
   });
   return idx;
@@ -5274,14 +5276,38 @@ searchInput.addEventListener('input', () => {
   const q = searchInput.value.trim().toLowerCase();
   if (!searchIdx) searchIdx = buildSearchIndex();
   if (q.length < 2) { searchResults.classList.remove('open'); return; }
-  const hits = searchIdx.filter(e =>
-    e.label.toLowerCase().includes(q) ||
-    e.body.toLowerCase().includes(q) ||
-    e.sLabel.toLowerCase().includes(q)
-  ).slice(0, 8);
+
+  // Secciones que coinciden con marca o nombre de sección
+  const secMatches = [...new Map(
+    searchIdx
+      .filter(e => e.brand.includes(q) || e.sLabel.toLowerCase().includes(q))
+      .map(e => [e.sid, e])
+  ).values()];
+
+  let hits;
+  if (secMatches.length) {
+    // Mostrar una entrada por sección (nivel sección)
+    hits = secMatches.slice(0, 8).map(h => ({ ...h, isSec: true }));
+  } else {
+    // Búsqueda por contenido de pasos
+    hits = searchIdx.filter(e =>
+      e.label.toLowerCase().includes(q) ||
+      e.body.toLowerCase().includes(q)
+    ).slice(0, 8);
+  }
+
   if (!hits.length) { searchResults.classList.remove('open'); return; }
   searchResults.innerHTML = hits.map(h => {
-    const snip = h.body.substring(h.body.toLowerCase().indexOf(q) - 20, h.body.toLowerCase().indexOf(q) + 60).trim();
+    if (h.isSec) {
+      return `<div class="sr-item" data-sid="${h.sid}">
+        <span class="sr-num">→</span>
+        <span class="sr-label">${h.sLabel}</span>
+        <span class="sr-sec">${h.brand ? h.brand.charAt(0).toUpperCase()+h.brand.slice(1) : ''}</span>
+        <span class="sr-snippet"></span>
+      </div>`;
+    }
+    const bi = h.body.toLowerCase().indexOf(q);
+    const snip = bi >= 0 ? h.body.substring(Math.max(0, bi-20), bi+60).trim() : '';
     return `<div class="sr-item" data-sid="${h.sid}">
       <span class="sr-num">${String(h.num).padStart(2,'0')}</span>
       <span class="sr-label">${h.label}</span>
