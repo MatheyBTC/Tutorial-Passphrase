@@ -1700,12 +1700,12 @@ const SECTIONS = [
         Navegar con los botones laterales hasta cada letra, confirmar con el botón central. Al terminar:<br>
         - <strong>➜</strong> para avanzar al siguiente conjunto de caracteres<br>
         - <strong>✓</strong> para confirmar la passphrase completa<br><br>
-        <div class="tip">La primera vez que usas la passphrase: anota una dirección de recepción en papel para verificar en sesiones futuras -Jade no guarda fingerprint como Coldcard.</div>`,
+        <div class="tip">Al confirmar la passphrase, Jade muestra el fingerprint de la billetera derivada en la pantalla de inicio de sesión. Verificá que cambie respecto al fingerprint base.</div>`,
         den: `Jade shows the <strong>"Enter Passphrase"</strong> screen with the blue QWERTY keyboard.<br><br>
         Navigate with side buttons to each letter, confirm with center button. When done:<br>
         - <strong>➜</strong> to advance to the next character set<br>
         - <strong>✓</strong> to confirm the complete passphrase<br><br>
-        <div class="tip">First time using your passphrase: write down a receiving address on paper to verify in future sessions -Jade doesn't store a fingerprint like Coldcard.</div>`
+        <div class="tip">After confirming the passphrase, Jade shows the derived wallet fingerprint on the login screen. Verify it changes compared to the base wallet fingerprint.</div>`
       },
       {
         f: 'hw-jade-06a.png',
@@ -2216,7 +2216,7 @@ const SECTIONS = [
         des: `Passport muestra el <strong>Master Fingerprint</strong> de la billetera iniciada - corresponde a la combinación seed + passphrase.<br><br>
         <div class="fp-compare">
           <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[A1B2C3D4]</code> - billetera base</div>
-          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[715498ES]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[715498AB]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
         </div>
         - Primera vez: anotar en papel, guardar separado de la seed<br>
         - Sesiones futuras: verificar que coincide antes de operar<br><br>
@@ -2224,7 +2224,7 @@ const SECTIONS = [
         den: `Passport shows the <strong>Master Fingerprint</strong> of the wallet opened - corresponds to the seed + passphrase combination.<br><br>
         <div class="fp-compare">
           <div class="fp-row-std">🔓 No passphrase ➜ <code>[A1B2C3D4]</code> - base wallet</div>
-          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[715498ES]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[715498AB]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
         </div>
         - First time: write on paper, store separate from the seed<br>
         - Future sessions: verify it matches before operating<br><br>
@@ -2275,11 +2275,11 @@ const SECTIONS = [
         en: 'Warning - "Using a Passphrase"',
         des: `El dispositivo muestra un aviso explicando qué es la passphrase BIP39 y sus implicaciones.<br><br>
         Leer con atención. Opcionalmente marcar <strong>"Don't show again"</strong> para no ver este aviso en el futuro. Presionar <strong>Confirm</strong> para continuar.<br><br>
-        <div class="warning">La passphrase crea una billetera completamente distinta. Para volver a acceder a ella debés ingresar <strong>exactamente los mismos caracteres</strong>. Si la olvidás, no hay recuperación posible.<br><br>
+        <div class="warn">La passphrase crea una billetera completamente distinta. Para volver a acceder a ella debés ingresar <strong>exactamente los mismos caracteres</strong>. Si la olvidás, no hay recuperación posible.<br><br>
         <strong>Passport Prime borra la passphrase al apagarse.</strong> Cada vez que enciendas el dispositivo deberás ingresarla nuevamente para acceder a esa wallet.</div>`,
         den: `The device shows a warning explaining what a BIP39 passphrase is and its implications.<br><br>
         Read carefully. Optionally check <strong>"Don't show again"</strong> to skip this warning in the future. Press <strong>Confirm</strong> to continue.<br><br>
-        <div class="warning">The passphrase creates a completely different wallet. To access it again you must enter <strong>exactly the same characters</strong>. If you forget it, there is no recovery.<br><br>
+        <div class="warn">The passphrase creates a completely different wallet. To access it again you must enter <strong>exactly the same characters</strong>. If you forget it, there is no recovery.<br><br>
         <strong>Passport Prime erases the passphrase when powered off.</strong> Every time you turn on the device you must re-enter it to access that wallet.</div>`
       },
       {
@@ -2324,9 +2324,9 @@ const SECTIONS = [
         es: 'Cuenta con Passphrase Activa',
         en: 'Passphrase Account Active',
         des: `La cuenta <strong>"Passphrase 1"</strong> aparece en la lista de cuentas. Podés alternar entre la cuenta sin passphrase ("Passport Prime") y la cuenta con passphrase usando el toggle.<br><br>
-        <div class="warning"><strong>Importante:</strong> la passphrase se borra automáticamente al apagar el Passport Prime. Cada vez que enciendas el dispositivo y quieras acceder a esta billetera, deberás ingresar la passphrase nuevamente desde Cuentas ➜ (…) ➜ Apply Passphrase.</div>`,
+        <div class="warn"><strong>Importante:</strong> la passphrase se borra automáticamente al apagar el Passport Prime. Cada vez que enciendas el dispositivo y quieras acceder a esta billetera, deberás ingresar la passphrase nuevamente desde Cuentas ➜ (…) ➜ Apply Passphrase.</div>`,
         den: `The <strong>"Passphrase 1"</strong> account appears in the accounts list. You can switch between the no-passphrase account ("Passport Prime") and the passphrase account using the toggle.<br><br>
-        <div class="warning"><strong>Important:</strong> the passphrase is automatically erased when Passport Prime turns off. Every time you power on the device and want to access this wallet, you must re-enter the passphrase from Accounts ➜ (…) ➜ Apply Passphrase.</div>`
+        <div class="warn"><strong>Important:</strong> the passphrase is automatically erased when Passport Prime turns off. Every time you power on the device and want to access this wallet, you must re-enter the passphrase from Accounts ➜ (…) ➜ Apply Passphrase.</div>`
       },
     ]
   },
@@ -2371,10 +2371,10 @@ const SECTIONS = [
         en: 'Do You Need to Use a Passphrase? ➜ Yes',
         des: `El dispositivo pregunta: <strong>"¿Usted necesita usar una frase de Passphrase?"</strong><br><br>
         Seleccionar <strong>Yes</strong> para continuar con la creación de la wallet con passphrase.<br><br>
-        <div class="warning">La passphrase crea una wallet Bitcoin completamente diferente. Para acceder a ella siempre deberás ingresar <strong>exactamente los mismos caracteres</strong>. Si la perdés, perdés el acceso a los fondos.</div>`,
+        <div class="warn">La passphrase crea una wallet Bitcoin completamente diferente. Para acceder a ella siempre deberás ingresar <strong>exactamente los mismos caracteres</strong>. Si la perdés, perdés el acceso a los fondos.</div>`,
         den: `The device asks: <strong>"Do you need to use a Passphrase?"</strong><br><br>
         Select <strong>Yes</strong> to continue creating the passphrase wallet.<br><br>
-        <div class="warning">The passphrase creates a completely different Bitcoin wallet. To access it you must always enter <strong>exactly the same characters</strong>. If you lose it, you lose access to the funds.</div>`
+        <div class="warn">The passphrase creates a completely different Bitcoin wallet. To access it you must always enter <strong>exactly the same characters</strong>. If you lose it, you lose access to the funds.</div>`
       },
       {
         f: 'hw-safepal-05.png', imgW: 420,
@@ -2720,11 +2720,11 @@ const SECTIONS = [
         des: `En Trezor Suite escribir la passphrase elegida. Revisar cuidadosamente cada carácter.<br><br>
         En el Model One aparecerá la passphrase para confirmar: <strong>"Use this passphrase?"</strong> Presionar <strong>Confirm</strong>.<br><br>
         El dispositivo advertirá que se accederá a una billetera oculta y que la siguiente pantalla mostrará la passphrase. Presionar nuevamente <strong>Confirm</strong>.<br><br>
-        <div class="warning">Mayúsculas, minúsculas, espacios y caracteres distintos pueden derivar otra wallet.</div>`,
+        <div class="warn">Mayúsculas, minúsculas, espacios y caracteres distintos pueden derivar otra wallet.</div>`,
         den: `In Trezor Suite type the chosen passphrase. Review every character carefully.<br><br>
         The Model One will show the passphrase to confirm: <strong>"Use this passphrase?"</strong> Press <strong>Confirm</strong>.<br><br>
         The device will warn that a hidden wallet will be accessed and the next screen will show the passphrase. Press <strong>Confirm</strong> again.<br><br>
-        <div class="warning">Uppercase, lowercase, spaces and different characters can derive a different wallet.</div>`
+        <div class="warn">Uppercase, lowercase, spaces and different characters can derive a different wallet.</div>`
       },
       {
         f: 'hw-trezor-one-05.png', imgW: 680,
@@ -2746,10 +2746,10 @@ const SECTIONS = [
         es: 'Billetera con passphrase #1 activa',
         en: 'Passphrase wallet #1 active',
         des: `La <strong>Billetera con passphrase #1</strong> aparece activa (borde verde) en el selector de billeteras, separada de la billetera estándar.<br><br>
-        <div class="warning"><strong>La misma seed + una passphrase diferente = una wallet diferente.</strong><br><br>
+        <div class="warn"><strong>La misma seed + una passphrase diferente = una wallet diferente.</strong><br><br>
         El Trezor One no guarda la passphrase. Para acceder a esta wallet en el futuro: Suite ➜ selector de billeteras ➜ + Billetera con passphrase ➜ ingresar exactamente la misma passphrase.</div>`,
         den: `<strong>Passphrase wallet #1</strong> appears active (green border) in the wallet selector, separate from the standard wallet.<br><br>
-        <div class="warning"><strong>Same seed + different passphrase = different wallet.</strong><br><br>
+        <div class="warn"><strong>Same seed + different passphrase = different wallet.</strong><br><br>
         Trezor One does not store the passphrase. To access this wallet in the future: Suite ➜ wallet selector ➜ + Passphrase wallet ➜ enter exactly the same passphrase.</div>`
       },
       {
@@ -2757,9 +2757,9 @@ const SECTIONS = [
         es: 'Nota: Deshabilitar la función passphrase',
         en: 'Note: Disabling the Passphrase Feature',
         des: `Si desactivás la función desde Configuración ➜ Dispositivo, el Trezor One pregunta: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
-        <div class="warning"><strong>Deshabilitar la función NO elimina las wallets con passphrase existentes.</strong> Los fondos siguen accesibles si volvés a habilitarla e ingresás exactamente la misma passphrase. Si perdés la passphrase, esos fondos serán inaccesibles para siempre.</div>`,
+        <div class="warn"><strong>Deshabilitar la función NO elimina las wallets con passphrase existentes.</strong> Los fondos siguen accesibles si volvés a habilitarla e ingresás exactamente la misma passphrase. Si perdés la passphrase, esos fondos serán inaccesibles para siempre.</div>`,
         den: `If you disable the feature from Settings ➜ Device, Trezor One asks: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
-        <div class="warning"><strong>Disabling the feature does NOT delete existing passphrase wallets.</strong> Funds remain accessible if you re-enable it and enter exactly the same passphrase. If you lose the passphrase, those funds are gone forever.</div>`
+        <div class="warn"><strong>Disabling the feature does NOT delete existing passphrase wallets.</strong> Funds remain accessible if you re-enable it and enter exactly the same passphrase. If you lose the passphrase, those funds are gone forever.</div>`
       },
     ]
   },
@@ -3803,10 +3803,10 @@ The <strong>BIP39 Passphrase</strong> field is still empty - it is entered in th
         es: 'Ingresar la BIP39 Passphrase',
         en: 'Enter the BIP39 Passphrase',
         des: `Con las palabras anotadas, pasar al campo <strong>BIP39 Passphrase</strong> e ingresar la passphrase.<br><br>
-La imagen muestra el campo con <em>"5/6 words form EFF list"</em> como ejemplo - en este campo va tu passphrase generada con Diceware o el método de tu preferencia.<br><br>
+La imagen muestra el campo con <em>"5/6 words from EFF list"</em> como ejemplo - en este campo va tu passphrase generada con Diceware o el método de tu preferencia.<br><br>
 Una vez ingresada la passphrase, hacer clic en <strong>Next</strong> para continuar.`,
         den: `With the words written down, move to the <strong>BIP39 Passphrase</strong> field and enter the passphrase.<br><br>
-The image shows the field with <em>"5/6 words form EFF list"</em> as an example - this field takes your passphrase generated with Diceware or your preferred method.<br><br>
+The image shows the field with <em>"5/6 words from EFF list"</em> as an example - this field takes your passphrase generated with Diceware or your preferred method.<br><br>
 Once the passphrase is entered, click <strong>Next</strong> to continue.`
       },
       {
@@ -4360,11 +4360,11 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
         des: `Ingresar las <strong>12 palabras de la seed phrase</strong> en los campos numerados.<br><br>
         En el campo inferior ingresar la <strong>passphrase</strong>. Revisar cuidadosamente cada carácter — es case-sensitive.<br><br>
         Presionar <strong>"Siguiente"</strong> para continuar.<br><br>
-        <div class="warning">La passphrase es diferente a la contraseña de la app. Es parte de la clave criptográfica y no se puede recuperar.</div>`,
+        <div class="warn">La passphrase es diferente a la contraseña de la app. Es parte de la clave criptográfica y no se puede recuperar.</div>`,
         den: `Enter the <strong>12 seed phrase words</strong> in the numbered fields.<br><br>
         In the lower field enter the <strong>passphrase</strong>. Check every character carefully — it is case-sensitive.<br><br>
         Click <strong>"Next"</strong> to continue.<br><br>
-        <div class="warning">The passphrase is different from the app password. It is part of the cryptographic key and cannot be recovered.</div>`
+        <div class="warn">The passphrase is different from the app password. It is part of the cryptographic key and cannot be recovered.</div>`
       },
       {
         f: 'desk-rabby-07.png', imgW: 360,
@@ -4393,9 +4393,9 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
         es: 'Wallet con passphrase lista',
         en: 'Passphrase wallet ready',
         des: `Rabby abre la wallet derivada con la passphrase. El nombre elegido aparece en la barra superior junto con la dirección.<br><br>
-        <div class="warning"><strong>Cada vez que uses Rabby en un navegador nuevo o reinstales la extensión, deberás importar nuevamente la seed phrase junto con la passphrase exacta.</strong> Una passphrase diferente deriva otra dirección completamente distinta.</div>`,
+        <div class="warn"><strong>Cada vez que uses Rabby en un navegador nuevo o reinstales la extensión, deberás importar nuevamente la seed phrase junto con la passphrase exacta.</strong> Una passphrase diferente deriva otra dirección completamente distinta.</div>`,
         den: `Rabby opens the wallet derived with the passphrase. The chosen name appears in the top bar alongside the address.<br><br>
-        <div class="warning"><strong>Every time you use Rabby in a new browser or reinstall the extension, you must import the seed phrase together with the exact passphrase.</strong> A different passphrase derives a completely different address.</div>`
+        <div class="warn"><strong>Every time you use Rabby in a new browser or reinstall the extension, you must import the seed phrase together with the exact passphrase.</strong> A different passphrase derives a completely different address.</div>`
       },
     ]
   },
@@ -4913,9 +4913,9 @@ The wallet derived from your seed + passphrase is active. You can check the rece
         es: 'Crear contraseña de 6 dígitos',
         en: 'Create 6-Digit Password',
         des: `La app solicita crear una <strong>contraseña de 6 dígitos</strong> para proteger el acceso a la aplicación.<br><br>
-        <div class="warning"><strong>Esta contraseña NO es la Passphrase BIP39.</strong> Es solo el PIN de acceso a la app SafePal. Son dos cosas completamente distintas.</div>`,
+        <div class="warn"><strong>Esta contraseña NO es la Passphrase BIP39.</strong> Es solo el PIN de acceso a la app SafePal. Son dos cosas completamente distintas.</div>`,
         den: `The app asks you to create a <strong>6-digit password</strong> to protect access to the application.<br><br>
-        <div class="warning"><strong>This password is NOT the BIP39 Passphrase.</strong> It is only the SafePal app access PIN. They are two completely different things.</div>`
+        <div class="warn"><strong>This password is NOT the BIP39 Passphrase.</strong> It is only the SafePal app access PIN. They are two completely different things.</div>`
       },
       {
         f: 'mob-safepal-03.png', imgW: 380,
@@ -4943,10 +4943,10 @@ The wallet derived from your seed + passphrase is active. You can check the rece
         en: 'Type the Passphrase Exactly',
         des: `Ingresar la passphrase <strong>exactamente como fue definida</strong>, respetando mayúsculas, minúsculas, espacios y símbolos. El ícono del ojo permite mostrar/ocultar el texto.<br><br>
         En el ejemplo se utilizan palabras de la lista EFF como passphrase.<br><br>
-        <div class="warning"><strong>Una passphrase diferente, incluso por un solo carácter, deriva una wallet completamente distinta.</strong> Verificar cuidadosamente antes de continuar.</div>`,
+        <div class="warn"><strong>Una passphrase diferente, incluso por un solo carácter, deriva una wallet completamente distinta.</strong> Verificar cuidadosamente antes de continuar.</div>`,
         den: `Enter the passphrase <strong>exactly as it was defined</strong>, respecting uppercase, lowercase, spaces and symbols. The eye icon lets you show/hide the text.<br><br>
         The example uses EFF word list words as the passphrase.<br><br>
-        <div class="warning"><strong>A different passphrase — even by a single character — derives a completely different wallet.</strong> Double-check carefully before continuing.</div>`
+        <div class="warn"><strong>A different passphrase — even by a single character — derives a completely different wallet.</strong> Double-check carefully before continuing.</div>`
       },
       {
         f: 'mob-safepal-06.png', imgW: 380,
