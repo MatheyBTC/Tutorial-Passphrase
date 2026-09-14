@@ -2786,40 +2786,87 @@ const SECTIONS = [
         f: 'hw-trezor-safe3-01.png', imgW: 280,
         es: 'Dispositivo - Confirmar Activación (Botón Derecho)',
         en: 'Device - Confirm Activation (Right Button)',
-        des: `El <strong>Safe 3</strong> usa <strong>dos botones físicos</strong> (sin pantalla táctil). Desde Trezor Suite activar la passphrase; el dispositivo pide confirmación.<br><br>
+        des: `El <strong>Safe 3</strong> usa <strong>dos botones físicos</strong> (sin pantalla táctil). El dispositivo muestra: <strong>"Do you really want to enable passphrase protection?"</strong><br><br>
         Presionar el <strong>botón derecho</strong> para confirmar.`,
-        den: `<strong>Safe 3</strong> uses <strong>two physical buttons</strong> (no touchscreen). From Trezor Suite enable passphrase; the device asks for confirmation.<br><br>
+        den: `<strong>Safe 3</strong> uses <strong>two physical buttons</strong> (no touchscreen). The device shows: <strong>"Do you really want to enable passphrase protection?"</strong><br><br>
         Press the <strong>right button</strong> to confirm.`
+      },
+      {
+        f: 'hw-trezor-one-03.png', imgW: 580,
+        es: 'Trezor Suite ➜ Prácticas Recomendadas',
+        en: 'Trezor Suite ➜ Best Practices',
+        des: `Trezor Suite muestra las prácticas recomendadas antes de continuar:<br><br>
+        - Entender primero cómo funciona la passphrase.<br>
+        - Escribirla y conservarla de forma segura.<br>
+        - Mantenerla separada de la seed y del dispositivo.<br>
+        - No compartirla con nadie.<br><br>
+        El Safe 3 pedirá ingresar la passphrase directamente en el dispositivo (no en el teclado del PC).<br><br>
+        <div class="info">A diferencia del Trezor One, en el Safe 3 la passphrase se escribe en el hardware, no en la computadora.</div>`,
+        den: `Trezor Suite shows best practices before continuing:<br><br>
+        - Learn first how a passphrase works.<br>
+        - Write it down and keep it safe.<br>
+        - Keep it separate from the seed and device.<br>
+        - Never share it with anyone.<br><br>
+        Safe 3 will ask you to enter the passphrase directly on the device (not on the PC keyboard).<br><br>
+        <div class="info">Unlike Trezor One, on Safe 3 the passphrase is typed on the hardware, not on the computer.</div>`
       },
       {
         f: 'hw-trezor-safe3-02.png', imgW: 280,
         es: 'Dispositivo - Ingresar Passphrase con Botones',
         en: 'Device - Enter Passphrase with Buttons',
         des: `El Safe 3 muestra el teclado en pantalla OLED navegado con los dos botones físicos.<br><br>
-        Navegar hasta cada carácter y confirmar con ambos botones. La passphrase se ingresa completamente en el dispositivo.<br><br>
-        <div class="tip">Safe 3 tiene chip EAL6+. Para entrada más cómoda, considerá passphrases cortas (6-10 chars).</div>`,
+        - Botón izquierdo: navegar entre caracteres<br>
+        - Botón derecho: seleccionar el carácter<br>
+        - Ambos botones juntos: confirmar la passphrase completa<br><br>
+        <div class="warn">La passphrase es <strong>case-sensitive</strong>. Un carácter diferente deriva una wallet completamente distinta.</div>`,
         den: `Safe 3 shows the on-screen keyboard on its OLED display navigated with the two physical buttons.<br><br>
-        Navigate to each character and confirm with both buttons. The passphrase is entered entirely on the device.<br><br>
-        <div class="tip">Safe 3 has EAL6+ chip. For more comfortable entry, consider short passphrases (6-10 chars).</div>`
+        - Left button: navigate between characters<br>
+        - Right button: select the character<br>
+        - Both buttons together: confirm the complete passphrase<br><br>
+        <div class="warn">The passphrase is <strong>case-sensitive</strong>. A different character derives a completely different wallet.</div>`
       },
       {
         f: 'hw-trezor-safe3-03.png', imgW: 280,
-        es: 'Dispositivo - Wallet Cargada',
-        en: 'Device - Wallet Loaded',
-        des: `Tras confirmar la passphrase, Suite carga la billetera derivada.<br><br>
+        es: 'Dispositivo - Confirmar Passphrase (Segunda Vez)',
+        en: 'Device - Confirm Passphrase (Second Time)',
+        des: `El Safe 3 pedirá ingresar la passphrase <strong>una segunda vez</strong> para confirmar.<br><br>
+        Repetir el proceso de navegación con los botones. Ambas entradas deben coincidir exactamente para derivar la billetera correcta.<br><br>
+        <div class="info">Si las dos entradas no coinciden, el dispositivo lo indica y pide reingresar.</div>`,
+        den: `Safe 3 will ask you to enter the passphrase <strong>a second time</strong> to confirm.<br><br>
+        Repeat the button navigation process. Both entries must match exactly to derive the correct wallet.<br><br>
+        <div class="info">If the two entries don't match, the device will indicate it and ask you to re-enter.</div>`
+      },
+      {
+        f: 'hw-trezor-one-06.png', imgW: 380,
+        es: 'Suite ➜ Billetera con Passphrase Activa',
+        en: 'Suite ➜ Passphrase Wallet Active',
+        des: `Suite abre la <strong>Billetera con passphrase #1</strong> (borde verde) separada de la billetera estándar.<br><br>
         <div class="fp-nodev">
           <div class="fp-nodev-title">Trezor no muestra fingerprint - opciones de verificación</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
-        </div>`,
-        den: `After confirming the passphrase, Suite loads the derived wallet.<br><br>
+        </div><br>
+        <div class="warn"><strong>La misma seed + una passphrase diferente = una wallet diferente.</strong><br><br>
+        El Safe 3 no guarda la passphrase. Para acceder en el futuro: Suite ➜ selector ➜ + Billetera con passphrase ➜ ingresar exactamente la misma passphrase en el dispositivo.</div>`,
+        den: `Suite opens <strong>Passphrase wallet #1</strong> (green border) separate from the standard wallet.<br><br>
         <div class="fp-nodev">
           <div class="fp-nodev-title">Trezor doesn't show a fingerprint - verification options</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
-        </div>`
+        </div><br>
+        <div class="warn"><strong>Same seed + different passphrase = different wallet.</strong><br><br>
+        Safe 3 does not store the passphrase. To access in the future: Suite ➜ selector ➜ + Passphrase wallet ➜ enter exactly the same passphrase on the device.</div>`
+      },
+      {
+        f: 'hw-trezor-one-07.png', imgW: 280,
+        es: 'Nota: Deshabilitar la Función Passphrase',
+        en: 'Note: Disabling the Passphrase Feature',
+        des: `Si desactivás la función desde Configuración ➜ Dispositivo, el Safe 3 pregunta: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
+        <div class="warn"><strong>Deshabilitar la función NO elimina las wallets con passphrase existentes.</strong> Los fondos siguen accesibles si volvés a habilitarla e ingresás exactamente la misma passphrase. Si perdés la passphrase, esos fondos serán inaccesibles para siempre.</div>`,
+        den: `If you disable the feature from Settings ➜ Device, Safe 3 asks: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
+        <div class="warn"><strong>Disabling the feature does NOT delete existing passphrase wallets.</strong> Funds remain accessible if you re-enable it and enter exactly the same passphrase. If you lose the passphrase, those funds are gone forever.</div>`
       },
     ]
   },
@@ -2846,31 +2893,83 @@ const SECTIONS = [
         f: 'hw-trezor-safe5-01.png', imgW: 280,
         es: 'Dispositivo - Confirmar Activación',
         en: 'Device - Confirm Activation',
-        des: `El <strong>Safe 5</strong> tiene pantalla táctil a color (240×240px) con feedback háptico. Desde Trezor Suite activar la passphrase; el dispositivo pide confirmación.<br><br>
+        des: `El <strong>Safe 5</strong> tiene pantalla táctil a color (240×240px) con <strong>feedback háptico</strong>. El dispositivo muestra: <strong>"Do you really want to enable passphrase protection?"</strong><br><br>
         Tocar <strong>Confirmar</strong> en la pantalla táctil del Safe 5.`,
-        den: `<strong>Safe 5</strong> has a color touchscreen (240×240px) with haptic feedback. From Trezor Suite enable passphrase; the device asks for confirmation.<br><br>
+        den: `<strong>Safe 5</strong> has a color touchscreen (240×240px) with <strong>haptic feedback</strong>. The device shows: <strong>"Do you really want to enable passphrase protection?"</strong><br><br>
         Tap <strong>Confirm</strong> on Safe 5's touchscreen.`
+      },
+      {
+        f: 'hw-trezor-one-03.png', imgW: 580,
+        es: 'Trezor Suite ➜ Prácticas Recomendadas',
+        en: 'Trezor Suite ➜ Best Practices',
+        des: `Trezor Suite muestra las prácticas recomendadas antes de continuar:<br><br>
+        - Entender primero cómo funciona la passphrase.<br>
+        - Escribirla y conservarla de forma segura.<br>
+        - Mantenerla separada de la seed y del dispositivo.<br>
+        - No compartirla con nadie.<br><br>
+        El Safe 5 pedirá ingresar la passphrase directamente en el dispositivo.<br><br>
+        <div class="info">A diferencia del Trezor One, en el Safe 5 la passphrase se escribe en la pantalla táctil del hardware.</div>`,
+        den: `Trezor Suite shows best practices before continuing:<br><br>
+        - Learn first how a passphrase works.<br>
+        - Write it down and keep it safe.<br>
+        - Keep it separate from the seed and device.<br>
+        - Never share it with anyone.<br><br>
+        Safe 5 will ask you to enter the passphrase directly on the device.<br><br>
+        <div class="info">Unlike Trezor One, on Safe 5 the passphrase is typed on the hardware touchscreen.</div>`
       },
       {
         f: 'hw-trezor-safe5-02.png', imgW: 280,
         es: 'Dispositivo - Teclado Táctil con Feedback Háptico',
         en: 'Device - Touch Keyboard with Haptic Feedback',
         des: `El Safe 5 muestra el teclado táctil para ingresar la passphrase. El <strong>feedback háptico</strong> (vibración) confirma cada carácter tocado, ayudando a evitar errores.<br><br>
-        Ingresar la passphrase y confirmar con ✓. Suite abre la billetera derivada.<br><br>
+        Tocar cada carácter y confirmar con ✓.<br><br>
+        <div class="warn">La passphrase es <strong>case-sensitive</strong>. Un carácter diferente deriva una wallet completamente distinta.</div>`,
+        den: `Safe 5 shows the touch keyboard to enter the passphrase. <strong>Haptic feedback</strong> (vibration) confirms each tapped character, helping avoid mistakes.<br><br>
+        Tap each character and confirm with ✓.<br><br>
+        <div class="warn">The passphrase is <strong>case-sensitive</strong>. A different character derives a completely different wallet.</div>`
+      },
+      {
+        noImg: true,
+        es: 'Dispositivo - Confirmar Passphrase (Segunda Vez)',
+        en: 'Device - Confirm Passphrase (Second Time)',
+        des: `El Safe 5 pide ingresar la passphrase <strong>una segunda vez</strong> para confirmar. Repetir en el teclado táctil y confirmar con ✓.<br><br>
+        Ambas entradas deben coincidir exactamente. Si no coinciden, el dispositivo lo indica y pide reingresar.<br><br>
+        <div class="info">Este paso de confirmación doble es exclusivo del Safe 5 y Safe 7 — protege contra errores de tipeo en la passphrase.</div>`,
+        den: `Safe 5 asks to enter the passphrase <strong>a second time</strong> to confirm. Repeat on the touchscreen and confirm with ✓.<br><br>
+        Both entries must match exactly. If they don't match, the device will indicate it and ask to re-enter.<br><br>
+        <div class="info">This double confirmation step is specific to Safe 5 and Safe 7 — it protects against typos in the passphrase.</div>`
+      },
+      {
+        f: 'hw-trezor-one-06.png', imgW: 380,
+        es: 'Suite ➜ Billetera con Passphrase Activa',
+        en: 'Suite ➜ Passphrase Wallet Active',
+        des: `Suite abre la <strong>Billetera con passphrase #1</strong> (borde verde) separada de la billetera estándar.<br><br>
         <div class="fp-nodev">
           <div class="fp-nodev-title">Trezor no muestra fingerprint - opciones de verificación</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
-        </div>`,
-        den: `Safe 5 shows the touch keyboard to enter the passphrase. <strong>Haptic feedback</strong> (vibration) confirms each tapped character, helping avoid mistakes.<br><br>
-        Enter the passphrase and confirm with ✓. Suite opens the derived wallet.<br><br>
+        </div><br>
+        <div class="warn"><strong>La misma seed + una passphrase diferente = una wallet diferente.</strong><br><br>
+        El Safe 5 no guarda la passphrase. Para acceder en el futuro: Suite ➜ selector ➜ + Billetera con passphrase ➜ ingresar exactamente la misma passphrase en el dispositivo.</div>`,
+        den: `Suite opens <strong>Passphrase wallet #1</strong> (green border) separate from the standard wallet.<br><br>
         <div class="fp-nodev">
           <div class="fp-nodev-title">Trezor doesn't show a fingerprint - verification options</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
-        </div>`
+        </div><br>
+        <div class="warn"><strong>Same seed + different passphrase = different wallet.</strong><br><br>
+        Safe 5 does not store the passphrase. To access in the future: Suite ➜ selector ➜ + Passphrase wallet ➜ enter exactly the same passphrase on the device.</div>`
+      },
+      {
+        f: 'hw-trezor-one-07.png', imgW: 280,
+        es: 'Nota: Deshabilitar la Función Passphrase',
+        en: 'Note: Disabling the Passphrase Feature',
+        des: `Si desactivás la función desde Configuración ➜ Dispositivo, el Safe 5 pregunta: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
+        <div class="warn"><strong>Deshabilitar la función NO elimina las wallets con passphrase existentes.</strong> Los fondos siguen accesibles si volvés a habilitarla e ingresás exactamente la misma passphrase. Si perdés la passphrase, esos fondos serán inaccesibles para siempre.</div>`,
+        den: `If you disable the feature from Settings ➜ Device, Safe 5 asks: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
+        <div class="warn"><strong>Disabling the feature does NOT delete existing passphrase wallets.</strong> Funds remain accessible if you re-enable it and enter exactly the same passphrase. If you lose the passphrase, those funds are gone forever.</div>`
       },
     ]
   },
@@ -2897,31 +2996,81 @@ const SECTIONS = [
         f: 'hw-trezor-safe7-new-01.png', imgW: 280,
         es: 'Dispositivo - Confirmar Activación',
         en: 'Device - Confirm Activation',
-        des: `Desde <strong>Trezor Suite</strong>, activar la passphrase. El <strong>Safe 7</strong> muestra la pantalla de confirmación en su pantalla táctil a color.<br><br>
+        des: `El <strong>Safe 7</strong> tiene pantalla táctil a color de mayor tamaño. El dispositivo muestra: <strong>"Do you really want to enable passphrase protection?"</strong><br><br>
         Tocar <strong>Confirmar</strong> en el dispositivo para activar la protección por passphrase.`,
-        den: `From <strong>Trezor Suite</strong>, enable passphrase. The <strong>Safe 7</strong> shows the confirmation screen on its color touchscreen.<br><br>
+        den: `<strong>Safe 7</strong> has a larger color touchscreen. The device shows: <strong>"Do you really want to enable passphrase protection?"</strong><br><br>
         Tap <strong>Confirm</strong> on the device to activate passphrase protection.`
+      },
+      {
+        f: 'hw-trezor-one-03.png', imgW: 580,
+        es: 'Trezor Suite ➜ Prácticas Recomendadas',
+        en: 'Trezor Suite ➜ Best Practices',
+        des: `Trezor Suite muestra las prácticas recomendadas antes de continuar:<br><br>
+        - Entender primero cómo funciona la passphrase.<br>
+        - Escribirla y conservarla de forma segura.<br>
+        - Mantenerla separada de la seed y del dispositivo.<br>
+        - No compartirla con nadie.<br><br>
+        El Safe 7 pedirá ingresar la passphrase directamente en su pantalla táctil.<br><br>
+        <div class="info">El Safe 7 es el primer Trezor con pantalla táctil de tamaño completo. La passphrase se ingresa 100% en el hardware.</div>`,
+        den: `Trezor Suite shows best practices before continuing:<br><br>
+        - Learn first how a passphrase works.<br>
+        - Write it down and keep it safe.<br>
+        - Keep it separate from the seed and device.<br>
+        - Never share it with anyone.<br><br>
+        Safe 7 will ask you to enter the passphrase directly on its touchscreen.<br><br>
+        <div class="info">Safe 7 is the first Trezor with a full-size touchscreen. The passphrase is entered 100% on hardware.</div>`
       },
       {
         f: 'hw-trezor-safe7-new-02.png', imgW: 280,
         es: 'Dispositivo - Teclado Táctil del Safe 7',
         en: 'Device - Safe 7 Touch Keyboard',
         des: `El Safe 7 muestra el teclado <strong>"Ingresa passphrase"</strong> en su pantalla táctil. Grupos de letras: abc/def/ghi/jkl/mno/pq/rst/uvw/xyz/*#.<br><br>
-        Tocar cada grupo para seleccionar el carácter, confirmar con ✓. La passphrase se ingresa completamente en el hardware.<br><br>
+        Tocar cada grupo para seleccionar el carácter, confirmar con ✓.<br><br>
+        <div class="warn">La passphrase es <strong>case-sensitive</strong>. Un carácter diferente deriva una wallet completamente distinta.</div>`,
+        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard on its touchscreen. Letter groups: abc/def/ghi/jkl/mno/pq/rst/uvw/xyz/*#.<br><br>
+        Tap each group to select the character, confirm with ✓.<br><br>
+        <div class="warn">The passphrase is <strong>case-sensitive</strong>. A different character derives a completely different wallet.</div>`
+      },
+      {
+        f: 'hw-trezor-safe7-01.png', imgW: 280,
+        es: 'Dispositivo - Confirmar Passphrase (Segunda Vez)',
+        en: 'Device - Confirm Passphrase (Second Time)',
+        des: `El Safe 7 pide ingresar la passphrase <strong>una segunda vez</strong> para confirmar. Repetir en el teclado táctil y confirmar con ✓.<br><br>
+        Ambas entradas deben coincidir exactamente. Si no coinciden, el dispositivo lo indica y pide reingresar.`,
+        den: `Safe 7 asks to enter the passphrase <strong>a second time</strong> to confirm. Repeat on the touchscreen and confirm with ✓.<br><br>
+        Both entries must match exactly. If they don't match, the device will indicate it and ask to re-enter.`
+      },
+      {
+        f: 'hw-trezor-one-06.png', imgW: 380,
+        es: 'Suite ➜ Billetera con Passphrase Activa',
+        en: 'Suite ➜ Passphrase Wallet Active',
+        des: `Suite abre la <strong>Billetera con passphrase #1</strong> (borde verde) separada de la billetera estándar.<br><br>
         <div class="fp-nodev">
           <div class="fp-nodev-title">Trezor no muestra fingerprint - opciones de verificación</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Cuenta ➜ <code>···</code> ➜ Detalles de cuenta · anotar y guardar</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 Primera dirección</span>anotar en la primera sesión, comparar en las siguientes</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Ruta</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
-        </div>`,
-        den: `Safe 7 shows the <strong>"Enter passphrase"</strong> keyboard on its touchscreen. Letter groups: abc/def/ghi/jkl/mno/pq/rst/uvw/xyz/*#.<br><br>
-        Tap each group to select the character, confirm with ✓. Passphrase is entered entirely on hardware.<br><br>
+        </div><br>
+        <div class="warn"><strong>La misma seed + una passphrase diferente = una wallet diferente.</strong><br><br>
+        El Safe 7 no guarda la passphrase. Para acceder en el futuro: Suite ➜ selector ➜ + Billetera con passphrase ➜ ingresar exactamente la misma passphrase en el dispositivo.</div>`,
+        den: `Suite opens <strong>Passphrase wallet #1</strong> (green border) separate from the standard wallet.<br><br>
         <div class="fp-nodev">
           <div class="fp-nodev-title">Trezor doesn't show a fingerprint - verification options</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📋 xpub/zpub</span>Suite ➜ Account ➜ <code>···</code> ➜ Account Details · write down and save</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">📍 First address</span>note it in the first session, compare in future sessions</div>
           <div class="fp-nodev-row"><span class="fp-nodev-row-label">🔗 Path</span><code>m/84'/0'/0'</code> (Native SegWit · zpub)</div>
-        </div>`
+        </div><br>
+        <div class="warn"><strong>Same seed + different passphrase = different wallet.</strong><br><br>
+        Safe 7 does not store the passphrase. To access in the future: Suite ➜ selector ➜ + Passphrase wallet ➜ enter exactly the same passphrase on the device.</div>`
+      },
+      {
+        f: 'hw-trezor-one-07.png', imgW: 280,
+        es: 'Nota: Deshabilitar la Función Passphrase',
+        en: 'Note: Disabling the Passphrase Feature',
+        des: `Si desactivás la función desde Configuración ➜ Dispositivo, el Safe 7 pregunta: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
+        <div class="warn"><strong>Deshabilitar la función NO elimina las wallets con passphrase existentes.</strong> Los fondos siguen accesibles si volvés a habilitarla e ingresás exactamente la misma passphrase. Si perdés la passphrase, esos fondos serán inaccesibles para siempre.</div>`,
+        den: `If you disable the feature from Settings ➜ Device, Safe 7 asks: <strong>"Do you really want to disable passphrase protection?"</strong><br><br>
+        <div class="warn"><strong>Disabling the feature does NOT delete existing passphrase wallets.</strong> Funds remain accessible if you re-enable it and enter exactly the same passphrase. If you lose the passphrase, those funds are gone forever.</div>`
       },
     ]
   },
