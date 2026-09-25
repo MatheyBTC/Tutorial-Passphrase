@@ -5195,6 +5195,86 @@ From here you can receive, send, or verify the address to confirm it is the corr
     ]
   },
 
+  {
+    id: 'mob-bitkit', ready: true, addedOn: '2026-09-25', group: 'mobile',
+    site: 'bitkit.to', github: 'https://github.com/synonymdev/bitkit',
+    brand: 'Bitkit', logo: 'bitkit.png', logoBg: '#000',
+    es: 'Bitkit', en: 'Bitkit',
+    steps: [
+      {
+        f: 'mob-bitkit-01.jpeg', imgW: 360,
+        es: 'Pantalla de Bienvenida ➜ Restaurar',
+        en: 'Welcome Screen ➜ Restore',
+        des: `Abrir <strong>Bitkit</strong>. La app muestra la pantalla de bienvenida con el mensaje <em>"Tus llaves, tus monedas"</em>.<br><br>
+Tocar <strong>"Restaurar"</strong> para importar una billetera existente con su passphrase.`,
+        den: `Open <strong>Bitkit</strong>. The app shows the welcome screen with the message <em>"Your keys, your coins"</em>.<br><br>
+Tap <strong>"Restore"</strong> to import an existing wallet with its passphrase.`
+      },
+      {
+        f: 'mob-bitkit-02.png', imgW: 360,
+        es: 'Restaurar Billetera ➜ Ingresar Semilla',
+        en: 'Restore Wallet ➜ Enter Seed',
+        des: `La pantalla <strong>"Restaurar su billetera"</strong> muestra 12 campos vacíos para ingresar la frase de recuperación.<br><br>
+Ingresar las <strong>12 palabras</strong> de la semilla en orden. Al terminar, Bitkit pedirá la passphrase a través del botón <strong>"Avanzado"</strong>.`,
+        den: `The <strong>"Restore your wallet"</strong> screen shows 12 empty fields to enter the recovery phrase.<br><br>
+Enter the <strong>12 seed words</strong> in order. After that, Bitkit will ask for the passphrase via the <strong>"Advanced"</strong> button.`
+      },
+      {
+        f: 'mob-bitkit-03.png', imgW: 360,
+        es: 'Semilla Completa ➜ Tocar "Avanzado"',
+        en: 'Seed Complete ➜ Tap "Advanced"',
+        des: `Con las 12 palabras ingresadas, tocar el botón <strong>"Avanzado"</strong> (inferior izquierdo) para acceder al campo de passphrase.<br><br>
+<div class="info">El botón <strong>"Restaurar"</strong> sin tocar "Avanzado" carga la wallet <em>sin</em> passphrase. Siempre tocar "Avanzado" primero.</div>`,
+        den: `With the 12 seed words entered, tap the <strong>"Advanced"</strong> button (bottom left) to access the passphrase field.<br><br>
+<div class="info">Tapping <strong>"Restore"</strong> without "Advanced" loads the wallet <em>without</em> the passphrase. Always tap "Advanced" first.</div>`
+      },
+      {
+        f: 'mob-bitkit-04.png', imgW: 360,
+        es: 'Campo de Passphrase (Palabras EFF)',
+        en: 'Passphrase Field (EFF Words)',
+        des: `Al tocar "Avanzado" aparece el campo de passphrase debajo de las palabras. Bitkit lo muestra con el placeholder <strong>"5/6 words from EFF list"</strong>.<br><br>
+Ingresar la passphrase <strong>exactamente como fue creada</strong> - puede ser texto libre o palabras EFF.<br><br>
+<div class="warn">⚠️ Un carácter diferente deriva una wallet completamente distinta sin advertencia.</div>
+<div class="tip">El placeholder "EFF list" es solo una sugerencia. Bitkit acepta cualquier texto como passphrase.</div>`,
+        den: `Tapping "Advanced" reveals the passphrase field below the seed words. Bitkit shows it with the placeholder <strong>"5/6 words from EFF list"</strong>.<br><br>
+Enter the passphrase <strong>exactly as it was created</strong> - it can be free text or EFF words.<br><br>
+<div class="warn">⚠️ One wrong character derives a completely different wallet with no warning.</div>
+<div class="tip">The "EFF list" placeholder is just a suggestion. Bitkit accepts any text as a passphrase.</div>`
+      },
+      {
+        noImg: true,
+        es: 'Tocar "Restaurar" para Confirmar',
+        en: 'Tap "Restore" to Confirm',
+        des: `Con la passphrase ingresada, tocar <strong>"Restaurar"</strong>.<br><br>
+Bitkit derivará la wallet con la combinación semilla + passphrase. Si la passphrase es correcta, la billetera cargará con el saldo esperado.<br><br>
+<div class="warn">Si el saldo aparece en 0, revisar que la passphrase sea exactamente la misma (mayúsculas, espacios, caracteres especiales).</div>`,
+        den: `With the passphrase entered, tap <strong>"Restore"</strong>.<br><br>
+Bitkit will derive the wallet with the seed + passphrase combination. If the passphrase is correct, the wallet will load with the expected balance.<br><br>
+<div class="warn">If balance shows 0, check that the passphrase is exactly the same (uppercase, spaces, special characters).</div>`
+      },
+      {
+        f: 'mob-bitkit-06.jpeg', imgW: 360,
+        es: 'Billetera Restaurada',
+        en: 'Wallet Restored',
+        des: `Bitkit muestra la pantalla de confirmación: <strong>"Billetera restaurada"</strong> con el mensaje "Ha restaurado con éxito su cartera desde la copia de seguridad".<br><br>
+Tocar <strong>"Empezar"</strong> para acceder a la wallet con passphrase activa.`,
+        den: `Bitkit shows the confirmation screen: <strong>"Wallet Restored"</strong> with the message "You have successfully restored your wallet from backup".<br><br>
+Tap <strong>"Start"</strong> to access the wallet with the active passphrase.`
+      },
+      {
+        f: 'mob-bitkit-07.jpeg', imgW: 360,
+        es: 'Wallet Activa ➜ Verificar Dirección',
+        en: 'Wallet Active ➜ Verify Address',
+        des: `La wallet carga con las secciones <strong>Ahorro</strong> (on-chain) y <strong>Gasto</strong> (Lightning).<br><br>
+Para verificar que la wallet derivada es la correcta, tocar <strong>"Recibir"</strong> y comparar la dirección Bitcoin con la registrada al crear la wallet con passphrase.<br><br>
+<div class="warn">Siempre verificar al menos 1 dirección antes de enviar fondos a esta wallet.</div>`,
+        den: `The wallet loads with the <strong>Savings</strong> (on-chain) and <strong>Spending</strong> (Lightning) sections.<br><br>
+To verify the derived wallet is correct, tap <strong>"Receive"</strong> and compare the Bitcoin address with the one recorded when the passphrase wallet was created.<br><br>
+<div class="warn">Always verify at least 1 address before sending funds to this wallet.</div>`
+      },
+    ]
+  },
+
 ]; // END SECTIONS
 
 // ═══════════════════════════════════════════════════════════════
