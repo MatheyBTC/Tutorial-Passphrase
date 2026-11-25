@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <title>Passphrase (BIP39) - Tutoriales</title>
+<meta name="description" content="Tutoriales paso a paso para activar la passphrase BIP39 en más de 30 hardware wallets y software wallets. Aprende a proteger tu Bitcoin con una capa adicional de seguridad.">
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://matheybtc.github.io/Tutorial-Passphrase/">
+<meta property="og:title" content="Passphrase BIP39 - Tutoriales paso a paso">
+<meta property="og:description" content="Aprende a activar la passphrase BIP39 en más de 30 wallets. BitBox, Coldcard, Jade, Ledger, Trezor, Sparrow, Electrum y más.">
+<meta property="og:image" content="https://matheybtc.github.io/Tutorial-Passphrase/og-image.png">
+<meta property="og:image:width" content="1324">
+<meta property="og:image:height" content="703">
+<meta property="og:locale" content="es_AR">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MatheyBTC">
+<meta name="twitter:title" content="Passphrase BIP39 - Tutoriales paso a paso">
+<meta name="twitter:description" content="Aprende a activar la passphrase BIP39 en más de 30 wallets. BitBox, Coldcard, Jade, Ledger, Trezor, Sparrow, Electrum y más.">
+<meta name="twitter:image" content="https://matheybtc.github.io/Tutorial-Passphrase/og-image.png">
 <style>
   :root {
     --bg: #0f0f0f; --surface: #1a1a1a; --border: #2a2a2a;
@@ -1331,10 +1347,12 @@ const SECTIONS = [
         es: 'Aviso del Dispositivo',
         en: 'Device Warning',
         des: `La Mk4 muestra un <strong>mensaje informativo</strong> antes de permitir ingresar la passphrase.<br><br>
-        La passphrase se suma a sus 24 palabras BIP-39 para crear una billetera completamente nueva por cada passphrase posible.<br><br>
+        La passphrase se suma a tus 24 palabras BIP-39 para crear una billetera completamente nueva. Cada passphrase posible genera una billetera diferente.<br><br>
+        <div class="warn">La passphrase es <strong>case-sensitive</strong>: "Bitcoin" y "bitcoin" generan billeteras completamente distintas. Verificar mayúsculas, minúsculas, espacios y caracteres especiales antes de confirmar.</div>
         Confirmar para continuar.`,
         den: `Mk4 shows an <strong>informational message</strong> before allowing passphrase entry.<br><br>
-        The passphrase is added to your 24 BIP-39 words to create a completely new wallet for each possible passphrase.<br><br>
+        The passphrase is added to your 24 BIP-39 words to create a completely new wallet. Every possible passphrase generates a different wallet.<br><br>
+        <div class="warn">The passphrase is <strong>case-sensitive</strong>: "Bitcoin" and "bitcoin" generate completely different wallets. Verify uppercase, lowercase, spaces and special characters before confirming.</div>
         Confirm to continue.`
       },
       {
@@ -1901,18 +1919,11 @@ const SECTIONS = [
         f: 'hw-krux-08.png', imgW: 340,
         es: 'Tipear la Passphrase',
         en: 'Type the Passphrase',
-        des: `Ingresar la passphrase usando el teclado en pantalla. Distingue mayúsculas, minúsculas y símbolos.<br><br>
-        Seleccionar <strong>Go</strong> al terminar.`,
-        den: `Enter the passphrase using the on-screen keyboard. It is case-sensitive and supports symbols.<br><br>
-        Select <strong>Go</strong> when done.`
-      },
-      {
-        f: 'hw-krux-09.png', imgW: 340,
-        es: 'Completar la Passphrase',
-        en: 'Complete the Passphrase',
-        des: `Krux muestra el avance del ingreso. Continuar tipeando hasta completar la passphrase.<br><br>
+        des: `Ingresar la passphrase usando el teclado en pantalla. Krux muestra el avance del ingreso a medida que se tipea.<br><br>
+        La passphrase distingue mayúsculas, minúsculas y símbolos. Continuar hasta completarla y seleccionar <strong>Go</strong> al terminar.<br><br>
         <div class="tip">La passphrase puede ser cualquier texto: palabras, frases, combinaciones de caracteres.</div>`,
-        den: `Krux shows the input progress. Continue typing until the passphrase is complete.<br><br>
+        den: `Enter the passphrase using the on-screen keyboard. Krux shows input progress as you type.<br><br>
+        The passphrase is case-sensitive and supports symbols. Continue until complete and select <strong>Go</strong> when done.<br><br>
         <div class="tip">The passphrase can be any text: words, phrases, combinations of characters.</div>`
       },
       {
@@ -2144,6 +2155,29 @@ const SECTIONS = [
         - <strong>Secondary PIN</strong> ➜ opens your passphrase wallet<br><br>
         <div class="tip">Open the Bitcoin app and verify that the addresses differ from your base wallet. This confirms the passphrase is active.</div>`
       },
+      {
+        noImg: true,
+        es: 'Alternativa: Modo "Set temporary" (sin rastro en el dispositivo)',
+        en: 'Alternative: "Set temporary" mode (no trace on device)',
+        des: `En lugar de <strong>Attach to PIN</strong>, el modo <strong>Set temporary</strong> no almacena nada en el dispositivo: la passphrase se ingresa manualmente en cada sesión.<br><br>
+        Para usarlo:<br>
+        1. En el paso 7, seleccionar <strong>Set temporary</strong> en lugar de Attach to PIN<br>
+        2. El dispositivo muestra el teclado QWERTY para ingresar la passphrase carácter a carácter<br>
+        3. Navegar con botón izquierdo/derecho hasta cada letra y confirmar con ambos botones<br>
+        4. Al terminar, confirmar con <strong>✓</strong><br>
+        5. Abrir la app Bitcoin — el dispositivo ya opera con la billetera con passphrase<br><br>
+        <div class="tip">Este modo es preferido para máxima privacidad: si alguien accede al dispositivo, no hay ninguna evidencia de que existe una segunda wallet.</div>
+        <div class="warn">La passphrase debe ingresarse de nuevo cada vez que se apague y encienda el Ledger. No hay recuperación posible si se olvida.</div>`,
+        den: `Instead of <strong>Attach to PIN</strong>, <strong>Set temporary</strong> mode stores nothing on the device: the passphrase is entered manually each session.<br><br>
+        To use it:<br>
+        1. At step 7, select <strong>Set temporary</strong> instead of Attach to PIN<br>
+        2. The device shows a QWERTY keyboard to enter the passphrase character by character<br>
+        3. Navigate left/right button to each letter and confirm with both buttons<br>
+        4. When done, confirm with <strong>✓</strong><br>
+        5. Open the Bitcoin app — the device now operates with the passphrase wallet<br><br>
+        <div class="tip">This mode is preferred for maximum privacy: if someone accesses the device, there is no evidence a second wallet exists.</div>
+        <div class="warn">The passphrase must be re-entered every time the Ledger is powered off and on. There is no recovery if it is forgotten.</div>`
+      },
     ]
   },
 
@@ -2311,14 +2345,24 @@ const SECTIONS = [
         - <strong>Fingerprint (XFP):</strong> el identificador único de esta billetera con passphrase<br>
         - <strong>Label:</strong> nombre para identificar la cuenta (por defecto "Passphrase 1")<br>
         - Aviso de que la passphrase se borra al apagar el dispositivo<br><br>
-        <fp-compare xfp="D1DF1B76"></fp-compare>
-        Verificar que el XFP coincida con tu billetera de software. Tocar <strong>Confirm</strong>.`,
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[XXXXXXXX]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[D1DF1B76]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
+        </div>
+        - Primera vez: anotar el XFP en papel y guardarlo por separado de la seed y la passphrase<br>
+        - Sesiones futuras: verificar que coincida antes de operar<br><br>
+        Tocar <strong>Confirm</strong>.`,
         den: `The device shows the confirmation screen with:<br><br>
         - <strong>Fingerprint (XFP):</strong> unique identifier for this passphrase wallet<br>
         - <strong>Label:</strong> name to identify the account (default "Passphrase 1")<br>
         - Warning that passphrase is erased when device turns off<br><br>
-        <fp-compare xfp="D1DF1B76"></fp-compare>
-        Verify the XFP matches your software wallet. Tap <strong>Confirm</strong>.`
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[XXXXXXXX]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[D1DF1B76]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
+        </div>
+        - First time: write down the XFP on paper, store it separate from your seed and passphrase<br>
+        - Future sessions: verify it matches before operating<br><br>
+        Tap <strong>Confirm</strong>.`
       },
       {
         f: 'hw-passport-prime-08.png', imgW: 360,
@@ -2632,6 +2676,17 @@ const SECTIONS = [
         den: `Open <strong>Trezor Suite</strong> (desktop) with Model T connected. Go to <strong>Settings ➜ Device tab</strong>.<br><br>
         In the <strong>Passphrase</strong> section, enable the <strong>"Use passphrase wallets"</strong> toggle. Suite will ask for confirmation on the physical device.<br><br>
         <div class="info">Also available from the Trezor Suite mobile app: device icon ➜ Device settings ➜ Security ➜ Passphrase wallets.</div>`
+      },
+      {
+        noImg: true,
+        es: 'Suite - Selector de Billeteras ➜ Nueva Passphrase',
+        en: 'Suite - Wallet Selector ➜ New Passphrase',
+        des: `Con la función activada, volver al panel principal de Trezor Suite. Hacer clic en el nombre de la billetera actual (arriba a la izquierda) para abrir el <strong>selector de billeteras</strong>.<br><br>
+        Seleccionar <strong>"+ Billetera con passphrase"</strong> (o <em>"Add passphrase wallet"</em> en inglés) para crear una nueva sesión con passphrase.<br><br>
+        <div class="info">La función passphrase debe estar activada en el paso anterior para que esta opción aparezca en el selector.</div>`,
+        den: `With the feature enabled, return to the Trezor Suite main panel. Click the current wallet name (top left) to open the <strong>wallet selector</strong>.<br><br>
+        Select <strong>"+ Passphrase wallet"</strong> to create a new session with passphrase.<br><br>
+        <div class="info">The passphrase feature must be enabled in the previous step for this option to appear in the selector.</div>`
       },
       {
         f: 'hw-trezor-t-01.png', imgW: 280,
@@ -3231,6 +3286,19 @@ const SECTIONS = [
         La wallet con passphrase es efímera: desaparece de la lista al cerrar sesión. Para volver a ella, repetí los pasos 7 y 8 con la misma passphrase.`,
         den: `In <strong>My Wallets</strong> two entries appear: <strong>Mobile Wallet</strong> (no passphrase) and <strong>BIP39 #1</strong> (with passphrase).<br><br>
         The passphrase wallet is ephemeral: it disappears from the list on logout. To return to it, repeat steps 7 and 8 with the same passphrase.`
+      },
+      {
+        noImg: true,
+        es: 'Verificar que es la Wallet Correcta',
+        en: 'Verify You Are in the Right Wallet',
+        des: `Green no muestra un fingerprint en pantalla. Para confirmar que ingresaste la passphrase correcta, verificá la primera dirección de recepción:<br><br>
+        1. Tocar <strong>Recibir</strong> (ícono de flecha hacia abajo)<br>
+        2. Comparar la dirección mostrada con la que registraste la primera vez<br><br>
+        <div class="warn">Si la dirección es distinta, la passphrase fue ingresada con algún error (mayúscula, espacio, carácter distinto). Cerrar sesión y repetir desde el paso 7 con exactamente la misma passphrase.</div>`,
+        den: `Green does not show a fingerprint on screen. To confirm you entered the correct passphrase, verify the first receive address:<br><br>
+        1. Tap <strong>Receive</strong> (downward arrow icon)<br>
+        2. Compare the shown address with the one you recorded the first time<br><br>
+        <div class="warn">If the address is different, the passphrase was entered with an error (uppercase, space, different character). Log out and repeat from step 7 with exactly the same passphrase.</div>`
       },
     ]
   },
@@ -4128,10 +4196,10 @@ Leave empty if no local encryption is desired. Click <strong>Finish</strong> to 
         f: 'sw-electrum-09.png',
         es: 'Cartera Lista - Verificar Información',
         en: 'Wallet Ready - Check Information',
-        des: `La cartera con passphrase está activa. La barra de título muestra el nombre: <em>Electrum 4.8.0 - wallet + passprhase [standard]</em>.<br><br>
+        des: `La cartera con passphrase está activa. La barra de título muestra el nombre: <em>Electrum 4.8.0 - wallet + passphrase [standard]</em>.<br><br>
 Para verificar el fingerprint de la wallet (y confirmar que la passphrase ingresada es correcta), ir a:<br><br>
 <strong>Cartera ➜ Información</strong> (resaltado en naranja en la imagen)`,
-        den: `The wallet with passphrase is active. The title bar shows the name: <em>Electrum 4.8.0 - wallet + passprhase [standard]</em>.<br><br>
+        den: `The wallet with passphrase is active. The title bar shows the name: <em>Electrum 4.8.0 - wallet + passphrase [standard]</em>.<br><br>
 To verify the wallet fingerprint (and confirm the passphrase entered is correct), go to:<br><br>
 <strong>Wallet ➜ Information</strong> (highlighted in orange in the image)`
       },
@@ -4543,8 +4611,10 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
         es: 'Wallet con passphrase lista',
         en: 'Passphrase wallet ready',
         des: `Rabby abre la wallet derivada con la passphrase. El nombre elegido aparece en la barra superior junto con la dirección.<br><br>
+        Para confirmar que la passphrase fue ingresada correctamente, verificar la dirección mostrada contra la registrada al crear esta wallet por primera vez. También se puede verificar el xpub desde <strong>Configuración ➜ Gestionar cuentas ➜ ver detalles de la cuenta</strong>.<br><br>
         <div class="warn"><strong>Cada vez que uses Rabby en un navegador nuevo o reinstales la extensión, deberás importar nuevamente la seed phrase junto con la passphrase exacta.</strong> Una passphrase diferente deriva otra dirección completamente distinta.</div>`,
         den: `Rabby opens the wallet derived with the passphrase. The chosen name appears in the top bar alongside the address.<br><br>
+        To confirm the passphrase was entered correctly, verify the shown address against the one recorded when first creating this wallet. You can also verify the xpub from <strong>Settings ➜ Manage accounts ➜ view account details</strong>.<br><br>
         <div class="warn"><strong>Every time you use Rabby in a new browser or reinstall the extension, you must import the seed phrase together with the exact passphrase.</strong> A different passphrase derives a completely different address.</div>`
       },
     ]
@@ -4615,6 +4685,21 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
         Case-sensitive: uppercase | lowercase | spaces all matter.<br><br>
         Tap <strong>Import</strong>. BlueWallet derives the wallet using seed + passphrase and loads it directly.<br><br>
         <div class="warn">⚠️ The passphrase is typed on the phone. Make sure you are in a safe environment, with no automatic screenshots or malicious software.</div>`
+      },
+      {
+        noImg: true,
+        es: 'Verificar que es la Wallet Correcta',
+        en: 'Verify You Are in the Right Wallet',
+        des: `BlueWallet no muestra fingerprint. Para confirmar que la passphrase fue ingresada correctamente, verificá la primera dirección de recepción:<br><br>
+        1. Tocar la wallet importada para abrirla<br>
+        2. Tocar <strong>Recibir</strong> para ver la primera dirección<br>
+        3. Comparar con la dirección que registraste la primera vez que usaste esta wallet<br><br>
+        <div class="warn">Si la dirección difiere, la passphrase tiene algún error. Eliminar la wallet y repetir la importación desde el paso 1 con la passphrase correcta.</div>`,
+        den: `BlueWallet does not show a fingerprint. To confirm the passphrase was entered correctly, verify the first receive address:<br><br>
+        1. Tap the imported wallet to open it<br>
+        2. Tap <strong>Receive</strong> to see the first address<br>
+        3. Compare with the address you recorded the first time you used this wallet<br><br>
+        <div class="warn">If the address differs, the passphrase has an error. Delete the wallet and repeat the import from step 1 with the correct passphrase.</div>`
       },
     ]
   },
@@ -4798,12 +4883,16 @@ Write down the fingerprint alongside the seed and passphrase backup. In each fut
         f: 'mob-cake-06.png', imgW: 380,
         es: 'Wallet lista con passphrase activa',
         en: 'Wallet ready with active passphrase',
-        des: `La billetera con passphrase está importada y lista. El saldo muestra 0 BTC (billetera de ejemplo vacía).<br><br>
+        des: `La billetera con passphrase está importada y lista. Para confirmar que la passphrase fue ingresada correctamente:<br><br>
+        1. Tocar el ícono de <strong>Recibir</strong> (flecha hacia abajo)<br>
+        2. Comparar la primera dirección de recepción con la que anotaste la primera vez<br><br>
         <div class="tip">💡 Para recovery: abrir Cake Wallet ➜ Carteras ➜ Restaurar monedero ➜ Seed o claves ➜ ingresar seed ➜ marcar checkbox passphrase ➜ "Añadir frase de contraseña" ➜ ingresar passphrase ➜ Restaurar.</div>
-        <div class="warn">⚠️ Guardar seed phrase y passphrase en lugares seguros y separados. Ambas son necesarias para recuperar esta billetera.</div>`,
-        den: `The passphrase wallet is imported and ready. The balance shows 0 BTC (empty example wallet).<br><br>
+        <div class="warn">⚠️ Guardar seed phrase y passphrase en lugares seguros y separados. Ambas son necesarias para recuperar esta billetera. Una passphrase con un solo carácter distinto abre una wallet completamente diferente sin ningún saldo.</div>`,
+        den: `The passphrase wallet is imported and ready. To confirm the passphrase was entered correctly:<br><br>
+        1. Tap the <strong>Receive</strong> icon (downward arrow)<br>
+        2. Compare the first receive address with the one you noted the first time<br><br>
         <div class="tip">💡 For recovery: open Cake Wallet ➜ Wallets ➜ Restore wallet ➜ Seed or keys ➜ enter seed ➜ check passphrase checkbox ➜ "Add passphrase" ➜ enter passphrase ➜ Restore.</div>
-        <div class="warn">⚠️ Store seed phrase and passphrase in safe, separate locations. Both are needed to recover this wallet.</div>`
+        <div class="warn">⚠️ Store seed phrase and passphrase in safe, separate locations. Both are needed to recover this wallet. A passphrase with even one wrong character opens a completely different wallet with no balance.</div>`
       },
     ]
   },
@@ -4869,9 +4958,17 @@ Tap <strong>"Continue"</strong> to finish the setup.<br><br>
         es: 'Wallet Lista con Passphrase Activa',
         en: 'Wallet Ready with Active Passphrase',
         des: `La wallet queda restaurada y lista para usar. El dashboard muestra <strong>Bitcoin</strong> como activo principal con el balance correspondiente.<br><br>
-La wallet derivada de tu semilla + passphrase está activa. Podés verificar la dirección de recepción para confirmar que es la wallet correcta.`,
+La wallet derivada de tu semilla + passphrase está activa. Para confirmar que es la wallet correcta:<br><br>
+        1. Tocar <strong>Bitcoin</strong> en el listado de activos<br>
+        2. Tocar <strong>Recibir</strong> para ver la primera dirección de recepción<br>
+        3. Comparar con la dirección que anotaste la primera vez que usaste esta wallet<br><br>
+        <div class="warn">Si la dirección es distinta, la passphrase fue ingresada con un error. Eliminar la wallet e importar nuevamente desde el paso 1 con la passphrase exacta.</div>`,
         den: `The wallet is restored and ready to use. The dashboard shows <strong>Bitcoin</strong> as the main asset with the corresponding balance.<br><br>
-The wallet derived from your seed + passphrase is active. You can check the receiving address to confirm it is the correct wallet.`
+The wallet derived from your seed + passphrase is active. To confirm it is the correct wallet:<br><br>
+        1. Tap <strong>Bitcoin</strong> in the asset list<br>
+        2. Tap <strong>Receive</strong> to see the first receive address<br>
+        3. Compare with the address you noted the first time you used this wallet<br><br>
+        <div class="warn">If the address differs, the passphrase was entered with an error. Delete the wallet and re-import from step 1 with the exact passphrase.</div>`
       },
     ]
   },
