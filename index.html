@@ -1078,12 +1078,12 @@ const SECTIONS = [
         en: 'How It Works -Last Info Screen',
         des: `La app explica el comportamiento al conectar con passphrase habilitada:<br><br>
         - Si te equivocás en un carácter, <strong>no serás notificado</strong> -abrirá una billetera diferente (también válida)<br>
-        - Al conectar, el BitBox pedirá la passphrase <strong>directamente en el dispositivo</strong><br>
+        - Al conectar, el BitBox ofrecerá dos opciones: ingresar en el dispositivo físico <strong>o</strong> en la BitBoxApp<br>
         - Tras ingresarla, la app mostrará lo que escribiste para confirmación visual<br><br>
         Hacer clic en <strong>"Activar passphrase"</strong> para avanzar al resumen final.`,
         den: `The app explains behavior when connecting with passphrase enabled:<br><br>
         - If you make a typo, <strong>you won't be notified</strong> -it will open a different (also valid) wallet<br>
-        - When connecting, BitBox will request the passphrase <strong>directly on the device</strong><br>
+        - When connecting, BitBox will offer two options: enter on the physical device <strong>or</strong> in BitBoxApp<br>
         - After entering it, the app will show what you typed for visual confirmation<br><br>
         Click <strong>"Activate passphrase"</strong> to proceed to the final summary.`
       },
@@ -1109,24 +1109,26 @@ const SECTIONS = [
         es: 'Passphrase Activada -Reconectar el Dispositivo',
         en: 'Passphrase Activated -Reconnect the Device',
         des: `La app confirma: <strong>"Passphrase opcional activada satisfactoriamente"</strong>.<br><br>
-        A partir de ahora, cada vez que conectes el BitBox02 se te pedirá ingresar una passphrase en el dispositivo físico.<br><br>
+        A partir de ahora, cada vez que conectes el BitBox02 se te pedirá ingresar la passphrase -podés elegir hacerlo en el dispositivo físico o en la BitBoxApp.<br><br>
         <div class="tip">Recomendación de la propia app: envía una pequeña cantidad a la wallet con passphrase, desconectá y reconectá el BitBox ingresando la passphrase -si ves los fondos, la passphrase es correcta.</div><br>
         Hacer clic en <strong>"Por favor vuelva a conectar tu BitBox ahora mismo"</strong> o reconectar físicamente.`,
         den: `The app confirms: <strong>"Optional passphrase successfully activated"</strong>.<br><br>
-        From now on, every time you connect the BitBox02 you will be asked to enter a passphrase on the physical device.<br><br>
+        From now on, every time you connect the BitBox02 you will be asked to enter the passphrase -you can choose to do it on the physical device or in BitBoxApp.<br><br>
         <div class="tip">The app's own recommendation: send a small amount to the passphrase wallet, disconnect and reconnect the BitBox entering the passphrase -if you see the funds, the passphrase is correct.</div><br>
         Click <strong>"Please reconnect your BitBox now"</strong> or physically reconnect.`
       },
       {
         f: 'hw-bitbox-11.png',
-        es: 'Ingresar Passphrase -Solo en el Dispositivo Físico',
-        en: 'Enter Passphrase -Only on the Physical Device',
+        es: 'Ingresar Passphrase -En el Dispositivo o en la App',
+        en: 'Enter Passphrase -On Device or in App',
         des: `Al reconectar, el <strong>dispositivo físico</strong> muestra el teclado <strong>"Optional passphrase"</strong> en su pantalla OLED.<br><br>
         Navegá por los grupos de letras (abcd/efgh/ijklm/nopq/rstuv/wxyz/ABC ▼) con los controles táctiles del dispositivo y escribe tu passphrase carácter por carácter.<br><br>
-        <div class="warn">⚠️ La passphrase se ingresa <strong>ÚNICAMENTE en el dispositivo físico</strong> -nunca en la computadora ni en la BitBoxApp. Esto protege contra keyloggers y malware.</div>`,
+        <div class="tip">Con el firmware actualizado también podés tocar <strong>"Introduce la passphrase en la app"</strong> en el dispositivo para escribirla desde la BitBoxApp en tu computadora.</div>
+        <div class="warn">⚠️ Si ingresás la passphrase por la app, asegurate de estar en un entorno seguro y sin malware. La entrada en el dispositivo físico siempre es la opción más segura.</div>`,
         den: `When reconnecting, the <strong>physical device</strong> shows the <strong>"Optional passphrase"</strong> keyboard on its OLED screen.<br><br>
         Navigate through letter groups (abcd/efgh/ijklm/nopq/rstuv/wxyz/ABC ▼) with the device's touch controls and type your passphrase character by character.<br><br>
-        <div class="warn">⚠️ The passphrase is entered <strong>ONLY on the physical device</strong> -never on the computer or in BitBoxApp. This protects against keyloggers and malware.</div>`
+        <div class="tip">With updated firmware you can also tap <strong>"Enter passphrase in app"</strong> on the device to type it from BitBoxApp on your computer.</div>
+        <div class="warn">⚠️ If entering the passphrase via the app, make sure you're in a secure environment free of malware. Entering on the physical device is always the safest option.</div>`
       },
       {
         f: 'hw-bitbox-12.png',
@@ -1255,12 +1257,12 @@ const SECTIONS = [
         en: 'How It Works -Last Info Screen',
         des: `La app explica el comportamiento al conectar con passphrase habilitada:<br><br>
         - Si te equivocás en un carácter, <strong>no serás notificado</strong> -abrirá una billetera diferente (también válida)<br>
-        - Al conectar, el BitBox pedirá la passphrase <strong>directamente en el dispositivo</strong><br>
+        - Al conectar, el BitBox ofrecerá dos opciones: ingresar en el dispositivo físico <strong>o</strong> en la BitBoxApp<br>
         - Tras ingresarla, la app mostrará lo que escribiste para confirmación visual<br><br>
         Hacer clic en <strong>"Activar passphrase"</strong> para avanzar al resumen final.`,
         den: `The app explains behavior when connecting with passphrase enabled:<br><br>
         - If you make a typo, <strong>you won't be notified</strong> -it will open a different (also valid) wallet<br>
-        - When connecting, BitBox will request the passphrase <strong>directly on the device</strong><br>
+        - When connecting, BitBox will offer two options: enter on the physical device <strong>or</strong> in BitBoxApp<br>
         - After entering it, the app will show what you typed for visual confirmation<br><br>
         Click <strong>"Activate passphrase"</strong> to proceed to the final summary.`
       },
@@ -1276,10 +1278,10 @@ const SECTIONS = [
         es: 'Passphrase Activada -Reconectar el Dispositivo',
         en: 'Passphrase Activated -Reconnect the Device',
         des: `La app confirma: <strong>"Passphrase opcional activada satisfactoriamente"</strong>.<br><br>
-        A partir de ahora, cada vez que conectes la Nova se te pedirá ingresar una passphrase en el dispositivo físico.<br><br>
+        A partir de ahora, cada vez que conectes la Nova se te pedirá ingresar la passphrase -podés elegir hacerlo en el dispositivo físico o en la BitBoxApp.<br><br>
         Hacer clic en <strong>"Por favor vuelva a conectar tu BitBox ahora mismo"</strong> o reconectar físicamente.`,
         den: `The app confirms: <strong>"Optional passphrase successfully activated"</strong>.<br><br>
-        From now on, every time you connect the Nova you will be asked to enter a passphrase on the physical device.<br><br>
+        From now on, every time you connect the Nova you will be asked to enter the passphrase -you can choose to do it on the physical device or in BitBoxApp.<br><br>
         Click <strong>"Please reconnect your BitBox now"</strong> or physically reconnect.`
       },
       {
@@ -1287,11 +1289,26 @@ const SECTIONS = [
         es: 'Ingresar Passphrase en la Nova -Teclado en Pantalla',
         en: 'Enter Passphrase on Nova -On-Screen Keyboard',
         des: `Aquí está la <strong>única diferencia visual</strong> respecto al BitBox02 estándar: la Nova muestra un <strong>teclado completo en pantalla</strong> (similar a iOS) en lugar del teclado de grupos de letras del modelo original.<br><br>
-        Ingresá tu passphrase directamente en el dispositivo -carácter por carácter. La passphrase <strong>nunca viaja a la computadora ni a la app</strong>.<br><br>
-        <div class="warn">⚠️ La passphrase se ingresa <strong>ÚNICAMENTE en el dispositivo físico</strong>. Esto protege contra keyloggers y malware en el host.</div>`,
+        Ingresá tu passphrase directamente en el dispositivo -carácter por carácter.<br><br>
+        <div class="tip">Con el firmware actualizado también podés tocar <strong>"Introduce la passphrase en la app"</strong> en el dispositivo para escribirla desde la BitBoxApp en tu computadora.</div>
+        <div class="warn">⚠️ Si ingresás la passphrase por la app, asegurate de estar en un entorno seguro y sin malware. La entrada en el dispositivo físico siempre es la opción más segura.</div>`,
         den: `This is the <strong>only visual difference</strong> from the standard BitBox02: Nova shows a <strong>full on-screen keyboard</strong> (iOS-like) instead of the letter-group keyboard of the original model.<br><br>
-        Enter your passphrase directly on the device -character by character. The passphrase <strong>never travels to the computer or app</strong>.<br><br>
-        <div class="warn">⚠️ The passphrase is entered <strong>ONLY on the physical device</strong>. This protects against keyloggers and malware on the host.</div>`
+        Enter your passphrase directly on the device -character by character.<br><br>
+        <div class="tip">With updated firmware you can also tap <strong>"Enter passphrase in app"</strong> on the device to type it from BitBoxApp on your computer.</div>
+        <div class="warn">⚠️ If entering the passphrase via the app, make sure you're in a secure environment free of malware. Entering on the physical device is always the safest option.</div>`
+      },
+      {
+        f: 'hw-bitbox-nova-11b.png',
+        es: 'Nueva Opción -Passphrase desde la BitBoxApp',
+        en: 'New Option -Passphrase from BitBoxApp',
+        des: `Con el <strong>firmware actualizado</strong>, al reconectar la Nova aparece el enlace <strong>"Introduce la passphrase en la app"</strong> resaltado en naranja en la pantalla del dispositivo.<br><br>
+        Al tocarlo, la BitBoxApp muestra un modal <strong>"Introducir passphrase"</strong> con un campo de texto y el botón <strong>"Confirmar"</strong>.<br><br>
+        <div class="tip">Esta opción es conveniente si preferís usar el teclado de tu computadora. La passphrase viaja cifrada al dispositivo para su verificación.</div>
+        <div class="warn">⚠️ Usá esta opción solo en un entorno de confianza. Para máxima seguridad, siempre preferí la entrada directa en el dispositivo.</div>`,
+        den: `With <strong>updated firmware</strong>, when reconnecting the Nova the link <strong>"Enter passphrase in app"</strong> appears highlighted in orange on the device screen.<br><br>
+        Tapping it, BitBoxApp shows an <strong>"Enter passphrase"</strong> modal with a text field and a <strong>"Confirm"</strong> button.<br><br>
+        <div class="tip">This option is convenient if you prefer using your computer keyboard. The passphrase is transmitted encrypted to the device for verification.</div>
+        <div class="warn">⚠️ Only use this option in a trusted environment. For maximum security, always prefer entering directly on the device.</div>`
       },
       {
         f: 'hw-bitbox-12.png',
