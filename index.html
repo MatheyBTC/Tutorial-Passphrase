@@ -1341,6 +1341,168 @@ const SECTIONS = [
     ]
   },
 
+  // BITBOX02 NOVA - App Móvil
+  {
+    id: 'hw-bitbox-nova-mobile', ready: true, group: 'hw',
+    site: 'bitbox.swiss', github: 'https://github.com/BitBoxSwiss',
+    brand: 'Shift Crypto', logo: 'bitbox_4x4_black.png', logoBg: true,
+    es: 'BitBox02 Nova (App Móvil)', en: 'BitBox02 Nova (Mobile App)',
+    steps: [
+      {
+        f: 'mob-bitbox-nova-01.jpeg',
+        es: 'Portfolio ➜ Configuración',
+        en: 'Portfolio ➜ Settings',
+        des: `La BitBoxApp móvil (Android/iOS) permite gestionar la passphrase directamente desde el teléfono, sin necesidad de computadora.<br><br>
+        Desde la pantalla <strong>Portfolio</strong>, tocar el ícono ⚙️ <strong>Configuración</strong> en la barra inferior derecha.<br><br>
+        <div class="info">La Nova es la única BitBox02 con soporte oficial para app móvil. El proceso es equivalente al de la versión de escritorio.</div>`,
+        den: `The BitBoxApp mobile (Android/iOS) lets you manage the passphrase directly from your phone, no computer needed.<br><br>
+        From the <strong>Portfolio</strong> screen, tap the ⚙️ <strong>Settings</strong> icon in the bottom-right bar.<br><br>
+        <div class="info">The Nova is the only BitBox02 with official mobile app support. The process mirrors the desktop version.</div>`
+      },
+      {
+        f: 'mob-bitbox-nova-02.jpeg',
+        es: 'Configuración ➜ Administrar Dispositivo',
+        en: 'Settings ➜ Manage Device',
+        des: `En la pantalla <strong>Configuración</strong> se ven cuatro opciones: General, Administrar cuentas, Administrar dispositivo, Configuración avanzada.<br><br>
+        Tocar <strong>"Administrar dispositivo"</strong>.`,
+        den: `The <strong>Settings</strong> screen shows four options: General, Manage accounts, Manage device, Advanced settings.<br><br>
+        Tap <strong>"Manage device"</strong>.`
+      },
+      {
+        f: 'mob-bitbox-nova-03.jpeg',
+        es: 'Administrar Dispositivo ➜ Passphrase',
+        en: 'Manage Device ➜ Passphrase',
+        des: `Dentro de <strong>Administrar dispositivo</strong>, bajo "Configuración avanzada", aparece la opción <strong>Passphrase</strong> con estado "Desactivado".<br><br>
+        Tocar <strong>"Passphrase"</strong> para comenzar el proceso de activación.`,
+        den: `Inside <strong>Manage device</strong>, under "Advanced settings", the <strong>Passphrase</strong> option appears with status "Disabled".<br><br>
+        Tap <strong>"Passphrase"</strong> to begin the activation process.`
+      },
+      {
+        f: 'mob-bitbox-nova-04.jpeg',
+        es: 'Resumen ➜ Tildar Checkbox ➜ Activar',
+        en: 'Summary ➜ Check the Box ➜ Activate',
+        des: `La pantalla muestra el <strong>resumen de riesgos</strong> de la passphrase:<br><br>
+        - Es una capa adicional sobre tu copia de seguridad<br>
+        - Un passphrase diferente genera billeteras diferentes<br>
+        - Para restaurar necesitás <strong>tanto el passphrase como la copia de seguridad</strong><br>
+        - Si olvidás tu passphrase, ya no podrás acceder a tus monedas<br><br>
+        Tildar el checkbox <em>"Entiendo como funciona la passphrase y sus riesgos asociados"</em> y luego tocar <strong>"Activar passphrase"</strong>.`,
+        den: `The screen shows the passphrase <strong>risk summary</strong>:<br><br>
+        - It is an additional layer on top of your backup<br>
+        - A different passphrase generates different wallets<br>
+        - To restore you need <strong>both the passphrase and the backup</strong><br>
+        - If you forget your passphrase, you will no longer be able to access your coins<br><br>
+        Check the box <em>"I understand how the passphrase works and its associated risks"</em> and then tap <strong>"Activate passphrase"</strong>.`
+      },
+      {
+        f: 'mob-bitbox-nova-05.jpeg',
+        es: 'Confirmar en el Dispositivo Físico',
+        en: 'Confirm on the Physical Device',
+        des: `La app pide <strong>confirmación directamente en la Nova</strong>. El dispositivo muestra en pantalla OLED:<br><br>
+        <code>Enable / Optional passphrase</code><br><br>
+        Deslizar a la derecha (✓) en el dispositivo para confirmar la activación.`,
+        den: `The app asks for <strong>confirmation directly on the Nova</strong>. The device shows on OLED screen:<br><br>
+        <code>Enable / Optional passphrase</code><br><br>
+        Swipe right (✓) on the device to confirm activation.`
+      },
+      {
+        f: 'mob-bitbox-nova-06.jpeg',
+        es: 'Passphrase Activada -Instrucciones',
+        en: 'Passphrase Activated -Instructions',
+        des: `La app confirma: <strong>"Passphrase opcional activada satisfactoriamente"</strong>.<br><br>
+        A partir de ahora, cada vez que conectés la Nova se te pedirá ingresar la passphrase. La app sugiere:<br><br>
+        - Enviar una pequeña cantidad a la billetera con passphrase<br>
+        - Desconectar y reconectar la Nova ingresando la passphrase<br>
+        - Si ves los fondos, la passphrase es correcta<br><br>
+        Tocar <strong>"Por favor vuelva a conectar tu BitBox ahora mismo"</strong> o reconectar físicamente.`,
+        den: `The app confirms: <strong>"Optional passphrase successfully activated"</strong>.<br><br>
+        From now on, every time you connect the Nova you'll be asked to enter the passphrase. The app suggests:<br><br>
+        - Send a small amount to the passphrase wallet<br>
+        - Disconnect and reconnect the Nova entering the passphrase<br>
+        - If you see the funds, the passphrase is correct<br><br>
+        Tap <strong>"Please reconnect your BitBox now"</strong> or physically reconnect.`
+      },
+      {
+        f: 'mob-bitbox-nova-07.jpeg',
+        es: 'Desbloquear ➜ Elegir Dónde Escribir',
+        en: 'Unlock ➜ Choose Where to Type',
+        des: `Al reconectar, la app muestra <strong>"Desbloquea tu billetera"</strong> con dos opciones:<br><br>
+        1. <strong>En el dispositivo</strong>: el teclado de grupos de letras aparece en la pantalla OLED de la Nova (abcd/efgh/ijklm/nopq/rstuv/wxyz/ABC)<br>
+        2. <strong>En la app</strong>: tocar el enlace naranja <strong>"Introduce la passphrase en la app"</strong> para escribirla desde el teléfono<br><br>
+        <div class="tip">La entrada en el dispositivo es más segura. La entrada en la app es más cómoda cuando estás en un entorno de confianza.</div>`,
+        den: `When reconnecting, the app shows <strong>"Unlock your wallet"</strong> with two options:<br><br>
+        1. <strong>On the device</strong>: the letter-group keyboard appears on the Nova's OLED screen (abcd/efgh/ijklm/nopq/rstuv/wxyz/ABC)<br>
+        2. <strong>In the app</strong>: tap the orange link <strong>"Enter passphrase in app"</strong> to type it from your phone<br><br>
+        <div class="tip">Entry on the device is more secure. Entry in the app is more convenient when you're in a trusted environment.</div>`
+      },
+      {
+        f: 'mob-bitbox-nova-08.jpeg',
+        es: 'Introducir Passphrase -Modal en la App',
+        en: 'Enter Passphrase -Modal in App',
+        des: `Al tocar el enlace naranja, aparece el modal <strong>"Introducir passphrase"</strong> con:<br><br>
+        - Campo de texto con cursor listo para escribir<br>
+        - Ícono de ojo 👁️ para mostrar/ocultar los caracteres<br>
+        - Botón <strong>"Confirmar"</strong><br><br>
+        Escribir la passphrase usando el teclado del teléfono y tocar <strong>"Confirmar"</strong>.<br><br>
+        <div class="warn">⚠️ Asegurate de no tener autocorrector ni predicción de texto activos -pueden modificar silenciosamente tu passphrase.</div>`,
+        den: `Tapping the orange link opens the <strong>"Enter passphrase"</strong> modal with:<br><br>
+        - Text field with cursor ready to type<br>
+        - Eye icon 👁️ to show/hide characters<br>
+        - <strong>"Confirm"</strong> button<br><br>
+        Type your passphrase using the phone keyboard and tap <strong>"Confirm"</strong>.<br><br>
+        <div class="warn">⚠️ Make sure autocorrect and text prediction are disabled -they can silently modify your passphrase.</div>`
+      },
+      {
+        f: 'mob-bitbox-nova-09.jpeg',
+        es: 'Passphrase Escrita ➜ Confirmar',
+        en: 'Passphrase Typed ➜ Confirm',
+        des: `El campo muestra la passphrase ocultada (en este ejemplo: <code>5 words from EFF list</code>). El ícono de ojo permite verificarla antes de confirmar.<br><br>
+        Tocar <strong>"Confirmar"</strong> para enviar la passphrase al dispositivo.`,
+        den: `The field shows the passphrase hidden (in this example: <code>5 words from EFF list</code>). The eye icon lets you verify it before confirming.<br><br>
+        Tap <strong>"Confirm"</strong> to send the passphrase to the device.`
+      },
+      {
+        f: 'mob-bitbox-nova-10.jpeg',
+        es: 'Nova Confirma en Pantalla OLED',
+        en: 'Nova Confirms on OLED Screen',
+        des: `La Nova recibe la passphrase de la app y muestra en pantalla OLED lo que va a confirmar:<br><br>
+        <code>Confirm / [primeros caracteres de la passphrase]...</code><br><br>
+        Deslizar a la derecha (✓) en el dispositivo para confirmar. Este paso es <strong>crítico de seguridad</strong>: el dispositivo muestra lo que realmente recibió -verificá que coincida con lo que escribiste en la app.`,
+        den: `The Nova receives the passphrase from the app and shows on OLED screen what it will confirm:<br><br>
+        <code>Confirm / [first characters of passphrase]...</code><br><br>
+        Swipe right (✓) on the device to confirm. This step is <strong>security-critical</strong>: the device shows exactly what it received -verify it matches what you typed in the app.`
+      },
+      {
+        f: 'mob-bitbox-nova-11.jpeg',
+        es: 'Verificar ➜ Ver Detalles de la Cuenta',
+        en: 'Verify ➜ View Account Details',
+        des: `Tras confirmar la passphrase, la app abre la cuenta Bitcoin. Para verificar que entraste a la billetera correcta, ir a:<br><br>
+        <strong>Cuenta ➜ Información de la cuenta ➜ "Ver detalles de la cuenta"</strong>`,
+        den: `After confirming the passphrase, the app opens the Bitcoin account. To verify you're in the correct wallet, go to:<br><br>
+        <strong>Account ➜ Account information ➜ "View account details"</strong>`
+      },
+      {
+        f: 'mob-bitbox-nova-12.jpeg',
+        es: 'Verificar -Root Fingerprint',
+        en: 'Verify -Root Fingerprint',
+        des: `En los detalles de la cuenta aparece el <strong>Root fingerprint</strong> -identificador único de la billetera activa.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 Sin passphrase ➜ <code>[valor original]</code> - billetera base</div>
+          <div class="fp-row-pp">🔐 Con passphrase ➜ <code>[nuevo valor]</code> - billetera oculta <span class="fp-here">← estás aquí</span></div>
+        </div>
+        Cada vez que ingreses la passphrase correcta deberías ver el mismo Root fingerprint.<br><br>
+        <div class="tip">Guardá el Root fingerprint junto a tu passphrase en papel. Es tu forma de verificar que entraste a la billetera correcta en cada sesión.</div>`,
+        den: `The account details show the <strong>Root fingerprint</strong> -unique identifier of the active wallet.<br><br>
+        <div class="fp-compare">
+          <div class="fp-row-std">🔓 No passphrase ➜ <code>[original value]</code> - base wallet</div>
+          <div class="fp-row-pp">🔐 With passphrase ➜ <code>[new value]</code> - hidden wallet <span class="fp-here">← you're here</span></div>
+        </div>
+        Every time you enter the correct passphrase you should see the same Root fingerprint.<br><br>
+        <div class="tip">Save the Root fingerprint along with your passphrase on paper. It's your way to verify you entered the correct wallet each session.</div>`
+      },
+    ]
+  },
+
   // COLDCARD Mk4
   {
     id: 'hw-coldcard-mk4', group: 'hw', ready: true,
@@ -5466,7 +5628,8 @@ const SLUGS = {
   'hw-coldcard-mk5':   'Coldcard-Mk5',
   'hw-coldcard-q':     'Coldcard-Q',
   'hw-bitbox':         'BitBox02',
-  'hw-bitbox-nova':    'BitBox02-Nova',
+  'hw-bitbox-nova':         'BitBox02-Nova',
+  'hw-bitbox-nova-mobile':  'BitBox02-Nova-Mobile',
   'hw-ledger-nanox':   'Ledger-Nano-X',
   'hw-trezor-one':     'Trezor-One',
   'hw-trezor-t':       'Trezor-T',
